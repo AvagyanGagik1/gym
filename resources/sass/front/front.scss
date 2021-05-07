@@ -1581,7 +1581,6 @@ footer {
         }
     }
 }
-
 .subscribe-header {
     h2 {
         font-family: Druk Wide Cyr, serif;
@@ -1594,7 +1593,6 @@ footer {
         margin-bottom: 30px;
     }
 }
-
 .subscribe-content {
 
 
@@ -1861,11 +1859,9 @@ footer {
         justify-content: space-between;
         align-items: flex-start;
         color: #FFFFFF;
-
-        div {
+        div{
             width: 100%;
         }
-
         h2 {
             font-family: Montserrat, serif;
             font-size: 20px;
@@ -1898,14 +1894,12 @@ footer {
             padding: 12px 24px;
         }
     }
-
-    .personal-numbers {
-        margin-top: 90px;
+    .personal-numbers{
+        margin-top:90px;
         margin-bottom: 8px;
-        color: #111111;
-
-        .item {
-            h1 {
+        color:#111111;
+        .item{
+            h1{
                 font-family: Druk Wide Cyr, serif;
                 font-size: 30px;
                 font-style: normal;
@@ -1915,8 +1909,7 @@ footer {
                 text-align: center;
                 margin-bottom: 12px;
             }
-
-            h5 {
+            h5{
                 font-family: Montserrat, serif;
                 font-size: 14px;
                 font-style: normal;
@@ -1925,8 +1918,7 @@ footer {
                 letter-spacing: 0.03em;
                 text-align: center;
             }
-
-            p {
+            p{
                 font-family: Montserrat, serif;
                 font-size: 14px;
                 font-style: normal;
@@ -1939,16 +1931,14 @@ footer {
         }
     }
 
-    .personal-video {
+    .personal-video{
         margin-bottom: 70px;
-
-        .item {
+        .item{
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-
-            h2 {
+            h2{
                 font-family: Druk Wide Cyr, serif;
                 font-size: 28px;
                 font-style: normal;
@@ -1968,23 +1958,20 @@ footer {
     }
 }
 
-.achievements-content {
-    .items {
+.achievements-content{
+    .items{
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 70px;
-
-        .item {
+        .item{
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 0 1px 40px 1px;
-
-            .item-img {
+            margin:0 1px 40px 1px;
+            .item-img{
 
             }
-
-            h1 {
+            h1{
                 font-family: Druk Wide Cyr, serif;
                 font-size: 14px;
                 font-style: normal;
@@ -1995,8 +1982,7 @@ footer {
                 color: #111111;
                 margin: 6px 0 12px 0;
             }
-
-            p {
+            p{
                 font-family: Montserrat, serif;
                 font-size: 12px;
                 font-style: normal;
@@ -2010,7 +1996,6 @@ footer {
         }
     }
 }
-
 //ellipse
 .ellipse {
     border: 1px solid;
@@ -2267,22 +2252,19 @@ body {
 .btn {
     margin: 15px;
 }
-
-.login-aside {
-    display: flex;
+.login-aside{
+  display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-top: 101px;
+    padding-top:101px;
     padding-right: 60px;
     box-shadow: inset -10px 0px 20px #F3F3F3;
     height: 58vh;
-
-    li {
+    li{
         position: relative;
         display: flex;
         margin-bottom: 16px;
-
-        .item {
+        .item{
             font-family: Montserrat, serif;
             font-style: normal;
             font-weight: normal;
@@ -2292,8 +2274,7 @@ body {
             display: flex;
             align-items: center;
         }
-
-        .item.active {
+        .item.active{
             font-family: Montserrat, serif;
             font-style: normal;
             font-weight: bold;
@@ -2303,12 +2284,10 @@ body {
             align-items: center;
             padding-right: 10px;
         }
-
-        .completed {
-            background-color: #F0F712;
+        .completed{
+            background-color:#F0F712 ;
         }
-
-        .custom-ellipse {
+        .custom-ellipse{
             border-radius: 50%;
             border: 2px solid #E6E6E6;
             width: 30px;
@@ -2323,8 +2302,7 @@ body {
             align-items: center;
             justify-content: center;
         }
-
-        .custom-ellipse.active {
+        .custom-ellipse.active{
             border-radius: 50%;
             border: 2px solid #F0F712;
             width: 30px;
@@ -2339,8 +2317,7 @@ body {
             align-items: center;
             justify-content: center;
         }
-
-        .underline {
+        .underline{
             width: 19px;
             height: 0;
             border: 1px solid #E6E6E6;
@@ -2352,13 +2329,11 @@ body {
     }
 
 }
-
-#app {
+#app{
     position: relative;
 }
-
-.submit-group {
-    .next {
+.submit-group{
+    .next{
         font-family: Druk Wide Cyr, serif;
         font-style: normal;
         font-weight: 500;
@@ -2371,8 +2346,7 @@ body {
         padding: 16px 56px;
         background: #F0F712;
     }
-
-    .prev {
+    .prev{
         font-family: Druk Wide Cyr, serif;
         font-style: normal;
         font-weight: 500;
@@ -2382,12 +2356,10 @@ body {
         color: #999999;
     }
 }
-
-.first-step {
+.first-step{
     padding-top: 101px;
     padding-left: 60px;
-
-    h1 {
+    h1{
         font-family: Druk Wide Cyr, serif;
         font-style: normal;
         font-weight: 500;
@@ -2396,14 +2368,12 @@ body {
         color: #111111;
         margin-bottom: 40px;
     }
-
-    form {
-        .custom-form-group-inline {
+    form{
+        .custom-form-group-inline{
             margin-bottom: 30px;
             margin-right: 22px;
             position: relative;
-
-            input {
+            input{
                 width: 308px;
                 height: 50px;
                 background: #FFFFFF;
@@ -2412,8 +2382,7 @@ body {
                 border: 1px solid #E6E6E6;
                 box-sizing: border-box;
                 padding-left: 20px;
-
-                &::placeholder {
+                &::placeholder{
                     font-family: Montserrat, serif;
                     font-style: normal;
                     font-weight: normal;
@@ -2421,8 +2390,7 @@ body {
                     line-height: 120%;
                 }
             }
-
-            .left-line {
+            .left-line{
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -2431,9 +2399,8 @@ body {
                 background: #F0F712;
             }
         }
-
-        .social-form {
-            h1 {
+        .social-form{
+            h1{
                 font-family: Montserrat, serif;
                 font-style: normal;
                 font-weight: 600;
@@ -2441,12 +2408,10 @@ body {
                 line-height: 140%;
                 margin-bottom: 12px;
             }
-
-            .social-btn-grp {
+            .social-btn-grp{
                 display: flex;
                 margin-bottom: 30px;
-
-                button {
+                button{
                     background: #FFFFFF;
                     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
                     border-radius: 10px;
@@ -2454,23 +2419,19 @@ body {
                     width: 198px;
                     height: 46px;
                     border: none;
-
-                    &:first-child {
+                    &:first-child{
                         margin: 0;
                     }
-
-                    svg {
-                        margin-right: 7px;
+                    svg{
+                      margin-right: 7px;
                     }
                 }
 
             }
         }
-
-        .terms {
+        .terms{
             margin-bottom: 33px;
-
-            p {
+            p{
                 font-family: Montserrat, serif;
                 font-style: normal;
                 font-weight: normal;
@@ -2579,7 +2540,6 @@ body {
         }
     }
 }
-
-body {
+body{
 
 }
