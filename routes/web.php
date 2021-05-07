@@ -22,10 +22,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::namespace('Front')->group(function(){
     Route::get('/','FrontController@index')->name('front.index');
-    Route::prefix('login')->group(function (){
-        Route::get('/second-step','FrontController@secondStep')->name('login.secondStep');
-        Route::get('/third-step','FrontController@thirdStep')->name('login.thirdStep');
-        Route::get('/four-step','FrontController@fourStep')->name('login.fourStep');
+    Route::prefix('register')->group(function (){
+        Route::get('/second-step','FrontController@secondStep')->name('register.secondStep');
+        Route::get('/third-step','FrontController@thirdStep')->name('register.thirdStep');
+        Route::get('/four-step','FrontController@fourStep')->name('register.fourStep');
 
     });
 });

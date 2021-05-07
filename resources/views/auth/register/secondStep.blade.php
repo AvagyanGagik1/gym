@@ -19,8 +19,8 @@
                         </div>
                     </div>
                     <div class="submit-group">
-                        <a href="{{route('login.thirdStep')}}">Продолжить</a>
-                        <button type="button">Отмена</button>
+                        <a href="{{route('register.thirdStep')}}" class="next">Продолжить</a>
+                        <a href="{{route('register')}}" class="prev">Отмена</a>
                     </div>
                 </form>
             </div>

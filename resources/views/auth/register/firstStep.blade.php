@@ -77,8 +77,8 @@
                         <label>Я прочитал Условия Соглашения и даю согласение на обработку личных данных</label>
                     </div>
                     <div class="submit-group">
-                        <button type="submit" value="Продолжить" type="button">Продолжить</button>
-                        <a href="">Отмена</a>
+                        <a class="next">Продолжить</a>
+                        <a class="prev">Отмена</a>
                     </div>
                 </form>
             </div>

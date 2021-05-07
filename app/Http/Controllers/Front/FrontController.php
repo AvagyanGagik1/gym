@@ -11,6 +11,6 @@ class FrontController extends Controller
         return response()->view('front.index');
     }
     public function secondStep(){
-        return response()->view('auth.login.secondStep');
+        return response()->view('auth.register.secondStep');
     }
 }

@@ -2250,6 +2250,10 @@ body {
   padding-right: 10px;
 }
 
+.login-aside li .completed {
+  background-color: #F0F712;
+}
+
 .login-aside li .custom-ellipse {
   border-radius: 50%;
   border: 2px solid #E6E6E6;

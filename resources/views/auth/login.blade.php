@@ -4,10 +4,10 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-4 d-flex justify-content-end">
-                @include('auth.aside')
+                @include('auth.loginAside')
             </div>
             <div class="col-8 first-step">
-                <h1>Создайте свой аккаунт</h1>
+                <h1>Авторизация</h1>
                 <form action="" class="d-flex flex-column">
                     <div class="d-flex">
                         <div class="custom-form-group-inline">
@@ -77,8 +77,8 @@
                         <label>Я прочитал Условия Соглашения и даю согласение на обработку личных данных</label>
                     </div>
                     <div class="submit-group">
-                        <a class="next" href="{{route('login.secondStep')}}" >Продолжить</a>
-                        <a class="prev">Отмена</a>
+                        <a class="next" href="{{route('login.secondStep')}}" >ВОЙТИ</a>
+                        <a class="prev" href="{{route('register')}}">РЕГИСТРАЦИЯ</a>
                     </div>
                 </form>
             </div>
