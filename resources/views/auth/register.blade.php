@@ -151,6 +151,7 @@
                     </div>
                     <div class="terms">
                         <input type="checkbox" class="terms-checkbox" id="terms-checkbox">
+                        <span></span>
                         <label>Я прочитал Условия Соглашения и даю согласение на обработку личных данных</label>
                     </div>
                     <div class="submit-group">

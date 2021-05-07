@@ -2430,7 +2430,48 @@ body {
             }
         }
         .terms{
+            position: relative;
             margin-bottom: 33px;
+            label{
+                margin-left: 32px;
+            }
+            input{
+                width: 24px;
+                height: 24px;
+                opacity: 0;
+                position: absolute;
+                z-index: 1;
+            }
+            input:checked+span{
+                background: #F0F712;
+                border:none;
+            }
+            input:checked+span:after{
+                opacity: 1;
+                height: 10px;
+                width: 5px;
+                top: 50%;
+                right: 8px;
+                -webkit-transform: translateY(calc(-50% - 2px)) rotate(
+                        45deg
+                );
+                transform: translateY(calc(-50% - 2px)) rotate(
+                        45deg
+                );
+                border-right: 2px solid #020202;
+                border-bottom: 2px solid #020202;
+                content: "";
+                position: absolute;
+            }
+            span{
+                z-index: 0;
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                top: 0;
+                border: 1px solid;
+                left: 0;
+            }
             p{
                 font-family: Montserrat, serif;
                 font-style: normal;
