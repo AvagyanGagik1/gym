@@ -13,4 +13,10 @@ class FrontController extends Controller
     public function secondStep(){
         return response()->view('auth.register.secondStep');
     }
+    public function thirdStep (){
+        return response()->view('auth.register.thirdStep');
+    }
+    public function fourStep (){
+        return response()->view('auth.register.fourStep');
+    }
 }
