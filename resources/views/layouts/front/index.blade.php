@@ -11,6 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/package/owl.js') }}" defer></script>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,6 +21,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/front/front.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/package/owl.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
@@ -169,5 +172,7 @@
         @include('front.user.footer')
     @endguest
 </div>
+<script src="{{ asset('js/front/front.js') }}" defer></script>
+
 </body>
 </html>

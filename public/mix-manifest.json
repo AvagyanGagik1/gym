@@ -1,5 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/front/front.css": "/css/front/front.css"
+    "/js/package/owl.js": "/js/package/owl.js",
+    "/js/front/front.js": "/js/front/front.js",
+    "/css/package/owl.css": "/css/package/owl.css",
+    "/css/front/front.css": "/css/front/front.css",
+    "/css/app.css": "/css/app.css"
 }

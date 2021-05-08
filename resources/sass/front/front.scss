@@ -6,9 +6,11 @@
     background: #FFFFFF;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     color: #111111;
-    .nav{
+
+    .nav {
         width: 100%;
     }
+
     .navHome {
         margin-left: 64px
     }
@@ -45,6 +47,7 @@
         justify-content: space-between;
         max-width: 384px;
         width: 100%;
+
         div {
             display: flex;
             align-items: center;
@@ -90,10 +93,7 @@
 
 .sectionMain {
     div:first-child {
-        height: 90vh;
-        background-repeat: no-repeat;
-        background-image: url(/images/main.png);
-        background-size: cover;
+        height: 100%;
     }
 
     .btnLeft,
@@ -114,6 +114,12 @@
     }
 
     .sectionText {
+        position: absolute;
+        top: 42%;
+        z-index: 2;
+        left: 26%;
+        width: 45%;
+
         h1 {
             font-family: Druk Wide Cyr, serif;
             font-size: 44px;
@@ -123,15 +129,17 @@
             letter-spacing: 0;
             text-align: left;
             color: #FFFFFF;
+
         }
     }
 
     .subtract {
-        bottom: 0;
+        bottom: 24px;
         left: 0;
         width: 100%;
         height: auto;
         position: absolute;
+        z-index: 2;
 
         img {
             width: 100%;
@@ -2870,7 +2878,8 @@ body {
 .four-step {
     padding-top: 101px;
     padding-left: 60px;
-    padding-bottom:70px ;
+    padding-bottom: 70px;
+
     h1 {
         width: 138px;
         height: 28px;
@@ -3008,11 +3017,13 @@ body {
             }
         }
     }
+
     .payment-subscription {
         width: 100%;
         display: flex;
         flex-direction: column;
         margin-bottom: 30px;
+
         h1 {
             font-family: Montserrat, serif;
             font-style: normal;
@@ -3023,16 +3034,18 @@ body {
             /* Grey Tones/Mostly Black:111111 */
             color: #111111;
             margin-bottom: 12px;
-width: 100%;
+            width: 100%;
         }
 
         .payment-wrapper {
             display: flex;
+
             .item {
                 width: 140px;
                 height: 100px;
                 position: relative;
                 margin-right: 20px;
+
                 input {
                     position: absolute;
                     width: 100%;
@@ -3050,7 +3063,8 @@ width: 100%;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    span{
+
+                    span {
                         width: 24px;
                         height: 24px;
                         border: 1px solid #CACACA;
@@ -3058,11 +3072,14 @@ width: 100%;
                         border-radius: 50%;
                     }
                 }
-                input:checked+label{
+
+                input:checked + label {
                     border: 2px solid #F0F712;
-                    span{
+
+                    span {
                         background: #F0F712;
-                        &:after{
+
+                        &:after {
                             top: 67%;
                             right: 49%;
                             opacity: 1;
@@ -3075,6 +3092,7 @@ width: 100%;
                                     45deg
                             );
                             border-right: 2px solid #020202;
+                            border-right: 2px solid #020202;
                             border-bottom: 2px solid #020202;
                             content: "";
                             position: absolute;
@@ -3085,6 +3103,50 @@ width: 100%;
         }
     }
 }
+
+.main-slider-item {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
+}
+.owl-carousel{
+    .owl-nav {
+        button {
+            width: 54px;
+            height: 54px;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+
+            span {
+                display: block;
+                position: relative;
+                background-image: url(/images/btnLeft.png);
+                width: 54px;
+                height: 54px;
+                background-size: cover;
+                transition: all 0.7s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+            }
+
+            &:last-child {
+                left: 90%;
+
+                span {
+                    background-image: url(/images/btnRight.png);
+
+                }
+
+            }
+        }
+
+    }
+}
+
 
 body {
 
