@@ -1,14 +1,9 @@
-@font-face {
-    font-family: 'Druk Wide Cyr';
-    src: url('../fonts/druke/DrukCyr-Bold.eot');
-    src: local('Druk Cyr Bold'), local('DrukCyr-Bold'),
-    url('../fonts/druke/DrukCyr-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/druke/DrukCyr-Bold.woff2') format('woff2'),
-    url('../fonts/druke/DrukCyr-Bold.woff') format('woff'),
-    url('../fonts/druke/DrukCyr-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
+//@font-face {
+//    font-family: 'Druk Wide Cyr';
+//    src: url('../fonts/druke/Druk Wide Medium.otf');
+//    font-weight: normal;
+//    font-style: normal;
+//}
 
 //@font-face {
 //    font-family: 'Druk Wide Cyr';
@@ -72,13 +67,8 @@
 
 @font-face {
     font-family: 'Druk Wide Cyr';
-    src: url('../fonts/druke/DrukCyr-Medium.eot');
-    src: local('Druk Cyr Medium'), local('DrukCyr-Medium'),
-    url('../fonts/druke/DrukCyr-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/druke/DrukCyr-Medium.woff2') format('woff2'),
-    url('../fonts/druke/DrukCyr-Medium.woff') format('woff'),
-    url('../fonts/druke/DrukCyr-Medium.ttf') format('truetype');
-    font-weight: 500;
+    src: url('../fonts/druke/DrukCyr-Super.ttf');
+    font-weight: bold;
     font-style: normal;
 }
 

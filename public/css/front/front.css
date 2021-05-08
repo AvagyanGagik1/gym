@@ -611,7 +611,6 @@
 
 footer {
   background: #111111;
-  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2219,7 +2218,7 @@ body {
   padding-top: 101px;
   padding-right: 60px;
   box-shadow: inset -10px 0px 20px #F3F3F3;
-  height: 58vh;
+  height: calc(100vh - 250px);
 }
 
 .login-aside li {
@@ -2252,6 +2251,19 @@ body {
 
 .login-aside li .completed {
   background-color: #F0F712;
+}
+
+.login-aside li .completed span:after {
+  top: 50%;
+  right: 13px;
+  opacity: 1;
+  height: 10px;
+  width: 5px;
+  transform: translateY(calc(-50% - 2px)) rotate(45deg);
+  border-right: 2px solid #020202;
+  border-bottom: 2px solid #020202;
+  content: "";
+  position: absolute;
 }
 
 .login-aside li .custom-ellipse {
@@ -2421,7 +2433,48 @@ body {
 }
 
 .first-step form .terms {
+  position: relative;
   margin-bottom: 33px;
+}
+
+.first-step form .terms label {
+  margin-left: 32px;
+}
+
+.first-step form .terms input {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.first-step form .terms input:checked + span {
+  background: #F0F712;
+  border: none;
+}
+
+.first-step form .terms input:checked + span:after {
+  opacity: 1;
+  height: 10px;
+  width: 5px;
+  top: 50%;
+  right: 8px;
+  transform: translateY(calc(-50% - 2px)) rotate(45deg);
+  border-right: 2px solid #020202;
+  border-bottom: 2px solid #020202;
+  content: "";
+  position: absolute;
+}
+
+.first-step form .terms span {
+  z-index: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  border: 1px solid;
+  left: 0;
 }
 
 .first-step form .terms p {
@@ -2445,7 +2498,7 @@ body {
   font-size: 20px;
   line-height: 140%;
   color: #111111;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .second-step form h1 {
@@ -2454,12 +2507,14 @@ body {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
+  margin-bottom: 12px;
   /* identical to box height, or 20px */
   /* Grey Tones/Mostly Black:111111 */
   color: #111111;
 }
 
 .second-step form .gender-select {
+  margin-bottom: 30px;
   width: 250px;
   height: 68px;
   background: #F7F7F7;
@@ -2475,6 +2530,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.second-step form .gender-select .gender-item span {
+  position: absolute;
+  bottom: -25px;
+  font-family: Montserrat, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0;
+  text-align: center;
 }
 
 .second-step form .gender-select .gender-item:last-child {
@@ -2517,6 +2584,7 @@ body {
 }
 
 .second-step form .gender-select .gender-item input:checked + label {
+  transform: scale(1.1);
   background: #FFFFFF;
   /* Signal Colours/Style */
   border: 2px solid #F0F712;
@@ -2526,5 +2594,378 @@ body {
 
 .second-step form .gender-select .gender-item input:checked + label svg path {
   fill: black;
+}
+
+.second-step form .target {
+  margin-bottom: 30px;
+}
+
+.second-step form .target h1 {
+  font-family: Montserrat, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0;
+  margin-bottom: 12px;
+}
+
+.second-step form .target .target-group {
+  display: flex;
+}
+
+.second-step form .target .target-group .item {
+  width: 198px;
+  height: 60px;
+  position: relative;
+  margin-right: 22px;
+}
+
+.second-step form .target .target-group .item input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.second-step form .target .target-group .item label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #E6E6E6;
+  border-radius: 10px;
+  justify-content: space-around;
+  transition: all 0.3s ease;
+}
+
+.second-step form .target .target-group .item label .desc {
+  font-family: Montserrat, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0;
+  text-align: center;
+  width: 106px;
+}
+
+.second-step form .target .target-group .item label .target-ellipse {
+  border: 1px solid #CACACA;
+  border-radius: 50%;
+  background: #FFFFFF;
+  height: 24px;
+  width: 24px;
+}
+
+.second-step form .target .target-group .item input:checked + label {
+  transform: scale(1.1);
+  border: 2px solid #F0F712;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.second-step form .target .target-group .item input:checked + label .target-ellipse {
+  background: #F0F712;
+}
+
+.second-step form .target .target-group .item input:checked + label .target-ellipse:after {
+  top: 50%;
+  right: 17px;
+  opacity: 1;
+  height: 10px;
+  width: 5px;
+  transform: translateY(calc(-50% - 2px)) rotate(45deg);
+  border-right: 2px solid #020202;
+  border-bottom: 2px solid #020202;
+  content: "";
+  position: absolute;
+}
+
+.third-step {
+  padding-top: 101px;
+  padding-left: 60px;
+}
+
+.third-step h1 {
+  width: 220px;
+  height: 28px;
+  font-family: Druk Wide Cyr, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  margin-bottom: 40px;
+  /* identical to box height, or 28px */
+  /* Grey Tones/Mostly Black:111111 */
+  color: #111111;
+}
+
+.third-step .personal-data {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.third-step .personal-data .item {
+  width: 180px;
+  height: 209px;
+  background: #FFFFFF;
+  /* Shadows/Modal Shadow:40 */
+  box-shadow: 0px 4px 40px rgba(34, 34, 34, 0.1);
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+.third-step .personal-data .item .header {
+  padding-top: 30px;
+}
+
+.third-step .personal-data .item .header h3 {
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+  color: #111111;
+  text-align: center;
+}
+
+.third-step .personal-data .item .value {
+  padding-top: 10px;
+  padding-bottom: 2px;
+}
+
+.third-step .personal-data .item .value h3 {
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 140%;
+  /* identical to box height, or 62px */
+  margin: 0;
+  /* Grey Tones/Mostly Black:111111 */
+  text-align: center;
+  color: #111111;
+}
+
+.third-step .personal-data .item .value .underline {
+  width: 98px;
+  height: 0;
+  border: 1px solid #E6E6E6;
+  margin: 0 auto 19px;
+}
+
+.third-step .personal-data .item .plus-minus-group {
+  display: flex;
+  justify-content: center;
+}
+
+.third-step .personal-data .item .plus-minus-group span {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #F0F712;
+  margin-right: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.four-step {
+  padding-top: 101px;
+  padding-left: 60px;
+  padding-bottom: 70px;
+}
+
+.four-step h1 {
+  width: 138px;
+  height: 28px;
+  font-family: Druk Wide Cyr, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  /* identical to box height, or 28px */
+  /* Grey Tones/Mostly Black:111111 */
+  color: #111111;
+  margin-bottom: 30px;
+}
+
+.four-step .subscriptions h1 {
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+  text-align: center;
+  /* Grey Tones/Mostly Black:111111 */
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.four-step .subscriptions .item {
+  background: #F7F7F7;
+  border-radius: 10px;
+  width: 528px;
+  height: 70px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.four-step .subscriptions .item .desc h3 {
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  /* Grey Tones/Mostly Black:111111 */
+  color: #111111;
+}
+
+.four-step .subscriptions .item .desc span {
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+  /* Grey Tones/Medium Grey:777777 */
+  color: #777777;
+}
+
+.four-step .subscriptions .item .price h3 {
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+  text-align: right;
+  color: #111111;
+}
+
+.four-step .subscriptions .item .checkbox {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.four-step .subscriptions .item .checkbox input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.four-step .subscriptions .item .checkbox label {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #CACACA;
+  background: #FFFFFF;
+}
+
+.four-step .subscriptions .item .checkbox input:checked + label {
+  background: #F0F712;
+}
+
+.four-step .subscriptions .item .checkbox input:checked + label:after {
+  top: 50%;
+  right: 10px;
+  opacity: 1;
+  height: 10px;
+  width: 5px;
+  transform: translateY(calc(-50% - 2px)) rotate(45deg);
+  border-right: 2px solid #020202;
+  border-bottom: 2px solid #020202;
+  content: "";
+  position: absolute;
+}
+
+.four-step .payment-subscription {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.four-step .payment-subscription h1 {
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+  /* Grey Tones/Mostly Black:111111 */
+  color: #111111;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.four-step .payment-subscription .payment-wrapper {
+  display: flex;
+}
+
+.four-step .payment-subscription .payment-wrapper .item {
+  width: 140px;
+  height: 100px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.four-step .payment-subscription .payment-wrapper .item input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.four-step .payment-subscription .payment-wrapper .item label {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #E6E6E6;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.four-step .payment-subscription .payment-wrapper .item label span {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #CACACA;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.four-step .payment-subscription .payment-wrapper .item input:checked + label {
+  border: 2px solid #F0F712;
+}
+
+.four-step .payment-subscription .payment-wrapper .item input:checked + label span {
+  background: #F0F712;
+}
+
+.four-step .payment-subscription .payment-wrapper .item input:checked + label span:after {
+  top: 67%;
+  right: 49%;
+  opacity: 1;
+  height: 10px;
+  width: 5px;
+  transform: translateY(calc(-50% - 2px)) rotate(45deg);
+  border-right: 2px solid #020202;
+  border-bottom: 2px solid #020202;
+  content: "";
+  position: absolute;
 }
 

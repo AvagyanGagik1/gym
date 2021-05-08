@@ -2,17 +2,8 @@
 
 @font-face {
   font-family: "Druk Wide Cyr";
-  src: url(/fonts/DrukCyr-Bold.eot?c02469bc8d21f9749ed0a829fb4b5401);
-  src: local("Druk Cyr Bold"), local("DrukCyr-Bold"), url(/fonts/DrukCyr-Bold.eot?c02469bc8d21f9749ed0a829fb4b5401) format("embedded-opentype"), url(/fonts/DrukCyr-Bold.woff2?40d115127602a8eafc54ac36a8fbcedf) format("woff2"), url(/fonts/DrukCyr-Bold.woff?7f6b25175fe1682434f8d0645b3c3eb0) format("woff"), url(/fonts/DrukCyr-Bold.ttf?46484b62203f7a81e6f60c3c5f3eeff0) format("truetype");
+  src: url(/fonts/DrukCyr-Super.ttf?6a23265e87e0a5c6fb8b96e1a35b147e);
   font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Druk Wide Cyr";
-  src: url(/fonts/DrukCyr-Medium.eot?b2f18c2f452055ef4a9b6e0d62de1b4f);
-  src: local("Druk Cyr Medium"), local("DrukCyr-Medium"), url(/fonts/DrukCyr-Medium.eot?b2f18c2f452055ef4a9b6e0d62de1b4f) format("embedded-opentype"), url(/fonts/DrukCyr-Medium.woff2?de64c0b2b4c4f8ca8aa62a5c40bf73aa) format("woff2"), url(/fonts/DrukCyr-Medium.woff?e9c60acce5644cb57d0aa9b818cfce1f) format("woff"), url(/fonts/DrukCyr-Medium.ttf?0cd1629cba38cbd6f9e57ede11256d4d) format("truetype");
-  font-weight: 500;
   font-style: normal;
 }
 
