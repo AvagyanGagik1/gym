@@ -19,6 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/front/front.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/front/media.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">

@@ -253,7 +253,7 @@
         <h1>Подписка Online Gym project первый шаг к твоей цели!</h1>
         <div class="container-fluid col-12">
             <div class="row d-flex flex-wrap">
-                <div class="d-flex align-items-center
+                <div class="d-flex align-items-md-center align-items-start
 				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">
                     <h3>8 Недельная Трансформация</h3>
                     <div>
@@ -264,7 +264,7 @@
                     </button>
                     <!--                <img class="w-100" src="images/subscribe.png" alt="">-->
                 </div>
-                <div class="d-flex align-items-center
+                <div class="d-flex align-items-md-center align-items-start
 				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">
                     <h3>8 Недельная Трансформация</h3>
                     <div>
@@ -275,7 +275,7 @@
                     </button>
                     <!--                <img class="w-100" src="images/subscribe1.png" alt="">-->
                 </div>
-                <div class="d-flex align-items-center
+                <div class="d-flex align-items-md-center align-items-start
 				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">
                     <h3>8 Недельная Трансформация</h3>
                     <div>
@@ -286,7 +286,7 @@
                     </button>
                     <!--                <img class="w-100" src="images/subscribe2.png" alt="">-->
                 </div>
-                <div class="d-flex align-items-center
+                <div class="d-flex align-items-md-center align-items-start
 				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">
                     <h3>8 Недельная Трансформация</h3>
                     <div>
@@ -301,21 +301,21 @@
         </div>
     </section>
     <section class="about col-12 d-flex flex-column text-left align-items-center position-relative">
-        <div class="col-8">
-            <div class="imgAbsolute">
-                <img class="img1" src="images/about.png" alt="">
-                <div class="img2">
-{{--                    <img src="images/about1.png" alt="">--}}
-{{--                    <img class="playButton" src="images/playButton.png">--}}
-                    <iframe width="569px" height="372px" src="https://www.youtube.com/embed/9VxqYJmiHpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
+        <div class="col-8 ">
             <div class="col-6 aboutFirst">
                 <h1>Решение начать =
                     более 70% результата!</h1>
                 <p>Хотите похудеть? Привести свое тело в форму? Сжечь лишние калории? Поставьте перед собой цель и
                     посмотрите, как Gym project может помочь вам преобразовать вашу жизнь. Получите онлайн-доступ ко всем
                     программам тренировок для любого телосложения и любого уровня подготовки.</p>
+            </div>
+            <div class="imgAbsolute col-lg-12">
+                <img class="img1" src="images/about.png" alt="">
+                <div class="img2">
+                    {{--                    <img src="images/about1.png" alt="">--}}
+                    <img class="playButton" src="images/playButton.png">
+                    <iframe width="569px" height="372px" controls=0 src="https://www.youtube.com/embed/9VxqYJmiHpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
             <div class="col-6 d-flex flex-wrap
 			aboutSecond">
