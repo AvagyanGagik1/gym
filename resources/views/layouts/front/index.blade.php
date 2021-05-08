@@ -78,7 +78,7 @@
                 <a href="#" class="navHome">
                     <img src="images/logo.png" alt="">
                 </a>
-                <div>
+                <div class="nav">
                     <ul class="navList">
                         <a href="">
                             <li>Программы тренировок</li>

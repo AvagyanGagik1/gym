@@ -20,32 +20,32 @@
         <div>
             <h6 class="gymSubTitle">КТО МЫ И ЧЕМ ЗАНИМАЕМСЯ</h6>
             <h1 class="gymTitle">Тренируйтесь в любое время, в любом месте</h1>
-            <div class="d-flex gymImages">
-                <div class="d-flex flex-column align-items-center m-4">
+            <div class="d-flex gymImages justify-content-center flex-wrap">
+                <div class="d-flex flex-md-column align-items-center m-4">
                     <div>
                         <img src="images/scales.png" alt="">
                     </div>
                     <p>40 программ + питание</p>
                 </div>
-                <div class="d-flex flex-column align-items-center m-4">
+                <div class="d-flex flex-md-column align-items-center m-4">
                     <div>
                         <img src="images/brawn.png" alt="">
                     </div>
                     <p>Эксклюзивные программы от лучших тренеров</p>
                 </div>
-                <div class="d-flex flex-column align-items-center m-4">
+                <div class="d-flex flex-md-column align-items-center m-4">
                     <div>
                         <img src="images/weight.png" alt="">
                     </div>
                     <p>40 программ + питание</p>
                 </div>
-                <div class="d-flex flex-column align-items-center m-4">
+                <div class="d-flex flex-md-column align-items-center m-4">
                     <div>
                         <img src="images/dumbbell.png" alt="">
                     </div>
                     <p>Йога, кардио, танцы, сила и много другое</p>
                 </div>
-                <div class="d-flex flex-column align-items-center m-4">
+                <div class="d-flex flex-md-column align-items-center m-4">
                     <div>
                         <img src="images/list.png" alt="">
                     </div>
@@ -252,9 +252,9 @@
         <h6>НУЖНО ПРИДУМАТЬ НАЗВАНИЕ ДОПОЛНИТЕЛЬНОЕ</h6>
         <h1>Подписка Online Gym project первый шаг к твоей цели!</h1>
         <div class="container-fluid col-12">
-            <div class="row d-flex">
+            <div class="row d-flex flex-wrap">
                 <div class="d-flex align-items-center
-				justify-content-center col-3 p-0 flex-column subscribe-item">
+				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">
                     <h3>8 Недельная Трансформация</h3>
                     <div>
                         <p>640 <span>грн</span></p>
@@ -265,7 +265,7 @@
                     <!--                <img class="w-100" src="images/subscribe.png" alt="">-->
                 </div>
                 <div class="d-flex align-items-center
-				justify-content-center col-3 p-0 flex-column subscribe-item">
+				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">
                     <h3>8 Недельная Трансформация</h3>
                     <div>
                         <p>640 <span>грн</span></p>
@@ -276,7 +276,7 @@
                     <!--                <img class="w-100" src="images/subscribe1.png" alt="">-->
                 </div>
                 <div class="d-flex align-items-center
-				justify-content-center col-3 p-0 flex-column subscribe-item">
+				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">
                     <h3>8 Недельная Трансформация</h3>
                     <div>
                         <p>640 <span>грн</span></p>
@@ -287,7 +287,7 @@
                     <!--                <img class="w-100" src="images/subscribe2.png" alt="">-->
                 </div>
                 <div class="d-flex align-items-center
-				justify-content-center col-3 p-0 flex-column subscribe-item">
+				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">
                     <h3>8 Недельная Трансформация</h3>
                     <div>
                         <p>640 <span>грн</span></p>
@@ -305,8 +305,9 @@
             <div class="imgAbsolute">
                 <img class="img1" src="images/about.png" alt="">
                 <div class="img2">
-                    <img src="images/about1.png" alt="">
-                    <img class="playButton" src="images/playButton.png">
+{{--                    <img src="images/about1.png" alt="">--}}
+{{--                    <img class="playButton" src="images/playButton.png">--}}
+                    <iframe width="569px" height="372px" src="https://www.youtube.com/embed/9VxqYJmiHpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col-6 aboutFirst">
