@@ -84,6 +84,27 @@
         }
     }
 }
+@media (max-width: 992px){
+    .sectionMain{
+        .owl-nav{
+            display: none;
+        }
+        .sectionText{
+            top:0;
+            left: 38px;
+            h1{
+                Line-height:  30px;
+                font-size: 22px;
+            }
+            button{
+                font-size: 15px;
+                max-width: 160px;
+                max-height: 38px;
+                margin: 0;
+            }
+        }
+    }
+}
 @media (max-width:1900px ) {
     .about{
         .aboutFirst,.aboutSecond{

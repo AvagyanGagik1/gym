@@ -247,6 +247,8 @@
     .subscribe-item {
         background-image:linear-gradient(rgba(20, 18, 25, 0.5) 0%, rgba(20, 18, 25, 0.5) 100% ), url(/images/subscribe.png);
         background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;
         max-width: 480px;
         max-height: 494px;
         height: 494px;
@@ -2140,11 +2142,15 @@ ul {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    svg{
+        margin-left: 11px;
+    }
 }
 
 .cardFooterImg {
     height: 32px;
     width: 32px;
+    overflow: hidden;
     border-radius: 50%;
 }
 
@@ -2168,6 +2174,9 @@ ul {
     margin: -0.5rem;
     padding: 0.5rem;
     border-top: 1px solid #E6E6E6;
+    svg{
+        margin: auto 0;
+    }
 }
 
 body {
