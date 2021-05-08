@@ -1,19 +1,21 @@
 @extends('layouts.front.index')
 @section('content')
     <section class="sectionMain position-relative">
-        <div class="d-flex align-items-center justify-content-around">
-            <button class="btnLeft"><img src="images/btnLeft.png" alt=""></button>
-            <!--        <img class="w-100" src="images/main.png" alt="">-->
-            <div class="sectionText">
-                <h1>Подписка gym project
-                    первый шаг к твоей цели!</h1>
-                <button class="btn btnNorm btnNormal1">начать</button>
-            </div>
-            <button class="btnRight"><img src="images/btnRight.png" alt=""></button>
+        <div class="owl-carousel owl-theme" id="owl-carousel">
+            <div class="main-slider-item"><img src="/images/main.png" class="img-fluid" alt=""></div>
+            <div class="main-slider-item"><img src="/images/main.png" class="img-fluid" alt=""></div>
+            <div class="main-slider-item"><img src="/images/main.png" class="img-fluid" alt=""></div>
+            <div class="main-slider-item"><img src="/images/main.png" class="img-fluid" alt=""></div>
+        </div>
+        <div class="sectionText">
+            <h1>Подписка gym project
+                первый шаг к твоей цели!</h1>
+            <button class="btn btnNorm btnNormal1">начать</button>
         </div>
         <div class="subtract">
             <img src="images/subtract.png" alt="">
         </div>
+
     </section>
     <section class="gym position-relative">
         <h1 class="onlineGym">ONLINE GYM.</h1>
@@ -57,190 +59,192 @@
     <section class="program d-flex flex-column align-items-center">
         <h1 class="program-header">Наши программы</h1>
         <div class="d-flex col-10">
-            <div class="col-3">
-                <div class="cardForFitness">
-                    <div class="position-relative">
-                        <div class="ellipse">
-                            <div class="ellipseM">
-                                <div class="stars">
-                                    <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 6px;height:6px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+            <div class="owl-carousel" id="owl-carousel-program">
+                <div class="item">
+                    <div class="cardForFitness">
+                        <div class="position-relative">
+                            <div class="ellipse">
+                                <div class="ellipseM">
+                                    <div class="stars">
+                                        <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 6px;height:6px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                                    </div>
+                                    <p class="ellipseText">зал</p>
                                 </div>
-                                <p class="ellipseText">зал</p>
                             </div>
+                            <img class="imgFitness" src="./images/img.png" alt="">
                         </div>
-                        <img class="imgFitness" src="./images/img.png" alt="">
-                    </div>
-                    <div class="p-2 cardWrapper">
-                        <h1 class="cardHeader">Утреннее кардио 2. Сожги весь жир!</h1>
-                        <div class="cardContent">
-                            <ul>
-                                <li class="cardListLeft">Кол-во тренировок</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">15</p>
-                                    <img class="ml-2" src="images/calendar.png" alt="">
-                                </li>
-                                <li class="cardListLeft">Тренировки от и до</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">18-30 мин</p>
-                                    <img class="ml-2" src="images/timer.png" alt="">
-                                </li>
-                                <li class="cardListLeft">Интенсивность</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">Низкая</p>
-                                    <img class="ml-2" src="images/graph.png" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="d-flex align-content-center cardFooter">
-                            <img class="cardFooterImg" src="./images/img.png" alt="">
-                            <p class="cardFooterText">Ольга Дерендеева</p>
-                            <p class="ml-auto cardFooterText">2276</p>
-                            <img class="mt-auto mb-auto" src="./images/user.png" alt="">
+                        <div class="p-2 cardWrapper">
+                            <h1 class="cardHeader">Утреннее кардио 2. Сожги весь жир!</h1>
+                            <div class="cardContent">
+                                <ul>
+                                    <li class="cardListLeft">Кол-во тренировок</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">15</p>
+                                        <img class="ml-2" src="images/calendar.png" alt="">
+                                    </li>
+                                    <li class="cardListLeft">Тренировки от и до</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">18-30 мин</p>
+                                        <img class="ml-2" src="images/timer.png" alt="">
+                                    </li>
+                                    <li class="cardListLeft">Интенсивность</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">Низкая</p>
+                                        <img class="ml-2" src="images/graph.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-flex align-content-center cardFooter">
+                                <img class="cardFooterImg" src="./images/img.png" alt="">
+                                <p class="cardFooterText">Ольга Дерендеева</p>
+                                <p class="ml-auto cardFooterText">2276</p>
+                                <img class="mt-auto mb-auto" src="./images/user.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-3">
-                <div class="cardForFitness">
-                    <div class="position-relative">
-                        <div class="ellipse">
-                            <div class="ellipseM">
-                                <div class="stars">
-                                    <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 6px;height:6px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                <div class="item">
+                    <div class="cardForFitness">
+                        <div class="position-relative">
+                            <div class="ellipse">
+                                <div class="ellipseM">
+                                    <div class="stars">
+                                        <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 6px;height:6px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                                    </div>
+                                    <p class="ellipseText">зал</p>
                                 </div>
-                                <p class="ellipseText">зал</p>
                             </div>
+                            <img class="imgFitness" src="./images/img.png" alt="">
                         </div>
-                        <img class="imgFitness" src="./images/img.png" alt="">
-                    </div>
-                    <div class="p-2 cardWrapper">
-                        <h1 class="cardHeader">Утреннее кардио 2. Сожги весь жир!</h1>
-                        <div class="cardContent">
-                            <ul>
-                                <li class="cardListLeft">Кол-во тренировок</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">15</p>
-                                    <img class="ml-2" src="images/calendar.png" alt="">
-                                </li>
-                                <li class="cardListLeft">Тренировки от и до</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">18-30 мин</p>
-                                    <img class="ml-2" src="images/timer.png" alt="">
-                                </li>
-                                <li class="cardListLeft">Интенсивность</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">Низкая</p>
-                                    <img class="ml-2" src="images/graph.png" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="d-flex align-content-center cardFooter">
-                            <img class="cardFooterImg" src="./images/img.png" alt="">
-                            <p class="cardFooterText">Ольга Дерендеева</p>
-                            <p class="ml-auto cardFooterText">2276</p>
-                            <img class="mt-auto mb-auto" src="./images/user.png" alt="">
+                        <div class="p-2 cardWrapper">
+                            <h1 class="cardHeader">Утреннее кардио 2. Сожги весь жир!</h1>
+                            <div class="cardContent">
+                                <ul>
+                                    <li class="cardListLeft">Кол-во тренировок</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">15</p>
+                                        <img class="ml-2" src="images/calendar.png" alt="">
+                                    </li>
+                                    <li class="cardListLeft">Тренировки от и до</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">18-30 мин</p>
+                                        <img class="ml-2" src="images/timer.png" alt="">
+                                    </li>
+                                    <li class="cardListLeft">Интенсивность</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">Низкая</p>
+                                        <img class="ml-2" src="images/graph.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-flex align-content-center cardFooter">
+                                <img class="cardFooterImg" src="./images/img.png" alt="">
+                                <p class="cardFooterText">Ольга Дерендеева</p>
+                                <p class="ml-auto cardFooterText">2276</p>
+                                <img class="mt-auto mb-auto" src="./images/user.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-3">
-                <div class="cardForFitness">
-                    <div class="position-relative">
-                        <div class="ellipse">
-                            <div class="ellipseM">
-                                <div class="stars">
-                                    <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 6px;height:6px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                <div class="item">
+                    <div class="cardForFitness">
+                        <div class="position-relative">
+                            <div class="ellipse">
+                                <div class="ellipseM">
+                                    <div class="stars">
+                                        <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 6px;height:6px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                                    </div>
+                                    <p class="ellipseText">зал</p>
                                 </div>
-                                <p class="ellipseText">зал</p>
                             </div>
+                            <img class="imgFitness" src="./images/img.png" alt="">
                         </div>
-                        <img class="imgFitness" src="./images/img.png" alt="">
-                    </div>
-                    <div class="p-2 cardWrapper">
-                        <h1 class="cardHeader">Утреннее кардио 2. Сожги весь жир!</h1>
-                        <div class="cardContent">
-                            <ul>
-                                <li class="cardListLeft">Кол-во тренировок</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">15</p>
-                                    <img class="ml-2" src="images/calendar.png" alt="">
-                                </li>
-                                <li class="cardListLeft">Тренировки от и до</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">18-30 мин</p>
-                                    <img class="ml-2" src="images/timer.png" alt="">
-                                </li>
-                                <li class="cardListLeft">Интенсивность</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">Низкая</p>
-                                    <img class="ml-2" src="images/graph.png" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="d-flex align-content-center cardFooter">
-                            <img class="cardFooterImg" src="./images/img.png" alt="">
-                            <p class="cardFooterText">Ольга Дерендеева</p>
-                            <p class="ml-auto cardFooterText">2276</p>
-                            <img class="mt-auto mb-auto" src="./images/user.png" alt="">
+                        <div class="p-2 cardWrapper">
+                            <h1 class="cardHeader">Утреннее кардио 2. Сожги весь жир!</h1>
+                            <div class="cardContent">
+                                <ul>
+                                    <li class="cardListLeft">Кол-во тренировок</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">15</p>
+                                        <img class="ml-2" src="images/calendar.png" alt="">
+                                    </li>
+                                    <li class="cardListLeft">Тренировки от и до</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">18-30 мин</p>
+                                        <img class="ml-2" src="images/timer.png" alt="">
+                                    </li>
+                                    <li class="cardListLeft">Интенсивность</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">Низкая</p>
+                                        <img class="ml-2" src="images/graph.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-flex align-content-center cardFooter">
+                                <img class="cardFooterImg" src="./images/img.png" alt="">
+                                <p class="cardFooterText">Ольга Дерендеева</p>
+                                <p class="ml-auto cardFooterText">2276</p>
+                                <img class="mt-auto mb-auto" src="./images/user.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-3">
-                <div class="cardForFitness">
-                    <div class="position-relative">
-                        <div class="ellipse">
-                            <div class="ellipseM">
-                                <div class="stars">
-                                    <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 6px;height:6px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
-                                    <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                <div class="item">
+                    <div class="cardForFitness">
+                        <div class="position-relative">
+                            <div class="ellipse">
+                                <div class="ellipseM">
+                                    <div class="stars">
+                                        <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 6px;height:6px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 4px;height:4px" alt="">
+                                        <img src="./images/star_rate.png" style="width: 2px;height:2px" alt="">
+                                    </div>
+                                    <p class="ellipseText">зал</p>
                                 </div>
-                                <p class="ellipseText">зал</p>
                             </div>
+                            <img class="imgFitness" src="./images/img.png" alt="">
                         </div>
-                        <img class="imgFitness" src="./images/img.png" alt="">
-                    </div>
-                    <div class="p-2 cardWrapper">
-                        <h1 class="cardHeader">Утреннее кардио 2. Сожги весь жир!</h1>
-                        <div class="cardContent">
-                            <ul>
-                                <li class="cardListLeft">Кол-во тренировок</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">15</p>
-                                    <img class="ml-2" src="images/calendar.png" alt="">
-                                </li>
-                                <li class="cardListLeft">Тренировки от и до</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">18-30 мин</p>
-                                    <img class="ml-2" src="images/timer.png" alt="">
-                                </li>
-                                <li class="cardListLeft">Интенсивность</li>
-                                <li class="cardListRight">
-                                    <p class="m-0">Низкая</p>
-                                    <img class="ml-2" src="images/graph.png" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="d-flex align-content-center cardFooter">
-                            <img class="cardFooterImg" src="./images/img.png" alt="">
-                            <p class="cardFooterText">Ольга Дерендеева</p>
-                            <p class="ml-auto cardFooterText">2276</p>
-                            <img class="mt-auto mb-auto" src="./images/user.png" alt="">
+                        <div class="p-2 cardWrapper">
+                            <h1 class="cardHeader">Утреннее кардио 2. Сожги весь жир!</h1>
+                            <div class="cardContent">
+                                <ul>
+                                    <li class="cardListLeft">Кол-во тренировок</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">15</p>
+                                        <img class="ml-2" src="images/calendar.png" alt="">
+                                    </li>
+                                    <li class="cardListLeft">Тренировки от и до</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">18-30 мин</p>
+                                        <img class="ml-2" src="images/timer.png" alt="">
+                                    </li>
+                                    <li class="cardListLeft">Интенсивность</li>
+                                    <li class="cardListRight">
+                                        <p class="m-0">Низкая</p>
+                                        <img class="ml-2" src="images/graph.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-flex align-content-center cardFooter">
+                                <img class="cardFooterImg" src="./images/img.png" alt="">
+                                <p class="cardFooterText">Ольга Дерендеева</p>
+                                <p class="ml-auto cardFooterText">2276</p>
+                                <img class="mt-auto mb-auto" src="./images/user.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
