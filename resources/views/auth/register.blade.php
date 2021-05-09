@@ -79,14 +79,14 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 d-flex justify-content-end">
+        <div class="row auth-wrapper">
+            <div class="col-xl-8 col-lg-12 d-flex justify-content-end aside-wrapper">
                 @include('auth.aside',['data'=>1])
             </div>
-            <div class="col-8 first-step">
+            <div class="col-xl-8 col-lg-12 first-step">
                 <h1>Создайте свой аккаунт</h1>
                 <form action="" class="d-flex flex-column">
-                    <div class="d-flex">
+                    <div class="d-flex login-input">
                         <div class="custom-form-group-inline">
                             <input type="email" name="email" value="{{old('email')}}" placeholder="E-mail">
                             <div class="left-line"></div>

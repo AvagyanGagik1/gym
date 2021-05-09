@@ -2,9 +2,9 @@
 @section('content')
     <section class="sectionMain position-relative">
         <div class="owl-carousel owl-theme" id="owl-carousel">
-            <div class="main-slider-item">
-                <img src="/images/main.png" class="img-fluid" alt=""
-                     style="clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 25% 100%, 0 90%);">
+            <div class="main-slider-item" style="clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 28% 100%, 0 90%);">
+                <img src="/images/main.png" class="img-fluid" alt="">
+                <div class="overlay-slider"></div>
             </div>
         </div>
         <div class="sectionText">
@@ -467,7 +467,7 @@
             <div class="imgAbsolute col-lg-12">
                 <img class="img1" src="images/about.png" alt="">
                 <div class="img2">
-                    {{--                    <img src="images/about1.png" alt="">--}}
+                                        <img src="images/about1.png" alt="">
                     <img class="playButton" src="images/playButton.png">
                     <iframe width="569px" height="372px" controls=0 src="https://www.youtube.com/embed/9VxqYJmiHpA"
                             title="YouTube video player" frameborder="0"
@@ -531,11 +531,11 @@
                 <div class="row d-flex justify-content-around align-items-center">
 
                     <div class="owl-carousel owl-theme" id="owl-carousel-trainer">
-                        {{--                        <div class="col-1 p-0 justify-content-center d-flex expertBtn">--}}
-                        {{--                            <button>--}}
-                        {{--                                <img src="images/ArrowRW.png" alt="">--}}
-                        {{--                            </button>--}}
-                        {{--                        </div>--}}
+                                                <div class="col-1 p-0 justify-content-center d-flex expertBtn">
+                                                    <button>
+                                                        <img src="images/ArrowRW.png" alt="">
+                                                    </button>
+                                                </div>
                         <div class="col-2 p-0 expertRate">
                             <div class="trainer">
                                 <div>
@@ -771,11 +771,11 @@
                             <!--                        <img src="images/expertpicture.png" alt="">-->
                             <!--                    </div>-->
                         </div>
-                        {{--                        <div class="col-1 p-0 justify-content-center d-flex expertBtn">--}}
-                        {{--                            <button>--}}
-                        {{--                                <img src="images/ArrowLW.png" alt="">--}}
-                        {{--                            </button>--}}
-                        {{--                        </div>--}}
+                                                <div class="col-1 p-0 justify-content-center d-flex expertBtn">
+                                                    <button>
+                                                        <img src="images/ArrowLW.png" alt="">
+                                                    </button>
+                                                </div>
                     </div>
                 </div>
             </div>
