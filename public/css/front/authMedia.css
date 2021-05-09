@@ -1,0 +1,5 @@
+@media (max-width: 1065px) {
+  .auth-wrapper {
+    flex-direction: column;
+  }
+}
