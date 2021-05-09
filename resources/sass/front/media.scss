@@ -1,38 +1,54 @@
 @media (max-width: 766px) {
-    .mainNav{
-        height: 60px!important;
+    .mainNav {
+        height: 60px !important;
+
         .navHome {
             margin-left: 20px !important;
-            img{
-                width: 92px!important;
-                height: 36px!important;
+
+            img {
+                width: 92px !important;
+                height: 36px !important;
             }
         }
-        select{
-            font-size: 12px!important;
+
+        select {
+            font-size: 12px !important;
         }
     }
+    .sectionMain{
+        .sectionText{
+            width: 90% !important;
+            a {
+                max-width: 183px;
+                height: 48px;
+                padding: 0;
+            }
+        }
+
+    }
     .subscribe {
-            h6{
-                font-family: Montserrat;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 12px;
-                letter-spacing: 0.03em;
-                text-align: center;
+        h6 {
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 12px;
+            letter-spacing: 0.03em;
+            text-align: center;
 
-            }
-            h1{
-                font-family: Druk Wide Cyr;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 28px;
-                letter-spacing: 0em;
-                text-align: center;
+        }
 
-            }
+        h1 {
+            font-family: Druk Wide Cyr;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+
         .subscribe-item {
             padding-left: 21px !important;
             max-width: 375px;
@@ -40,7 +56,7 @@
             background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 75.78%), url(/images/subscribe.png);
 
             h3 {
-                width: 50%;
+                width: 60%;
                 font-family: Druk Wide Cyr, serif;
                 font-size: 18px;
                 font-style: normal;
@@ -93,16 +109,19 @@
     .about {
         div:first-of-type {
             max-width: 100%;
+            padding: 0;
         }
 
         .aboutFirst {
             h1 {
                 font-size: 20px;
+                line-height: 28px;
                 margin-bottom: 6px !important;
             }
 
             p {
                 font-size: 14px;
+                line-height: 19.6px;
                 margin-bottom: 14px !important;
             }
         }
@@ -110,25 +129,73 @@
         .aboutSecond {
             flex-direction: column;
             align-content: center;
+            margin-top: 50px !important;
+            margin-bottom: 50px !important;
 
             h1 {
                 text-align: center;
                 max-width: 100%;
                 font-size: 30px;
+                line-height: 36px;
             }
 
             p {
                 text-align: center;
                 max-width: 100%;
                 font-size: 14px;
+                line-height: 16.8px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .aboutThird {
+            margin-bottom: 50px ;
+            h2{
+                font-family: Druk Wide Cyr;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            }
+            p{
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0;
+                text-align: left;
+
+            }
+            h1{
+                font-family: Druk Wide Cyr;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            }
+            .aboutThird-back {
+                left: 35px;
+                top: 90px;
+
+                img:last-child {
+                    display: none;
+                }
             }
         }
     }
-    .gym{
-        .onlineGym{
+    .gym {
+        .onlineGym {
             display: none;
         }
-        h6{
+
+        h6 {
             font-family: Montserrat;
             font-size: 12px;
             font-style: normal;
@@ -137,7 +204,8 @@
             letter-spacing: 0.03em;
             text-align: center;
         }
-        h1{
+
+        h1 {
             font-family: Druk Wide Cyr;
             font-size: 20px;
             font-style: normal;
@@ -147,7 +215,8 @@
             text-align: center;
 
         }
-        p{
+
+        p {
             font-family: Montserrat;
             font-size: 14px;
             font-style: normal;
@@ -157,8 +226,8 @@
             text-align: left;
         }
     }
-    .program{
-        .program-header{
+    .program {
+        .program-header {
             h1 {
                 font-family: Druk Wide Cyr;
                 font-size: 20px;
@@ -169,7 +238,8 @@
                 text-align: center;
             }
         }
-        .cardHeader{
+
+        .cardHeader {
             font-family: Druk Wide Cyr;
             font-size: 14px;
             font-style: normal;
@@ -179,15 +249,164 @@
             text-align: left;
         }
     }
+    .expert{
+        h2{
+            font-family: Druk Wide Cyr;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h4{
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 14px;
+            letter-spacing: 0.03em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .trainer{
+            h1{
+                font-family: Montserrat;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 22px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            }
+            h3{
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 17px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .news{
+        margin-top: 50px;
+        h4{
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 12px;
+            letter-spacing: 0.03em;
+            text-align: center;
+        }
+        h2{
+            font-family: Druk Wide Cyr;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h3{
+            font-family: Druk Wide Cyr;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+        p{
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0.03em;
+            text-align: left;
+
+        }
+    }
+    .seo{
+        padding: 0;
+        margin-bottom: 50px;
+        h1{
+            font-family: Druk Wide Cyr;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+        h3{
+            font-family: Druk Wide Cyr;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 25px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+        p{
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+            &:first-child{
+                margin-bottom: 50px;
+            }
+        }
+    }
+    footer{
+        padding-top: 40px;
+        .footerPromo {
+            margin-bottom: 0!important;
+            h6{
+                margin: 0 0 17px;
+            }
+        }
+        .footerClient{
+            margin-bottom: 32px;
+        }
+        .footer-main-link{
+            margin-bottom: 30px;
+        }
+        ul{
+            a{
+                max-height: 18px;
+                margin-bottom: 16px!important;
+                font-size: 14px!important;
+                font-weight: 500!important;
+                line-height: 18px!important;
+
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
     .navClient {
-        width: auto!important;
-        svg{
+        width: auto !important;
+
+        svg {
             width: 24px;
             height: 24px;
         }
+
         width: auto;
         justify-content: flex-end;
 
@@ -292,11 +511,13 @@
 
 @media (max-width: 576px) {
     .navClient {
-        width: auto!important;
-        svg{
+        width: auto !important;
+
+        svg {
             width: 24px;
             height: 24px;
         }
+
         width: auto;
         justify-content: flex-end;
 

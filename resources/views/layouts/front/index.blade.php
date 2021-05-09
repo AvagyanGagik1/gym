@@ -79,7 +79,7 @@
         @guest
         <header>
             <nav class="mainNav">
-                <a href="#" class="navHome">
+                <a href="/" class="navHome">
                     <img src="images/logo.svg" alt="">
                 </a>
                 <div class="nav d-xl-flex d-none">

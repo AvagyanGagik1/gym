@@ -33,7 +33,7 @@
             align-items: center;
             text-decoration: none;
             font-family: Druk Wide Cyr, serif;
-            font-size: 18px;
+            font-size: 11px;
             font-style: normal;
             font-weight: 700;
             line-height: 18px;
@@ -59,7 +59,7 @@
             select {
                 border: none;
                 font-family: Druk Wide Cyr, serif;
-                font-size: 18px;
+                font-size: 12px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 15px;
@@ -156,8 +156,9 @@
 
     .btnNorm {
         border-radius: unset !important;
-        width: 233px;
+        max-width: 233px;
         height: 60px;
+        width: auto;
         font-family: Druk Wide Cyr, serif;
         font-size: 12px;
         font-style: normal;
@@ -165,6 +166,10 @@
         line-height: 18px;
         letter-spacing: 0;
         text-align: center;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -363,6 +368,16 @@
 
     .aboutThird {
         margin-bottom: 85px;
+        h2{
+            font-family: Druk Wide Cyr;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
        .aboutThird-back{
             position: absolute;
             right: 0;

@@ -824,7 +824,7 @@
     <section class="news d-flex justify-content-center flex-column align-items-center">
         <h4>ЧИТАЙТЕ НАС</h4>
         <h2>Последние новости и статьи </h2>
-        <div class="col-9 d-flex justify-content-center">
+        <div class="col-md-9 col-sm-12 col-12 d-flex justify-content-center">
             <div class="owl-carousel owl-theme" id="olw-carousel-news">
                 <div class=" d-flex flex-column justify-content-center	news-item">
                     <div class="newsAbsolute">
@@ -838,18 +838,10 @@
                         в любом движении, улучшают чувство баланса и защищают спину от травм и боли.</p>
                     <a href="#">Читать подробнее
                         <svg width="40" height="14" viewBox="0 0 40 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0)">
-                                <path
-                                    d="M-21.0957 7.7765L37.1902 7.7765L33.5935 11.0372L33.5935 13.2109L40.4443 7.00015L33.5935 0.789369L33.5935 2.96314L37.1902 6.22381L-21.0957 6.2238L-21.0957 7.7765Z"
-                                    fill="#111111"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0">
-                                    <rect width="40" height="14" fill="white"
-                                          transform="translate(40 14) rotate(-180)"/>
-                                </clipPath>
-                            </defs>
+                            <path d="M-21.0957 7.7765L37.1902 7.7765L33.5935 11.0372L33.5935 13.2109L40.4443 7.00015L33.5935 0.789369L33.5935 2.96314L37.1902 6.22381L-21.0957 6.2238L-21.0957 7.7765Z" fill="#111111"/>
                         </svg>
+
+
                     </a>
                 </div>
                 <div class=" d-flex flex-column justify-content-center	news-item">
@@ -864,18 +856,10 @@
                         в любом движении, улучшают чувство баланса и защищают спину от травм и боли.</p>
                     <a href="#">Читать подробнее
                         <svg width="40" height="14" viewBox="0 0 40 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0)">
-                                <path
-                                    d="M-21.0957 7.7765L37.1902 7.7765L33.5935 11.0372L33.5935 13.2109L40.4443 7.00015L33.5935 0.789369L33.5935 2.96314L37.1902 6.22381L-21.0957 6.2238L-21.0957 7.7765Z"
-                                    fill="#111111"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0">
-                                    <rect width="40" height="14" fill="white"
-                                          transform="translate(40 14) rotate(-180)"/>
-                                </clipPath>
-                            </defs>
+                            <path d="M-21.0957 7.7765L37.1902 7.7765L33.5935 11.0372L33.5935 13.2109L40.4443 7.00015L33.5935 0.789369L33.5935 2.96314L37.1902 6.22381L-21.0957 6.2238L-21.0957 7.7765Z" fill="#111111"/>
                         </svg>
+
+
                     </a>
                 </div>
                 <div class=" d-flex flex-column justify-content-center	news-item">
@@ -890,24 +874,16 @@
                         в любом движении, улучшают чувство баланса и защищают спину от травм и боли.</p>
                     <a href="#">Читать подробнее
                         <svg width="40" height="14" viewBox="0 0 40 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0)">
-                                <path
-                                    d="M-21.0957 7.7765L37.1902 7.7765L33.5935 11.0372L33.5935 13.2109L40.4443 7.00015L33.5935 0.789369L33.5935 2.96314L37.1902 6.22381L-21.0957 6.2238L-21.0957 7.7765Z"
-                                    fill="#111111"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0">
-                                    <rect width="40" height="14" fill="white"
-                                          transform="translate(40 14) rotate(-180)"/>
-                                </clipPath>
-                            </defs>
+                            <path d="M-21.0957 7.7765L37.1902 7.7765L33.5935 11.0372L33.5935 13.2109L40.4443 7.00015L33.5935 0.789369L33.5935 2.96314L37.1902 6.22381L-21.0957 6.2238L-21.0957 7.7765Z" fill="#111111"/>
                         </svg>
+
+
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="seo col-sm-12 col-lg-9 ">
+    <section class="seo col-sm-12 col-lg-9">
         <div class="seo-img">
             <img src="images/seoImage.png" alt="">
         </div>
