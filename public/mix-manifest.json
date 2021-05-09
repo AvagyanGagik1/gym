@@ -3,6 +3,7 @@
     "/js/package/owl.js": "/js/package/owl.js",
     "/js/front/front.js": "/js/front/front.js",
     "/css/package/owl.css": "/css/package/owl.css",
+    "/css/front/media.css": "/css/front/media.css",
     "/css/front/front.css": "/css/front/front.css",
     "/css/app.css": "/css/app.css"
 }

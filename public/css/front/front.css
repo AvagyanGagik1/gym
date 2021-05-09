@@ -208,10 +208,13 @@
 }
 .subscribe h1 {
   margin: 0 auto 30px auto;
+  text-align: center;
 }
 .subscribe .subscribe-item {
-  background-image: url(/images/subscribe.png);
+  background-image: linear-gradient(rgba(20, 18, 25, 0.5) 0%, rgba(20, 18, 25, 0.5) 100%), url(/images/subscribe.png);
   background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
   max-width: 480px;
   max-height: 494px;
   height: 494px;
@@ -901,11 +904,30 @@ footer .absoluteTop {
   margin: auto -15px !important;
 }
 
-.burn-content .content-user {
+.burn-content .funtional-training, .functional-content .funtional-training {
+  padding: 10px 20px;
+  background: url(/images/lastpage.png);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.burn-content .funtional-training h2, .functional-content .funtional-training h2 {
+  font-family: Druk Wide Cyr;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.burn-content .content-user, .functional-content .content-user {
   background: #F7F7F7;
   width: 100%;
 }
-.burn-content .content-user div:last-of-type p {
+.burn-content .content-user div:last-of-type p, .functional-content .content-user div:last-of-type p {
   font-family: Montserrat, serif;
   font-size: 14px;
   font-style: normal;
@@ -915,7 +937,7 @@ footer .absoluteTop {
   text-align: left;
   margin: 0 0 2px 0;
 }
-.burn-content .content-user div:last-of-type h1 {
+.burn-content .content-user div:last-of-type h1, .functional-content .content-user div:last-of-type h1 {
   font-family: Druk Wide Cyr, serif;
   font-size: 14px;
   font-style: normal;
@@ -924,7 +946,7 @@ footer .absoluteTop {
   letter-spacing: 0;
   text-align: left;
 }
-.burn-content .content-user-hide > button {
+.burn-content .content-user-hide > button, .functional-content .content-user-hide > button {
   width: 244px;
   height: 42px;
   margin: 20px -15px 20px auto;
@@ -938,12 +960,12 @@ footer .absoluteTop {
   letter-spacing: 0;
   text-align: center;
 }
-.burn-content .content-user-preview {
+.burn-content .content-user-preview, .functional-content .content-user-preview {
   border-bottom: 1px solid #CACACA;
   margin-bottom: 30px;
   padding: 0 0 30px 0;
 }
-.burn-content .content-user-image {
+.burn-content .content-user-image, .functional-content .content-user-image {
   border: 2px solid #E21A3D;
   padding: 2px;
   border-radius: 50%;
@@ -952,11 +974,11 @@ footer .absoluteTop {
   height: 48px;
   margin: 15px 12px 15px 25px;
 }
-.burn-content .content-user-image img {
+.burn-content .content-user-image img, .functional-content .content-user-image img {
   width: 100%;
   height: 100%;
 }
-.burn-content .content-user-image-small {
+.burn-content .content-user-image-small, .functional-content .content-user-image-small {
   border-radius: 50%;
   overflow: hidden;
   width: 42px;
@@ -968,10 +990,10 @@ footer .absoluteTop {
   justify-content: center;
   align-items: center;
 }
-.burn-content .content-user-video div:last-child .content-user-video-item {
+.burn-content .content-user-video div:last-child .content-user-video-item, .functional-content .content-user-video div:last-child .content-user-video-item {
   margin-bottom: 20px;
 }
-.burn-content .content-user-video div:last-child .content-user-video-item div:last-child h2 {
+.burn-content .content-user-video div:last-child .content-user-video-item div:last-child h2, .functional-content .content-user-video div:last-child .content-user-video-item div:last-child h2 {
   font-family: Druk Wide Cyr, serif;
   font-size: 14px;
   font-style: normal;
@@ -980,12 +1002,12 @@ footer .absoluteTop {
   letter-spacing: 0;
   text-align: left;
 }
-.burn-content .youtube-image-ccal {
+.burn-content .youtube-image-ccal, .functional-content .youtube-image-ccal {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.burn-content .youtube-image-ccal p {
+.burn-content .youtube-image-ccal p, .functional-content .youtube-image-ccal p {
   margin: 0;
   font-family: Montserrat, serif;
   font-size: 14px;
@@ -995,7 +1017,7 @@ footer .absoluteTop {
   letter-spacing: 0;
   text-align: left;
 }
-.burn-content .youtube-image-ccal div {
+.burn-content .youtube-image-ccal div, .functional-content .youtube-image-ccal div {
   background: #F0F712;
   display: flex;
   align-content: center;
@@ -1006,12 +1028,12 @@ footer .absoluteTop {
   border-radius: 50%;
   margin: auto 8px auto 20px;
 }
-.burn-content .youtube-save {
+.burn-content .youtube-save, .functional-content .youtube-save {
   margin-top: 30px;
   background: #111111;
   padding: 24px 40px;
 }
-.burn-content .youtube-save div h2 {
+.burn-content .youtube-save div h2, .functional-content .youtube-save div h2 {
   font-family: Druk Wide Cyr, serif;
   font-size: 14px;
   font-style: normal;
@@ -1021,7 +1043,7 @@ footer .absoluteTop {
   text-align: left;
   color: #FFFFFF;
 }
-.burn-content .youtube-save div button {
+.burn-content .youtube-save div button, .functional-content .youtube-save div button {
   background: #F0F712;
   padding: 16px 56px;
   font-family: Druk Wide Cyr, serif;
@@ -1032,7 +1054,7 @@ footer .absoluteTop {
   letter-spacing: 0;
   text-align: center;
 }
-.burn-content .youtube-comment-write h2 {
+.burn-content .youtube-comment-write h2, .functional-content .youtube-comment-write h2 {
   font-family: Druk Wide Cyr, serif;
   font-size: 20px;
   font-style: normal;
@@ -1042,7 +1064,7 @@ footer .absoluteTop {
   text-align: left;
   margin: 40px 0 20px 0;
 }
-.burn-content .youtube-comment-write textarea::-moz-placeholder {
+.burn-content .youtube-comment-write textarea::-moz-placeholder, .functional-content .youtube-comment-write textarea::-moz-placeholder {
   font-family: Montserrat, serif;
   font-size: 14px;
   font-style: normal;
@@ -1053,7 +1075,7 @@ footer .absoluteTop {
   color: #444444;
   margin: 40px 0 20px 0;
 }
-.burn-content .youtube-comment-write textarea:-ms-input-placeholder {
+.burn-content .youtube-comment-write textarea:-ms-input-placeholder, .functional-content .youtube-comment-write textarea:-ms-input-placeholder {
   font-family: Montserrat, serif;
   font-size: 14px;
   font-style: normal;
@@ -1064,7 +1086,7 @@ footer .absoluteTop {
   color: #444444;
   margin: 40px 0 20px 0;
 }
-.burn-content .youtube-comment-write textarea::placeholder {
+.burn-content .youtube-comment-write textarea::placeholder, .functional-content .youtube-comment-write textarea::placeholder {
   font-family: Montserrat, serif;
   font-size: 14px;
   font-style: normal;
@@ -1075,14 +1097,14 @@ footer .absoluteTop {
   color: #444444;
   margin: 40px 0 20px 0;
 }
-.burn-content .youtube-comment-write textarea {
+.burn-content .youtube-comment-write textarea, .functional-content .youtube-comment-write textarea {
   width: inherit;
   height: 140px;
   padding: 16px 40px 5px 40px;
   resize: inherit;
   border-color: #CBCBCB;
 }
-.burn-content .youtube-comment-write button {
+.burn-content .youtube-comment-write button, .functional-content .youtube-comment-write button {
   font-family: Druk Wide Cyr, serif;
   font-size: 11px;
   font-style: normal;
@@ -1095,7 +1117,7 @@ footer .absoluteTop {
   background: #111111;
   color: #FFFFFF;
 }
-.burn-content .youtube-comment h1 {
+.burn-content .youtube-comment h1, .functional-content .youtube-comment h1 {
   font-family: Druk Wide Cyr, serif;
   font-size: 20px;
   font-style: normal;
@@ -1105,7 +1127,7 @@ footer .absoluteTop {
   text-align: left;
   margin-bottom: 20px;
 }
-.burn-content .youtube-comment h1 span {
+.burn-content .youtube-comment h1 span, .functional-content .youtube-comment h1 span {
   font-family: Druk Wide Cyr, serif;
   font-size: 20px;
   font-style: normal;
@@ -1115,10 +1137,10 @@ footer .absoluteTop {
   text-align: left;
   color: #e21a3d;
 }
-.burn-content .youtube-comment div {
+.burn-content .youtube-comment div, .functional-content .youtube-comment div {
   margin-bottom: 40px;
 }
-.burn-content .youtube-comment div p {
+.burn-content .youtube-comment div p, .functional-content .youtube-comment div p {
   font-family: Montserrat, serif;
   font-size: 14px;
   font-style: normal;
@@ -1127,7 +1149,7 @@ footer .absoluteTop {
   letter-spacing: 0;
   text-align: left;
 }
-.burn-content .youtube-comment div a {
+.burn-content .youtube-comment div a, .functional-content .youtube-comment div a {
   font-family: Montserrat, serif;
   font-size: 14px;
   font-style: normal;
@@ -1139,10 +1161,10 @@ footer .absoluteTop {
   text-decoration: underline;
   margin-bottom: 40px;
 }
-.burn-content .youtube-comment div div {
+.burn-content .youtube-comment div div, .functional-content .youtube-comment div div {
   margin-bottom: 12px;
 }
-.burn-content .youtube-comment div div h3 {
+.burn-content .youtube-comment div div h3, .functional-content .youtube-comment div div h3 {
   font-family: Montserrat, serif;
   font-size: 16px;
   font-style: normal;
@@ -1152,7 +1174,7 @@ footer .absoluteTop {
   text-align: left;
   margin: 0 0 0 12px;
 }
-.burn-content .youtube-comment div div div {
+.burn-content .youtube-comment div div div, .functional-content .youtube-comment div div div {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -1160,12 +1182,12 @@ footer .absoluteTop {
   padding: 2px;
   overflow: hidden;
 }
-.burn-content .youtube-comment div div div img {
+.burn-content .youtube-comment div div div img, .functional-content .youtube-comment div div div img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-.burn-content .youtube-comment button {
+.burn-content .youtube-comment button, .functional-content .youtube-comment button {
   text-align: center;
   padding: 21px 0;
   width: 100%;
@@ -1173,10 +1195,10 @@ footer .absoluteTop {
   border: 1px solid;
   margin-bottom: 70px;
 }
-.burn-content .answer {
+.burn-content .answer, .functional-content .answer {
   padding-left: 50px !important;
 }
-.burn-content .youtube-program button {
+.burn-content .youtube-program button, .functional-content .youtube-program button {
   background: #F0F712;
   padding: 12px 0;
   width: 100%;
@@ -1878,10 +1900,14 @@ ul {
   align-items: center;
   justify-content: flex-end;
 }
+.cardListRight svg {
+  margin-left: 11px;
+}
 
 .cardFooterImg {
   height: 32px;
   width: 32px;
+  overflow: hidden;
   border-radius: 50%;
 }
 
@@ -1905,6 +1931,9 @@ ul {
   margin: -0.5rem;
   padding: 0.5rem;
   border-top: 1px solid #E6E6E6;
+}
+.cardFooter svg {
+  margin: auto 0;
 }
 
 body {
@@ -2703,14 +2732,14 @@ body {
   filter: brightness(0.5);
 }
 
-.owl-carousel .owl-nav button {
+#owl-carousel .owl-nav button {
   width: 54px;
   height: 54px;
   position: absolute;
   top: 50%;
   left: 10%;
 }
-.owl-carousel .owl-nav button span {
+#owl-carousel .owl-nav button span {
   display: block;
   position: relative;
   background-image: url(/images/btnLeft.png);
@@ -2719,12 +2748,12 @@ body {
   background-size: cover;
   transition: all 0.7s ease;
 }
-.owl-carousel .owl-nav button span:hover {
+#owl-carousel .owl-nav button span:hover {
   transform: scale(1.1);
 }
-.owl-carousel .owl-nav button:last-child {
+#owl-carousel .owl-nav button:last-child {
   left: 90%;
 }
-.owl-carousel .owl-nav button:last-child span {
+#owl-carousel .owl-nav button:last-child span {
   background-image: url(/images/btnRight.png);
 }

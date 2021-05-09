@@ -2,7 +2,7 @@ $(document).ready(function (){
     $('#owl-carousel').owlCarousel({
         autoplay: true,
         lazyLoad: true,
-        loop: true,
+        loop: false,
         margin: 20,
         /*
        animateOut: 'fadeOut',
@@ -23,6 +23,9 @@ $(document).ready(function (){
     $('#owl-carousel-program').owlCarousel({
         responsiveClass: true,
         margin: 20,
+        lazyLoad: true,
+        smartSpeed: 800,
+        nav: true,
         responsive:{
             0:{
                 items:1.2,
@@ -30,18 +33,51 @@ $(document).ready(function (){
             },
             600:{
                 items:2,
-                nav:false
             },
             1000:{
                 items:3,
-                nav:true,
-                loop:false
             },
             1100:{
                 items:4,
-                nav:true,
-                loop:false
             }
+        }
+    })
+    $('#owl-carousel-trainer').owlCarousel({
+        responsiveClass: true,
+        margin: 20,
+        lazyLoad: true,
+        smartSpeed: 800,
+        nav: true,
+        loop: false,
+        responsive:{
+            0:{
+                items:1.2,
+            },
+            600:{
+                items:2,
+            },
+            1000:{
+                items:3,
+            },
+            1100:{
+                items:4,
+            }
+        }
+    })
+    $('#olw-carousel-news').owlCarousel({
+        responsiveClass: true,
+        margin: 20,
+        lazyLoad: true,
+        smartSpeed: 800,
+        nav: true,
+        loop: false,
+        responsive:{
+            0:{
+                items:1.2,
+            },
+            1000:{
+                items:3,
+            },
         }
     })
 })
