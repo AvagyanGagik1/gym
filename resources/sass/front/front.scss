@@ -12,7 +12,11 @@
     }
 
     .navHome {
-        margin-left: 64px
+        margin-left: 64px;
+        img{
+            width: 145px;
+            height: 57px;
+        }
     }
 
     .navList {
@@ -29,7 +33,7 @@
             align-items: center;
             text-decoration: none;
             font-family: Druk Wide Cyr, serif;
-            font-size: 18px;
+            font-size: 11px;
             font-style: normal;
             font-weight: 700;
             line-height: 18px;
@@ -55,7 +59,7 @@
             select {
                 border: none;
                 font-family: Druk Wide Cyr, serif;
-                font-size: 18px;
+                font-size: 12px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 15px;
@@ -118,7 +122,7 @@
         top: 42%;
         z-index: 2;
         left: 26%;
-        width: 45%;
+        width: 53.75%;
 
         h1 {
             font-family: Druk Wide Cyr, serif;
@@ -152,8 +156,9 @@
 
     .btnNorm {
         border-radius: unset !important;
-        width: 233px;
+        max-width: 233px;
         height: 60px;
+        width: auto;
         font-family: Druk Wide Cyr, serif;
         font-size: 12px;
         font-style: normal;
@@ -161,6 +166,10 @@
         line-height: 18px;
         letter-spacing: 0;
         text-align: center;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -204,6 +213,11 @@
     }
 
     .gymImages {
+        .yellowUnderline{
+            width: 24px;
+            border-bottom: 1px solid #F0F712;
+            margin: 30px auto 0 auto;
+        }
         div {
             p {
                 max-width: 198px;
@@ -214,7 +228,7 @@
                 line-height: 17px;
                 letter-spacing: 0;
                 text-align: center;
-                margin-top: 40px;
+                margin-top: 10px;
             }
         }
     }
@@ -237,11 +251,25 @@
 .subscribe {
     h6 {
         margin: 70px auto 8px auto;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0.03em;
+        text-align: center;
+
     }
 
     h1 {
         margin: 0 auto 30px auto;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0em;
         text-align: center;
+
     }
 
     .subscribe-item {
@@ -340,6 +368,16 @@
 
     .aboutThird {
         margin-bottom: 85px;
+        h2{
+            font-family: Druk Wide Cyr;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
        .aboutThird-back{
             position: absolute;
             right: 0;
@@ -693,7 +731,6 @@ footer {
             line-height: 18px;
             letter-spacing: 0;
             text-align: center;
-            margin: auto 50px;
             color: #FFFFFF;
         }
 
@@ -710,7 +747,7 @@ footer {
                 line-height: 18px;
                 letter-spacing: 0;
                 text-align: center;
-                margin: auto 50px;
+                margin: auto;
                 color: #FFFFFF;
             }
         }
@@ -741,14 +778,33 @@ footer {
     }
 
     .footerPromo {
+        .d-flex,h6,img{
+            margin-bottom: 17px  ;
+        }
         margin-bottom: 25px;
 
         p {
-            margin: auto 12px auto 0;
+            margin: 0 12px 17px 0;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+
         }
 
         h6 {
-            margin: auto 12px auto 0;
+            margin: 0 12px 17px 0;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 12px;
+            letter-spacing: 0em;
+            text-align: center;
+
         }
     }
 
@@ -2121,25 +2177,27 @@ ul {
     letter-spacing: 0;
     margin: 8px 0;
     text-align: left;
-    flex: 0 0 54%;
+    flex: 0 0 56%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
 .cardListRight {
-    font-family: Montserrat, serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 14px;
-    letter-spacing: 0;
-    margin: 8px 0;
-    text-align: right;
-    flex: 0 0 46%;
+    flex: 0 0 44%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+        font-family: Montserrat, serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 14px;
+        letter-spacing: 0;
+        margin: 8px 0;
+        text-align: right;
+
 
     svg {
         margin-left: 11px;
