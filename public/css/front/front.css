@@ -291,6 +291,11 @@
 .about .aboutThird {
   margin-bottom: 85px;
 }
+.about .aboutThird .aboutThird-back {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
 .about .imgAbsolute {
   position: absolute;
   right: 0;
@@ -312,7 +317,11 @@
 .about .playButton {
   position: absolute;
 }
-.about .aboutComment1 img {
+.about .aboutComment1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about .aboutComment1 div img {
   width: 79px;
   height: 79px;
   margin: 6px;
@@ -904,7 +913,7 @@ footer .absoluteTop {
   margin: auto -15px !important;
 }
 
-.burn-content .funtional-training, .functional-content .funtional-training {
+.burn-content .functional-training, .functional-content .functional-training {
   padding: 10px 20px;
   background: url(/images/lastpage.png);
   display: flex;
@@ -913,7 +922,7 @@ footer .absoluteTop {
   border-radius: 10px;
   margin-bottom: 10px;
 }
-.burn-content .funtional-training h2, .functional-content .funtional-training h2 {
+.burn-content .functional-training h2, .functional-content .functional-training h2 {
   font-family: Druk Wide Cyr;
   color: #FFFFFF;
   font-size: 11px;
@@ -1792,7 +1801,6 @@ footer .absoluteTop {
 }
 
 .ellipse {
-  border: 1px solid;
   position: absolute;
   width: 48px;
   height: 48px;
@@ -1801,37 +1809,6 @@ footer .absoluteTop {
   top: 16px;
   left: 16px;
   border-radius: 50%;
-}
-
-.ellipseM {
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  border: 0.5px solid;
-  top: 2px;
-  left: 2px;
-  border-radius: 50%;
-}
-
-.stars {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 13px;
-  position: relative;
-}
-
-.ellipseText {
-  top: 15px;
-  position: relative;
-  font-family: Druk Wide Cyr, serif;
-  font-size: 11px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 13px;
-  letter-spacing: 0;
-  text-align: center;
-  margin: auto;
 }
 
 .cardForFitness {

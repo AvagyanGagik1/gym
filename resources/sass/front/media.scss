@@ -1,6 +1,38 @@
 @media (max-width: 766px) {
+    .mainNav{
+        height: 60px!important;
+        .navHome {
+            margin-left: 20px !important;
+            img{
+                width: 92px!important;
+                height: 36px!important;
+            }
+        }
+        select{
+            font-size: 12px!important;
+        }
+    }
     .subscribe {
+            h6{
+                font-family: Montserrat;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 12px;
+                letter-spacing: 0.03em;
+                text-align: center;
 
+            }
+            h1{
+                font-family: Druk Wide Cyr;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: center;
+
+            }
         .subscribe-item {
             padding-left: 21px !important;
             max-width: 375px;
@@ -92,6 +124,102 @@
             }
         }
     }
+    .gym{
+        .onlineGym{
+            display: none;
+        }
+        h6{
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 12px;
+            letter-spacing: 0.03em;
+            text-align: center;
+        }
+        h1{
+            font-family: Druk Wide Cyr;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+        p{
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+    .program{
+        .program-header{
+            h1 {
+                font-family: Druk Wide Cyr;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+        }
+        .cardHeader{
+            font-family: Druk Wide Cyr;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .navClient {
+        width: auto!important;
+        svg{
+            width: 24px;
+            height: 24px;
+        }
+        width: auto;
+        justify-content: flex-end;
+
+        a {
+            width: auto;
+            padding: 18px 25px;
+        }
+
+        span {
+            display: none;
+        }
+    }
+    .gymImages {
+        width: 100%;
+
+        .gymItem {
+            width: 100%;
+        }
+
+        .yellowUnderline {
+            display: none;
+        }
+
+        p {
+            margin-left: 20px;
+            text-align: left !important;
+        }
+
+        .gymSvgItems {
+            width: 60px;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -147,6 +275,7 @@
         .aboutThird-content {
             flex-direction: column;
             padding: 0;
+
             .aboutComment1 {
                 max-width: 100%;
                 flex-wrap: wrap;
@@ -157,6 +286,47 @@
                 max-width: 100%;
                 padding: 0;
             }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .navClient {
+        width: auto!important;
+        svg{
+            width: 24px;
+            height: 24px;
+        }
+        width: auto;
+        justify-content: flex-end;
+
+        a {
+            width: auto;
+            padding: 18px 25px;
+        }
+
+        span {
+            display: none;
+        }
+    }
+    .gymImages {
+        width: 100%;
+
+        .gymItem {
+            width: 100%;
+        }
+
+        .yellowUnderline {
+            display: none;
+        }
+
+        p {
+            margin-left: 20px;
+            text-align: left !important;
+        }
+
+        .gymSvgItems {
+            width: 60px;
         }
     }
 }
