@@ -1,11 +1,12 @@
-@media (max-width:766px ) {
-    .subscribe{
+@media (max-width: 766px) {
+    .subscribe {
 
-        .subscribe-item{
-            padding-left: 21px!important;
+        .subscribe-item {
+            padding-left: 21px !important;
             max-width: 375px;
             max-height: 240px;
             background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 75.78%), url(/images/subscribe.png);
+
             h3 {
                 width: 50%;
                 font-family: Druk Wide Cyr, serif;
@@ -17,6 +18,7 @@
                 text-align: left;
                 color: #FFFFFF;
             }
+
             p {
                 font-family: Montserrat, serif;
                 font-size: 36px;
@@ -26,6 +28,7 @@
                 letter-spacing: 0;
                 text-align: center;
                 color: #FFFFFF;
+
                 span {
                     font-family: Montserrat, serif;
                     font-size: 14px;
@@ -37,7 +40,8 @@
                     position: absolute;
                 }
             }
-            button{
+
+            button {
                 border-radius: unset !important;
                 max-width: 183px;
                 width: 100%;
@@ -54,29 +58,34 @@
             }
         }
     }
-    .about{
-        div:first-of-type{
+    .about {
+        div:first-of-type {
             max-width: 100%;
         }
-        .aboutFirst{
-            h1{
+
+        .aboutFirst {
+            h1 {
                 font-size: 20px;
-                margin-bottom: 6px!important;
+                margin-bottom: 6px !important;
             }
-            p{
+
+            p {
                 font-size: 14px;
-                margin-bottom: 14px!important;
+                margin-bottom: 14px !important;
             }
         }
-        .aboutSecond{
+
+        .aboutSecond {
             flex-direction: column;
             align-content: center;
-            h1{
+
+            h1 {
                 text-align: center;
                 max-width: 100%;
                 font-size: 30px;
             }
-            p{
+
+            p {
                 text-align: center;
                 max-width: 100%;
                 font-size: 14px;
@@ -84,19 +93,23 @@
         }
     }
 }
-@media (max-width: 992px){
-    .sectionMain{
-        .owl-nav{
+
+@media (max-width: 992px) {
+    .sectionMain {
+        .owl-nav {
             display: none;
         }
-        .sectionText{
-            top:0;
+
+        .sectionText {
+            top: 0;
             left: 38px;
-            h1{
-                Line-height:  30px;
+
+            h1 {
+                Line-height: 30px;
                 font-size: 22px;
             }
-            button{
+
+            button {
                 font-size: 15px;
                 max-width: 160px;
                 max-height: 38px;
@@ -105,18 +118,44 @@
         }
     }
 }
-@media (max-width:1900px ) {
-    .about{
-        .aboutFirst,.aboutSecond{
+
+@media (max-width: 1900px) {
+    .about {
+        .aboutFirst, .aboutSecond {
             max-width: 100%;
         }
-        .imgAbsolute{
-            position: unset!important;
-            .img1{
+
+        .imgAbsolute {
+            position: unset !important;
+
+            .img1 {
                 display: none;
             }
-            .img2{
-                position: unset!important;
+
+            .img2 {
+                position: unset !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .aboutThird {
+        max-width: 100%;
+        padding: 0;
+
+        .aboutThird-content {
+            flex-direction: column;
+            padding: 0;
+            .aboutComment1 {
+                max-width: 100%;
+                flex-wrap: wrap;
+                padding: 0;
+            }
+
+            .aboutComment2 {
+                max-width: 100%;
+                padding: 0;
             }
         }
     }
