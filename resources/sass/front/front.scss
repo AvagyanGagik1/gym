@@ -340,6 +340,11 @@
 
     .aboutThird {
         margin-bottom: 85px;
+       .aboutThird-back{
+            position: absolute;
+            right: 0;
+           z-index: -1;
+        }
     }
 
     .imgAbsolute {
@@ -368,10 +373,15 @@
     }
 
     .aboutComment1 {
-        img {
-            width: 79px;
-            height: 79px;
-            margin: 6px
+        display: flex;
+        flex-wrap: wrap;
+        div{
+
+            img {
+                width: 79px;
+                height: 79px;
+                margin: 6px
+            }
         }
     }
 
