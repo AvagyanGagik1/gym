@@ -29,3 +29,14 @@ Route::namespace('Front')->group(function(){
 
     });
 });
+Route::namespace('Admin')->middleware('auth')->prefix('admin')->group(function(){
+    Route::get('/','AdminController@index')->name('dashboard');
+    Route::namespace('Slider')->group(function (){
+        Route::get('/slider','SliderController@index')->name('slider.index');
+        Route::get('/slider/create','SliderController@create')->name('slider.create');
+        Route::post('/slider/store','SliderController@store')->name('slider.store');
+        Route::get('/slider/{id}/edit','SliderController@edit')->name('slider.edit');
+        Route::Put('/slider/{id}/update','SliderController@update')->name('slider.update');
+        Route::Delete('/slider/{id}','SliderController@destroy')->name('slider.destroy');
+    });
+});
