@@ -13,6 +13,10 @@
 .mainNav .navHome {
   margin-left: 64px;
 }
+.mainNav .navHome img {
+  width: 145px;
+  height: 57px;
+}
 .mainNav .navList {
   display: flex;
   list-style: none;
@@ -27,7 +31,7 @@
   align-items: center;
   text-decoration: none;
   font-family: Druk Wide Cyr, serif;
-  font-size: 18px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
@@ -51,7 +55,7 @@
 .mainNav .navClient div select {
   border: none;
   font-family: Druk Wide Cyr, serif;
-  font-size: 18px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 15px;
@@ -81,7 +85,10 @@
 }
 
 .sectionMain div:first-child {
-  height: 100%;
+  min-height: 408px;
+}
+.sectionMain div:first-child img {
+  min-height: 408px;
 }
 .sectionMain .btnLeft,
 .sectionMain .btnRight {
@@ -104,7 +111,7 @@
   top: 42%;
   z-index: 2;
   left: 26%;
-  width: 45%;
+  width: 53.75%;
 }
 .sectionMain .sectionText h1 {
   font-family: Druk Wide Cyr, serif;
@@ -132,8 +139,9 @@
 }
 .sectionMain .btnNorm {
   border-radius: unset !important;
-  width: 233px;
+  max-width: 233px;
   height: 60px;
+  width: auto;
   font-family: Druk Wide Cyr, serif;
   font-size: 12px;
   font-style: normal;
@@ -141,6 +149,10 @@
   line-height: 18px;
   letter-spacing: 0;
   text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gym {
@@ -179,6 +191,11 @@
   letter-spacing: 0.03em;
   text-align: center;
 }
+.gym .gymImages .yellowUnderline {
+  width: 24px;
+  border-bottom: 1px solid #F0F712;
+  margin: 30px auto 0 auto;
+}
 .gym .gymImages div p {
   max-width: 198px;
   font-family: Montserrat, serif;
@@ -188,7 +205,7 @@
   line-height: 17px;
   letter-spacing: 0;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .program .program-header {
@@ -205,9 +222,21 @@
 
 .subscribe h6 {
   margin: 70px auto 8px auto;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
 .subscribe h1 {
   margin: 0 auto 30px auto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0em;
   text-align: center;
 }
 .subscribe .subscribe-item {
@@ -290,6 +319,15 @@
 }
 .about .aboutThird {
   margin-bottom: 85px;
+}
+.about .aboutThird h2 {
+  font-family: Druk Wide Cyr;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .about .aboutThird .aboutThird-back {
   position: absolute;
@@ -596,7 +634,6 @@ footer .footerNav .footer-main-link {
   line-height: 18px;
   letter-spacing: 0;
   text-align: center;
-  margin: auto 50px;
   color: #FFFFFF;
 }
 footer .footerNav ul a {
@@ -611,7 +648,7 @@ footer .footerNav ul a {
   line-height: 18px;
   letter-spacing: 0;
   text-align: center;
-  margin: auto 50px;
+  margin: auto;
   color: #FFFFFF;
 }
 footer .footerClient {
@@ -638,11 +675,28 @@ footer .footerClient a:hover {
 footer .footerPromo {
   margin-bottom: 25px;
 }
+footer .footerPromo .d-flex, footer .footerPromo h6, footer .footerPromo img {
+  margin-bottom: 17px;
+}
 footer .footerPromo p {
-  margin: auto 12px auto 0;
+  margin: 0 12px 17px 0;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 footer .footerPromo h6 {
-  margin: auto 12px auto 0;
+  margin: 0 12px 17px 0;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 footer .absoluteTop {
   position: absolute;
@@ -1857,13 +1911,17 @@ ul {
   letter-spacing: 0;
   margin: 8px 0;
   text-align: left;
-  flex: 0 0 54%;
+  flex: 0 0 56%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
 .cardListRight {
+  flex: 0 0 44%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   font-family: Montserrat, serif;
   font-size: 12px;
   font-style: normal;
@@ -1872,10 +1930,6 @@ ul {
   letter-spacing: 0;
   margin: 8px 0;
   text-align: right;
-  flex: 0 0 46%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 .cardListRight svg {
   margin-left: 11px;

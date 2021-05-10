@@ -97,7 +97,10 @@
 
 .sectionMain {
     div:first-child {
-        height: 100%;
+        min-height: 408px;
+        img{
+           min-height: 408px;
+        }
     }
 
     .btnLeft,
@@ -2488,7 +2491,6 @@ body {
         color: #999999;
     }
 }
-
 .first-step {
     padding-top: 101px;
     padding-left: 60px;

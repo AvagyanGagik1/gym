@@ -6,7 +6,7 @@
                 </p>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-                <p class="m-0 mr-2">Разработано:</p><img src="images/PROMODEX.png" alt="">
+                <p class="m-0 mr-2">Разработано:</p><img src="/images/PROMODEX.png" alt="">
             </div>
         </div>
     </div>

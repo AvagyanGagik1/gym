@@ -9,42 +9,42 @@
                 <div class="col-12 p-0 d-flex align-items-center items">
                     <div class="col-2 item">
                         <div class="item-img">
-                            <img src="images/metan.png" alt="">
+                            <img src="/images/metan.png" alt="">
                         </div>
                         <h1>Метан и дека</h1>
                         <p>Награда за пройденные три тренировки за день;</p>
                     </div>
                     <div class="col-2 item">
                         <div class="item-img">
-                            <img src="images/metan.png" alt="">
+                            <img src="/images/metan.png" alt="">
                         </div>
                         <h1>Метан и дека</h1>
                         <p>Награда за пройденные три тренировки за день;</p>
                     </div>
                     <div class="col-2 item">
                         <div class="item-img">
-                            <img src="images/metan.png" alt="">
+                            <img src="/images/metan.png" alt="">
                         </div>
                         <h1>Метан и дека</h1>
                         <p>Награда за пройденные три тренировки за день;</p>
                     </div>
                     <div class="col-2 item">
                         <div class="item-img">
-                            <img src="images/metan.png" alt="">
+                            <img src="/images/metan.png" alt="">
                         </div>
                         <h1>Метан и дека</h1>
                         <p>Награда за пройденные три тренировки за день;</p>
                     </div>
                     <div class="col-2 item">
                         <div class="item-img">
-                            <img src="images/metan.png" alt="">
+                            <img src="/images/metan.png" alt="">
                         </div>
                         <h1>Метан и дека</h1>
                         <p>Награда за пройденные три тренировки за день;</p>
                     </div>
                     <div class="col-2 item">
                         <div class="item-img">
-                            <img src="images/achievementsBlock.png" alt="">
+                            <img src="/images/achievementsBlock.png" alt="">
                         </div>
                         <h1>Метан и дека</h1>
                         <p>Награда за пройденные три тренировки за день;</p>

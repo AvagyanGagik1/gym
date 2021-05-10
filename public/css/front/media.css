@@ -39,11 +39,14 @@
     top: 14px;
     right: 0;
   }
+  .auth-wrapper .aside-wrapper .login-aside li .completed span:after {
+    right: 30px;
+  }
   .auth-wrapper .first-step {
     padding: 0;
   }
   .auth-wrapper .first-step h1 {
-    display: none;
+    text-align: center;
   }
   .auth-wrapper .first-step .login-input {
     flex-direction: column;
@@ -63,25 +66,54 @@
   }
   .auth-wrapper .first-step .terms {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .auth-wrapper .first-step .terms span {
     display: block;
     position: relative;
+    min-width: 24px;
   }
   .auth-wrapper .first-step .terms input {
     position: relative;
     left: 24px;
+    min-width: 24px;
   }
-  .auth-wrapper .first-step .submit-group {
+  .auth-wrapper .first-step .terms label {
+    margin-left: 8px;
+  }
+
+  .second-step {
+    padding: 0;
+    justify-content: center;
+  }
+  .second-step h1 {
+    text-align: center;
+  }
+  .second-step .login-input {
+    justify-content: center;
+    display: flex;
+  }
+  .second-step .login-input .gender-select {
+    margin: 12px auto 53px auto;
+  }
+  .second-step .target .target-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  .second-step .target .target-group .item {
+    margin-bottom: 12px;
+  }
+
+  .submit-group {
     flex-direction: column;
     display: flex;
     align-items: center;
+    padding: 0 15px;
   }
-  .auth-wrapper .first-step .submit-group a {
-    border: 1px solid #F0F712;
+  .submit-group a {
     box-sizing: border-box;
     margin-bottom: 12px;
+    min-width: 24px;
     height: 48px;
     width: 100%;
     margin-left: 15px;
@@ -89,14 +121,106 @@
     text-align: center;
     line-height: 48px;
   }
-  .auth-wrapper .first-step .submit-group button {
+  .submit-group .next {
     margin-bottom: 12px;
     width: 100%;
     margin-left: 15px;
     margin-right: 15px;
+    padding: 0;
+  }
+
+  .third-step {
+    padding: 0;
+  }
+  .third-step h1 {
+    text-align: center;
+    width: 100%;
+  }
+  .third-step .personal-data {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+  }
+  .third-step .personal-data .item {
+    margin: 4.5px;
+    width: 168px;
+  }
+
+  .four-step {
+    padding: 0;
+  }
+  .four-step h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .four-step .subscriptions {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .four-step .subscriptions .item {
+    width: 345px;
+  }
+  .four-step .payment-wrapper {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .four-step .payment-wrapper .item {
+    width: 168px;
+    margin: 4.5px;
   }
 }
 @media (max-width: 766px) {
+  .mainNav {
+    height: 60px !important;
+  }
+  .mainNav .navHome {
+    margin-left: 20px !important;
+  }
+  .mainNav .navHome img {
+    width: 92px !important;
+    height: 36px !important;
+  }
+  .mainNav .navClient a {
+    height: 60px;
+  }
+  .mainNav select {
+    font-size: 12px !important;
+  }
+
+  .sectionMain .sectionText {
+    width: 90% !important;
+  }
+  .sectionMain .sectionText a {
+    max-width: 183px;
+    height: 48px;
+    padding: 0;
+  }
+
+  .subscribe h6 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .subscribe h1 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
   .subscribe .subscribe-item {
     padding-left: 21px !important;
     max-width: 375px;
@@ -152,28 +276,297 @@
 
   .about div:first-of-type {
     max-width: 100%;
+    padding: 0;
   }
   .about .aboutFirst h1 {
     font-size: 20px;
+    line-height: 28px;
     margin-bottom: 6px !important;
   }
   .about .aboutFirst p {
     font-size: 14px;
+    line-height: 19.6px;
     margin-bottom: 14px !important;
   }
   .about .aboutSecond {
     flex-direction: column;
     align-content: center;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
   }
   .about .aboutSecond h1 {
     text-align: center;
     max-width: 100%;
     font-size: 30px;
+    line-height: 36px;
   }
   .about .aboutSecond p {
     text-align: center;
     max-width: 100%;
     font-size: 14px;
+    line-height: 16.8px;
+    margin-bottom: 20px;
+  }
+  .about .aboutThird {
+    margin-bottom: 50px;
+  }
+  .about .aboutThird h2 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .about .aboutThird p {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .about .aboutThird h1 {
+    font-family: Druk Wide Cyr;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .about .aboutThird .aboutThird-back {
+    left: 35px;
+    top: 90px;
+  }
+  .about .aboutThird .aboutThird-back img:last-child {
+    display: none;
+  }
+
+  .gym .onlineGym {
+    display: none;
+  }
+  .gym h6 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .gym h1 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .gym p {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .program .program-header h1 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .program .cardHeader {
+    font-family: Druk Wide Cyr;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .expert h2 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .expert h4 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .expert .trainer h1 {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .expert .trainer h3 {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .news {
+    margin-top: 50px;
+  }
+  .news h4 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .news h2 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .news h3 {
+    font-family: Druk Wide Cyr;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .news p {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+
+  .seo {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .seo h1 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .seo h3 {
+    font-family: Druk Wide Cyr;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .seo p {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .seo p:first-child {
+    margin-bottom: 50px;
+  }
+
+  footer {
+    padding-top: 40px;
+  }
+  footer .footerPromo {
+    margin-bottom: 0 !important;
+  }
+  footer .footerPromo h6 {
+    margin: 0 0 17px;
+  }
+  footer .footerClient {
+    margin-bottom: 32px;
+  }
+  footer .footer-main-link {
+    margin-bottom: 30px;
+  }
+  footer ul a {
+    max-height: 18px;
+    margin-bottom: 16px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+  }
+}
+@media (max-width: 576px) {
+  .navClient {
+    width: auto !important;
+    width: auto;
+    justify-content: flex-end;
+  }
+  .navClient svg {
+    width: 24px;
+    height: 24px;
+  }
+  .navClient a {
+    width: auto;
+    padding: 18px 25px;
+  }
+  .navClient span {
+    display: none;
+  }
+
+  .gymImages {
+    width: 100%;
+  }
+  .gymImages .gymItem {
+    width: 100%;
+  }
+  .gymImages .yellowUnderline {
+    display: none;
+  }
+  .gymImages p {
+    margin-left: 20px;
+    text-align: left !important;
+  }
+  .gymImages .gymSvgItems {
+    width: 60px;
   }
 }
 @media (max-width: 992px) {
@@ -231,5 +624,40 @@
 @media (min-width: 920px) {
   .owl-carousel .owl-nav {
     display: block !important;
+  }
+}
+@media (max-width: 576px) {
+  .navClient {
+    width: auto !important;
+    width: auto;
+    justify-content: flex-end;
+  }
+  .navClient svg {
+    width: 24px;
+    height: 24px;
+  }
+  .navClient a {
+    width: auto;
+    padding: 18px 25px;
+  }
+  .navClient span {
+    display: none;
+  }
+
+  .gymImages {
+    width: 100%;
+  }
+  .gymImages .gymItem {
+    width: 100%;
+  }
+  .gymImages .yellowUnderline {
+    display: none;
+  }
+  .gymImages p {
+    margin-left: 20px;
+    text-align: left !important;
+  }
+  .gymImages .gymSvgItems {
+    width: 60px;
   }
 }

@@ -505,7 +505,6 @@
             <div class="imgAbsolute col-lg-12">
                 <img class="img1" src="images/about.png" alt="">
                 <div class="img2">
-                                        <img src="images/about1.png" alt="">
                     <img class="playButton" src="images/playButton.png">
                     <iframe width="569px" height="372px" controls=0 src="https://www.youtube.com/embed/9VxqYJmiHpA"
                             title="YouTube video player" frameborder="0"

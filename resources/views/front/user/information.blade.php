@@ -8,9 +8,9 @@
                 </div>
                 <div class="col-12 p-0 personal-head">
                     <div class="personal-head-img">
-                        <img src="images/personal.png" alt="">
+                        <img src="/images/personal.png" alt="">
                         <button>
-                            <img src="images/personal-camera.png" alt="">
+                            <img src="/images/personal-camera.png" alt="">
                         </button>
                     </div>
                     <div class="personal-head-name d-flex flex-column align-items-start">
@@ -37,7 +37,7 @@
                                 82.1
                             </h6>
                             <div class="line">
-                                <img src="images/polygon.png" alt="">
+                                <img src="/images/polygon.png" alt="">
                             </div>
                             <div>
                                 <button>-</button><button>+</button>
@@ -51,7 +51,7 @@
                                 178
                             </h6>
                             <div class="line">
-                                <img src="images/polygon.png" alt="">
+                                <img src="/images/polygon.png" alt="">
                             </div>
                             <div>
                                 <button>-</button><button>+</button>
@@ -65,7 +65,7 @@
                                 24
                             </h6>
                             <div class="line">
-                                <img src="images/polygon.png" alt="">
+                                <img src="/images/polygon.png" alt="">
                             </div>
                             <div>
                                 <button>-</button><button>+</button>
@@ -86,6 +86,7 @@
                     <div class="col-8 p-0">
                         <div class="col-12 personal-params-header">
                             <h3>График потери веса</h3>
+                            <canvas id="profileChart"></canvas>
                         </div>
                     </div>
                 </div>
@@ -124,4 +125,5 @@
             </div>
         </div>
     </section>
+    <script src="{{asset('/js/front/profileChart.js')}}" defer></script>
 @endsection

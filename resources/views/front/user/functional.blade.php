@@ -5,19 +5,18 @@
             <div class="col-10 d-flex justify-content-center flex-wrap m-auto">
                 <div class="col-12 p-0 d-flex align-items-center justify-content-between subscribe-header">
                     <h2>Функциональные тренировки</h2>
-                    <img src="images/cardioHome.png" alt="">
+                    <img src="/images/cardioHome.png" alt="">
                 </div>
                 <div class="col-12 d-flex justify-content-between align-items-center content-user">
                     <div class="d-flex align-items-center content-user">
                         <div class="content-user-image">
-                            <img src="images/roundUser.png" alt="">
+                            <img src="/images/roundUser.png" alt="">
                         </div>
                         <div class="d-flex flex-column ">
                             <p>Тренер</p>
                             <h1>Лера Алёшкина</h1>
                         </div>
                     </div>
-
                     <div class="d-flex align-items-center">
                         <div class="d-flex justify-content-center align-items-center content-user">
                             <div class="content-user-image-small">
@@ -48,14 +47,14 @@
                 <div class="col-12 d-flex justify-content-between align-items-center content-user-hide">
                     <button>
                         Скрыть описание
-                        <img src="images/vectorTop.png" alt="">
+                        <img src="/images/vectorTop.png" alt="">
                     </button>
                 </div>
 
                 <div class="col-12 d-flex justify-content-between
         content-user-preview">
                     <div class="col-5 pl-0">
-                        <img src="images/previewPlaceholder.png" alt="">
+                        <img src="/images/previewPlaceholder.png" alt="">
                     </div>
                     <div class="col-7 pr-0">
                         <p>
@@ -220,7 +219,7 @@
                             <div class="col-12 p-0">
                                 <div class="col-12 p-0 d-flex align-items-center">
                                     <div>
-                                        <img src="images/previewPlaceholder.png" alt="">
+                                        <img src="/images/previewPlaceholder.png" alt="">
                                     </div>
                                     <h3>Юлия Стриж</h3>
                                 </div>
@@ -233,7 +232,7 @@
                             <div class="col-12 p-0 answer">
                                 <div class="col-12 p-0 d-flex align-items-center">
                                     <div>
-                                        <img src="images/previewPlaceholder.png" alt="">
+                                        <img src="/images/previewPlaceholder.png" alt="">
                                     </div>
                                     <h3>Юлия Стриж</h3>
                                 </div>
@@ -252,7 +251,7 @@
                     <div class="col-5 ">
                         <div class="col-12 d-flex content-user-video-item">
                             <div class="col-6 pl-0">
-                                <img src="images/previewPlaceholder.png" class="w-100" alt="">
+                                <img src="/images/previewPlaceholder.png" class="w-100" alt="">
                             </div>
                             <div class="col-6 pr-0">
                                 <h2>
@@ -262,7 +261,7 @@
                         </div>
                         <div class="col-12 d-flex content-user-video-item">
                             <div class="col-6 pl-0">
-                                <img src="images/previewPlaceholder.png" class="w-100" alt="">
+                                <img src="/images/previewPlaceholder.png" class="w-100" alt="">
                             </div>
                             <div class="col-6 pr-0">
                                 <h2>
@@ -272,7 +271,7 @@
                         </div>
                         <div class="col-12 d-flex content-user-video-item">
                             <div class="col-6 pl-0">
-                                <img src="images/previewPlaceholder.png" class="w-100" alt="">
+                                <img src="/images/previewPlaceholder.png" class="w-100" alt="">
                             </div>
                             <div class="col-6 pr-0">
                                 <h2>
@@ -282,7 +281,7 @@
                         </div>
                         <div class="col-12 d-flex content-user-video-item">
                             <div class="col-6 pl-0">
-                                <img src="images/previewPlaceholder.png" class="w-100" alt="">
+                                <img src="/images/previewPlaceholder.png" class="w-100" alt="">
                             </div>
                             <div class="col-6 pr-0">
                                 <h2>
@@ -292,7 +291,7 @@
                         </div>
                         <div class="col-12 d-flex content-user-video-item">
                             <div class="col-6 pl-0">
-                                <img src="images/previewPlaceholder.png" class="w-100" alt="">
+                                <img src="/images/previewPlaceholder.png" class="w-100" alt="">
                             </div>
                             <div class="col-6 pr-0">
                                 <h2>
@@ -302,7 +301,7 @@
                         </div>
                         <div class="col-12 d-flex content-user-video-item">
                             <div class="col-6 pl-0">
-                                <img src="images/previewPlaceholder.png" class="w-100" alt="">
+                                <img src="/images/previewPlaceholder.png" class="w-100" alt="">
                             </div>
                             <div class="col-6 pr-0">
                                 <h2>

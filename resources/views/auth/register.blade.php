@@ -80,7 +80,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="row auth-wrapper">
-            <div class="col-xl-8 col-lg-12 d-flex justify-content-end aside-wrapper">
+            <div class="col-xl-4 col-lg-12 d-flex justify-content-end aside-wrapper">
                 @include('auth.aside',['data'=>1])
             </div>
             <div class="col-xl-8 col-lg-12 first-step">
