@@ -116,7 +116,7 @@
     .sideNav{
         display: none;
     }
-    .program-content,.food-content,.achievements-content,.information-content,.subscribe-content{
+    .program-content,.food-content,.achievements-content,.information-content,.subscribe-content,.burn-content{
         left: unset;
         width: 100%;
         padding-top: 90px;
@@ -147,6 +147,41 @@
                     text-align: center;
                 }
             }
+        }
+    }
+    .subscribe-content{
+        .subscribe-transform{
+            flex-direction: column;
+            h3{
+                font-family: Druk Wide Cyr;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+            p{
+                font-size: 12px;
+            }
+            *{
+                max-width: 313px!important;
+            }
+        }
+        .subscribe-new-plan-header{
+            h2{
+                font-family: Druk Wide Cyr;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: center;
+
+            }
+        }
+        .subscribe-new-plan-price{
+            margin-bottom: 28px;
         }
     }
     .userFooter{
