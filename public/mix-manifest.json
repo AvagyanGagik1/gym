@@ -4,6 +4,7 @@
     "/js/package/chart.js": "/js/package/chart.js",
     "/js/package/date-fns.js": "/js/package/date-fns.js",
     "/js/front/front.js": "/js/front/front.js",
+    "/js/front/profileChart.js": "/js/front/profileChart.js",
     "/js/admin/index.js": "/js/admin/index.js",
     "/css/package/owl.css": "/css/package/owl.css",
     "/css/admin/admin.css": "/css/admin/admin.css",

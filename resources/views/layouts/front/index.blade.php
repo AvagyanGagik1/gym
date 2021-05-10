@@ -197,11 +197,11 @@
     </header>
     <section class="sideNav">
         <div class="sideNavTop">
-            <a class="active" href="">Мои программы</a>
-            <a href="">Питание</a>
-            <a href="">Достижения</a>
-            <a href="">Личная информация</a>
-            <a href="">Моя подписка</a>
+            <a class=" {{ Request::is('profile') ? 'active' : '' }}" href="{{route('profile.index')}}">Мои программы</a>
+            <a class="{{ Request::is('profile/food') ? 'active' : '' }}" href="{{route('profile.food')}}">Питание</a>
+            <a class="{{ Request::is('profile/achievements') ? 'active' : '' }}" href="{{route('profile.achievements')}}">Достижения</a>
+            <a class="{{ Request::is('profile/information') ? 'active' : '' }}" href="{{route('profile.information')}}">Личная информация</a>
+            <a class="{{ Request::is('profile/subscribe') ? 'active' : '' }}" href="{{route('profile.subscribe')}}">Моя подписка</a>
             <a href="">Выход</a>
         </div>
         <div class="sideNavBottom">

@@ -39,14 +39,14 @@
                     <div class="col-12 d-flex justify-content-between p-0 food-category-content-alert">
                         <p>Выберите только одно блюдо в каждой категории</p>
                         <div>
-                            <img src="images/pdf.png" alt="">
+                            <img src="/images/pdf.png" alt="">
                             <a href="">Скачать рекомендации по питанию</a>
                         </div>
                     </div>
                     <div class="col-12 d-flex justify-content-between p-0 food-category-content-items">
                         <div class="col-4 food-category-content-item">
                             <div class="food-category-content-item-img d-flex justify-content-center">
-                                <img src="images/food-item.png" alt="">
+                                <img src="/images/food-item.png" alt="">
                             </div>
                             <div class="food-category-content-item-heads">
                                 <h3>Куриная грудка "под шубой",в духовке</h3>
@@ -62,14 +62,14 @@
                             </div>
                             <button class="food-category-content-item-button ">
                                 <div class="selected">
-                                    <img src="images/btntick.png" alt="">
+                                    <img src="/images/btntick.png" alt="">
                                 </div>
                                 ДОБАВИТЬ НА ЗАВТРОК
                             </button>
                         </div>
                         <div class="col-4 food-category-content-item">
                             <div class="food-category-content-item-img">
-                                <img src="images/food-item.png" alt="">
+                                <img src="/images/food-item.png" alt="">
                             </div>
                             <div class="food-category-content-item-heads">
                                 <h3>Куриная грудка "под шубой",в духовке</h3>
@@ -85,14 +85,14 @@
                             </div>
                             <button class="food-category-content-item-button">
                                 <div>
-                                    <img src="images/btnplus.png" alt="">
+                                    <img src="/images/btnplus.png" alt="">
                                 </div>
                                 ДОБАВИТЬ НА ЗАВТРОК
                             </button>
                         </div>
                         <div class="col-4 food-category-content-item">
                             <div class="food-category-content-item-img">
-                                <img src="images/food-item.png" alt="">
+                                <img src="/images/food-item.png" alt="">
                             </div>
                             <div class="food-category-content-item-heads">
                                 <h3>Куриная грудка "под шубой",в духовке</h3>
@@ -108,7 +108,7 @@
                             </div>
                             <button class="food-category-content-item-button">
                                 <div>
-                                    <img src="images/btnplus.png" alt="">
+                                    <img src="/images/btnplus.png" alt="">
                                 </div>
                                 ДОБАВИТЬ НА ЗАВТРОК
                             </button>
@@ -122,7 +122,7 @@
                     <div class="col-12 d-flex justify-content-between p-0 food-category-content-items">
                         <div class="col-4 food-category-content-item">
                             <div class="food-category-content-item-img d-flex justify-content-center">
-                                <img src="images/food-item.png" alt="">
+                                <img src="/images/food-item.png" alt="">
                             </div>
                             <div class="food-category-content-item-heads">
                                 <h3>Куриная грудка "под шубой",в духовке</h3>
@@ -138,14 +138,14 @@
                             </div>
                             <button class="food-category-content-item-button ">
                                 <div class="selected">
-                                    <img src="images/btntick.png" alt="">
+                                    <img src="/images/btntick.png" alt="">
                                 </div>
                                 ДОБАВИТЬ НА ЗАВТРОК
                             </button>
                         </div>
                         <div class="col-4 food-category-content-item">
                             <div class="food-category-content-item-img">
-                                <img src="images/food-item.png" alt="">
+                                <img src="/images/food-item.png" alt="">
                             </div>
                             <div class="food-category-content-item-heads">
                                 <h3>Куриная грудка "под шубой",в духовке</h3>
@@ -161,14 +161,14 @@
                             </div>
                             <button class="food-category-content-item-button">
                                 <div>
-                                    <img src="images/btnplus.png" alt="">
+                                    <img src="/images/btnplus.png" alt="">
                                 </div>
                                 ДОБАВИТЬ НА ЗАВТРОК
                             </button>
                         </div>
                         <div class="col-4 food-category-content-item">
                             <div class="food-category-content-item-img">
-                                <img src="images/food-item.png" alt="">
+                                <img src="/images/food-item.png" alt="">
                             </div>
                             <div class="food-category-content-item-heads">
                                 <h3>Куриная грудка "под шубой",в духовке</h3>
@@ -184,7 +184,7 @@
                             </div>
                             <button class="food-category-content-item-button">
                                 <div>
-                                    <img src="images/btnplus.png" alt="">
+                                    <img src="/images/btnplus.png" alt="">
                                 </div>
                                 ДОБАВИТЬ НА ЗАВТРОК
                             </button>

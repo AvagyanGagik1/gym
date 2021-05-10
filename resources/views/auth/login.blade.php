@@ -2,14 +2,15 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 d-flex justify-content-end">
+        <div class="row auth-wrapper">
+            <div class="col-xl-4 col-lg-12 d-flex justify-content-end aside-wrapper">
                 @include('auth.loginAside')
             </div>
-            <div class="col-8 first-step">
+            <div class="col-xl-8 col-lg-12 first-step">
                 <h1>Авторизация</h1>
-                <form action="" class="d-flex flex-column">
-                    <div class="d-flex">
+                <form method="POST" action="{{ route('login') }}" class="d-flex flex-column">
+                    @csrf
+                    <div class="d-flex login-input">
                         <div class="custom-form-group-inline">
                             <input type="email" name="email" value="{{old('email')}}" placeholder="E-mail">
                             <div class="left-line"></div>
@@ -73,11 +74,12 @@
                         </div>
                     </div>
                     <div class="terms">
-                        <input type="checkbox" class="terms-checkbox" id="terms-checkbox">
-                        <label>Я прочитал Условия Соглашения и даю согласение на обработку личных данных</label>
+                        <input type="checkbox" class="terms-checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <span></span>
+                        <label>Запомнить меня</label>
                     </div>
                     <div class="submit-group">
-                        <a class="next" href="{{route('login.secondStep')}}" >ВОЙТИ</a>
+                        <button class="next" type="submit" >ВОЙТИ</button>
                         <a class="prev" href="{{route('register')}}">РЕГИСТРАЦИЯ</a>
                     </div>
                 </form>
@@ -126,7 +128,7 @@
     {{--                        <div class="form-group row">--}}
     {{--                            <div class="col-md-6 offset-md-4">--}}
     {{--                                <div class="form-check">--}}
-    {{--                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
+{{--                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
 
     {{--                                    <label class="form-check-label" for="remember">--}}
     {{--                                        {{ __('Remember Me') }}--}}

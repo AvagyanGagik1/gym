@@ -40,3 +40,12 @@ Route::namespace('Admin')->middleware('auth')->prefix('admin')->group(function()
         Route::Delete('/slider/{id}','SliderController@destroy')->name('slider.destroy');
     });
 });
+Route::prefix('profile')->namespace('Profile')->group(function (){
+    Route::get('/','ProfileController@index')->name('profile.index');
+    Route::get('/information','ProfileController@information')->name('profile.information');
+    Route::get('/food','ProfileController@food')->name('profile.food');
+    Route::get('/achievements','ProfileController@achievements')->name('profile.achievements');
+    Route::get('/burn-fat','ProfileController@burnFat')->name('profile.burnFat');
+    Route::get('/subscribe','ProfileController@subscribe')->name('profile.subscribe');
+    Route::get('/functional','ProfileController@functional')->name('profile.functional');
+});

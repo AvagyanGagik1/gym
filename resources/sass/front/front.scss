@@ -97,7 +97,10 @@
 
 .sectionMain {
     div:first-child {
-        height: 100%;
+        min-height: 408px;
+        img{
+           min-height: 408px;
+        }
     }
 
     .btnLeft,
@@ -2506,7 +2509,6 @@ body {
         color: #999999;
     }
 }
-
 .first-step {
     padding-top: 101px;
     padding-left: 60px;
@@ -3232,7 +3234,14 @@ body {
 
     }
 }
-
+.overlay-slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(90.64deg, #000000 6.6%, rgba(0, 0, 0, 0) 51.79%);
+}
 
 body {
 

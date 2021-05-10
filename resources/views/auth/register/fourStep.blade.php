@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 d-flex justify-content-end">
+        <div class="row auth-wrapper">
+            <div class="col-xl-4 col-lg-12 justify-content-end aside-wrapper">
                 @include('auth.aside',['data'=>4])
             </div>
-            <div class="col-8 four-step">
+            <div class="col-xl-8 col-lg-12 four-step">
                 <h1>Подписка</h1>
                 <div class="subscriptions">
                     <div class="item">

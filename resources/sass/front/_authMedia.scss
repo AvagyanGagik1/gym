@@ -1,0 +1,221 @@
+@media (max-width: 1200px) {
+    .auth-wrapper {
+        flex-direction: column;
+        align-items: center;
+
+        .aside-wrapper {
+            width: 100%;
+            padding: 0;
+            justify-content: center !important;
+
+            .login-aside {
+                flex-direction: row;
+                height: auto;
+                width: 100%;
+                padding: 0;
+                justify-content: center;
+                align-items: center;
+
+                li {
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 30px;
+
+                    .item {
+                        font-family: Druk Wide Cyr, serif;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: 140%;
+                        margin-top: 20px;
+                        display: none;
+                    }
+
+                    .custom-ellipse {
+                        margin-right: 19px;
+                    }
+
+                    .underline {
+                        transform: rotate(0);
+                        top: 14px;
+                        right: 0;
+                    }
+
+                    .completed {
+                        span {
+                            &:after {
+                                right: 30px;
+                            }
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .first-step {
+            padding: 0;
+
+            h1 {
+                text-align: center;
+            }
+
+            .login-input {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .social-form {
+
+                h1 {
+                    display: block;
+                    text-align: center;
+                }
+
+                .social-btn-grp {
+                    flex-direction: column;
+                    align-items: center;
+
+                    button {
+                        margin: 0 0 12px !important;
+                    }
+                }
+            }
+
+            .terms {
+                display: flex;
+                justify-content: flex-start;
+
+                span {
+                    display: block;
+                    position: relative;
+                    min-width: 24px;
+
+                }
+
+                input {
+                    position: relative;
+                    left: 24px;
+                    min-width: 24px;
+                }
+
+                label {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+    .second-step {
+        padding: 0;
+        justify-content: center;
+
+        h1 {
+            text-align: center;
+        }
+
+        .login-input {
+            justify-content: center;
+            display: flex;
+
+            .gender-select {
+                margin: 12px auto 53px auto;
+            }
+        }
+
+        .target {
+            .target-group {
+                flex-direction: column;
+                align-items: center;
+
+                .item {
+
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+    .submit-group {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+
+        a {
+            //border: 1px solid #F0F712;
+            box-sizing: border-box;
+            margin-bottom: 12px;
+            min-width: 24px;
+            height: 48px;
+            width: 100%;
+            margin-left: 15px;
+            margin-right: 15px;
+            text-align: center;
+            line-height: 48px;
+        }
+
+        .next {
+            margin-bottom: 12px;
+            width: 100%;
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 0;
+        }
+    }
+    .third-step {
+        padding: 0;
+
+        h1 {
+            text-align: center;
+            width: 100%;
+        }
+
+        .personal-data {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 10px;
+
+            .item {
+                margin: 4.5px;
+                width: 168px;
+
+            }
+        }
+    }
+    .four-step {
+        padding: 0;
+
+        h1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .subscriptions {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .item {
+                width: 345px;
+            }
+        }
+
+        .payment-wrapper {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            .item {
+                width: 168px;
+                margin: 4.5px;
+            }
+        }
+    }
+}
