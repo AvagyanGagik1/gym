@@ -25,6 +25,12 @@
     <link href="{{ asset('css/package/owl.css') }}" rel="stylesheet">
 </head>
 <body>
+<div class="overlay">
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="17" r="17" fill="white"/>
+        <path d="M24.0005 11.0844L22.9183 10L17.0015 15.9169L11.0851 10L10.002 11.0839L15.9183 17L10.002 22.9161L11.0851 24L17.0015 18.0826L22.9183 24L24.0005 22.9156L18.0848 17L24.0005 11.0844Z" fill="#010002"/>
+    </svg>
+</div>
 <div id="app">
     {{--    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">--}}
     {{--        <div class="container">--}}
@@ -129,7 +135,7 @@
 {{--        @else--}}
     <header>
         <nav class="mainNavUser position-fixed">
-            <button class="menu btn">
+            <button class="menu btn" id="hamburger">
                 <svg width="32" height="17" viewBox="0 0 32 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect y="7" width="23.3333" height="3" fill="#111111"/>
                     <rect width="32" height="3" fill="#111111"/>

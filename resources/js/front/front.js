@@ -75,4 +75,28 @@ $(document).ready(function (){
             },
         }
     })
+    $('#hamburger').click(function (){
+        $('.sideNav').show('slow').addClass('sideNav-open')
+        $('.overlay').show('slow').click(function (){
+            $('.sideNav').hide('slow')
+            $(this).hide('slow')
+            $('body').css('overflow','auto')
+        })
+        $('body').css('overflow','hidden')
+    })
+    $('#food-owl-carousel').owlCarousel({
+        responsiveClass: true,
+        margin: 20,
+        lazyLoad: true,
+        smartSpeed: 800,
+        loop: false,
+        responsive:{
+            0:{
+                items:1.2,
+            },
+            1000:{
+                items:3,
+            },
+        }
+    })
 })

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class FrontController extends Controller
 {
     public function index(){
-        return response()->view('front.user.index');
+        return response()->view('front.index');
     }
     public function secondStep(){
         return response()->view('auth.register.secondStep');

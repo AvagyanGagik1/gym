@@ -824,7 +824,7 @@ footer {
 //user
 .mainNavUser {
     background: #F7F7F7;
-    z-index: 1;
+    z-index: 5;
     width: 100%;
     border-bottom: 1px solid #E6E6E6;
     display: flex;
@@ -3232,8 +3232,26 @@ body {
 
     }
 }
-
-
+.sideNav-open{
+    z-index: 9000;
+    background-color: white;
+}
+.overlay{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 8000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    svg{
+        position: absolute;
+        top: 50px;
+        left: 300px;
+    }
+}
 body {
 
 }
