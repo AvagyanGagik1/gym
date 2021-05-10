@@ -1,0 +1,564 @@
+@media (max-width: 1900px) {
+  .about .aboutFirst, .about .aboutSecond {
+    max-width: 100%;
+  }
+  .about .imgAbsolute {
+    position: unset !important;
+  }
+  .about .imgAbsolute .img1 {
+    display: none;
+  }
+  .about .imgAbsolute .img2 {
+    position: unset !important;
+  }
+
+  .program-content .program-content-item {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+  .program-content .item {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1440px) {
+  .aboutThird {
+    max-width: 100%;
+    padding: 0;
+  }
+  .aboutThird .aboutThird-content {
+    flex-direction: column;
+    padding: 0;
+  }
+  .aboutThird .aboutThird-content .aboutComment1 {
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .aboutThird .aboutThird-content .aboutComment2 {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .program-content .item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1157px) {
+  .mainNavUser .menu {
+    display: flex;
+    margin: auto 30px auto 15px !important;
+    padding: 0;
+  }
+  .mainNavUser .navHome {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+  .mainNavUser .navSearch {
+    margin-left: 0;
+  }
+  .mainNavUser .navSearch input {
+    display: none;
+  }
+  .mainNavUser .navSearch span {
+    line-height: inherit;
+  }
+  .mainNavUser .navClient .clientCabinet div:first-of-type {
+    display: none;
+  }
+  .mainNavUser .navClient .clientCabinet div:last-of-type {
+    margin: auto 15px auto 18px;
+  }
+  .mainNavUser .navClient .clientCabinet div {
+    width: 34px;
+    height: 34px;
+  }
+  .mainNavUser .navClient .clientCabinet img {
+    width: 28px;
+    height: 28px;
+  }
+  .mainNavUser .navClient .d-flex {
+    display: none !important;
+  }
+  .mainNavUser .navClient button {
+    width: 22px;
+    height: 22px;
+    background: none;
+    padding: 0;
+    margin: auto 0 auto 4px !important;
+    line-height: 0;
+  }
+  .mainNavUser .navClient button span {
+    display: none;
+  }
+
+  .sideNav {
+    display: none;
+  }
+
+  .program-content {
+    left: unset;
+    width: 100%;
+    padding-top: 90px;
+  }
+  .program-content .program-content-item h2 {
+    text-align: center;
+  }
+  .program-content .program-content-item .cardForFitness {
+    margin: auto !important;
+  }
+
+  .userFooter {
+    width: 100%;
+    left: unset;
+  }
+}
+@media (max-width: 992px) {
+  .sectionMain .owl-nav {
+    display: none;
+  }
+  .sectionMain .sectionText {
+    top: 0;
+    left: 38px;
+  }
+  .sectionMain .sectionText h1 {
+    Line-height: 30px;
+    font-size: 22px;
+  }
+  .sectionMain .sectionText button {
+    font-size: 15px;
+    max-width: 160px;
+    max-height: 38px;
+    margin: 0;
+  }
+
+  .userFooter div:first-child {
+    padding: 0;
+    margin-bottom: 12px;
+  }
+  .userFooter p {
+    text-align: left;
+  }
+  .userFooter .user-content {
+    flex-direction: column;
+    margin-left: -15px;
+    max-width: 100%;
+  }
+  .userFooter .copyright {
+    margin-left: 15px;
+  }
+  .userFooter .promodex {
+    margin-left: 15px;
+    justify-content: flex-start !important;
+  }
+}
+@media (max-width: 766px) {
+  .program-content h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .program-content .program-content-item {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+  .program-content .item {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mainNav, .mainNavUser {
+    height: 60px !important;
+  }
+  .mainNav .navHome img, .mainNavUser .navHome img {
+    width: 92px !important;
+    height: 36px !important;
+  }
+  .mainNav .navClient a, .mainNavUser .navClient a {
+    height: 60px;
+  }
+  .mainNav select, .mainNavUser select {
+    font-size: 12px !important;
+  }
+
+  .sectionMain .sectionText {
+    width: 90% !important;
+  }
+  .sectionMain .sectionText a {
+    max-width: 183px;
+    height: 48px;
+    padding: 0;
+  }
+
+  .subscribe h6 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .subscribe h1 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .subscribe .subscribe-item {
+    padding-left: 21px !important;
+    max-width: 375px;
+    max-height: 240px;
+    background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 75.78%), url(/images/subscribe.png);
+  }
+  .subscribe .subscribe-item h3 {
+    width: 60%;
+    font-family: Druk Wide Cyr, serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25.2px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #FFFFFF;
+  }
+  .subscribe .subscribe-item p {
+    font-family: Montserrat, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 66px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .subscribe .subscribe-item p span {
+    font-family: Montserrat, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0;
+    text-align: center;
+    position: absolute;
+  }
+  .subscribe .subscribe-item button {
+    border-radius: unset !important;
+    max-width: 183px;
+    width: 100%;
+    padding: 15px 60px;
+    height: 60px;
+    font-family: Druk Wide Cyr, serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  .about div:first-of-type {
+    max-width: 100%;
+    padding: 0;
+  }
+  .about .aboutFirst h1 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 6px !important;
+  }
+  .about .aboutFirst p {
+    font-size: 14px;
+    line-height: 19.6px;
+    margin-bottom: 14px !important;
+  }
+  .about .aboutSecond {
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+  }
+  .about .aboutSecond h1 {
+    text-align: center;
+    max-width: 100%;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .about .aboutSecond p {
+    text-align: center;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 16.8px;
+    margin-bottom: 20px;
+  }
+  .about .aboutThird {
+    margin-bottom: 50px;
+  }
+  .about .aboutThird h2 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .about .aboutThird p {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .about .aboutThird h1 {
+    font-family: Druk Wide Cyr;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .about .aboutThird .aboutThird-back {
+    left: 35px;
+    top: 90px;
+  }
+  .about .aboutThird .aboutThird-back img:last-child {
+    display: none;
+  }
+
+  .gym .onlineGym {
+    display: none;
+  }
+  .gym h6 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .gym h1 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .gym p {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .program .program-header h1 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .program .cardHeader {
+    font-family: Druk Wide Cyr;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .expert h2 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .expert h4 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .expert .trainer h1 {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .expert .trainer h3 {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .news {
+    margin-top: 50px;
+  }
+  .news h4 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .news h2 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .news h3 {
+    font-family: Druk Wide Cyr;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .news p {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+
+  .seo {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .seo h1 {
+    font-family: Druk Wide Cyr;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .seo h3 {
+    font-family: Druk Wide Cyr;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .seo p {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .seo p:first-child {
+    margin-bottom: 50px;
+  }
+
+  footer {
+    padding-top: 40px;
+  }
+  footer .footerPromo {
+    margin-bottom: 0 !important;
+  }
+  footer .footerPromo h6 {
+    margin: 0 0 17px;
+  }
+  footer .footerClient {
+    margin-bottom: 32px;
+  }
+  footer .footer-main-link {
+    margin-bottom: 30px;
+  }
+  footer ul a {
+    max-height: 18px;
+    margin-bottom: 16px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+  }
+}
+@media (max-width: 576px) {
+  .navClient {
+    width: auto !important;
+    width: auto;
+    justify-content: flex-end;
+  }
+  .navClient svg {
+    width: 24px;
+    height: 24px;
+  }
+  .navClient a {
+    width: auto;
+    padding: 18px 25px;
+  }
+  .navClient span {
+    display: none;
+  }
+
+  .gymImages {
+    width: 100%;
+  }
+  .gymImages .gymItem {
+    width: 100%;
+  }
+  .gymImages .yellowUnderline {
+    display: none;
+  }
+  .gymImages p {
+    margin-left: 20px;
+    text-align: left !important;
+  }
+  .gymImages .gymSvgItems {
+    width: 60px;
+  }
+}
