@@ -1,3 +1,234 @@
+@media (max-width: 1200px) {
+  .auth-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .auth-wrapper .aside-wrapper {
+    width: 100%;
+    padding: 0;
+    justify-content: center !important;
+  }
+  .auth-wrapper .aside-wrapper .login-aside {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .auth-wrapper .aside-wrapper .login-aside li {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .auth-wrapper .aside-wrapper .login-aside li .item {
+    font-family: Druk Wide Cyr, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140%;
+    margin-top: 20px;
+    display: none;
+  }
+  .auth-wrapper .aside-wrapper .login-aside li .custom-ellipse {
+    margin-right: 19px;
+  }
+  .auth-wrapper .aside-wrapper .login-aside li .underline {
+    transform: rotate(0);
+    top: 14px;
+    right: 0;
+  }
+  .auth-wrapper .aside-wrapper .login-aside li .completed span:after {
+    right: 30px;
+  }
+  .auth-wrapper .first-step {
+    padding: 0;
+  }
+  .auth-wrapper .first-step h1 {
+    text-align: center;
+  }
+  .auth-wrapper .first-step .login-input {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .auth-wrapper .first-step .social-form h1 {
+    display: block;
+    text-align: center;
+  }
+  .auth-wrapper .first-step .social-form .social-btn-grp {
+    flex-direction: column;
+    align-items: center;
+  }
+  .auth-wrapper .first-step .social-form .social-btn-grp button {
+    margin: 0 0 12px !important;
+  }
+  .auth-wrapper .first-step .terms {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .auth-wrapper .first-step .terms span {
+    display: block;
+    position: relative;
+    min-width: 24px;
+  }
+  .auth-wrapper .first-step .terms input {
+    position: relative;
+    left: 24px;
+    min-width: 24px;
+  }
+  .auth-wrapper .first-step .terms label {
+    margin-left: 8px;
+  }
+
+  .second-step {
+    padding: 0;
+    justify-content: center;
+  }
+  .second-step h1 {
+    text-align: center;
+  }
+  .second-step .login-input {
+    justify-content: center;
+    display: flex;
+  }
+  .second-step .login-input .gender-select {
+    margin: 12px auto 53px auto;
+  }
+  .second-step .target .target-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  .second-step .target .target-group .item {
+    margin-bottom: 12px;
+  }
+
+  .submit-group {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .submit-group a {
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    min-width: 24px;
+    height: 48px;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    line-height: 48px;
+  }
+  .submit-group .next {
+    margin-bottom: 12px;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 0;
+  }
+
+  .third-step {
+    padding: 0;
+  }
+  .third-step h1 {
+    text-align: center;
+    width: 100%;
+  }
+  .third-step .personal-data {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+  }
+  .third-step .personal-data .item {
+    margin: 4.5px;
+    width: 168px;
+  }
+
+  .four-step {
+    padding: 0;
+  }
+  .four-step h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .four-step .subscriptions {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .four-step .subscriptions .item {
+    width: 345px;
+  }
+  .four-step .payment-wrapper {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .four-step .payment-wrapper .item {
+    width: 168px;
+    margin: 4.5px;
+  }
+}
+@media (max-width: 1750px) {
+  .information-content .col-10 {
+    margin: 0 !important;
+    max-width: 100%;
+  }
+  .information-content .personal-params {
+    flex-direction: column;
+  }
+  .information-content .personal-params .col-4 {
+    max-width: 100% !important;
+  }
+  .information-content .personal-params .col-4 .personal-params-item {
+    max-width: 20%;
+    min-width: 150px;
+  }
+  .information-content .personal-params .col-4 .personal-params-item-update {
+    max-width: 25%;
+    min-width: 150px;
+  }
+  .information-content .personal-params-item-update button {
+    padding: 12px 12px;
+  }
+  .information-content .chart-div {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1048px) {
+  .information-content .col-10 {
+    margin: 0 !important;
+    max-width: 100%;
+  }
+  .information-content .personal-head {
+    flex-direction: column;
+  }
+  .information-content .subscribe-header h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .information-content .personal-numbers {
+    flex-direction: column;
+  }
+  .information-content .personal-numbers .item {
+    max-width: 100%;
+  }
+  .information-content .personal-params .personal-params-item {
+    max-width: 50% !important;
+    min-width: 150px;
+  }
+  .information-content .personal-params .personal-params-item-update {
+    max-width: 50% !important;
+    min-width: 150px;
+  }
+}
 @media (max-width: 1900px) {
   .about .aboutFirst, .about .aboutSecond {
     max-width: 100%;
@@ -100,11 +331,12 @@
     display: none;
   }
 
-  .program-content {
+  .program-content, .food-content, .achievements-content, .information-content, .subscribe-content {
     left: unset;
     width: 100%;
     padding-top: 90px;
   }
+
   .program-content .program-content-item h2 {
     text-align: center;
   }
@@ -154,59 +386,6 @@
   .userFooter .promodex {
     margin-left: 15px;
     justify-content: flex-start !important;
-  }
-}
-@media (max-width: 1750px) {
-  .information-content .col-10 {
-    margin: 0 !important;
-    max-width: 100%;
-  }
-  .information-content .personal-params {
-    flex-direction: column;
-  }
-  .information-content .personal-params .col-4 {
-    max-width: 100% !important;
-  }
-  .information-content .personal-params .col-4 .personal-params-item {
-    max-width: 20%;
-    min-width: 150px;
-  }
-  .information-content .personal-params .col-4 .personal-params-item-update {
-    max-width: 25%;
-    min-width: 150px;
-  }
-  .information-content .personal-params-item-update button {
-    padding: 12px 12px;
-  }
-  .information-content .chart-div {
-    max-width: 100%;
-  }
-}
-@media (max-width: 1048px) {
-  .information-content .col-10 {
-    margin: 0 !important;
-    max-width: 100%;
-  }
-  .information-content .personal-head {
-    flex-direction: column;
-  }
-  .information-content .subscribe-header h2 {
-    width: 100%;
-    text-align: center;
-  }
-  .information-content .personal-numbers {
-    flex-direction: column;
-  }
-  .information-content .personal-numbers .item {
-    max-width: 100%;
-  }
-  .information-content .personal-params .personal-params-item {
-    max-width: 50% !important;
-    min-width: 150px;
-  }
-  .information-content .personal-params .personal-params-item-update {
-    max-width: 50% !important;
-    min-width: 150px;
   }
 }
 @media (max-width: 766px) {
