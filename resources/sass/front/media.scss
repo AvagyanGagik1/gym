@@ -1,17 +1,220 @@
 @import "authMedia";
 @import "information";
+@media (max-width: 1900px) {
+    .about {
+        .aboutFirst, .aboutSecond {
+            max-width: 100%;
+        }
+
+        .imgAbsolute {
+            position: unset !important;
+
+            .img1 {
+                display: none;
+            }
+
+            .img2 {
+                position: unset !important;
+            }
+        }
+    }
+    .program-content{
+        .program-content-item{
+            justify-content: flex-start;
+            margin-bottom: 30px;
+        }
+        .item{
+            flex: 0 0 33.3333333333%;
+            max-width: 33.3333333333%;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .aboutThird {
+        max-width: 100%;
+        padding: 0;
+
+        .aboutThird-content {
+            flex-direction: column;
+            padding: 0;
+
+            .aboutComment1 {
+                max-width: 100%;
+                flex-wrap: wrap;
+                padding: 0;
+            }
+
+            .aboutComment2 {
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+    }
+    .program-content{
+        .item{
+            flex: 0 0 50%;
+            max-width: 50%;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media (max-width: 1157px){
+    .mainNavUser{
+        .menu{
+            display: flex;
+            margin: auto 30px auto 15px!important;
+            padding: 0;
+        }
+        .navHome{
+            margin-left: 0!important;
+            padding: 0!important;
+            border: none!important;
+        }
+        .navSearch{
+            margin-left: 0;
+            input{
+                display: none;
+            }
+            span{
+                line-height: inherit;
+            }
+        }
+        .navClient{
+            .clientCabinet{
+                div:first-of-type{
+                    display: none;
+                }
+                div:last-of-type{
+                    margin: auto 15px auto 18px;
+                }
+                div{
+                    width: 34px;
+                    height: 34px;
+                }
+                img{
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+            .d-flex{
+                display: none!important;
+            }
+            button{
+                width: 22px;
+                height: 22px;
+                background: none;
+                padding: 0;
+                margin: auto 0 auto 4px!important;
+                line-height: 0;
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
+    .sideNav{
+        display: none;
+    }
+    .program-content{
+        left: unset;
+        width: 100%;
+        padding-top: 90px;
+        .program-content-item{
+            h2{
+                text-align: center;
+            }
+            .cardForFitness{
+                margin: auto!important;
+            }
+        }
+    }
+    .userFooter{
+        width: 100%;
+        left: unset;
+        .copyright{
+
+        }
+        .promodex{
+
+        }
+    }
+}
+@media (max-width: 992px) {
+    .sectionMain {
+        .owl-nav {
+            display: none;
+        }
+
+        .sectionText {
+            top: 0;
+            left: 38px;
+
+            h1 {
+                Line-height: 30px;
+                font-size: 22px;
+            }
+
+            button {
+                font-size: 15px;
+                max-width: 160px;
+                max-height: 38px;
+                margin: 0;
+            }
+        }
+    }
+    .userFooter{
+        div:first-child{
+            padding: 0;
+            margin-bottom: 12px;
+        }
+        p{
+            text-align: left;
+        }
+        .user-content{
+            flex-direction: column;
+            margin-left: -15px;
+            max-width: 100%;
+        }
+        .copyright{
+
+            margin-left: 15px;
+        }
+        .promodex{
+            margin-left: 15px;
+            justify-content: flex-start!important;
+        }
+    }
+
+}
 @media (max-width: 766px) {
-    .mainNav {
+    .program-content{
+        h2{
+            width: 100%;
+            text-align: center;
+        }
+        .program-content-item{
+            justify-content: flex-start;
+            margin-bottom: 30px;
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .mainNav,.mainNavUser {
         height: 60px !important;
 
         .navHome {
-            margin-left: 20px !important;
+            //margin-left: 20px !important;
 
             img {
                 width: 92px !important;
                 height: 36px !important;
             }
-
         }
         .navClient{
             a{
@@ -64,7 +267,7 @@
             background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 75.78%), url(/images/subscribe.png);
 
             h3 {
-                width: 50%;
+                width: 60%;
                 font-family: Druk Wide Cyr, serif;
                 font-size: 18px;
                 font-style: normal;
@@ -405,124 +608,6 @@
         }
     }
 }
-
-@media (max-width: 576px) {
-    .navClient {
-        width: auto !important;
-
-        svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        width: auto;
-        justify-content: flex-end;
-
-        a {
-            width: auto;
-            padding: 18px 25px;
-        }
-
-        span {
-            display: none;
-        }
-    }
-    .gymImages {
-        width: 100%;
-
-        .gymItem {
-            width: 100%;
-        }
-
-        .yellowUnderline {
-            display: none;
-        }
-
-        p {
-            margin-left: 20px;
-            text-align: left !important;
-        }
-
-        .gymSvgItems {
-            width: 60px;
-        }
-    }
-}
-
-@media (max-width: 992px) {
-    .sectionMain {
-        .owl-nav {
-            display: none;
-        }
-
-        .sectionText {
-            top: 0;
-            left: 38px;
-
-            h1 {
-                Line-height: 30px;
-                font-size: 22px;
-            }
-
-            button {
-                font-size: 15px;
-                max-width: 160px;
-                max-height: 38px;
-                margin: 0;
-            }
-        }
-    }
-}
-
-@media (max-width: 1900px) {
-    .about {
-        .aboutFirst, .aboutSecond {
-            max-width: 100%;
-        }
-
-        .imgAbsolute {
-            position: unset !important;
-
-            .img1 {
-                display: none;
-            }
-
-            .img2 {
-                position: unset !important;
-            }
-        }
-    }
-}
-
-@media (max-width: 1440px) {
-    .aboutThird {
-        max-width: 100%;
-        padding: 0;
-
-        .aboutThird-content {
-            flex-direction: column;
-            padding: 0;
-            .aboutComment1 {
-                max-width: 100%;
-                flex-wrap: wrap;
-                padding: 0;
-            }
-
-            .aboutComment2 {
-                max-width: 100%;
-                padding: 0;
-            }
-        }
-    }
-}
-@media (min-width:920px) {
-    .owl-carousel{
-        .owl-nav{
-            display: block!important;
-        }
-    }
-}
-
 @media (max-width: 576px) {
     .navClient {
         width: auto !important;
