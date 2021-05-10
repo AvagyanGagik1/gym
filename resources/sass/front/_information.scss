@@ -1,0 +1,55 @@
+@media (max-width: 1750px) {
+    .information-content {
+        .col-10 {
+            margin: 0 !important;
+            max-width: 100%;
+        }
+
+        .personal-params {
+            flex-direction: column;
+
+            .col-4 {
+                max-width: 100% !important;
+
+                .personal-params-item {
+                    max-width: 20%;
+                    min-width: 150px
+                }
+
+                .personal-params-item-update {
+                    max-width: 25%;
+                    min-width: 150px;
+                }
+            }
+        }
+
+
+        .personal-params-item-update button {
+            padding: 12px 12px;
+        }
+        .chart-div{
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1048px) {
+    .information-content {
+        .col-10 {
+            margin: 0 !important;
+            max-width: 100%;
+        }
+
+        .personal-params {
+            .personal-params-item {
+                max-width: 50%!important;
+                min-width: 150px
+            }
+
+            .personal-params-item-update {
+                max-width: 50%!important;
+                min-width: 150px;
+            }
+        }
+    }
+}
