@@ -85,10 +85,7 @@
 }
 
 .sectionMain div:first-child {
-  min-height: 408px;
-}
-.sectionMain div:first-child img {
-  min-height: 408px;
+  height: 100%;
 }
 .sectionMain .btnLeft,
 .sectionMain .btnRight {
@@ -722,6 +719,9 @@ footer .absoluteTop {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   color: #111111;
 }
+.mainNavUser .menu {
+  display: none;
+}
 .mainNavUser .navHomeBorder {
   padding-right: 63px;
   border-right: 1px solid #E6E6E6;
@@ -735,19 +735,21 @@ footer .absoluteTop {
 .mainNavUser .navSearch {
   max-width: 401px;
   width: inherit;
-  height: 46px;
   position: relative;
-  border-radius: 26px;
-  border: 1px solid;
+  height: 46px;
   overflow: hidden;
-  padding: 0 26px;
+  margin-right: auto;
   margin-left: 60px;
-  background: #FFFFFF;
 }
 .mainNavUser .navSearch input {
-  width: 100%;
-  height: 100%;
-  border: none;
+  max-width: 401px;
+  width: inherit;
+  height: inherit;
+  border-radius: 26px;
+  border: 1px solid;
+  padding: 0 26px;
+  background: #FFFFFF;
+  text-overflow: ellipsis;
 }
 .mainNavUser .navSearch input::-moz-placeholder {
   font-family: Montserrat, serif;
@@ -779,13 +781,11 @@ footer .absoluteTop {
 .mainNavUser .navSearch input:focus-visible {
   outline: none;
 }
-.mainNavUser .navSearch label {
+.mainNavUser .navSearch span {
   position: absolute;
-  top: 14px;
+  top: 11px;
   right: 14px;
-}
-.mainNavUser .navSearch label img {
-  vertical-align: unset !important;
+  line-height: 0;
 }
 .mainNavUser .navClient {
   display: flex;
@@ -832,6 +832,9 @@ footer .absoluteTop {
   width: 48px;
   height: 48px;
   margin: auto 60px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .mainNavUser .clientCabinet div h1 {
   font-family: Druk Wide Cyr, serif;
@@ -854,8 +857,8 @@ footer .absoluteTop {
   margin: 0;
 }
 .mainNavUser .clientCabinet div img {
-  width: 100%;
-  height: 100%;
+  width: 40px;
+  height: 40px;
 }
 
 .sideNav {
@@ -940,6 +943,16 @@ footer .absoluteTop {
   padding: 0;
   margin: 0;
   width: calc(100% - 273px);
+}
+.userFooter p {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #999999;
 }
 
 .content {
@@ -2787,13 +2800,4 @@ body {
 }
 #owl-carousel .owl-nav button:last-child span {
   background-image: url(/images/btnRight.png);
-}
-
-.overlay-slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(90.64deg, #000000 6.6%, rgba(0, 0, 0, 0) 51.79%);
 }

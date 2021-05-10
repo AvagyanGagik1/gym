@@ -1,196 +1,189 @@
-@media (max-width: 1200px) {
-  .auth-wrapper {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 1900px) {
+  .about .aboutFirst, .about .aboutSecond {
+    max-width: 100%;
   }
-  .auth-wrapper .aside-wrapper {
-    width: 100%;
-    padding: 0;
-    justify-content: center !important;
+  .about .imgAbsolute {
+    position: unset !important;
   }
-  .auth-wrapper .aside-wrapper .login-aside {
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-  }
-  .auth-wrapper .aside-wrapper .login-aside li {
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .auth-wrapper .aside-wrapper .login-aside li .item {
-    font-family: Druk Wide Cyr, serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 140%;
-    margin-top: 20px;
+  .about .imgAbsolute .img1 {
     display: none;
   }
-  .auth-wrapper .aside-wrapper .login-aside li .custom-ellipse {
-    margin-right: 19px;
+  .about .imgAbsolute .img2 {
+    position: unset !important;
   }
-  .auth-wrapper .aside-wrapper .login-aside li .underline {
-    transform: rotate(0);
-    top: 14px;
-    right: 0;
-  }
-  .auth-wrapper .aside-wrapper .login-aside li .completed span:after {
-    right: 30px;
-  }
-  .auth-wrapper .first-step {
-    padding: 0;
-  }
-  .auth-wrapper .first-step h1 {
-    text-align: center;
-  }
-  .auth-wrapper .first-step .login-input {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .auth-wrapper .first-step .social-form h1 {
-    display: block;
-    text-align: center;
-  }
-  .auth-wrapper .first-step .social-form .social-btn-grp {
-    flex-direction: column;
-    align-items: center;
-  }
-  .auth-wrapper .first-step .social-form .social-btn-grp button {
-    margin: 0 0 12px !important;
-  }
-  .auth-wrapper .first-step .terms {
-    display: flex;
+
+  .program-content .program-content-item {
     justify-content: flex-start;
+    margin-bottom: 30px;
   }
-  .auth-wrapper .first-step .terms span {
-    display: block;
-    position: relative;
-    min-width: 24px;
+  .program-content .item {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    margin-bottom: 20px;
   }
-  .auth-wrapper .first-step .terms input {
-    position: relative;
-    left: 24px;
-    min-width: 24px;
-  }
-  .auth-wrapper .first-step .terms label {
-    margin-left: 8px;
-  }
-
-  .second-step {
+}
+@media (max-width: 1440px) {
+  .aboutThird {
+    max-width: 100%;
     padding: 0;
-    justify-content: center;
   }
-  .second-step h1 {
-    text-align: center;
-  }
-  .second-step .login-input {
-    justify-content: center;
-    display: flex;
-  }
-  .second-step .login-input .gender-select {
-    margin: 12px auto 53px auto;
-  }
-  .second-step .target .target-group {
+  .aboutThird .aboutThird-content {
     flex-direction: column;
-    align-items: center;
-  }
-  .second-step .target .target-group .item {
-    margin-bottom: 12px;
-  }
-
-  .submit-group {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-  }
-  .submit-group a {
-    box-sizing: border-box;
-    margin-bottom: 12px;
-    min-width: 24px;
-    height: 48px;
-    width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
-    text-align: center;
-    line-height: 48px;
-  }
-  .submit-group .next {
-    margin-bottom: 12px;
-    width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
     padding: 0;
   }
-
-  .third-step {
-    padding: 0;
-  }
-  .third-step h1 {
-    text-align: center;
-    width: 100%;
-  }
-  .third-step .personal-data {
-    display: flex;
-    justify-content: flex-start;
+  .aboutThird .aboutThird-content .aboutComment1 {
+    max-width: 100%;
     flex-wrap: wrap;
-    align-items: center;
-    padding: 10px;
-  }
-  .third-step .personal-data .item {
-    margin: 4.5px;
-    width: 168px;
-  }
-
-  .four-step {
     padding: 0;
   }
-  .four-step h1 {
+  .aboutThird .aboutThird-content .aboutComment2 {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .program-content .item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1157px) {
+  .mainNavUser .menu {
+    display: flex;
+    margin: auto 30px auto 15px !important;
+    padding: 0;
+  }
+  .mainNavUser .navHome {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+  .mainNavUser .navSearch {
+    margin-left: 0;
+  }
+  .mainNavUser .navSearch input {
+    display: none;
+  }
+  .mainNavUser .navSearch span {
+    line-height: inherit;
+  }
+  .mainNavUser .navClient .clientCabinet div:first-of-type {
+    display: none;
+  }
+  .mainNavUser .navClient .clientCabinet div:last-of-type {
+    margin: auto 15px auto 18px;
+  }
+  .mainNavUser .navClient .clientCabinet div {
+    width: 34px;
+    height: 34px;
+  }
+  .mainNavUser .navClient .clientCabinet img {
+    width: 28px;
+    height: 28px;
+  }
+  .mainNavUser .navClient .d-flex {
+    display: none !important;
+  }
+  .mainNavUser .navClient button {
+    width: 22px;
+    height: 22px;
+    background: none;
+    padding: 0;
+    margin: auto 0 auto 4px !important;
+    line-height: 0;
+  }
+  .mainNavUser .navClient button span {
+    display: none;
+  }
+
+  .sideNav {
+    display: none;
+  }
+
+  .program-content {
+    left: unset;
     width: 100%;
+    padding-top: 90px;
+  }
+  .program-content .program-content-item h2 {
     text-align: center;
   }
-  .four-step .subscriptions {
-    padding: 15px;
-    display: flex;
+  .program-content .program-content-item .cardForFitness {
+    margin: auto !important;
+  }
+
+  .userFooter {
+    width: 100%;
+    left: unset;
+  }
+}
+@media (max-width: 992px) {
+  .sectionMain .owl-nav {
+    display: none;
+  }
+  .sectionMain .sectionText {
+    top: 0;
+    left: 38px;
+  }
+  .sectionMain .sectionText h1 {
+    Line-height: 30px;
+    font-size: 22px;
+  }
+  .sectionMain .sectionText button {
+    font-size: 15px;
+    max-width: 160px;
+    max-height: 38px;
+    margin: 0;
+  }
+
+  .userFooter div:first-child {
+    padding: 0;
+    margin-bottom: 12px;
+  }
+  .userFooter p {
+    text-align: left;
+  }
+  .userFooter .user-content {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-left: -15px;
+    max-width: 100%;
   }
-  .four-step .subscriptions .item {
-    width: 345px;
+  .userFooter .copyright {
+    margin-left: 15px;
   }
-  .four-step .payment-wrapper {
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  .four-step .payment-wrapper .item {
-    width: 168px;
-    margin: 4.5px;
+  .userFooter .promodex {
+    margin-left: 15px;
+    justify-content: flex-start !important;
   }
 }
 @media (max-width: 766px) {
-  .mainNav {
+  .program-content h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .program-content .program-content-item {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+  .program-content .item {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mainNav, .mainNavUser {
     height: 60px !important;
   }
-  .mainNav .navHome {
-    margin-left: 20px !important;
-  }
-  .mainNav .navHome img {
+  .mainNav .navHome img, .mainNavUser .navHome img {
     width: 92px !important;
     height: 36px !important;
   }
-  .mainNav .navClient a {
+  .mainNav .navClient a, .mainNavUser .navClient a {
     height: 60px;
   }
-  .mainNav select {
+  .mainNav select, .mainNavUser select {
     font-size: 12px !important;
   }
 
@@ -228,7 +221,7 @@
     background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 75.78%), url(/images/subscribe.png);
   }
   .subscribe .subscribe-item h3 {
-    width: 50%;
+    width: 60%;
     font-family: Druk Wide Cyr, serif;
     font-size: 18px;
     font-style: normal;
@@ -532,98 +525,6 @@
     font-size: 14px !important;
     font-weight: 500 !important;
     line-height: 18px !important;
-  }
-}
-@media (max-width: 576px) {
-  .navClient {
-    width: auto !important;
-    width: auto;
-    justify-content: flex-end;
-  }
-  .navClient svg {
-    width: 24px;
-    height: 24px;
-  }
-  .navClient a {
-    width: auto;
-    padding: 18px 25px;
-  }
-  .navClient span {
-    display: none;
-  }
-
-  .gymImages {
-    width: 100%;
-  }
-  .gymImages .gymItem {
-    width: 100%;
-  }
-  .gymImages .yellowUnderline {
-    display: none;
-  }
-  .gymImages p {
-    margin-left: 20px;
-    text-align: left !important;
-  }
-  .gymImages .gymSvgItems {
-    width: 60px;
-  }
-}
-@media (max-width: 992px) {
-  .sectionMain .owl-nav {
-    display: none;
-  }
-  .sectionMain .sectionText {
-    top: 0;
-    left: 38px;
-  }
-  .sectionMain .sectionText h1 {
-    Line-height: 30px;
-    font-size: 22px;
-  }
-  .sectionMain .sectionText button {
-    font-size: 15px;
-    max-width: 160px;
-    max-height: 38px;
-    margin: 0;
-  }
-}
-@media (max-width: 1900px) {
-  .about .aboutFirst, .about .aboutSecond {
-    max-width: 100%;
-  }
-  .about .imgAbsolute {
-    position: unset !important;
-  }
-  .about .imgAbsolute .img1 {
-    display: none;
-  }
-  .about .imgAbsolute .img2 {
-    position: unset !important;
-  }
-}
-@media (max-width: 1440px) {
-  .aboutThird {
-    max-width: 100%;
-    padding: 0;
-  }
-  .aboutThird .aboutThird-content {
-    flex-direction: column;
-    padding: 0;
-  }
-  .aboutThird .aboutThird-content .aboutComment1 {
-    max-width: 100%;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-  .aboutThird .aboutThird-content .aboutComment2 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-@media (min-width: 920px) {
-  .owl-carousel .owl-nav {
-    display: block !important;
   }
 }
 @media (max-width: 576px) {
