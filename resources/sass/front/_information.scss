@@ -39,7 +39,21 @@
             margin: 0 !important;
             max-width: 100%;
         }
-
+        .personal-head{
+            flex-direction: column;
+        }
+.subscribe-header{
+    h2{
+        width: 100%;
+        text-align: center;
+    }
+}
+        .personal-numbers{
+        flex-direction: column;
+            .item{
+                max-width: 100%;
+            }
+        }
         .personal-params {
             .personal-params-item {
                 max-width: 50%!important;

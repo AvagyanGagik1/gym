@@ -116,7 +116,7 @@
                         <h2>Мы рады приветствовать вас в нашем проекте</h2>
                     </div>
                     <div class="col-12 item">
-                        <img src="/images/informationVideo.png" alt="">
+                        <img src="/images/informationVideo.png" alt="" class="img-fluid">
                         <div class="position-absolute">
                             <img src="/images/playButton.png" alt="">
                         </div>
