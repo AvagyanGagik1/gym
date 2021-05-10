@@ -31,7 +31,6 @@
                         ПОДОБРАТЬ РАЦИОН
                     </button>
                 </div>
-
                 <div class="col-12 p-0 d-flex align-items-center food-category-content flex-wrap">
                     <div class="col-12 p-0 food-category-content-header">
                         <h2>Завтрак</h2>
@@ -43,7 +42,7 @@
                             <a href="">Скачать рекомендации по питанию</a>
                         </div>
                     </div>
-                    <div class="col-12 d-flex justify-content-between p-0 food-category-content-items">
+                    <div class="col-12 d-flex justify-content-between p-0 food-category-content-items owl-carousel" id="food-owl-carousel">
                         <div class="col-4 food-category-content-item">
                             <div class="food-category-content-item-img d-flex justify-content-center">
                                 <img src="/images/food-item.png" alt="">
@@ -62,7 +61,10 @@
                             </div>
                             <button class="food-category-content-item-button ">
                                 <div class="selected">
-                                    <img src="/images/btntick.png" alt="">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.27594 12.5205L1.87177 9.1164L0 10.9882L4.49225 15.4804L4.4974 15.4752L5.31751 16.2953L18 3.61273L16.0919 1.70459L5.27594 12.5205Z" fill="#020202"/>
+                                    </svg>
+
                                 </div>
                                 ДОБАВИТЬ НА ЗАВТРОК
                             </button>
@@ -85,7 +87,10 @@
                             </div>
                             <button class="food-category-content-item-button">
                                 <div>
-                                    <img src="/images/btnplus.png" alt="">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 8H10V2H8V8H2V10H8V16H10V10H16V8Z" fill="white"/>
+                                    </svg>
+
                                 </div>
                                 ДОБАВИТЬ НА ЗАВТРОК
                             </button>
@@ -108,37 +113,10 @@
                             </div>
                             <button class="food-category-content-item-button">
                                 <div>
-                                    <img src="/images/btnplus.png" alt="">
-                                </div>
-                                ДОБАВИТЬ НА ЗАВТРОК
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 p-0 d-flex align-items-center food-category-content flex-wrap">
-                    <div class="col-12 p-0 food-category-content-header">
-                        <h2>Завтрак</h2>
-                    </div>
-                    <div class="col-12 d-flex justify-content-between p-0 food-category-content-items">
-                        <div class="col-4 food-category-content-item">
-                            <div class="food-category-content-item-img d-flex justify-content-center">
-                                <img src="/images/food-item.png" alt="">
-                            </div>
-                            <div class="food-category-content-item-heads">
-                                <h3>Куриная грудка "под шубой",в духовке</h3>
-                                <h4>Куриные грудки, Чеснок, Растительное масло, Паприка, Сольпо вкусу, Специи сухие </h4>
-                            </div>
-                            <div class="food-category-content-item-content">
-                                <ul>
-                                    <li>Калории <span>121323 ccal</span></li>
-                                    <li>Белки <span>30г</span></li>
-                                    <li>Жиры <span>50г</span></li>
-                                    <li>Углеводы <span>80г</span></li>
-                                </ul>
-                            </div>
-                            <button class="food-category-content-item-button ">
-                                <div class="selected">
-                                    <img src="/images/btntick.png" alt="">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 8H10V2H8V8H2V10H8V16H10V10H16V8Z" fill="white"/>
+                                    </svg>
+
                                 </div>
                                 ДОБАВИТЬ НА ЗАВТРОК
                             </button>
@@ -161,30 +139,11 @@
                             </div>
                             <button class="food-category-content-item-button">
                                 <div>
-                                    <img src="/images/btnplus.png" alt="">
-                                </div>
-                                ДОБАВИТЬ НА ЗАВТРОК
-                            </button>
-                        </div>
-                        <div class="col-4 food-category-content-item">
-                            <div class="food-category-content-item-img">
-                                <img src="/images/food-item.png" alt="">
-                            </div>
-                            <div class="food-category-content-item-heads">
-                                <h3>Куриная грудка "под шубой",в духовке</h3>
-                                <h4>Куриные грудки, Чеснок, Растительное масло, Паприка, Сольпо вкусу, Специи сухие </h4>
-                            </div>
-                            <div class="food-category-content-item-content">
-                                <ul>
-                                    <li>Калории <span>121323 ccal</span></li>
-                                    <li>Белки <span>30г</span></li>
-                                    <li>Жиры <span>50г</span></li>
-                                    <li>Углеводы <span>80г</span></li>
-                                </ul>
-                            </div>
-                            <button class="food-category-content-item-button">
-                                <div>
-                                    <img src="/images/btnplus.png" alt="">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 8H10V2H8V8H2V10H8V16H10V10H16V8Z" fill="white"/>
+                                    </svg>
+
+
                                 </div>
                                 ДОБАВИТЬ НА ЗАВТРОК
                             </button>
