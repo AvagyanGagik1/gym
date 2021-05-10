@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="col-12 p-0 personal-params d-flex">
-                    <div class="col-4 p-0 d-flex flex-wrap">
+                    <div class="col-4 p-0 d-flex flex-wrap custom-params">
                         <div class="col-12 personal-params-header">
                             <h3>Параметры</h3>
                         </div>
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-8 p-0">
+                    <div class="col-8 p-0 chart-div">
                         <div class="col-12 personal-params-header">
                             <h3>График потери веса</h3>
                             <canvas id="profileChart"></canvas>
@@ -116,7 +116,7 @@
                         <h2>Мы рады приветствовать вас в нашем проекте</h2>
                     </div>
                     <div class="col-12 item">
-                        <img src="/images/informationVideo.png" alt="">
+                        <img src="/images/informationVideo.png" alt="" class="img-fluid">
                         <div class="position-absolute">
                             <img src="/images/playButton.png" alt="">
                         </div>
