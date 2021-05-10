@@ -27,42 +27,126 @@
         .personal-params-item-update button {
             padding: 12px 12px;
         }
-        .chart-div{
+
+        .chart-div {
             max-width: 100%;
         }
     }
 }
 
 @media (max-width: 1048px) {
+    .subscribe-header{
+        H2 {
+            font-family: Druk Wide Cyr;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+    }
     .information-content {
         .col-10 {
             margin: 0 !important;
             max-width: 100%;
         }
-        .personal-head{
+
+        .personal-head {
             flex-direction: column;
-        }
-.subscribe-header{
-    h2{
-        width: 100%;
-        text-align: center;
-    }
-}
-        .personal-numbers{
-        flex-direction: column;
-            .item{
-                max-width: 100%;
+
+            .personal-head-img {
+                margin-right: 0;
+            }
+
+            .personal-head-name,.personal-head-gender {
+                margin-right: 0;
             }
         }
+
+        .subscribe-header {
+            h2 {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .personal-numbers {
+            flex-direction: column;
+
+            .item {
+                max-width: 100%;
+                h5{
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 12px;
+                    letter-spacing: 0.03em;
+                    text-align: center;
+                }
+            }
+        }
+
         .personal-params {
             .personal-params-item {
-                max-width: 50%!important;
-                min-width: 150px
+                max-width: 50% !important;
+                min-width: 150px;
+                p{
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+                h6{
+                    font-family: Montserrat;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 50px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
             }
 
             .personal-params-item-update {
-                max-width: 50%!important;
+                max-width: 50% !important;
                 min-width: 150px;
+                h2{
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 22px;
+                    letter-spacing: 0em;
+                    text-align: center;
+
+                }
+                p{
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 17px;
+                    letter-spacing: 0em;
+                    text-align: center;
+
+                }
+            }
+        }
+        .personal-video{
+            h2{
+                font-family: Druk Wide Cyr;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: center;
+
             }
         }
     }

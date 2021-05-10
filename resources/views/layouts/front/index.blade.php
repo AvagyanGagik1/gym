@@ -80,7 +80,7 @@
 {{--        <header>--}}
 {{--            <nav class="mainNav">--}}
 {{--                <a href="/" class="navHome">--}}
-{{--                    <img src="images/logo.svg" alt="">--}}
+{{--                    <img src="/images/logo.svg" alt="">--}}
 {{--                </a>--}}
 {{--                <div class="nav d-xl-flex d-none">--}}
 {{--                    <ul class="navList">--}}

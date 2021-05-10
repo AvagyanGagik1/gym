@@ -13,7 +13,8 @@
 
     .navHome {
         margin-left: 64px;
-        img{
+
+        img {
             width: 145px;
             height: 57px;
         }
@@ -213,11 +214,12 @@
     }
 
     .gymImages {
-        .yellowUnderline{
+        .yellowUnderline {
             width: 24px;
             border-bottom: 1px solid #F0F712;
             margin: 30px auto 0 auto;
         }
+
         div {
             p {
                 max-width: 198px;
@@ -368,7 +370,8 @@
 
     .aboutThird {
         margin-bottom: 85px;
-        h2{
+
+        h2 {
             font-family: Druk Wide Cyr;
             font-size: 28px;
             font-style: normal;
@@ -378,10 +381,11 @@
             text-align: left;
 
         }
-       .aboutThird-back{
+
+        .aboutThird-back {
             position: absolute;
             right: 0;
-           z-index: -1;
+            z-index: -1;
         }
     }
 
@@ -413,7 +417,8 @@
     .aboutComment1 {
         display: flex;
         flex-wrap: wrap;
-        div{
+
+        div {
 
             img {
                 width: 79px;
@@ -778,9 +783,10 @@ footer {
     }
 
     .footerPromo {
-        .d-flex,h6,img{
-            margin-bottom: 17px  ;
+        .d-flex, h6, img {
+            margin-bottom: 17px;
         }
+
         margin-bottom: 25px;
 
         p {
@@ -834,7 +840,7 @@ footer {
     box-shadow: 0 4px 10px rgb(0 0 0 / 5%);
     color: #111111;
 
-    .menu{
+    .menu {
         display: none;
     }
 
@@ -1073,7 +1079,8 @@ footer {
     padding: 0;
     margin: 0;
     width: calc(100% - 273px);
-    p{
+
+    p {
         font-family: Montserrat;
         font-size: 12px;
         font-style: normal;
@@ -1081,7 +1088,7 @@ footer {
         line-height: 12px;
         letter-spacing: 0em;
         text-align: center;
-        color:#999999;
+        color: #999999;
     }
 }
 
@@ -1126,6 +1133,7 @@ footer {
         align-items: center;
         border-radius: 10px;
         margin-bottom: 10px;
+
         h2 {
             font-family: Druk Wide Cyr;
             color: #FFFFFF;
@@ -1899,6 +1907,17 @@ footer {
         width: inherit;
         margin-right: 40px;
         max-width: 280px;
+        color: #777777;
+
+        label {
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
 
         select, input {
             font-family: Montserrat, serif;
@@ -2096,17 +2115,30 @@ footer {
 .achievements-content {
     .items {
         flex-wrap: wrap;
-        justify-content: space-between;
         margin-bottom: 70px;
 
         .item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 0 1px 40px 1px;
+            margin: 0 0 auto 0;
+            min-width: 236px;
+            max-width: 20%;
+            width: 100%;
 
             .item-img {
+                width: 150px;
+                height: 150px;
+                border: 10px solid #F0F712;
+                border-radius: 50%;
+                padding: 2px;
 
+                .item-img-2 {
+                    border: 1px solid;
+                    border-radius: 50%;
+                    padding: 22px;
+                    box-shadow: inset 0 0 4px 4px rgb(141 141 141 / 40%);
+                }
             }
 
             h1 {
@@ -2130,7 +2162,7 @@ footer {
                 letter-spacing: 0;
                 text-align: center;
                 color: #777777;
-                margin-bottom: 0;
+                margin-bottom: 40px;
             }
         }
     }
@@ -2207,14 +2239,14 @@ ul {
     align-items: center;
     justify-content: flex-end;
 
-        font-family: Montserrat, serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 14px;
-        letter-spacing: 0;
-        margin: 8px 0;
-        text-align: right;
+    font-family: Montserrat, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0;
+    margin: 8px 0;
+    text-align: right;
 
 
     svg {
@@ -3204,6 +3236,7 @@ body {
             position: absolute;
             top: 50%;
             left: 10%;
+
             span {
                 display: block;
                 position: relative;

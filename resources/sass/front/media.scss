@@ -131,6 +131,24 @@
             }
         }
     }
+    .achievements-content{
+        .items{
+            margin-bottom: 10px;
+            .item{
+                max-width: 168px;
+                min-width: unset;
+                h1{
+                    font-family: Druk Wide Cyr;
+                    font-size: 11px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 15px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+            }
+        }
+    }
     .userFooter{
         width: 100%;
         left: unset;
@@ -649,6 +667,11 @@
 
         .gymSvgItems {
             width: 60px;
+        }
+    }
+    .achievements-content{
+        .items{
+          justify-content: center;
         }
     }
 }

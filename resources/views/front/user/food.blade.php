@@ -2,7 +2,7 @@
 @section('content')
     <section class="content food-content">
         <div class="d-flex flex-column">
-            <div class="col-10 d-flex justify-content-center flex-wrap m-auto">
+            <div class="col-xl-10 col-12 d-flex justify-content-center flex-wrap m-auto">
                 <div class="col-12 p-0 d-flex align-items-center food-header">
                     <h2>Питание</h2>
                 </div>
