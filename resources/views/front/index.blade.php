@@ -94,7 +94,7 @@
             </div>
         </div>
     </section>
-    <section class="program d-flex flex-column align-items-center">
+    <section id="program" class="program d-flex flex-column align-items-center">
         <h1 class="program-header">Наши программы</h1>
         <div class="d-flex col-md-10 col-sm-12 col-12">
             <div class="owl-carousel" id="owl-carousel-program">
@@ -440,7 +440,7 @@
 
         </div>
     </section>
-    <section class="subscribe d-flex flex-column align-items-center">
+    <section id="subscribe" class="subscribe d-flex flex-column align-items-center">
         <h6>НУЖНО ПРИДУМАТЬ НАЗВАНИЕ ДОПОЛНИТЕЛЬНОЕ</h6>
         <h1>Подписка Online Gym project первый шаг к твоей цели!</h1>
         <div class="container-fluid col-12">
@@ -492,7 +492,7 @@
             </div>
         </div>
     </section>
-    <section class="about col-12 d-flex flex-column text-left align-items-center position-relative">
+    <section id="about" class="about col-12 d-flex flex-column text-left align-items-center position-relative">
         <div class="col-8 ">
             <div class="col-6 aboutFirst">
                 <h1>Решение начать =
@@ -559,7 +559,7 @@
             </div>
         </div>
     </section>
-    <section class="expert col-12 d-flex flex-column justify-content-center">
+    <section id="expert" class="expert col-12 d-flex flex-column justify-content-center">
         <h2>Тренировки под руководством экспертов</h2>
         <h4>Супер тренеры Gym project — это лучшие профессионалы мира фитнеса. Они уже научили миллионы таких же людей, как
             вы, добиваться результатов, которые они считали невозможными.</h4>
@@ -568,11 +568,11 @@
                 <div class="row d-flex justify-content-around align-items-center">
 
                     <div class="owl-carousel owl-theme" id="owl-carousel-trainer">
-                                                <div class="col-1 p-0 justify-content-center d-flex expertBtn">
-                                                    <button>
-                                                        <img src="images/ArrowRW.png" alt="">
-                                                    </button>
-                                                </div>
+{{--                                                <div class="col-1 p-0 justify-content-center d-flex expertBtn">--}}
+{{--                                                    <button>--}}
+{{--                                                        <img src="images/ArrowRW.png" alt="">--}}
+{{--                                                    </button>--}}
+{{--                                                </div>--}}
                         <div class="col-2 p-0 expertRate">
                             <div class="trainer">
                                 <div>
@@ -809,9 +809,9 @@
                             <!--                    </div>-->
                         </div>
                                                 <div class="col-1 p-0 justify-content-center d-flex expertBtn">
-                                                    <button>
-                                                        <img src="images/ArrowLW.png" alt="">
-                                                    </button>
+{{--                                                    <button>--}}
+{{--                                                        <img src="images/ArrowLW.png" alt="">--}}
+{{--                                                    </button>--}}
                                                 </div>
                     </div>
                 </div>
@@ -820,7 +820,7 @@
         <img class="absoluteTop" src="images/top.png" alt="">
         <img class="absoluteBottom" src="images/bottom.png" alt="">
     </section>
-    <section class="news d-flex justify-content-center flex-column align-items-center">
+    <section id="news" class="news d-flex justify-content-center flex-column align-items-center">
         <h4>ЧИТАЙТЕ НАС</h4>
         <h2>Последние новости и статьи </h2>
         <div class="col-md-9 col-sm-12 col-12 d-flex justify-content-center">

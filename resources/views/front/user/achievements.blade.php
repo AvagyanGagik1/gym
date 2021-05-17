@@ -1,4 +1,4 @@
-@extends('layouts.front.index')
+@extends('layouts.front.test')
 @section('content')
     <section class="content achievements-content">
         <div class="d-flex flex-column  ">
@@ -10,7 +10,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame.svg" alt="">
+                                <img src="/images/Frame.svg" alt="">
                             </div>
                         </div>
                         <h1>Метан и дека</h1>
@@ -19,7 +19,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame1.svg" alt="">
+                                <img src="/images/Frame1.svg" alt="">
                             </div>
                         </div>
                         <h1>Турникмен</h1>
@@ -28,7 +28,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame2.svg" alt="">
+                                <img src="/images/Frame2.svg" alt="">
                             </div>
                         </div>
                         <h1>Абсолютли</h1>
@@ -37,7 +37,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame3.svg" alt="">
+                                <img src="/images/Frame3.svg" alt="">
                             </div>
                         </div>
                         <h1>Метан и дека</h1>
@@ -46,7 +46,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame4.svg" alt="">
+                                <img src="/images/Frame4.svg" alt="">
                             </div>
                         </div>
                         <h1>Подстахуй</h1>
@@ -55,7 +55,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame5.svg" alt="">
+                                <img src="/images/Frame5.svg" alt="">
                             </div>
                         </div>
                         <h1>1000 ccal</h1>
@@ -64,7 +64,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame6.svg" alt="">
+                                <img src="/images/Frame6.svg" alt="">
                             </div>
                         </div>
                         <h1>2000 ccal</h1>
@@ -73,7 +73,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame7.svg" alt="">
+                                <img src="/images/Frame7.svg" alt="">
                             </div>
                         </div>
                         <h1>Парные тренировки</h1>
@@ -82,7 +82,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame8.svg" alt="">
+                                <img src="/images/Frame8.svg" alt="">
                             </div>
                         </div>
                         <h1>Абсолютли</h1>
@@ -91,7 +91,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame9.svg" alt="">
+                                <img src="/images/Frame9.svg" alt="">
                             </div>
                         </div>
                         <h1>5000</h1>
@@ -100,7 +100,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame10.svg" alt="">
+                                <img src="/images/Frame10.svg" alt="">
                             </div>
                         </div>
                         <h1>1 месяц с нами</h1>
@@ -109,7 +109,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame11.svg" alt="">
+                                <img src="/images/Frame11.svg" alt="">
                             </div>
                         </div>
                         <h1>Абсолютли</h1>
@@ -118,7 +118,7 @@
                     <div class="item">
                         <div class="item-img">
                             <div class="item-img-2">
-                                <img src="/images/frame12.svg" alt="">
+                                <img src="/images/Frame12.svg" alt="">
                             </div>
                         </div>
                         <h1>Абсолютли</h1>

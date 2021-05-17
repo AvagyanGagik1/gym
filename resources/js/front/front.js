@@ -76,8 +76,8 @@ $(document).ready(function (){
         }
     })
     $('#hamburger').click(function (){
-        $('.sideNav').show('slow').addClass('sideNav-open')
-        $('.overlay').show('slow').click(function (){
+        $('.sideNav').css('display', 'flex').addClass('sideNav-open')
+        $('.overlay').css('display', 'flex').click(function (){
             $('.sideNav').hide('slow')
             $(this).hide('slow')
             $('body').css('overflow','auto')

@@ -1,4 +1,4 @@
-@extends('layouts.front.index')
+@extends('layouts.front.test')
 @section('content')
     <section class="content functional-content">
         <div class="d-flex flex-column  ">
