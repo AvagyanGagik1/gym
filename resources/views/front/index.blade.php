@@ -1,9 +1,9 @@
 @extends('layouts.front.index')
 @section('content')
     <section class="sectionMain position-relative">
-        <div class="owl-carousel owl-theme" id="owl-carousel">
+        <div class="owl-carousel owl-theme" id="owl-carousel" style="min-height: 175px;">
             <div class="main-slider-item" style="clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 28% 100%, 0 90%);">
-                <img src="/images/main.png" class="img-fluid" alt="">
+                <img src="/images/main.png" class="img-fluid h-100" alt="">
                 <div class="overlay-slider"></div>
             </div>
         </div>
@@ -12,10 +12,6 @@
                 первый шаг к твоей цели!</h1>
             <a href="{{route('register')}}" class="btn btnNorm btnNormal1">начать</a>
         </div>
-        {{--        <div class="subtract">--}}
-        {{--            <img src="images/subtract.png" alt="">--}}
-        {{--        </div>--}}
-
     </section>
     <section class="gym position-relative">
         <h1 class="onlineGym">ONLINE GYM.</h1>
@@ -552,7 +548,7 @@
                             <img src="images/ArrowR.png" alt="">
                         </button>
                         <button>
-                            <img src="images/Arrowl.png" alt="">
+                            <img src="images/ArrowL.png" alt="">
                         </button>
                     </div>
                 </div>

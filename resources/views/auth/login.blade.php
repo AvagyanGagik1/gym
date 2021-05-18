@@ -79,7 +79,7 @@
                         <label>Запомнить меня</label>
                     </div>
                     <div class="submit-group">
-                        <button class="next" type="submit" >ВОЙТИ</button>
+                        <a href="{{route('profile.index')}}" class="next text-center" type="submit" >ВОЙТИ</a>
                         <a class="prev" href="{{route('register')}}">РЕГИСТРАЦИЯ</a>
                     </div>
                 </form>

@@ -1,3 +1,39 @@
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/package/owl.js') }}" defer></script>
+
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/front/front.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/front/media.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/package/owl.css') }}" rel="stylesheet">
+</head>
+<body>
+<div class="overlay">
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="17" r="17" fill="white"/>
+        <path
+            d="M24.0005 11.0844L22.9183 10L17.0015 15.9169L11.0851 10L10.002 11.0839L15.9183 17L10.002 22.9161L11.0851 24L17.0015 18.0826L22.9183 24L24.0005 22.9156L18.0848 17L24.0005 11.0844Z"
+            fill="#010002"/>
+    </svg>
+</div>
+<div id="app">
 <header>
     <nav class="mainNavUser position-fixed">
         <button class="menu btn" id="hamburger">
@@ -92,6 +128,17 @@
     </nav>
 </header>
 <section class="sideNav">
+    <div class="sideNavProfile">
+        <div class="clientCabinet">
+            <div>
+                <img src="/images/roundUser.png" alt="">
+            </div>
+            <div>
+                <h1>Алёна Кнопочкина</h1>
+                <p>Misterolympia@gmail.com</p>
+            </div>
+        </div>
+    </div>
     <div class="sideNavTop">
         <a class=" {{ Request::is('profile') ? 'active' : '' }}" href="{{route('profile.index')}}">Мои
             программы</a>
@@ -103,7 +150,7 @@
            href="{{route('profile.information')}}">Личная информация</a>
         <a class="{{ Request::is('profile/subscribe') ? 'active' : '' }}" href="{{route('profile.subscribe')}}">Моя
             подписка</a>
-        <a href="">Выход</a>
+        <a href="/">Выход</a>
     </div>
     <div class="sideNavBottom">
         <h1>Подписка</h1>
@@ -116,3 +163,8 @@
     @yield('content')
 </main>
 @include('front.user.footer')
+</div>
+<script src="{{ asset('js/front/front.js') }}" defer></script>
+
+</body>
+</html>

@@ -2,12 +2,12 @@
 @section('content')
     <section class="content burn-content">
         <div class="d-flex flex-column">
-            <div class="col-xl-10 col-12 d-flex justify-content-center flex-wrap m-auto">
+            <div class="col-xl-10 col-12 d-flex justify-content-center flex-wrap m-auto youtube-account">
                 <div class="col-12 d-flex align-items-center justify-content-between subscribe-header">
                     <h2>Утреннее кардио 2. Сожги весь жир!</h2>
                     <img class="d-none d-lg-block" src="/images/cardioHome.png" alt="">
                 </div>
-                <div class="col-12 d-flex d-lg-none d-flex align-items-center justify-content-between">
+                <div class="col-12 d-flex d-lg-none d-flex align-items-center justify-content-between youtube-account">
                     <div class="d-flex align-items-center content-user bg-white">
                         <div class="content-user-image">
                             <img src="/images/roundUser.png" alt="">
@@ -19,7 +19,7 @@
                     </div>
                     <img class="content-user-img" src="/images/cardioHome.png" alt="">
                 </div>
-                <div class="col-12 d-flex d-lg-none d-flex align-items-center justify-content-between content-user-bg">
+                <div class="col-12 d-flex d-lg-none d-flex align-items-center justify-content-between youtube-account content-user-bg">
                     <div class="d-flex align-items-center w-100">
                         <div class="d-flex justify-content-center align-items-center content-user">
                             <div class="content-user-image-small">
@@ -93,7 +93,7 @@
 
                 <div class="col-12 d-flex justify-content-between
             content-user-preview flex-wrap">
-                    <div class="col-lg-5 col-12 pl-0 d-flex justify-content-center pb-3">
+                    <div class="col-lg-5 col-12 p-0 d-flex justify-content-center pb-3">
                         <img src="/images/previewPlaceholder.png" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-7 col-12 pr-0">
@@ -115,7 +115,7 @@
             content-user-video
             flex-wrap
              p-0">
-                    <div class="col-lg-7 col-12 pl-0 ">
+                    <div class="col-lg-7 col-12 p-0 ">
                         <div class=" col-12 p-0 d-flex align-items-center justify-content-center">
                             <img src="/images/resizemeyoutube.png" class="w-100" alt="">
                             <div class="position-absolute">
@@ -161,10 +161,10 @@
                             </div>
                         </div>
                         <div class="col-12 d-flex justify-content-center youtube-save flex-lg-row flex-column-reverse">
-                            <div class="col-lg-3 col12 p-0 d-flex justify-content-center align-items-center">
+                            <div class="col-lg-4 col-12 p-0 d-flex justify-content-center align-items-center">
                                 <button>ГОТОВО</button>
                             </div>
-                            <div class="col-lg-9 col-12  p-0 d-flex justify-content-end">
+                            <div class="col-lg-8 col-12  p-0 d-flex justify-content-end">
                                 <h2 class="text-lg-left text-center">
                                     После выполнения тренировки нажмите кнопку “Готово” что бы сохранить свой прогресс
                                 </h2>

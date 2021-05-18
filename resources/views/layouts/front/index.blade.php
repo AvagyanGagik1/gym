@@ -244,7 +244,7 @@
                    href="{{route('profile.information')}}">Личная информация</a>
                 <a class="{{ Request::is('profile/subscribe') ? 'active' : '' }}" href="{{route('profile.subscribe')}}">Моя
                     подписка</a>
-                <a href="">Выход</a>
+                <a href="{{route('front.index')}}">Выход</a>
             </div>
             <div class="sideNavBottom">
                 <h1>Подписка</h1>

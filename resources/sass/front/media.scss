@@ -31,6 +31,16 @@
             margin-bottom: 20px;
         }
     }
+    .burn-content, .functional-content {
+        .youtube-save, .youtube-header {
+            flex-wrap: wrap-reverse;
+
+            .col-12 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 1440px) {
@@ -129,9 +139,15 @@
         }
     }
     .sideNav {
+        padding-top: 40px;
         display: none;
+        width: 253px;
+
+        .sideNavProfile {
+            display: block;
+        }
     }
-    .program-content, .food-content, .achievements-content, .information-content, .subscribe-content, .burn-content {
+    .program-content, .food-content, .achievements-content, .information-content, .subscribe-content, .burn-content, .functional-content {
         left: unset;
         width: 100%;
         padding-top: 90px;
@@ -207,7 +223,7 @@
             margin-bottom: 28px;
         }
     }
-    .burn-content {
+    .burn-content, .functional-content {
         .content-user-hide {
             button {
                 width: 100%;
@@ -365,22 +381,71 @@
             justify-content: flex-start !important;
         }
     }
-    .burn-content {
+    .burn-content, {
         .content-user-video {
             div:last-child {
                 padding: 0 !important;
 
             }
+
             .content-user-video-item {
                 padding: 0;
-                h2{
-                    font-size: 11px!important;
-                    line-height: 15px!important;
+
+                h2 {
+                    font-size: 11px !important;
+                    line-height: 15px !important;
                 }
             }
         }
-        .youtube-header{
-            h3{
+
+        .youtube-header {
+            h3 {
+                font-family: Druk Wide Cyr;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            }
+        }
+
+        .youtube-save {
+            margin-bottom: 40px;
+        }
+
+        .answer {
+            padding-left: 0 !important;
+        }
+    }
+    .functional-content {
+        .youtube-training {
+            h1 {
+                font-family: Druk Wide Cyr;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 22px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            }
+        }
+
+        .content-user-video {
+            .content-user-video-item {
+                padding: 0;
+
+                h2 {
+                    font-size: 11px !important;
+                    line-height: 15px !important;
+                }
+            }
+        }
+
+        .youtube-header {
+            h3 {
                 font-family: Druk Wide Cyr;
                 font-size: 18px;
                 font-style: normal;
@@ -446,7 +511,7 @@
     }
     .sectionMain {
         .sectionText {
-            width: 90% !important;
+            width: 85% !important;
 
             a {
                 max-width: 183px;
