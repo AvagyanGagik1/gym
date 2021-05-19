@@ -8,7 +8,7 @@
                 <img src="/images/logo.png" alt="">
             </a>
             <div class="w-100">
-                <ul class="flex-column flex-sm-row">
+                <ul class="flex-column flex-sm-row d-flex justify-content-center">
                     <a href="">
                         <li>Программы тренировок</li>
                     </a>

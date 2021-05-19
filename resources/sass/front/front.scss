@@ -40,7 +40,7 @@
             line-height: 18px;
             letter-spacing: 0;
             text-align: center;
-            margin-rigth: 50px;
+            margin-right: 50px;
             color: #111111;
             text-transform: uppercase;
             border-bottom: 2px solid transparent;
@@ -294,13 +294,14 @@
 
     h1 {
         margin: 0 auto 30px auto;
+        font-family: Druk Wide Cyr, serif;
         font-size: 28px;
         font-style: normal;
         font-weight: 700;
         line-height: 39px;
         letter-spacing: 0em;
         text-align: center;
-
+        max-width: 860px;
     }
 
     .subscribe-item {
@@ -622,6 +623,7 @@
         line-height: 39px;
         letter-spacing: 0;
         text-align: center;
+        margin-bottom: 30px;
     }
 
     h4 {
@@ -644,6 +646,8 @@
             letter-spacing: 0;
             text-align: left;
             color: #111111;
+            margin-top: 12px;
+            margin-bottom: 12px;
         }
 
         p {
@@ -656,6 +660,7 @@
             text-align: left;
             margin: auto auto 10px auto;
             color: #777777;
+            margin-bottom: 23px;
         }
 
         a {
@@ -705,7 +710,7 @@
 }
 
 .seo {
-    margin: 70px auto auto auto;
+    margin: 70px auto 70px auto;
     padding: 40px 0 0 50px;
 
     .seo-img {
@@ -722,7 +727,7 @@
         line-height: 31px;
         letter-spacing: 0;
         text-align: left;
-
+        max-width: 368px;
     }
 
     a {
