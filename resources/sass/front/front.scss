@@ -42,7 +42,10 @@
             text-align: center;
             margin: auto;
             color: #111111;
-            border-bottom: 2px solid #F0F712;
+            text-transform: uppercase;
+            &:hover{
+                border-bottom: 2px solid #F0F712;
+            }
         }
     }
 
@@ -217,6 +220,12 @@
     }
 
     .gymImages {
+        .gymSvgItems{
+            height: 91px;
+            svg{
+                color: #111111;
+            }
+        }
         .yellowUnderline {
             width: 24px;
             border-bottom: 1px solid #F0F712;
@@ -2332,6 +2341,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    color: #444444;
 }
 
 .cardListRight {
