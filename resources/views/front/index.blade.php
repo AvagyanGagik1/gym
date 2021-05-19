@@ -2,7 +2,8 @@
 @section('content')
     <section class="sectionMain position-relative">
         <div class="owl-carousel owl-theme" id="owl-carousel" style="min-height: 175px;">
-            <div class="main-slider-item" style="clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 28% 100%, 0 90%);">
+            <div class="main-slider-item" style="clip-path: polygon(100% 84%, 100% 0, 0 0, 0 90%, 15% 96%, 25% 99%, 30% 100%, 37% 100%, 45% 98%, 62% 95%);
+}">
                 <img src="/images/main.png" class="img-fluid h-100" alt="">
                 <div class="overlay-slider"></div>
             </div>

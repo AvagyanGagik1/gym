@@ -21,8 +21,9 @@ $(document).ready(function (){
 
     $('#owl-carousel-program').owlCarousel({
         responsiveClass: true,
-        margin: 20,
+        margin: 22,
         lazyLoad: true,
+        autoWidth:false,
         smartSpeed: 800,
         responsive:{
             0:{
@@ -41,7 +42,7 @@ $(document).ready(function (){
     })
     $('#owl-carousel-trainer').owlCarousel({
         responsiveClass: true,
-        margin: 20,
+        margin: 22,
         lazyLoad: true,
         smartSpeed: 800,
         loop: false,

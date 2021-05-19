@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="col-12 col-md-10 col-sm-12 line"></div>
-    <div class="col-12 col-md-10 col-sm-12 ">
+    <div class="col-12 col-md-10 col-sm-12 promodex">
         <div class="footerPromo row d-flex flex-xl-row flex-column justify-content-xl-between justify-content-center align-items-center">
             <div class="d-flex align-items-center">
                 <p>Наш партнер:</p>
