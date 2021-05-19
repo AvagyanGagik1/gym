@@ -99,4 +99,12 @@ $(document).ready(function (){
             },
         }
     })
+    $('#closeCalendar').click(function (){
+        $('.calendarOverlay').css('display','none')
+        $('.sideCalendar').css('display','none')
+    })
+    $('#openCalendar').click(function (){
+        $('.calendarOverlay').css('display','block')
+        $('.sideCalendar').css('display','flex')
+    })
 })
