@@ -64,25 +64,14 @@
 //    font-weight: normal;
 //    font-style: normal;
 //}
-
 @font-face {
     font-family: 'Druk Wide Cyr';
-    src: url('../fonts/druke/Druk Wide Cyr Medium.otf');
-    font-weight: 700;
+    src: url('../fonts/druke/Druk Wide Cyr Bold.otf');
+    src: local('Druk Cyr Bold Italic'), local('DrukCyr-BoldItalic'),
+    url('../fonts/druke/Druk Wide Cyr Bold.otf') format('opentype');
+    font-weight: bold;
     font-style: normal;
 }
-
-//@font-face {
-//    font-family: 'Druk Wide Cyr';
-//    src: url('../fonts/druke/DrukCyr-BoldItalic.eot');
-//    src: local('Druk Cyr Bold Italic'), local('DrukCyr-BoldItalic'),
-//    url('../fonts/druke/DrukCyr-BoldItalic.eot?#iefix') format('embedded-opentype'),
-//    url('../fonts/druke/DrukCyr-BoldItalic.woff2') format('woff2'),
-//    url('../fonts/druke/DrukCyr-BoldItalic.woff') format('woff'),
-//    url('../fonts/druke/DrukCyr-BoldItalic.ttf') format('truetype');
-//    font-weight: bold;
-//    font-style: italic;
-//}
 @font-face {
     font-family: Montserrat;
     src: url("../fonts/montserrat/Montserrat-Regular.ttf");
