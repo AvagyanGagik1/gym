@@ -1,6 +1,14 @@
 @import "authMedia";
 @import "information";
-
+@media (max-width: 1920px) {
+    .subscribe-content {
+        .subscribe-new-plan-price {
+            div:nth-child(even){
+                margin-right: 22px;
+            }
+        }
+    }
+}
 @media (max-width: 1900px) {
     .about {
         .aboutFirst, .aboutSecond {
@@ -41,9 +49,24 @@
             }
         }
     }
-}
 
+}
+@media (max-width: 1593px) {
+    .mainNav{
+        .navList{
+            justify-content: space-around;
+            a{
+                margin-right: 0!important;
+            }
+        }
+    }
+}
 @media (max-width: 1440px) {
+    .mainNav{
+        .nav{
+            display: none!important;
+        }
+    }
     .aboutThird {
         max-width: 100%;
         padding: 0;
@@ -333,14 +356,22 @@
 }
 
 @media (max-width: 992px) {
+    .subscribe-content {
+        .subscribe-new-plan-price {
+            div{
+                margin-right: 0!important;
+            }
+        }
+    }
     .sectionMain {
         .owl-nav {
             display: none;
         }
 
         .sectionText {
-            top: 0;
+            top: 50%;
             left: 38px;
+            transform: translateY(-50%);
 
             h1 {
                 Line-height: 30px;
