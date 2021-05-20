@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    $('#owl-carousel').owlCarousel({
+    $('.owl-one').owlCarousel({
         autoplay: true,
         lazyLoad: true,
         margin: 20,
@@ -11,65 +11,104 @@ $(document).ready(function (){
         autoHeight: true,
         autoplayTimeout: 5000,
         smartSpeed: 800,
-        nav: true,
+        dots:false,
         responsive:{
             0:{
                 items:1,
+                nav: true,
+                navContainerClass: 'custom-nav-main-slider',
+                navElement:'div',
+                navText:[
+                    '<img src="/images/btnLeft.png">',
+                    '<img src="/images/btnRight.png">',
+                ]
             },
         }
     })
 
-    $('#owl-carousel-program').owlCarousel({
-        responsiveClass: true,
+    $('.owl-two').owlCarousel({
         margin: 22,
         lazyLoad: true,
         autoWidth:false,
         smartSpeed: 800,
+        loop:true,
+        dots:false,
         responsive:{
             0:{
+                items:1,
+                nav:false,
+                margin:11
+            },
+            400:{
                 items:1.2,
+                nav:false,
+                margin:11
             },
-            600:{
+            632:{
                 items:2,
+                nav:false
             },
-            1000:{
+            1194:{
                 items:3,
+                nav:true,
             },
-            1100:{
+            1495:{
                 items:4,
+                nav:true,
+                margin:22,
+                navContainerClass: 'custom-nav-program-slider',
+                navElement:'div',
+                navText:[
+                    '<img src="/images/ArrowR.png">',
+                    '<img src="/images/ArrowL.png">',
+                ]
             }
         }
     })
-    $('#owl-carousel-trainer').owlCarousel({
+    $('.owl-three').owlCarousel({
         responsiveClass: true,
         margin: 22,
         lazyLoad: true,
         smartSpeed: 800,
-        loop: false,
+        loop:true,
+        dots:false,
         responsive:{
             0:{
                 items:1.2,
+                nav:false
             },
-            600:{
+            815:{
                 items:2,
+                nav:false
             },
-            1000:{
+            1400:{
                 items:3,
             },
-            1100:{
+            1700:{
                 items:4,
+            },
+            1730:{
+                items:5,
+                nav:true,
+                navContainerClass: 'custom-nav-trainer-slider',
+                navElement:'div',
+                navText:[
+                    '<img src="/images/ArrowRW.png">',
+                    '<img src="/images/ArrowLW.png">',
+                ]
             }
         }
     })
-    $('#olw-carousel-news').owlCarousel({
+    $('.owl-four').owlCarousel({
         responsiveClass: true,
         margin: 20,
         lazyLoad: true,
         smartSpeed: 800,
-        loop: false,
+        loop:true,
+        dots:false,
         responsive:{
             0:{
-                items:1.2,
+                items:1,
             },
             1000:{
                 items:3,
