@@ -355,6 +355,7 @@
 }
 
 .about {
+    height: 100%;
     .aboutFirst {
         margin-top: 70px;
 
@@ -420,11 +421,14 @@
             top: 25px;
         }
     }
-
+    .col-8{
+        height: inherit;
+    }
     .imgAbsolute {
         position: absolute;
         right: 0;
         top: 70px;
+        height: inherit;
 
         .img1 {
             position: absolute;
@@ -439,11 +443,29 @@
             position: absolute;
             top: 354px;
             right: 69px;
+            max-width: 569px;
+            max-height: 372px;
+            width: 100%;
+            height: inherit;
+            .preview{
+                max-width:569px;
+                max-height:372px;
+                width: inherit;
+            }
+            #player{
+                display: none;
+                max-width:569px;
+                max-height:372px;
+                width: inherit;
+                height: inherit;
+            }
         }
     }
 
     .playButton {
         position: absolute;
+        cursor: pointer;
+        border-radius: 50%;
     }
 
     .aboutComment1 {
@@ -1983,6 +2005,9 @@ footer {
             align-items: flex-start;
             justify-content: center;
             color: #FFFFFF;
+            &:nth-child(odd){
+                margin-right: 22px;
+            }
 
             h4 {
                 font-family: Druk Wide Cyr, serif;
@@ -2347,7 +2372,7 @@ footer {
 .cardForFitness {
     display: flex;
     flex-direction: column;
-    max-height: 533px;
+    //max-height: 538px;
     height: 100%;
     align-items: center;
     max-width: 308px;

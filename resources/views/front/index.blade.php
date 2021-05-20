@@ -512,11 +512,16 @@
             <div class="imgAbsolute col-lg-12">
                 <img class="img1" src="images/about.png" alt="">
                 <div class="img2">
-                    <img class="playButton" src="images/playButton.png">
-                    <iframe width="569px" height="372px" controls=0 src="https://www.youtube.com/embed/9VxqYJmiHpA"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                    <div id="player"></div>
+                    <img class="playButton" id="playButton" src="/images/playButton.png">
+                    <img class="preview" src="//img.youtube.com/vi/uLe7Sklkd_M/maxresdefault.jpg" alt="">
+{{--                    <iframe width="569px" height="372px" controls=0 src="https://www.youtube.com/embed/9VxqYJmiHpA"--}}
+{{--                            title="YouTube video player" frameborder="0"--}}
+{{--                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"--}}
+{{--                            allowfullscreen></iframe>--}}
+{{--                    <iframe id="player" type="text/html" width="640" height="390"--}}
+{{--                            src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"--}}
+{{--                            frameborder="0"></iframe>--}}
                 </div>
             </div>
             <div class="col-6 d-flex flex-wrap
