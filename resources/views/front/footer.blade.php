@@ -3,12 +3,12 @@
         <img class="absoluteTop" src="/images/top.png" alt="">
     </div>
     <div class="col-12 col-md-10 col-sm-12 footerNav">
-        <div class="row flex-nowrap flex-column flex-lg-row d-flex justify-content-between align-items-center">
+        <div class="row flex-nowrap flex-column flex-xl-row d-flex justify-content-between align-items-center">
             <a href="#" class="footer-main-link">
-                <img src="/images/logo.png" alt="">
+                <img src="/images/logo.png" alt="" class="img-fluid">
             </a>
             <div class="w-100">
-                <ul class="flex-column flex-sm-row d-flex justify-content-center">
+                <ul class="flex-column flex-md-row d-flex justify-content-center">
                     <a href="">
                         <li>Программы тренировок</li>
                     </a>

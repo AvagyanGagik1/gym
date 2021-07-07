@@ -4,11 +4,13 @@
         align-items: center;
 
         .aside-wrapper {
+            min-height: unset;
             width: 100%;
             padding: 0;
             justify-content: center !important;
 
             .login-aside {
+                min-height: unset;
                 flex-direction: row;
                 height: auto;
                 width: 100%;
@@ -76,7 +78,7 @@
                 }
 
                 .social-btn-grp {
-                    flex-direction: column;
+                    justify-content: center;
                     align-items: center;
 
                     button {
@@ -87,7 +89,7 @@
 
             .terms {
                 display: flex;
-                justify-content: flex-start;
+                justify-content: center;
 
                 span {
                     display: block;
@@ -156,13 +158,9 @@
             line-height: 48px;
         }
 
-        .next {
-            margin-bottom: 12px;
-            width: 100%;
-            margin-left: 15px;
-            margin-right: 15px;
-        }
-        .prev{
+
+
+        .prev {
             margin: auto;
         }
     }
@@ -218,6 +216,32 @@
                 width: 168px;
                 margin: 4.5px;
             }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .first-step {
+        .social-form {
+
+            h1 {
+                display: block;
+                text-align: center;
+            }
+
+            .social-btn-grp {
+                flex-direction: column;
+                align-items: center;
+
+                button {
+                    margin: 0 0 12px !important;
+                }
+            }
+        }
+    }
+    .submit-group{
+        .next {
+            width: 100%;
         }
     }
 }

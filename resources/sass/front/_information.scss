@@ -225,5 +225,13 @@
         width: 100%;
         padding: 0 15px;
     }
+    .cardForFitness{
+        max-width: 280px!important;
+    }
+    .program{
+        .owl-item{
+            width: 280px!important;
+        }
+    }
 
 }

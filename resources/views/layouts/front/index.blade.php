@@ -87,12 +87,19 @@
     @guest
         <header>
             <nav class="mainNav">
+{{--                <button id="mainButton" class=" btn d-none">--}}
+{{--                    <svg width="32" height="17" viewBox="0 0 32 17" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
+{{--                        <rect y="7" width="23.3333" height="3" fill="#111111"></rect>--}}
+{{--                        <rect width="32" height="3" fill="#111111"></rect>--}}
+{{--                        <rect y="14" width="32" height="3" fill="#111111"></rect>--}}
+{{--                    </svg>--}}
+{{--                </button>--}}
                 <a href="/" class="navHome">
-                    <img src="/images/logo.svg" alt="">
+                    <img src="/images/logo.png" alt="">
                 </a>
-                <div class="nav d-xl-flex d-none">
+                <div class="nav d-lg-flex d-none">
                     <ul class="navList">
-                        <a href="#program">
+                        <a class="active" href="#program">
                             <li>Программы тренировок</li>
                         </a>
                         <a href="#expert">
@@ -107,10 +114,24 @@
                         <a href="#news">
                             <li>Блог</li>
                         </a>
+                        <div class="dropdown d-none">
+                            <button id="mainButtonResponsive" class=" btn d-none" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg width="32" height="17" viewBox="0 0 32 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="7" width="23.3333" height="3" fill="#111111"></rect>
+                                    <rect width="32" height="3" fill="#111111"></rect>
+                                    <rect y="14" width="32" height="3" fill="#111111"></rect>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="mainButtonResponsive">
+                                <a class="dropdown-item d-none" href="#about">Результаты</a>
+                                <a class="dropdown-item d-none" href="#subscribe">Программы подписки</a>
+                                <a class="dropdown-item d-none" href="#news">Блог</a>
+                            </div>
+                        </div>
                     </ul>
                 </div>
                 <div class="navClient">
-                    <div>
+                    <div class="language">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
                                 <path
@@ -123,9 +144,20 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <select name="" id="">
-                            <option value="RU">RU</option>
-                        </select>
+                        <div class="dropdown">
+                            <button class="btn languageButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                RU
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.862 6.19533L7.99998 9.05733L5.13798 6.19533L4.19531 7.13799L7.99998 10.9427L11.8046 7.13799L10.862 6.19533Z" fill="#111111"/>
+                                </svg>
+
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">RU</a>
+                                <a class="dropdown-item" href="#">BLR</a>
+                                <a class="dropdown-item" href="#">ENG</a>
+                            </div>
+                        </div>
                     </div>
                     <a href="{{route('login')}}">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,6 +170,24 @@
                 </div>
             </nav>
         </header>
+        <section id="sideMenuOverlay" >
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="17" cy="17" r="17" fill="white"></circle>
+                <path d="M24.0005 11.0844L22.9183 10L17.0015 15.9169L11.0851 10L10.002 11.0839L15.9183 17L10.002 22.9161L11.0851 24L17.0015 18.0826L22.9183 24L24.0005 22.9156L18.0848 17L24.0005 11.0844Z" fill="#010002"></path>
+            </svg>
+        </section>
+        <section class="sideMenu ">
+            <div class="sideNavTop">
+                <a class="active {{ Request::is('#program') ? 'active' : '' }}" href="#program">Программы тренировок</a>
+                <a class="{{ Request::is('profile/food') ? 'active' : '' }}"
+                   href="#expert">Тренеры</a>
+                <a class="{{ Request::is('profile/achievements') ? 'active' : '' }}"
+                   href="#about">Результаты</a>
+                <a class="{{ Request::is('profile/information') ? 'active' : '' }}"
+                   href="#subscribe">Программы подписки</a>
+                <a class="{{ Request::is('profile/subscribe') ? 'active' : '' }}" href="#news">Блог</a>
+            </div>
+        </section>
     @else
         <header>
             <nav class="mainNavUser position-fixed">

@@ -14,6 +14,10 @@ $(document).ready(function (){
         dots:false,
         responsive:{
             0:{
+              items:1,
+              nav:false
+            },
+            992:{
                 items:1,
                 nav: true,
                 navContainerClass: 'custom-nav-main-slider',
@@ -29,8 +33,9 @@ $(document).ready(function (){
     $('.owl-two').owlCarousel({
         margin: 22,
         lazyLoad: true,
-        autoWidth:false,
+        autoWidth:true,
         smartSpeed: 800,
+        responsiveClass:true,
         loop:true,
         dots:false,
         responsive:{
@@ -69,6 +74,7 @@ $(document).ready(function (){
         responsiveClass: true,
         margin: 22,
         lazyLoad: true,
+        autoWidth:true,
         smartSpeed: 800,
         loop:true,
         dots:false,
@@ -108,7 +114,10 @@ $(document).ready(function (){
         dots:false,
         responsive:{
             0:{
-                items:1,
+                items:1.2,
+            },
+            600:{
+                items:2,
             },
             1000:{
                 items:3,
@@ -146,6 +155,15 @@ $(document).ready(function (){
     $('#openCalendar').click(function (){
         $('.calendarOverlay').css('display','block')
         $('.sideCalendar').css('display','flex')
+    })
+    $('#mainButton').click(function (){
+        console.log('pix')
+        $('#sideMenuOverlay').css('display','block')
+        $('.sideMenu').css('display','flex')
+    })
+    $('#sideMenuOverlay').click(function (){
+        $('#sideMenuOverlay').css('display','none')
+        $('.sideMenu').css('display','none')
     })
 
 
