@@ -147,7 +147,8 @@
                 line-height: 18px;
                 letter-spacing: 0;
                 text-align: center;
-                margin-left: 13px
+                margin-left: 13px;
+                text-transform: uppercase;
             }
         }
     }
@@ -188,6 +189,7 @@
         z-index: 2;
         left: 26%;
         width: 53.75%;
+        text-transform: uppercase;
 
         h1 {
             font-family: Druk Wide Cyr, serif;
@@ -269,6 +271,7 @@
         line-height: 14px;
         letter-spacing: 0.03em;
         text-align: center;
+        text-transform: uppercase;
     }
 
     .gymImages {
@@ -694,8 +697,8 @@
 
     .trainer {
         min-height: 370px;
-        background-image: linear-gradient(
-                360deg, #111111 0%, rgba(0, 0, 0, 0) 39.46%), url(/images/expertpicture.png);
+        //background-image: linear-gradient(
+        //        360deg, #111111 0%, rgba(0, 0, 0, 0) 39.46%), url(/images/expertpicture.png);
         width: 242px;
         height: 370px;
         background-repeat: no-repeat;
@@ -927,8 +930,8 @@ footer {
             color: #FFFFFF;
 
             img {
-                width: 127px;
-                height: 50px;
+                width: 155px;
+                height: auto;
             }
         }
 

@@ -1,0 +1,26 @@
+<?php
+return [
+    "programs" => "Mои праграмы",
+    "food" => "Харчаванне",
+    "achievements" =>"Дасягненні",
+    "personal" =>"Асабістая інфармацыя",
+    "subscription" =>"Мая падпіска",
+    "exit" =>"Выхад",
+    "subscribe" =>"Падпіска",
+    "days" =>"Засталося дзён",
+    "renew" =>"Падоўжыць",
+    "calendar" =>"Каляндар",
+    "training" =>"Праграмы трэніровак",
+    "trainers" =>"Трэнеры",
+    "results" =>"Вынікі",
+    "subscriptionPrograms" =>"Праграмы падпіскі",
+    "blog" =>"Блог",
+    "personalArea" =>"асабісты кабінет",
+    "start" =>"пачаць",
+    "whoWeAre" =>"ХТО МЫ І чым займаецца",
+    "ourPrograms" =>"Нашы праграмы",
+    "firstSteps"=>"першы крок да тваёй мэты",
+    "readMore"=>"ЧЫТАЦЬ ЯШЧЭ",
+    "partner"=>"Наш партнёр",
+
+];

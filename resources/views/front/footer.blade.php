@@ -5,30 +5,30 @@
     <div class="col-12 col-md-10 col-sm-12 footerNav">
         <div class="row flex-nowrap flex-column flex-xl-row d-flex justify-content-between align-items-center">
             <a href="#" class="footer-main-link">
-                <img src="/images/logo.png" alt="" class="img-fluid">
+                <img src="/images/logo.png" alt="">
             </a>
             <div class="w-100">
-                <ul class="flex-column flex-md-row d-flex justify-content-center">
+                <ul class="flex-column flex-md-row d-flex justify-content-center m-0">
                     <a href="">
-                        <li>Программы тренировок</li>
+                        <li>{{__("language.training")}}</li>
                     </a>
                     <a href="">
-                        <li>Тренеры</li>
+                        <li>{{__("language.training")}}</li>
                     </a>
                     <a href="">
-                        <li>Результаты</li>
+                        <li>{{__("language.results")}}</li>
                     </a>
                     <a href="">
-                        <li>Программы подписки</li>
+                        <li>{{__("language.subscriptionPrograms")}}</li>
                     </a>
                     <a href="">
-                        <li>Блог</li>
+                        <li>{{__("language.blog")}}</li>
                     </a>
                 </ul>
             </div>
             <div class="footerClient">
                 <a href="">
-                    <span>ЛИЧНЫЙ КАБИНЕТ</span>
+                    <span class="text-uppercase">{{__("language.personalArea")}}</span>
                 </a>
             </div>
         </div>
@@ -37,7 +37,7 @@
     <div class="col-12 col-md-10 col-sm-12 promodex">
         <div class="footerPromo row d-flex flex-xl-row flex-column justify-content-xl-between justify-content-center align-items-center">
             <div class="d-flex align-items-center">
-                <p>Наш партнер:</p>
+                <p>{{__("language.partner")}}:</p>
                 <img src="/images/club.png" alt="">
             </div>
             <div class="d-flex align-items-center  flex-md-row flex-column">
