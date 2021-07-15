@@ -157,30 +157,29 @@
             </div>
         </div>
         <div class="sideNavTop">
-            <a class=" {{ Request::is('profile') ? 'active' : '' }}" href="{{route('profile.index')}}">Мои
-                программы</a>
+            <a class=" {{ Request::is('profile') ? 'active' : '' }}" href="{{route('profile.index')}}">
+                {{__("language.programs")}}</a>
             <a class="{{ Request::is('profile/food') ? 'active' : '' }}"
-               href="{{route('profile.food')}}">Питание</a>
+               href="{{route('profile.food')}}">{{__("language.food")}}</a>
             <a class="{{ Request::is('profile/achievements') ? 'active' : '' }}"
-               href="{{route('profile.achievements')}}">Достижения</a>
+               href="{{route('profile.achievements')}}">{{__("language.achievements")}}</a>
             <a class="{{ Request::is('profile/information') ? 'active' : '' }}"
-               href="{{route('profile.information')}}">Личная информация</a>
-            <a class="{{ Request::is('profile/subscribe') ? 'active' : '' }}" href="{{route('profile.subscribe')}}">Моя
-                подписка</a>
+               href="{{route('profile.information')}}">{{__("language.personal")}}</a>
+            <a class="{{ Request::is('profile/subscribe') ? 'active' : '' }}" href="{{route('profile.subscribe')}}">{{__("language.subscription")}}</a>
             <a href="{{ route('logout') }}"
                onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
-                Выход
+                {{__("language.exit")}}
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
         </div>
         <div class="sideNavBottom">
-            <h1>Подписка</h1>
-            <p>Осталось дней:<span>323/365</span></p>
+            <h1>{{__("language.subscribe")}}</h1>
+            <p>{{__("language.days")}}:<span>323/365</span></p>
             <div></div>
-            <button class="btn btnNorm btnNormal1" onclick="window.location = '/profile/subscribe'">Продлить</button>
+            <button class="btn btnNorm btnNormal1" onclick="window.location = '/profile/subscribe'">{{__("language.renew")}}</button>
         </div>
     </section>
     <section class="sideCalendar">
