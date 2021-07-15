@@ -186,7 +186,7 @@
     <section class="sideCalendar">
         <button class="closeCalendar" id="closeCalendar"><span></span><span></span></button>
         <h1 class="calendarHeader" >Календарь</h1>
-        <img class="calendarpic img-fluid" src="/images/calendarshow.png" alt="">
+        <div id="datePicker"></div>
         <p class="calendarColor"><span></span>Пройденные тренировки</p>
         <div class="line"></div>
         <div class="calendarSection">
