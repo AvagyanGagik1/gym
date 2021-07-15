@@ -1,4 +1,4 @@
-@extends('layouts.front.test')
+@extends('layouts.front.profile')
 @section('content')
     <section class="content information-content">
         <div class="d-flex flex-column  ">
@@ -8,19 +8,26 @@
                 </div>
                 <div class="col-12 p-0 personal-head">
                     <div class="personal-head-img">
-                        <img src="/images/personal.png" alt="">
+                        <img src="{{\Illuminate\Support\Facades\Auth::user()->avatar}}" id="avatarImage"
+                             class="img-fluid" alt="">
                         <button>
+                            <input type="file" id="changePhoto">
                             <img src="/images/personal-camera.png" alt="">
                         </button>
                     </div>
                     <div class="personal-head-name d-flex flex-column align-items-start">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" value="Алёна Кнопочкина">
+                        <label for="userNameSet">Ваше имя</label>
+                        <input type="text" id="userNameSet" value="{{auth()->user()->name??''}}">
                     </div>
                     <div class="personal-head-gender d-flex flex-column align-items-start">
                         <label for="">Ваш пол</label>
-                        <select name="gender" id="">
-                            <option id="gender" value="">Женский</option>
+                        <select name="gender" value="" id="userGenderSet">
+                            <option id="gender" @if(auth()->user()->gender==='female') selected @endif value="female">
+                                Женский
+                            </option>
+                            <option id="gender" @if(auth()->user()->gender==='male') selected @endif value="male">
+                                Мужской
+                            </option>
                         </select>
                     </div>
                 </div>
@@ -29,59 +36,63 @@
                         <div class="col-12 personal-params-header">
                             <h3>Параметры</h3>
                         </div>
-                        <div class="col-5 personal-params-item">
-                            <p>
-                                Вес
-                            </p>
-                            <h6>
-                                82.1
-                            </h6>
-                            <div class="line">
-                                <img src="/images/polygon.png" alt="">
+                        <form action="{{route('user.change.personals')}}" method="post" class="d-flex flex-wrap">
+                            @csrf
+                            <input type="hidden" name="user_id" value="{{auth()->id()}}">
+                            <div class="col-5 personal-params-item">
+                                <p>
+                                    Вес
+                                </p>
+                                <input type="number" value="{{$personal->weight}}" name="weight">
+
+                                <div class="line">
+                                    <img src="/images/polygon.png" alt="">
+                                </div>
+                                <div>
+                                    <button type="button" class="plusMinusPersonal" data-calc="-">-</button>
+                                    <button type="button" class="plusMinusPersonal" data-calc="+">+</button>
+                                </div>
                             </div>
-                            <div>
-                                <button>-</button><button>+</button>
+                            <div class="col-5 personal-params-item">
+                                <p>
+                                    Рост
+                                </p>
+                                <input type="number" value="{{$personal->height}}" name="height">
+
+                                <div class="line">
+                                    <img src="/images/polygon.png" alt="">
+                                </div>
+                                <div>
+                                    <button type="button" class="plusMinusPersonal" data-calc="-">-</button>
+                                    <button type="button" class="plusMinusPersonal" data-calc="+">+</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-5 personal-params-item">
-                            <p>
-                                Рост
-                            </p>
-                            <h6>
-                                178
-                            </h6>
-                            <div class="line">
-                                <img src="/images/polygon.png" alt="">
+                            <div class="col-5 personal-params-item">
+                                <p>
+                                    Возраст
+                                </p>
+                                <input type="number" value="{{$personal->age}}" name="age">
+
+                                <div class="line">
+                                    <img src="/images/polygon.png" alt="">
+                                </div>
+                                <div>
+                                    <button type="button" class="plusMinusPersonal" data-calc="-">-</button>
+                                    <button type="button" class="plusMinusPersonal" data-calc="+">+</button>
+                                </div>
                             </div>
-                            <div>
-                                <button>-</button><button>+</button>
+                            <div class="col-5 personal-params-item-update">
+                                <div>
+                                    <h2>Вес: {{$personal->weight}} кг</h2>
+                                    <p>{{$personal->created_at->format('m.d.Y')}}</p>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn m-0">
+                                        ОБНОВИТЬ
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-5 personal-params-item">
-                            <p>
-                                Возраст
-                            </p>
-                            <h6>
-                                24
-                            </h6>
-                            <div class="line">
-                                <img src="/images/polygon.png" alt="">
-                            </div>
-                            <div>
-                                <button>-</button><button>+</button>
-                            </div>
-                        </div>
-                        <div class="col-5 personal-params-item-update">
-                            <div>
-                                <h2>Вес: 82.1 кг</h2>
-                                <p>02.09.2021</p>
-                            </div>
-                            <div>
-                                <button>
-                                    ОБНОВИТЬ
-                                </button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="col-8 p-0 chart-div">
                         <div class="col-12 personal-params-header">

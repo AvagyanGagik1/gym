@@ -4,7 +4,8 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class WorkoutCategory extends Model
+class MainNew extends Model
 {
-    //
+    protected $guarded = ['id'];
+
 }

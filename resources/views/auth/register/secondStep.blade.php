@@ -8,12 +8,13 @@
             </div>
             <div class="col-xl-8 col-lg-12 second-step">
                 <h1>Ваша цель</h1>
-                <form action="" class="d-flex flex-column">
+                <form action="" method="post"  class="d-flex flex-column FormNotSubmit">
+                    @csrf
                     <div class="d-flex flex-column login-input">
                         <h1>Выберите ваш пол</h1>
                         <div class="gender-select">
                             <div class="gender-item">
-                                <input type="radio" name="gender" checked value="male">
+                                <input type="radio" name="gender" @if(Session::has('user.gender') && Session::get('user.gender')==='male') checked @endif checked value="male">
                                 <label>
                                     <svg width="16" height="38" viewBox="0 0 16 38" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +29,7 @@
                                 <span>Мужчина</span>
                             </div>
                             <div class="gender-item">
-                                <input type="radio" name="gender" value="female">
+                                <input type="radio" name="gender" @if(Session::has('user.gender') && Session::get('user.gender')==='female') checked @endif value="female">
                                 <label for="">
                                     <svg width="16" height="32" viewBox="0 0 16 32" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +49,7 @@
                         <h1>Выберите самую важную для себя цель</h1>
                         <div class="target-group">
                             <div class="item">
-                                <input type="radio" name="target" checked value="flexibility">
+                                <input type="radio"  @if(Session::has('user.target') && Session::get('user.target')==='flexibility') checked @endif name="target" checked value="flexibility">
                                 <label for="">
                                     <img src="/images/yoga.svg" alt="">
 
@@ -59,7 +60,7 @@
                             </div>
                             <div class="item">
 
-                                <input type="radio" name="target"  value="BurnАat">
+                                <input type="radio"  @if(Session::has('user.target') && Session::get('user.target')==='BurnFat') checked @endif name="target"  value="BurnFat">
                                 <label for="">
                                     <img src="/images/scales.svg" alt="">
                                     <span class="desc">Сжечь жир</span>
@@ -67,7 +68,7 @@
                                 </label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="target" value="muscleSet">
+                                <input type="radio"  @if(Session::has('user.target') && Session::get('user.target')==='muscleSet') checked @endif name="target" value="muscleSet">
                                 <label for="">
                                     <img src="/images/dumbbell.svg" alt="">
                                     <span class="desc">Набор мышц</span>
@@ -75,7 +76,7 @@
                                 </label>
                             </div>
                             <div class="item">
-                                <input type="radio" name="target" value="keepingInShape">
+                                <input type="radio"  @if(Session::has('user.target') && Session::get('user.target')==='keepingInShape') checked @endif name="target" value="keepingInShape">
                                 <label for="">
                                     <img src="/images/brawn.svg" alt="">
                                     <span class="desc">Поддержание формы</span>
@@ -85,7 +86,7 @@
                         </div>
                     </div>
                     <div class="submit-group">
-                        <a href="{{route('register.thirdStep')}}" class="next">Продолжить</a>
+                        <button type="submit" class="next">Продолжить</button>
                         <a href="{{route('register')}}" class="prev">Отмена</a>
                     </div>
                 </form>

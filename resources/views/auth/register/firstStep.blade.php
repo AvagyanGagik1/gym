@@ -1,5 +1,4 @@
 @extends('layouts.front.index')
-
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -8,15 +7,21 @@
             </div>
             <div class="col-8 login-page">
                 <h1>Создайте свой аккаунт</h1>
-                <form action="" class="d-flex flex-column">
+                <form action="{{route('register.secondStep')}}" method="post" class="d-flex flex-column">
                     <div class="d-flex">
                         <div class="custom-form-group-inline">
                             <input type="email" name="email" value="{{old('email')}}" placeholder="E-mail">
                             <div class="left-line"></div>
+                            @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email')}}</span>
+                            @endif
                         </div>
                         <div class="custom-form-group-inline">
-                            <input type="password" name="password" value="{{old('email')}}" placeholder="Пароль">
+                            <input type="password" name="password" value="{{old('password')}}" placeholder="Пароль">
                             <div class="left-line"></div>
+                            @if ($errors->has('password'))
+                                <span class="text-danger">{{ $errors->first('password')}}</span>
+                            @endif
                         </div>
                     </div>
                     <div class="social-form">
@@ -73,11 +78,14 @@
                         </div>
                     </div>
                     <div class="terms">
-                        <input type="checkbox" class="terms-checkbox" id="terms-checkbox">
+                        <input type="checkbox" class="terms-checkbox" name="terms" id="terms-checkbox">
                         <label>Я прочитал Условия Соглашения и даю согласение на обработку личных данных</label>
+                        @if ($errors->has('terms'))
+                            <span class="text-danger">{{ $errors->first('terms')}}</span>
+                        @endif
                     </div>
                     <div class="submit-group">
-                        <a class="next">Продолжить</a>
+                        <button type="submit" class="next">Продолжить</button>
                         <a class="prev">Отмена</a>
                     </div>
                 </form>

@@ -1,4 +1,4 @@
-$(document).ready(function (){
+$(document).ready(function () {
     $('.owl-one').owlCarousel({
         autoplay: true,
         lazyLoad: true,
@@ -11,18 +11,18 @@ $(document).ready(function (){
         autoHeight: true,
         autoplayTimeout: 5000,
         smartSpeed: 800,
-        dots:false,
-        responsive:{
-            0:{
-              items:1,
-              nav:false
+        dots: false,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
             },
-            992:{
-                items:1,
+            992: {
+                items: 1,
                 nav: true,
                 navContainerClass: 'custom-nav-main-slider',
-                navElement:'div',
-                navText:[
+                navElement: 'div',
+                navText: [
                     '<img src="/images/btnLeft.png">',
                     '<img src="/images/btnRight.png">',
                 ]
@@ -33,37 +33,37 @@ $(document).ready(function (){
     $('.owl-two').owlCarousel({
         margin: 22,
         lazyLoad: true,
-        autoWidth:true,
+        autoWidth: true,
         smartSpeed: 800,
-        responsiveClass:true,
-        loop:true,
-        dots:false,
-        responsive:{
-            0:{
-                items:1,
-                nav:false,
-                margin:11
+        responsiveClass: true,
+        loop: true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                margin: 11
             },
-            400:{
-                items:1.2,
-                nav:false,
-                margin:11
+            400: {
+                items: 1.2,
+                nav: false,
+                margin: 11
             },
-            632:{
-                items:2,
-                nav:false
+            632: {
+                items: 2,
+                nav: false
             },
-            1194:{
-                items:3,
-                nav:true,
+            1194: {
+                items: 3,
+                nav: true,
             },
-            1495:{
-                items:4,
-                nav:true,
-                margin:22,
+            1495: {
+                items: 4,
+                nav: true,
+                margin: 22,
                 navContainerClass: 'custom-nav-program-slider',
-                navElement:'div',
-                navText:[
+                navElement: 'div',
+                navText: [
                     '<img src="/images/ArrowR.png">',
                     '<img src="/images/ArrowL.png">',
                 ]
@@ -74,31 +74,31 @@ $(document).ready(function (){
         responsiveClass: true,
         margin: 22,
         lazyLoad: true,
-        autoWidth:true,
+        autoWidth: true,
         smartSpeed: 800,
-        loop:true,
-        dots:false,
-        responsive:{
-            0:{
-                items:1.2,
-                nav:false
+        loop: true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1.2,
+                nav: false
             },
-            815:{
-                items:2,
-                nav:false
+            815: {
+                items: 2,
+                nav: false
             },
-            1400:{
-                items:3,
+            1400: {
+                items: 3,
             },
-            1700:{
-                items:4,
+            1700: {
+                items: 4,
             },
-            1730:{
-                items:5,
-                nav:true,
+            1730: {
+                items: 5,
+                nav: true,
                 navContainerClass: 'custom-nav-trainer-slider',
-                navElement:'div',
-                navText:[
+                navElement: 'div',
+                navText: [
                     '<img src="/images/ArrowRW.png">',
                     '<img src="/images/ArrowLW.png">',
                 ]
@@ -110,28 +110,28 @@ $(document).ready(function (){
         margin: 20,
         lazyLoad: true,
         smartSpeed: 800,
-        loop:true,
-        dots:false,
-        responsive:{
-            0:{
-                items:1.2,
+        loop: true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1.2,
             },
-            600:{
-                items:2,
+            600: {
+                items: 2,
             },
-            1000:{
-                items:3,
+            1000: {
+                items: 3,
             },
         }
     })
-    $('#hamburger').click(function (){
+    $('#hamburger').click(function () {
         $('.sideNav').css('display', 'flex').addClass('sideNav-open')
-        $('.overlay').css('display', 'flex').click(function (){
+        $('.overlay').css('display', 'flex').click(function () {
             $('.sideNav').hide('slow')
             $(this).hide('slow')
-            $('body').css('overflow','auto')
+            $('body').css('overflow', 'auto')
         })
-        $('body').css('overflow','hidden')
+        $('body').css('overflow', 'hidden')
     })
     $('#food-owl-carousel').owlCarousel({
         responsiveClass: true,
@@ -139,33 +139,32 @@ $(document).ready(function (){
         lazyLoad: true,
         smartSpeed: 800,
         loop: false,
-        responsive:{
-            0:{
-                items:1.2,
+        responsive: {
+            0: {
+                items: 1.2,
             },
-            1000:{
-                items:3,
+            1000: {
+                items: 3,
             },
         }
     })
-    $('#closeCalendar').click(function (){
-        $('.calendarOverlay').css('display','none')
-        $('.sideCalendar').css('display','none')
+    $('#closeCalendar').click(function () {
+        $('.calendarOverlay').css('display', 'none')
+        $('.sideCalendar').css('display', 'none')
     })
-    $('#openCalendar').click(function (){
-        $('.calendarOverlay').css('display','block')
-        $('.sideCalendar').css('display','flex')
+    $('#openCalendar').click(function () {
+        $('.calendarOverlay').css('display', 'block')
+        $('.sideCalendar').css('display', 'flex')
     })
-    $('#mainButton').click(function (){
+    $('#mainButton').click(function () {
         console.log('pix')
-        $('#sideMenuOverlay').css('display','block')
-        $('.sideMenu').css('display','flex')
+        $('#sideMenuOverlay').css('display', 'block')
+        $('.sideMenu').css('display', 'flex')
     })
-    $('#sideMenuOverlay').click(function (){
-        $('#sideMenuOverlay').css('display','none')
-        $('.sideMenu').css('display','none')
+    $('#sideMenuOverlay').click(function () {
+        $('#sideMenuOverlay').css('display', 'none')
+        $('.sideMenu').css('display', 'none')
     })
-
 
 
     // youtube
@@ -176,7 +175,7 @@ $(document).ready(function (){
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
     let player;
-    $('#playButton').click(function (){
+    $('#playButton').click(function () {
 
         player = new YT.Player('player', {
             height: 'inherit',
@@ -184,7 +183,7 @@ $(document).ready(function (){
             videoId: 'M7lc1UVf-VE',
             playerVars: {
                 'playsinline': 1,
-                'autoplay':1,
+                'autoplay': 1,
             },
             events: {
                 'onReady': onPlayerReady,
@@ -196,6 +195,7 @@ $(document).ready(function (){
         $('.preview').hide()
 
     })
+
     function onPlayerReady(event) {
         event.target.playVideo();
     }
@@ -211,5 +211,78 @@ $(document).ready(function (){
         player.stopVideo();
     }
 
+    $('.calcButton').click(function () {
+        let calc = $(this).attr('data-calc')
+        let id = $('#' + $(this).attr('data-type'))
+        let input = $('#' + $(this).attr('data-input'))
+        let number = Number(id.html())
+        if (calc === '-') {
+            number--
+        } else {
+            number++
+        }
+        id.html(number)
+        input.val(number)
+    })
+    $('.FormNotSubmit').submit(function (e) {
+        $('.emailError').empty()
+        $('.passwordError').empty()
+        $('.termsError').empty()
+        e.preventDefault()
+        let data = new FormData(e.target)
+        axios.post(e.target.action, data).then((response) => {
+            if (response.status === 200) {
+
+                // sessionStorage.setItem('user',JSON.stringify(response.data))
+                window.location = response.data.location
+                console.log(response.data)
+            }
+        }).catch(error => {
+
+            let err = error.response.data.errors
+            if (err.email) {
+                $('.emailError').removeClass('d-none').html(err.email[0])
+            }
+            if (err.password) {
+                $('.passwordError').removeClass('d-none').html(err.password[0])
+            }
+            if (err.terms) {
+                $('.termsError').removeClass('d-none').html(err.terms[0])
+            }
+        })
+    })
+    $('#changePhoto').change(function (e){
+        let data = new FormData()
+        data.append('image',e.target.files[0])
+        axios.post('/profile/user/change/avatar',data,{
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        }).then((response)=>{
+            console.log(response.data)
+            $('#avatarImage').attr('src',response.data.avatar)
+            $('#headerUserAvatar').attr('src',response.data.avatar)
+        })
+    })
+    $('#userNameSet').change(function (){
+      axios.post('/profile/user/change/name',{'name':$(this).val()}).then((response)=>{
+          console.log(response.data)
+      })
+    })
+    $('#userGenderSet').change(function (){
+      axios.post('/profile/user/change/gender',{'gender':$(this).val()}).then((response)=>{
+          console.log(response.data)
+      })
+    })
+    $('.plusMinusPersonal').click(function (){
+        let input = $(this).parent().parent().children('input')
+        let value = $(this).parent().parent().children('input').val()
+        let calc = $(this).attr('data-calc')
+        calc === '+'?value++:value--
+        input.val(value)
+    })
 })
+
+
+
 

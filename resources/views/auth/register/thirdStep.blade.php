@@ -14,20 +14,23 @@
                             <h3>Возраст</h3>
                         </div>
                         <div class="value">
-                            <h3>
-                                24
+                            <h3 id="setAge">
+                                @if(Session::has('user.age') && Session::get('user.age'))
+                                    {{Session::get('user.age')}}
+                                @else
+                                    24
+                                @endif
                             </h3>
                             <div class="underline"></div>
-
                         </div>
                         <div class="plus-minus-group">
-                            <span>
+                            <span class="calcButton" data-calc="-" data-type="setAge" data-input="inputAge">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 8H16V10H2V8Z" fill="#111111"/>
                                 </svg>
                             </span>
-                            <span>
+                            <span class="calcButton" data-calc="+" data-type="setAge" data-input="inputAge">
                                 <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                  <path d="M16 9H10V3H8V9H2V11H8V17H10V11H16V9Z" fill="#111111"/>
@@ -41,20 +44,23 @@
                             <h3>Вес</h3>
                         </div>
                         <div class="value">
-                            <h3>
-                                82
+                            <h3 id="setWeight">
+                                @if(Session::has('user.weight') && Session::get('user.weight'))
+                                    {{Session::get('user.weight')}}
+                                @else
+                                    82
+                                @endif
                             </h3>
                             <div class="underline"></div>
-
                         </div>
                         <div class="plus-minus-group">
-                            <span>
+                            <span class="calcButton" data-calc="-" data-type="setWeight" data-input="inputWeight">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 8H16V10H2V8Z" fill="#111111"/>
                                 </svg>
                             </span>
-                            <span>
+                            <span class="calcButton" data-calc="+" data-type="setWeight" data-input="inputWeight">
                                 <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                  <path d="M16 9H10V3H8V9H2V11H8V17H10V11H16V9Z" fill="#111111"/>
@@ -68,19 +74,23 @@
                             <h3>Рост</h3>
                         </div>
                         <div class="value">
-                            <h3>
-                                178
+                            <h3 id="setHeight">
+                                @if(Session::has('user.height') && Session::get('user.height'))
+                                    {{Session::get('user.height')}}
+                                @else
+                                    178
+                                @endif
                             </h3>
                             <div class="underline"></div>
                         </div>
                         <div class="plus-minus-group">
-                            <span>
+                            <span class="calcButton" data-calc="-" data-type="setHeight" data-input="inputHeight">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 8H16V10H2V8Z" fill="#111111"/>
                                 </svg>
                             </span>
-                            <span>
+                            <span class="calcButton" data-calc="+" data-type="setHeight" data-input="inputHeight">
                                 <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                  <path d="M16 9H10V3H8V9H2V11H8V17H10V11H16V9Z" fill="#111111"/>
@@ -92,8 +102,17 @@
                 </div>
 
                 <div class="submit-group">
-                    <a class="next" href="{{route('register.fourStep')}}">Продолжить</a>
-                    <a class="prev" href="{{route('register.secondStep')}}">Отмена</a>
+                    <form id="fourStepForm" action="{{route('register.thirdStep')}}" method="post" class="FormNotSubmit">
+                        @csrf
+                        <input type="hidden" name="age" id="inputAge"
+                               @if(Session::has('user.age') && Session::get('user.age')) value="{{Session::get('user.age')}}" @else value="24"@endif>
+                        <input type="hidden" name="height" id="inputHeight"
+                               @if(Session::has('user.height') && Session::get('user.height')) value="{{Session::get('user.height')}}" @else value="178"@endif>
+                        <input type="hidden" name="weight" id="inputWeight"
+                               @if(Session::has('user.weight') && Session::get('user.weight')) value="{{Session::get('user.weight')}}" @else value="82"@endif>
+                        <button type="submit" class="next">Продолжить</button>
+                        <a class="prev" href="{{route('register.get.secondStep')}}">Отмена</a>
+                    </form>
                 </div>
             </div>
         </div>

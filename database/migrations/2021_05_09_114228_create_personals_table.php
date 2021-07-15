@@ -20,6 +20,12 @@ class CreatePersonalsTable extends Migration
             $table->bigInteger('weight');
             $table->bigInteger('age');
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

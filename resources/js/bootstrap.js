@@ -1,3 +1,29 @@
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
+if (document.getElementsByClassName('editor').length) {
+    let elements = Array.from(document.getElementsByClassName('editor'))
+    elements.forEach((item) => {
+        ClassicEditor
+            .create(item,
+                {
+                    toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'],
+                    heading: {
+                        options: [
+                            {model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph'},
+                            {model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1'},
+                            {model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2'}
+                        ]
+                    }
+                }
+            )
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    })
+}
 window._ = require('lodash');
 
 /**
@@ -11,7 +37,8 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
-} catch (e) {}
+} catch (e) {
+}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

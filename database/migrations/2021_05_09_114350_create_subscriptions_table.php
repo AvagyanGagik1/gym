@@ -17,7 +17,6 @@ class CreateSubscriptionsTable extends Migration
             $table->id();
             $table->string('duration_month');
             $table->string('duration_week');
-            $table->string('description');
             $table->bigInteger('price');
             $table->timestamps();
         });

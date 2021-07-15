@@ -1,4 +1,4 @@
-@extends('layouts.front.test')
+@extends('layouts.front.profile')
 @section('content')
     <section class="content burn-content">
         <div class="d-flex flex-column">

@@ -1,8 +1,86 @@
 $(document).ready(function () {
+    let key = 0
     $('.leftmenutrigger').on('click', function (e) {
         $('.side-nav').toggleClass("open");
         e.preventDefault();
     });
+    $('#cloneVideoDiv').click(function () {
+        let clonedDiv = $('#videoDiv').clone()
+        clonedDiv.children('div').children('input').val('')
+        $('.video-create').append(clonedDiv)
+    });
+    $('#cloneTaskDiv').click(function () {
+        let cloneTaskDiv = $('#taskDiv').clone()
+        cloneTaskDiv.children('.subtask').children().each(function () {
+            if ($(this).attr('data-cloned')) {
+                $(this).remove()
+            }
+        })
+        cloneTaskDiv.attr('data-key', Number($(this).parent().children(':last').attr('data-key')) + 1)
+        cloneTaskDiv.children('.subtask').children('div').attr('data-key', Number($(this).parent().children(':last').attr('data-key')) + 1)
+        cloneTaskDiv.children('div').children('input').val('')
+        setTimeout(() => {
+            cloneTaskDiv.children('.subtask').children('button').click(function () {
+                // console.log($(this).parent().parent())
+                let cloneSubTaskDiv = $('#subTaskDiv').clone()
+                cloneSubTaskDiv.children('div').val('')
+                // console.log(cloneSubTaskDiv.children())
+                cloneSubTaskDiv.attr('data-cloned', 'true')
+                cloneSubTaskDiv.attr('data-key', Number($(this).parent().parent().attr('data-key')))
+                $(this).parent().append(cloneSubTaskDiv)
+            })
+        }, 0)
+
+        $('.task-create').append(cloneTaskDiv)
+    });
+    $('.cloneSubTaskDiv').click(function () {
+        let cloneSubTaskDiv = $('#subTaskDiv').clone()
+        cloneSubTaskDiv.attr('data-cloned', 'true')
+        cloneSubTaskDiv.attr('data-key', Number($(this).parent().parent().attr('data-key')))
+        cloneSubTaskDiv.children('div').children('input').val('')
+        $(this).parent().append(cloneSubTaskDiv)
+    })
+    $('#workoutForm').submit(function (e) {
+        let tasks = []
+        let tmp = {}
+        e.preventDefault()
+        $('.tasks').each(function (index) {
+            tmp.key = $(this).parent().parent().attr('data-key')
+            if ($(this).attr('data-lang') === 'ru' ) {
+                tmp.name_ru = $(this).val()
+            }
+            if ($(this).attr('data-lang') === 'en') {
+                tmp.name_en = $(this).val()
+            }
+            if ($(this).attr('data-lang') === 'blr') {
+                tmp.name_blr = $(this).val()
+            }
+
+            tmp.subtasks = []
+            if(e.target.action)
+            if((Number(index)+1) % 3 === 0 ) {
+                tasks.push({name_ru:tmp.name_ru,name_en:tmp.name_en,name_blr:tmp.name_blr,key:tmp.key,subtasks:[]})
+                console.log(tasks)
+            }
+        })
+
+        $('.subtask').each(function () {
+            $(this).children('div').each(function () {
+                tasks.forEach((i) => {
+                    if (i.key === $(this).attr('data-key'))
+                        $(this).children('div').children('input').each(function () {
+                            i.subtasks.push({'value': $(this).val(), 'lang': $(this).attr('data-lang')})
+                        })
+                })
+            })
+
+        })
+        let data = new FormData(e.target)
+        data.append('tasks', JSON.stringify(tasks))
+            axios.post(e.target.action, data).then((response) => {
+                console.log(response)
+            })
+    })
 });
 $(function () {
     let container = $('.container-image'), inputFile = $('#file'), img, btn, txt = 'Browse',
@@ -21,7 +99,6 @@ $(function () {
     });
 
     inputFile.on('change', function (e) {
-        console.log(e.target.files)
         container.find('label').html(inputFile.val());
         $('#default-image').remove()
 
@@ -43,7 +120,6 @@ $(function () {
 
 $('#pictures').change(function (e) {
     const file = Array.from(e.target.files)
-
 
 
     file.forEach(file => {
@@ -68,15 +144,16 @@ $('.custom-icon-remove').click(function () {
     remove($(this))
 })
 
-$('.remove-image').click(function (){
+$('.remove-image').click(function () {
     const type = $(this).attr('data-type')
     const data = {
-        'pictureId':$(this).attr('data-picture')
+        'pictureId': $(this).attr('data-picture')
     }
-    axios.post('/admin/'+type+'/picture/destroy',data).then(()=>{
+    axios.post('/admin/' + type + '/picture/destroy', data).then(() => {
         $(this).parent('div').remove()
     })
 })
+
 function remove($this) {
     let id = $this.attr('data-id')
     let name = $this.attr('data-name')
@@ -131,13 +208,13 @@ function resizeImage(img) {
         if (width > MAX_WIDTH) {
             height *= MAX_WIDTH / width;
             width = MAX_WIDTH;
-            y = (MAX_HEIGHT - height)/2
+            y = (MAX_HEIGHT - height) / 2
         }
     } else {
         if (height > MAX_HEIGHT) {
             width *= MAX_HEIGHT / height;
             height = MAX_HEIGHT;
-            x = (MAX_WIDTH - width) /2
+            x = (MAX_WIDTH - width) / 2
         }
     }
     canvas.width = 500;

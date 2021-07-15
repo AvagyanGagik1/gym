@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Model\Personal;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -29,7 +31,15 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    public function redirectTo(){
+        if(Auth::check()){
+            if(Auth::user()->is_admin){
+                return redirect('/admin');
+            }else{
+                return redirect('/profile');
+            }
+        }
+    }
 
     /**
      * Create a new controller instance.
@@ -53,6 +63,10 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'terms' => ['required'],
+            'avatar' => ['nullable','image'],
+            'important_goal' => ['required'],
+            'gender' => ['required'],
         ]);
     }
 
@@ -64,10 +78,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user =  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        $personal = [
+            'user_id'=>$user->id,
+            'height'=>$data['height'],
+            'weight'=>$data['weight'],
+            'age' => $data['age']
+        ];
+        Personal::create($personal);
+
     }
 }

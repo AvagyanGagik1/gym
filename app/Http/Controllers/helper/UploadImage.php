@@ -45,14 +45,13 @@ trait UploadImage
         }
         return false;
     }
+
     public function uploadSliderImage(string $path, $image): string
     {
         $filename = $path . '/' . time() . microtime(true) . '.' . $image->getClientOriginalExtension();
         Image::make($image)->save(public_path($filename));
         return $filename;
     }
-
-
     public function uploadImageDataUrl(string $path, $image): string
     {
         $filename = $path . '/' . time() . '.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];

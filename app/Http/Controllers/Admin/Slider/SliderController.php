@@ -45,9 +45,9 @@ class SliderController extends Controller
     public function store(StoreSliderRequest $request)
     {
         $image = $request->file('image');
-        $input['title'] = $request->get('title');
-        $input['long_description'] = $request->get('long_description');
-        $input['short_description'] = $request->get('short_description');
+//        $input['title'] = $request->get('title');
+//        $input['long_description'] = $request->get('long_description');
+//        $input['short_description'] = $request->get('short_description');
         $input['image'] = $this->uploadSliderImage('/images/slider', $image);
         Slider::create($input);
         return redirect('/admin/slider');
@@ -74,9 +74,9 @@ class SliderController extends Controller
     {
         $slider =  Slider::find($id);
         $image = $request->file('image');
-        $input['title'] = $request->get('title');
-        $input['short_description'] = $request->get('short_description');
-        $input['long_description'] = $request->get('long_description');
+//        $input['title'] = $request->get('title');
+//        $input['short_description'] = $request->get('short_description');
+//        $input['long_description'] = $request->get('long_description');
         if($image){
             $input['image'] = $this->uploadSliderImage('/images/slider', $image);
         }

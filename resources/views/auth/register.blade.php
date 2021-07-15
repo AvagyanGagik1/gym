@@ -85,16 +85,20 @@
             </div>
             <div class="col-xl-8 col-lg-12 first-step">
                 <h1>Создайте свой аккаунт</h1>
-                <form action="" class="d-flex flex-column">
+                <form action="{{route('register.firstStep')}}" method="post" data-first="true" class="d-flex flex-column FormNotSubmit">
+                    @csrf
                     <div class="d-flex login-input">
                         <div class="custom-form-group-inline">
-                            <input type="email" name="email" value="{{old('email')}}" placeholder="E-mail">
+                            <input type="email" name="email" @if(Session::has('user')) value=" {{ Session::get('user.email')}}"@endif placeholder="E-mail">
                             <div class="left-line"></div>
+                            <span class="text-danger  emailError">{{ $errors->first('email')}}</span>
                         </div>
                         <div class="custom-form-group-inline">
-                            <input type="password" name="password" value="{{old('email')}}" placeholder="Пароль">
+                            <input type="password" name="password" placeholder="Пароль">
                             <div class="left-line"></div>
+                                <span class="text-danger  passwordError">{{ $errors->first('password')}}</span>
                         </div>
+
                     </div>
                     <div class="social-form">
                         <h1>Или войти с помощью социальных сетей</h1>
@@ -149,14 +153,19 @@
                             </button>
                         </div>
                     </div>
+
                     <div class="terms">
-                        <input type="checkbox" class="terms-checkbox" id="terms-checkbox">
+                        <input type="checkbox" @if(Session::has('user')) checked="true" @endif name="terms" value="1" class="terms-checkbox" id="terms-checkbox">
                         <span></span>
-                        <label>Я прочитал Условия Соглашения и даю согласение на обработку личных данных</label>
+                        <label>Я прочитал Условия Соглашения и даю согласение на обработку личных данных
+                                <p class="text-danger  termsError"></p>
+                        </label>
                     </div>
+
+
                     <div class="submit-group">
-                        <a class="next" href="{{route('register.secondStep')}}" >Продолжить</a>
-                        <a class="prev">Отмена</a>
+                        <button type="submit" class="next">Продолжить</button>
+                        <a class="prev" href="{{route('login')}}">Отмена</a>
                     </div>
                 </form>
             </div>

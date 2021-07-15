@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkoutCategoriesTable extends Migration
+class CreateSliderTextsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateWorkoutCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('workout_categories', function (Blueprint $table) {
+        Schema::create('slider_texts', function (Blueprint $table) {
             $table->id();
+            $table->text('text_en');
+            $table->text('text_ru');
+            $table->text('text_blr');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateWorkoutCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('workout_categories');
+        Schema::dropIfExists('slider_texts');
     }
 }

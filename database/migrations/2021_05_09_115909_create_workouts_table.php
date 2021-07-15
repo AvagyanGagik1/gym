@@ -15,7 +15,18 @@ class CreateWorkoutsTable extends Migration
     {
         Schema::create('workouts', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('program_id')->unsigned();
+            $table->string('name_en');
+            $table->string('name_ru');
+            $table->string('name_blr');
+            $table->bigInteger('calories');
             $table->timestamps();
+
+            $table->foreign('program_id')
+                ->references('id')
+                ->on('programs')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

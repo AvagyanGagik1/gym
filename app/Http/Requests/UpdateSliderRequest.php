@@ -25,10 +25,13 @@ class UpdateSliderRequest extends FormRequest
     public function rules()
     {
         return [
-            'short_description'=>'nullable|string|min:3',
-            'title'=>'nullable|string|min:3',
-            'long_description'=>'nullable|string|min:3',
             'image'=>'nullable|image'
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'images.image'=>'файл должен быть формата кртинкы!!!'
         ];
     }
 }

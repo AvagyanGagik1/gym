@@ -125,8 +125,11 @@
 
                 </div>
                 <div class="submit-group">
-                    <a class="next">Продолжить</a>
-                    <a class="prev" href="{{route('register.thirdStep')}}">Отмена</a>
+                    <form method="post" action="{{route('user.custom.register')}}">
+                        @csrf
+                        <button class="next" type="submit" >Продолжить</button>
+                        <a class="prev" href="{{route('register.get.thirdStep')}}">Отмена</a>
+                    </form>
                 </div>
             </div>
         </div>
