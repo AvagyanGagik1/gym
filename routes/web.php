@@ -42,8 +42,10 @@ Route::namespace('Admin')->middleware(['auth','is_admin'])->prefix('admin')->gro
     Route::get('/first/step','AdminController@firstStep')->name('admin.first.step');
     Route::put('/first/step/{id}/update','AdminController@firstStepUpdate')->name('firstStep.update');
     Route::get('/hwo/we','AdminController@hwoWeAre')->name('admin.hwo.we.are');
+    Route::get('/hwo/description/we/','AdminController@hwoWeAreDescription')->name('admin.hwo.description.we.are');
 
 
+    Route::put('/description/hwo/{id}/update','AdminController@hwoWeAreDescriptionUpdate')->name('hwoWeAre.description.update');
     Route::put('/hwo/we/{id}/update','AdminController@hwoWeAreUpdate')->name('hwoWeAre.update');
 
     Route::get('/slider/text','AdminController@sliderText')->name('admin.slider.text');
@@ -104,6 +106,9 @@ Route::namespace('Admin')->middleware(['auth','is_admin'])->prefix('admin')->gro
     });
     Route::namespace('FoodCategory')->group(function (){
         Route::resource('foodCategory','FoodCategoryController');
+    });
+    Route::namespace('Achievement')->group(function (){
+        Route::resource('achievement','AchievementController');
     });
 });
 Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(function (){

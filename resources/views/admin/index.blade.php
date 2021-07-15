@@ -25,6 +25,15 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
+                        <h5 class="card-title">Блок кто мы (Описаные)</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Блок кто мы на главной странице (Описаные)</h6>
+                        <a href="{{route('admin.hwo.description.we.are')}}" class="card-link">Кто мы</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
                         <h5 class="card-title">Блок первые шаги</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Блок первые шаги на главной странице редактировать</h6>
                         <a href="{{route('admin.first.step')}}" class="card-link">Первые шаги</a>

@@ -1,0 +1,86 @@
+#datepicker {
+    width: 100%;
+    margin-bottom: 30px;
+    .ui-datepicker-header {
+        margin-bottom: 21.9px;
+        font-weight: bold;
+        .ui-datepicker-title{
+            order: 1;
+        }
+        display: flex;
+        .ui-datepicker-next {
+            order: 3;
+            margin-left: 29.1px;
+            width: 18px;
+            background-image: url(/images/calendar/ArrowL.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            span {
+                display: none;
+            }
+        }
+        .ui-datepicker-prev {
+            order: 2;
+            margin-left: auto;
+            width: 18px;
+            background-image: url(/images/calendar/ArrowR.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            span {
+                display: none;
+            }
+        }
+
+    }
+
+    table {
+        width: 100% !important;
+        min-height: 249px;
+        padding: 20.73px 58px 30px 63px;
+        thead{
+            tr{
+                th{
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 17px;
+                    letter-spacing: 0em;
+
+                }
+            }
+        }
+        tr {
+            margin-bottom: 36px;
+
+            td {
+                max-width: 16px;
+                height: 20px;
+                //background: #F0F712;
+
+
+
+                .active {
+                    background: #F0F712;
+
+                }
+
+                a {
+                    color: #111111;
+                    text-decoration: none;
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: center;
+
+
+                }
+            }
+        }
+    }
+}

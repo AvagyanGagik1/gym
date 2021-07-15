@@ -1,17 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Admin\ClientComment;
+namespace App\Http\Controllers\Admin\Achievement;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\helper\UploadImage;
-use App\Http\Requests\StoreClientCommentRequest;
-use App\Http\Requests\UpdateClientCommentRequest;
-use App\Model\ClientComment;
+use App\Http\Requests\StoreAchievementRequest;
+use App\Http\Requests\UpdateAchievementRequest;
+use App\Model\Achievement;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class ClientCommentController extends Controller
+class AchievementController extends Controller
 {
     use UploadImage;
     /**
@@ -19,9 +20,9 @@ class ClientCommentController extends Controller
      *
      * @return Response
      */
-    public function index(): Response
+    public function index()
     {
-        return response()->view('admin.clientComment.index',['clientComment'=>ClientComment::paginate(10)]);
+        return response()->view('admin.achievement.index',['achievement'=>Achievement::paginate(10)]);
     }
 
     /**
@@ -29,24 +30,25 @@ class ClientCommentController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function create(): Response
     {
-        return response()->view('admin.clientComment.create');
+        return response()->view('admin.achievement.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param StoreClientCommentRequest $request
+     * @param StoreAchievementRequest $request
      * @return RedirectResponse
      */
-    public function store(StoreClientCommentRequest $request): RedirectResponse
+    public function store(StoreAchievementRequest $request): RedirectResponse
     {
         $input = $request->all();
         $image = $request->file('image');
-        $input['image'] = $this->uploadSliderImage('/images/clientComment',$image);
-        ClientComment::create($input);
-        return redirect()->route('clientComment.index');
+        $input['image'] = $this->uploadSliderImage('/images/achievement',$image);
+        Achievement::create($input);
+        return redirect()->route('achievement.index');
+
     }
 
     /**
@@ -57,7 +59,7 @@ class ClientCommentController extends Controller
      */
     public function show(int $id): Response
     {
-        return \response($id);
+        //
     }
 
     /**
@@ -68,27 +70,27 @@ class ClientCommentController extends Controller
      */
     public function edit(int $id): Response
     {
-        return response()->view('admin.clientComment.edit',['clientComment'=>ClientComment::find($id)]);
+        return response()->view('admin.achievement.edit',['achievement'=>Achievement::find($id)]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param UpdateClientCommentRequest $request
+     * @param UpdateAchievementRequest $request
      * @param int $id
      * @return RedirectResponse
      */
-    public function update(UpdateClientCommentRequest $request, $id): RedirectResponse
+    public function update(UpdateAchievementRequest $request, int $id): RedirectResponse
     {
         $input = $request->all();
-        $achievement = ClientComment::find($id);
+        $achievement = Achievement::find($id);
         $image = $request->file('image');
         if($image){
-            $input['image'] = $this->uploadSliderImage('/images/clientComment',$image);
+            $input['image'] = $this->uploadSliderImage('/images/achievement',$image);
             $this->deleteImage($achievement->image);
         }
         $achievement->update($input);
-        return redirect()->route('clientComment.index');
+        return redirect()->route('achievement.index');
     }
 
     /**
@@ -99,9 +101,9 @@ class ClientCommentController extends Controller
      */
     public function destroy(int $id): JsonResponse
     {
-        $clientComment = ClientComment::find($id);
-        $this->deleteImage($clientComment);
-        $clientComment->delete();
+        $achievement = Achievement::find($id);
+        $this->deleteImage($achievement);
+        $achievement->delete();
         return response()->json(['success'=>1,'message'=>'item successful deleted']);
     }
 }

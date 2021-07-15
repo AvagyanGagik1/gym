@@ -22,6 +22,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/front/front.css') }}" rel="stylesheet">
     <link href="{{ asset('css/front/media.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/front/calendar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/package/owl.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -186,7 +187,7 @@
     <section class="sideCalendar">
         <button class="closeCalendar" id="closeCalendar"><span></span><span></span></button>
         <h1 class="calendarHeader" >Календарь</h1>
-        <div id="datePicker"></div>
+        <div id="datepicker"></div>
         <p class="calendarColor"><span></span>Пройденные тренировки</p>
         <div class="line"></div>
         <div class="calendarSection">
@@ -211,6 +212,7 @@
     @include('front.user.footer')
 </div>
 <script src="{{ asset('js/front/front.js') }}" defer></script>
+<script src="{{ asset('js/front/calendar.js') }}" defer></script>
 
 </body>
 </html>

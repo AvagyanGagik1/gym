@@ -148,13 +148,20 @@ $(document).ready(function () {
             },
         }
     })
+    $('.calendarOverlay').click(function (){
+        $('.calendarOverlay').css('display', 'none')
+        $('.sideCalendar').css('display', 'none')
+        $('body').css('overflow','auto')
+    })
     $('#closeCalendar').click(function () {
         $('.calendarOverlay').css('display', 'none')
         $('.sideCalendar').css('display', 'none')
+        $('body').css('overflow','auto')
     })
     $('#openCalendar').click(function () {
         $('.calendarOverlay').css('display', 'block')
         $('.sideCalendar').css('display', 'flex')
+        $('body').css('overflow','hidden')
     })
     $('#mainButton').click(function () {
         console.log('pix')

@@ -80,13 +80,17 @@
                         <a class="nav-link {{ Request::is('admin/workOut') ? 'active' : '' }}"
                            href="{{route('workOut.index')}}">Тренировкы</a>
                     </li>
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link {{ Request::is('admin/task') ? 'active' : '' }}"--}}
-{{--                           href="{{route('task.index')}}">Заданые</a>--}}
-{{--                    </li>--}}
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::is('admin/achievement') ? 'active' : '' }}"
+                           href="{{route('achievement.index')}}">Достижения</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('admin/subscription') ? 'active' : '' }}"
                            href="{{route('subscription.index')}}">Подпискы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::is('admin/clientComment') ? 'active' : '' }}"
+                           href="{{route('clientComment.index')}}">Коменты</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-md-auto d-md-flex">
