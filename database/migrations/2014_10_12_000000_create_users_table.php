@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->enum('gender',['male','female']);
             $table->string('avatar')->nullable();
             $table->boolean('is_admin')->default(false);
+            $table->bigInteger('calories')->nullable();
             $table->string('target');
             $table->rememberToken();
             $table->timestamps();

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubscriptionsTable extends Migration
+class CreateProjectVideosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateSubscriptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('subscriptions', function (Blueprint $table) {
+        Schema::create('project_videos', function (Blueprint $table) {
             $table->id();
-            $table->string('name_ru');
-            $table->string('name_en');
-            $table->string('name_blr');
-            $table->string('duration');
-            $table->bigInteger('price');
-            $table->string('image');
+            $table->text('link');
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ class CreateSubscriptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subscriptions');
+        Schema::dropIfExists('project_videos');
     }
 }

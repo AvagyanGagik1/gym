@@ -92,6 +92,10 @@
                         <a class="nav-link {{ Request::is('admin/clientComment') ? 'active' : '' }}"
                            href="{{route('clientComment.index')}}">Коменты</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::is('admin/users') ? 'active' : '' }}"
+                           href="{{route('users.index')}}">Users</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ml-md-auto d-md-flex">
                     <li class="nav-item">

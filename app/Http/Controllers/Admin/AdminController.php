@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\helper\UploadImage;
+use App\Http\Requests\StoreProjectVideoRequest;
 use App\Http\Requests\UpdateClientCommentHeaderRequest;
+use App\Http\Requests\UpdateFirstStepIconRequest;
 use App\Http\Requests\UpdateFirstStepRequest;
 use App\Http\Requests\UpdateHwoWeAreDescriptionRequest;
 use App\Http\Requests\UpdateHwoWeAreRequest;
@@ -13,9 +15,11 @@ use App\Http\Requests\UpdateSliderTextRequest;
 use App\Http\Requests\UpdateTrainerHeaderRequest;
 use App\Model\ClientCommentHeader;
 use App\Model\FirstStep;
+use App\Model\FirstStepIcon;
 use App\Model\HwoAreWe;
 use App\Model\HwoWeAreDescription;
 use App\Model\MainNew;
+use App\Model\ProjectVideo;
 use App\Model\SliderText;
 use App\Model\TrainerHeader;
 use Illuminate\Http\RedirectResponse;
@@ -185,5 +189,36 @@ class AdminController extends Controller
         $description->update($input);
         return redirect()->route('dashboard');
 
+    }
+
+    /**
+     * @return Response
+     */
+    public function firstStepIcon(): Response
+    {
+        return response()->view('admin.firstStepIcon.index',['descriptions'=>FirstStepIcon::all()]);
+    }
+
+    /**
+     * @param UpdateFirstStepIconRequest $request
+     * @param $id
+     * @return RedirectResponse
+     */
+    public function firstStepUpdateIcon(UpdateFirstStepIconRequest $request,$id): RedirectResponse
+    {
+        $icon = FirstStepIcon::find($id);
+        $input = $request->all();
+        $icon->update($input);
+        return redirect()->route('dashboard');
+
+    }
+    public function projectVideo(){
+        return response()->view('admin.projectVideo.index',['projectVideo' => ProjectVideo::find(1)]);
+    }
+    public function projectVideoUpdate(StoreProjectVideoRequest $request,$id){
+        $projectVideo = ProjectVideo::find($id);
+        $input = $request->all();
+        $projectVideo->update($input);
+        return \redirect()->route('dashboard');
     }
 }

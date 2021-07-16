@@ -498,7 +498,7 @@
                 <div class="img2">
 
                     <div id="player"></div>
-                    <img class="playButton" id="playButton" src="/images/playButton.png" data-link="{{$firstStep->video_link}}">
+                    <img class="playButton" id="playButton" src="/images/playButton.png" data-link="{{$youtubeImage}}">
                     <img class="preview" src="//img.youtube.com/vi/{{$youtubeImage}}/maxresdefault.jpg" alt="">
 {{--                    <iframe width="569px" height="372px" controls=0 src="https://www.youtube.com/embed/9VxqYJmiHpA"--}}
 {{--                            title="YouTube video player" frameborder="0"--}}

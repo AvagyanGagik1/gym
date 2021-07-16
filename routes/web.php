@@ -39,10 +39,14 @@ Route::namespace('Admin')->middleware(['auth','is_admin'])->prefix('admin')->gro
     Route::get('/','AdminController@index')->name('dashboard');
     Route::get('/main/news','AdminController@mainNews')->name('admin.main.news');
     Route::put('/main/news/{id}/update','AdminController@mainNewsUpdate')->name('admin.main.news.update');
+    Route::get('/first/step/icon','AdminController@firstStepIcon')->name('admin.first.step.icon');
     Route::get('/first/step','AdminController@firstStep')->name('admin.first.step');
     Route::put('/first/step/{id}/update','AdminController@firstStepUpdate')->name('firstStep.update');
+    Route::put('/first/step/icon/{id}/update','AdminController@firstStepUpdateIcon')->name('firstStep.update.icon');
     Route::get('/hwo/we','AdminController@hwoWeAre')->name('admin.hwo.we.are');
     Route::get('/hwo/description/we/','AdminController@hwoWeAreDescription')->name('admin.hwo.description.we.are');
+    Route::get('/project/video','AdminController@projectVideo')->name('project.video');
+    Route::put('/project/{id}/video','AdminController@projectVideoUpdate')->name('project.video.update');
 
 
     Route::put('/description/hwo/{id}/update','AdminController@hwoWeAreDescriptionUpdate')->name('hwoWeAre.description.update');
@@ -109,6 +113,12 @@ Route::namespace('Admin')->middleware(['auth','is_admin'])->prefix('admin')->gro
     });
     Route::namespace('Achievement')->group(function (){
         Route::resource('achievement','AchievementController');
+    });
+    Route::namespace('Achievement')->group(function (){
+        Route::resource('achievement','AchievementController');
+    });
+    Route::namespace('User')->group(function (){
+        Route::resource('users','UserController');
     });
 });
 Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(function (){

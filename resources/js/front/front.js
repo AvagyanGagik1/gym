@@ -183,11 +183,12 @@ $(document).ready(function () {
 
     let player;
     $('#playButton').click(function () {
+        let video = $(this).attr('data-link')
 
         player = new YT.Player('player', {
             height: 'inherit',
             width: 'inherit',
-            videoId: 'M7lc1UVf-VE',
+            videoId: video,
             playerVars: {
                 'playsinline': 1,
                 'autoplay': 1,

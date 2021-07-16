@@ -43,6 +43,15 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
+                        <h5 class="card-title">Блок первые шаги (Описаные)</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Блок первые шаги на главной странице (Описаные) редактировать</h6>
+                        <a href="{{route('admin.first.step.icon')}}" class="card-link">Первые шаги</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
                         <h5 class="card-title">Коменты</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Что говорят о нас наши клиенты блок на главной странице</h6>
                         <a href="{{route('admin.client.comment.header')}}" class="card-link">Коменты</a>
@@ -64,6 +73,15 @@
                         <h5 class="card-title">Главная новость</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Блок Главная новость на главной странице редактировать</h6>
                         <a href="{{route('admin.main.news')}}" class="card-link">Главная новость</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Выдео о проекте</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Блок личные данные Выдео о проекте редактировать</h6>
+                        <a href="{{route('project.video')}}" class="card-link">Выдео о проекте</a>
                     </div>
                 </div>
             </div>
