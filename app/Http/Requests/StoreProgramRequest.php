@@ -26,6 +26,7 @@ class StoreProgramRequest extends FormRequest
     {
         return [
             'program_category_id'=>'required',
+            'subscription_id'=>'required',
             'trainer_id'=>'required',
             'name_ru'=>'required',
             'name_en'=>'required',

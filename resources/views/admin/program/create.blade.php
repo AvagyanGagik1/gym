@@ -5,6 +5,22 @@
         <form action="{{route('program.store')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group row pb-3">
+                <label for="subscription_id" class="col-sm-2 col-form-label font-weight-bold">Подписка програмы:</label>
+                <div class="col-sm-10">
+                    <select class="custom-select" id="subscription_id" name="subscription_id">
+                        <option disabled @if(!old('subscription_id')) selected @endif>--Выберите програму--
+                        </option>
+                        @foreach($subscriptions as $subscription)
+                            <option value="{{$subscription->id}}"
+                                    @if(old('subscription_id')=== $subscription->id) selected @endif>{{$subscription->name_ru}}</option>
+                        @endforeach
+                    </select>
+                    @if ($errors->has('subscription_id'))
+                        <span class="text-danger">{{ $errors->first('subscription_id')}}</span>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group row pb-3">
                 <label for="program_category_id" class="col-sm-2 col-form-label font-weight-bold">Категория для
                     питания:</label>
                 <div class="col-sm-10">

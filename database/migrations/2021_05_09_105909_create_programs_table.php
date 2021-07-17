@@ -17,6 +17,7 @@ class CreateProgramsTable extends Migration
             $table->id();
             $table->bigInteger('program_category_id')->unsigned();
             $table->bigInteger('trainer_id')->unsigned();
+            $table->bigInteger('subscription_id')->unsigned();
             $table->string('name_en');
             $table->string('name_ru');
             $table->string('name_blr');
@@ -40,6 +41,12 @@ class CreateProgramsTable extends Migration
             $table->foreign('trainer_id')
                 ->references('id')
                 ->on('trainers')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('subscription_id')
+                ->references('id')
+                ->on('subscriptions')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
         });

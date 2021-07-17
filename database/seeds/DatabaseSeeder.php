@@ -22,5 +22,8 @@ class DatabaseSeeder extends Seeder
          $this->call(FirstStepIconSeeder::class);
          $this->call(HwoWeAreDescriptionSeeder::class);
          $this->call(ProjectVideoSeeder::class);
+         $this->call(SubscribeSeeder::class);
+         $this->call(AchievmentSeeder::class);
+         $this->call(ClientCommentSeeder::class);
     }
 }

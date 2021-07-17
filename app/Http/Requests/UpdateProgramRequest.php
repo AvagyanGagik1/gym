@@ -26,6 +26,7 @@ class UpdateProgramRequest extends FormRequest
     {
         return [
             'program_category_id'=>'required',
+            'subscription_id'=>'required',
             'trainer_id'=>'required',
             'name_ru.required'=>'обезательна к заполнению!!',
             'name_en.required'=>'обезательна к заполнению!!',

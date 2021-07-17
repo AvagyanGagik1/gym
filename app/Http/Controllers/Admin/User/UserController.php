@@ -5,8 +5,12 @@ namespace App\Http\Controllers\Admin\User;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\helper\UploadImage;
 use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UpdateUsersRequest;
+use App\Model\Personal;
 use App\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -18,7 +22,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return response()->view('admin.user.index',['users'=>User::paginate(10)]);
+        return response()->view('admin.user.index',['users'=>User::where('is_admin',0)->paginate(10)]);
     }
 
     /**
@@ -35,16 +39,19 @@ class UserController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(StoreUserRequest $request)
     {
         $input = $request->all();
-        $image = $request->file('image');
+         $image = $request->file('avatar');
         if($image){
-            $input['image'] = $this->uploadSliderImage('images/user',$image);
+            $input['avatar'] = $this->uploadSliderImage('/images/user',$image);
         }
-        User::create($input);
+        $input['password'] = Hash::make($input['password']);
+        $user = User::create($input);
+        Personal::create(['age'=>$input['age'],'height'=>$input['height'],'weight'=>$input['weight'],'user_id'=>$user->id]);
+        return redirect()->route('users.index');
     }
 
     /**
@@ -66,7 +73,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return response()->view('admin.user.edit',['user'=>$user,'personal'=> count($user->personals)?$user->personals[0]:['weight'=>0,'height'=>0,'age'=>0]]);
     }
 
     /**
@@ -74,21 +82,34 @@ class UserController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(UpdateUsersRequest $request, $id)
     {
-        //
+        $input = $request->all();
+        $image = $request->file('avatar');
+        $user = User::find($id);
+        if($image){
+            $input['avatar'] = $this->uploadSliderImage('/images/user',$image);
+            $this->deleteImage($user->avatar);
+        }
+//        $input['password'] = Hash::make($input['password']);
+        $user->update($input);
+        $user->personals[0]->update(['age'=>$input['age'],'height'=>$input['height'],'weight'=>$input['weight']]);
+        return redirect()->route('users.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $this->deleteImage($user->avatar);
+        $user->delete();
+        return response()->json(['success'=>1,'message'=>'user successful deleted']);
     }
 }
