@@ -4,11 +4,14 @@ namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\helper\UploadImage;
+use App\Model\Achievement;
 use App\Model\DietRestrictions;
 use App\Model\FoodCategory;
 use App\Model\Personal;
 use App\Model\PurposeOfNutrition;
+use App\Model\Subscription;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -42,12 +45,15 @@ class ProfileController extends Controller
 
     public function achievements(): Response
     {
-        return response()->view('front.user.achievements');
+        $user = Auth::user();
+        $achievements = $user->achievements;
+        $activated = $this->getActivatedAchievements($achievements);
+        return response()->view('front.user.achievements',['achievements'=>Achievement::all(),'activated'=>$activated]);
     }
 
-    public function subscribe(): Response
+    public function subscribe()
     {
-        return response()->view('front.user.subscribe');
+        return response()->view('front.user.subscribe',['subscriptions'=>Subscription::all()]);
     }
 
     public function functional(): Response
@@ -123,5 +129,13 @@ class ProfileController extends Controller
         $json = ['date' => $date, 'weight' => $weight];
         return response()->json($json);
 
+    }
+    public function getActivatedAchievements($achievements): array
+    {
+        $activatedAchievements = [];
+        foreach ($achievements as $achievement){
+            array_push($activatedAchievements,$achievement->id);
+        }
+        return $activatedAchievements;
     }
 }

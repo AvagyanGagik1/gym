@@ -9,7 +9,8 @@ class SubscribeSeeder extends Seeder
             'name_ru'=>'4 Недельная Трансформация',
             'name_en'=>'4 Недельная Трансформация',
             'name_blr'=>'4 Недельная Трансформация',
-            'duration' => 365,
+            'duration_subscribe' => 365,
+            'duration_program' => 4,
             'price'=>340,
             'image' => '/images/subscription/subscribe1.png'
         ],
@@ -17,7 +18,8 @@ class SubscribeSeeder extends Seeder
             'name_ru'=>'8 Недельная Трансформация',
             'name_en'=>'8 Недельная Трансформация',
             'name_blr'=>'8 Недельная Трансформация',
-            'duration' => 365,
+            'duration_subscribe' => 365,
+            'duration_program' => 8,
             'price'=>640,
             'image' => '/images/subscription/subscribe2.png'
         ],
@@ -25,7 +27,8 @@ class SubscribeSeeder extends Seeder
             'name_ru'=>'16 Недельная Трансформация',
             'name_en'=>'16 Недельная Трансформация',
             'name_blr'=>'16 Недельная Трансформация',
-            'duration' => 365,
+            'duration_subscribe' => 365,
+            'duration_program' => 16,
             'price'=>740,
             'image' => '/images/subscription/subscribe3.png'
         ],
@@ -34,7 +37,8 @@ class SubscribeSeeder extends Seeder
             'name_en'=>'32 Недельная Трансформация',
             'name_blr'=>'32 Недельная Трансформация',
 
-            'duration' => 365,
+            'duration_subscribe' => 365,
+            'duration_program' => 32,
             'price'=>979,
             'image' => '/images/subscription/subscribe4.png'
         ]

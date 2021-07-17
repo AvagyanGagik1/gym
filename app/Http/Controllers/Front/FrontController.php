@@ -9,6 +9,7 @@ use App\Model\HwoAreWe;
 use App\Model\MainNew;
 use App\Model\Slider;
 use App\Model\SliderText;
+use App\Model\Subscription;
 use App\Model\Trainer;
 use App\Model\TrainerHeader;
 use Illuminate\Http\JsonResponse;
@@ -110,15 +111,15 @@ class FrontController extends Controller
 
     public function fourStep(): Response
     {
-        return response()->view('auth.register.fourStep');
+        return response()->view('auth.register.fourStep',['subscriptions'=>Subscription::all()]);
 
     }
 
     /**
      * @return Response
      */
-    public function fourGetStep(): Response
-    {
-        return response()->view('auth.register.fourStep');
-    }
+//    public function fourGetStep(): Response
+//    {
+//        return response()->view('auth.register.fourStep',['subscriptions',Subscription::all()]);
+//    }
 }
