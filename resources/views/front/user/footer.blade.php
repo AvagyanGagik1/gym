@@ -6,7 +6,7 @@
                 </p>
             </div>
             <div class="d-flex align-items-center justify-content-center promodex">
-                <p class="m-0 mr-2">Разработано:</p><img src="/images/PROMODEX.png" alt="" class="img-fluid">
+                <p class="m-0 mr-2">{{__('language.designed')}}:</p><img src="/images/PROMODEX.png" alt="" class="img-fluid">
             </div>
         </div>
     </div>

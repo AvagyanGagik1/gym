@@ -84,7 +84,7 @@
                 @include('auth.aside',['data'=>1])
             </div>
             <div class="col-xl-8 col-lg-12 first-step">
-                <h1>Создайте свой аккаунт</h1>
+                <h1>{{__('language.yourAccount')}}</h1>
                 <form action="{{route('register.firstStep')}}" method="post" data-first="true" class="d-flex flex-column FormNotSubmit">
                     @csrf
                     <div class="d-flex login-input">
@@ -101,7 +101,7 @@
 
                     </div>
                     <div class="social-form">
-                        <h1>Или войти с помощью социальных сетей</h1>
+                        <h1>{{__('language.orLogin')}}</h1>
                         <div class="social-btn-grp">
                             <button type="button">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -157,15 +157,15 @@
                     <div class="terms">
                         <input type="checkbox" @if(Session::has('user')) checked="true" @endif name="terms" value="1" class="terms-checkbox" id="terms-checkbox">
                         <span></span>
-                        <label>Я прочитал Условия Соглашения и даю согласение на обработку личных данных
+                        <label>{{__('language.terms')}}
                                 <p class="text-danger  termsError"></p>
                         </label>
                     </div>
 
 
                     <div class="submit-group">
-                        <button type="submit" class="next">Продолжить</button>
-                        <a class="prev" href="{{route('login')}}">Отмена</a>
+                        <button type="submit" class="next">{{__('language.proceed')}}</button>
+                        <a class="prev" href="{{route('login')}}">{{__('language.cancel')}}</a>
                     </div>
                 </form>
             </div>

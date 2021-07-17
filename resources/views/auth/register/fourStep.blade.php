@@ -7,7 +7,7 @@
                 @include('auth.aside',['data'=>4])
             </div>
             <div class="col-xl-8 col-lg-12 four-step">
-                <h1>Подписка</h1>
+                <h1>{{__('language.subscribe')}}</h1>
                 <div class="subscriptions">
                     <div class="item">
                         <input type="radio" name="subscribe">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="payment-subscription">
-                    <h1>Оплатите удобным способом</h1>
+                    <h1>{{__('language.convenient')}}</h1>
                     <div class="payment-wrapper">
                         <div class="item">
                             <input type="radio" name="payment" checked>
@@ -127,8 +127,8 @@
                 <div class="submit-group">
                     <form method="post" action="{{route('user.custom.register')}}">
                         @csrf
-                        <button class="next" type="submit" >Продолжить</button>
-                        <a class="prev" href="{{route('register.get.thirdStep')}}">Отмена</a>
+                        <button class="next" type="submit" >{{__('language.proceed')}}</button>
+                        <a class="prev" href="{{route('register.get.thirdStep')}}">{{__('language.cancel')}}</a>
                     </form>
                 </div>
             </div>
