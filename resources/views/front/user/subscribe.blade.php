@@ -6,18 +6,21 @@
                 <div class="col-12 p-0 d-flex align-items-center subscribe-header">
                     <h2>{{__('language.mySub')}}</h2>
                 </div>
-                <div class="col-12 d-flex align-items-center subscribe-transform justify-content-between">
-                    <h3>
-                        4 {{__('language.weekTransform')}}
-                    </h3>
-                    <div class="subscribe-transform-days">
-                        <p>{{__('language.days')}}:<span>323/365</span></p>
-                        <div></div>
+                @foreach($profileSubscription as $subscription)
+                    <div class="col-12 d-flex align-items-center subscribe-transform justify-content-between">
+                        <h3>
+                            {{$subscription->duration_week}} {{App::getlocale()==='ru'?$subscription->name_ru:(App::getlocale()==='en'?$subscription->name_en:$subscription->name_blr)}}
+                        </h3>
+                        <div class="subscribe-transform-days">
+                            <p>{{__('language.days')}}
+                                :<span>{{$subscription->dayLeft}}/{{$subscription->duration_subscribe}}</span></p>
+                            <div></div>
+                        </div>
+                        <button>
+                            {{__('language.reSub')}}
+                        </button>
                     </div>
-                    <button>
-                        {{__('language.reSub')}}
-                    </button>
-                </div>
+                @endforeach
                 <div class="col-12 d-flex align-items-center subscribe-new-plan flex-wrap">
                     <div class="w-100 subscribe-new-plan-header">
                         <h2>
@@ -25,42 +28,18 @@
                         </h2>
                     </div>
                     <div class="subscribe-new-plan-price d-flex col-12 p-0 justify-content-center flex-wrap">
-                        <div class="col-lg-6 col-12">
-                            <h4>
-                                4 Недельная Трансформация
-                            </h4>
-                            <p>340 <span>грн</span></p>
-                            <button>
-                                ПРОДЛИТЬ
-                            </button>
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <h4>
-                                4 Недельная Трансформация
-                            </h4>
-                            <p>340 <span>грн</span></p>
-                            <button>
-                                ПРОДЛИТЬ
-                            </button>
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <h4>
-                                4 Недельная Трансформация
-                            </h4>
-                            <p>340 <span>грн</span></p>
-                            <button>
-                                ПРОДЛИТЬ
-                            </button>
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <h4>
-                                4 Недельная Трансформация
-                            </h4>
-                            <p>340 <span>грн</span></p>
-                            <button>
-                                ПРОДЛИТЬ
-                            </button>
-                        </div>
+                        @foreach($subscriptions as $subscription)
+                            <div class="col-lg-6 col-12" style="background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 75.78%), url('{{$subscription->image}}') no-repeat center;
+">
+                                <h4>
+                                    {{$subscription->duration_program}} Недельная Трансформация
+                                </h4>
+                                <p>{{$subscription->price}} <span>грн</span></p>
+                                <button>
+                                    ПРОДЛИТЬ
+                                </button>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

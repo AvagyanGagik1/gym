@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::composer(['layouts.front.profile','front.user.subscribe'],function ($view){
+            $user =Auth::user();
+            $subscriptions = $user->subscriptions;
+            foreach ($subscriptions as $subscription){
+                $subscription->dayLeft = intval($subscription->duration_subscribe) - Carbon::parse($subscription->created_at)->diffInDays();
+            }
+            $view->with('profileSubscription',$subscriptions);
+        });
     }
 }

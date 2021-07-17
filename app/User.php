@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -38,9 +39,27 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-
+    /**
+     * @return HasMany
+     */
     public function personals(): HasMany
     {
         return $this->hasMany('App\Model\Personal');
+    }
+
+    /**
+     * @return MorphToMany
+     */
+    public function subscriptions(): MorphToMany
+    {
+        return $this->morphedByMany('App\Model\Subscription','userable');
+    }
+
+    /**
+     * @return MorphToMany
+     */
+    public function achievements(): MorphToMany
+    {
+        return $this->morphedByMany('App\Model\Achievement','userable');
     }
 }

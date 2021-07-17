@@ -176,12 +176,14 @@
                 @csrf
             </form>
         </div>
+        @foreach($profileSubscription as $subscription)
         <div class="sideNavBottom">
             <h1>{{__("language.subscribe")}}</h1>
-            <p>{{__("language.days")}}:<span>323/365</span></p>
+            <p>{{__("language.days")}}:<span>{{$subscription->dayLeft}}/{{$subscription->duration_subscribe}}</span></p>
             <div></div>
             <button class="btn btnNorm btnNormal1" onclick="window.location = '/profile/subscribe'">{{__("language.renew")}}</button>
         </div>
+        @endforeach
     </section>
     <section class="sideCalendar">
         <button class="closeCalendar" id="closeCalendar"><span></span><span></span></button>

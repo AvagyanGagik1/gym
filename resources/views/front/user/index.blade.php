@@ -21,7 +21,7 @@
                                 <path d="M28.9998 19.5111L29.8243 20.1111L29.5087 19.1422L30.3332 18.5556H29.3221L28.9998 17.5556L28.6776 18.5556H27.6665L28.4909 19.1422L28.1754 20.1111L28.9998 19.5111Z" fill="#111111"/>
                             </svg>
                         </div>
-                        <img class="imgFitness" src="./images/img.png" alt="">
+                        <img class="imgFitness" src="/images/img.png" alt="">
                     </div>
                     <div class="p-2 cardWrapper">
                         <h1 class="cardHeader">Утреннее кардио 2. Сожги весь жир!</h1>
