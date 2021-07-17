@@ -7,7 +7,7 @@
                 @include('auth.loginAside')
             </div>
             <div class="col-xl-8 col-lg-12 first-step">
-                <h1>Авторизация</h1>
+                <h1>{{__('language.authorization')}}</h1>
                 <form method="POST" action="{{ route('login') }}" class="d-flex flex-column">
                     @csrf
                     <div class="d-flex login-input">
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="social-form">
-                        <h1>Или войти с помощью социальных сетей</h1>
+                        <h1>{{__('language.orLogin')}}</h1>
                         <div class="social-btn-grp">
                             <button type="button">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -76,11 +76,12 @@
                     <div class="terms">
                         <input type="checkbox" class="terms-checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                         <span></span>
-                        <label>Запомнить меня</label>
+                        <label>{{__('language.remember')}}</label>
                     </div>
+
                     <div class="submit-group">
-                        <button type="submit" class="next text-center" >ВОЙТИ</button>
-                        <a class="prev" href="{{route('register')}}">РЕГИСТРАЦИЯ</a>
+                        <button type="submit" class="next text-center">{{ __('language.logIn')}}</button>
+                        <a class="prev" href="{{route('register')}}">{{ __('language.signUp')}}</a>
                     </div>
                 </form>
             </div>

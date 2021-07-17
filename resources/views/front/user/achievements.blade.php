@@ -4,7 +4,7 @@
         <div class="d-flex flex-column  ">
             <div class="col-xl-10 col-12 d-flex justify-content-center flex-wrap m-auto">
                 <div class="col-12 p-0 d-flex align-items-center subscribe-header">
-                    <h2>Достижения</h2>
+                    <h2>{{__('language.achievements')}}</h2>
                 </div>
                 <div class="col-12 p-0 d-flex align-items-center items">
                     <div class="item">

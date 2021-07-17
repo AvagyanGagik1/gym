@@ -4,7 +4,7 @@
         <div class="d-flex flex-column  ">
             <div class="col-xl-10 col-12 d-flex justify-content-center flex-wrap m-auto">
                 <div class="col-12 p-0 d-flex align-items-center subscribe-header">
-                    <h2>Личная информация</h2>
+                    <h2>{{__('language.personal')}}</h2>
                 </div>
                 <div class="col-12 p-0 personal-head">
                     <div class="personal-head-img">
@@ -16,17 +16,17 @@
                         </button>
                     </div>
                     <div class="personal-head-name d-flex flex-column align-items-start">
-                        <label for="userNameSet">Ваше имя</label>
+                        <label for="userNameSet">{{__('language.yourName')}}</label>
                         <input type="text" id="userNameSet" value="{{auth()->user()->name??''}}">
                     </div>
                     <div class="personal-head-gender d-flex flex-column align-items-start">
-                        <label for="">Ваш пол</label>
+                        <label for="">{{__('language.yourGender')}}</label>
                         <select name="gender" value="" id="userGenderSet">
                             <option id="gender" @if(auth()->user()->gender==='female') selected @endif value="female">
-                                Женский
+                                {{__('language.male')}}
                             </option>
                             <option id="gender" @if(auth()->user()->gender==='male') selected @endif value="male">
-                                Мужской
+                                {{__('language.female')}}
                             </option>
                         </select>
                     </div>
@@ -34,14 +34,14 @@
                 <div class="col-12 p-0 personal-params d-flex">
                     <div class="col-4 p-0 d-flex flex-wrap custom-params">
                         <div class="col-12 personal-params-header">
-                            <h3>Параметры</h3>
+                            <h3>{{__('language.parameters')}}</h3>
                         </div>
                         <form action="{{route('user.change.personals')}}" method="post" class="d-flex flex-wrap">
                             @csrf
                             <input type="hidden" name="user_id" value="{{auth()->id()}}">
                             <div class="col-5 personal-params-item">
                                 <p>
-                                    Вес
+                                    {{__('language.weight')}}
                                 </p>
                                 <input type="number" value="{{$personal->weight}}" name="weight">
 
@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-5 personal-params-item">
                                 <p>
-                                    Рост
+                                    {{__('language.height')}}
                                 </p>
                                 <input type="number" value="{{$personal->height}}" name="height">
 
@@ -69,7 +69,7 @@
                             </div>
                             <div class="col-5 personal-params-item">
                                 <p>
-                                    Возраст
+                                    {{__('language.age')}}
                                 </p>
                                 <input type="number" value="{{$personal->age}}" name="age">
 
@@ -83,12 +83,12 @@
                             </div>
                             <div class="col-5 personal-params-item-update">
                                 <div>
-                                    <h2>Вес: {{$personal->weight}} кг</h2>
+                                    <h2>{{__('language.weight')}}: {{$personal->weight}} {{__('language.kg')}}</h2>
                                     <p>{{$personal->created_at->format('m.d.Y')}}</p>
                                 </div>
                                 <div>
                                     <button type="submit" class="btn m-0">
-                                        ОБНОВИТЬ
+                                        {{__('language.update')}}
                                     </button>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="col-8 p-0 chart-div">
                         <div class="col-12 personal-params-header">
-                            <h3>График потери веса</h3>
+                            <h3>{{__('language.chart')}}</h3>
                             <canvas id="profileChart"></canvas>
                         </div>
                     </div>
@@ -119,12 +119,12 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                     <div class="col-12 item">
-                        <h5>ПОСМОТРИТЕ РОЛИК О НАШЕМ ПРОЕКТЕ</h5>
+                        <h5>{{__('language.projectVideo')}}</h5>
                     </div>
                 </div>
                 <div class="col-12 p-0 personal-video d-flex justify-content-around flex-wrap">
                     <div class="col-12 item">
-                        <h2>Мы рады приветствовать вас в нашем проекте</h2>
+                        <h2>{{__('language.welcome')}}</h2>
                     </div>
                     <div class="col-12 item">
                         <img src="/images/informationVideo.png" alt="" class="img-fluid">

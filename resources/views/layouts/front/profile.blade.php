@@ -61,7 +61,7 @@
             </div>
             <div class="navClient">
                 <button id="openCalendar" class="btn btnNorm btnNormal1">
-                    <span>Календарь</span>
+                    <span>{{__('language.calendar')}}</span>
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M16.5859 9.88281C17.0606 9.88281 17.4453 9.49806 17.4453 9.02344C17.4453 8.54882 17.0606 8.16406 16.5859 8.16406C16.1113 8.16406 15.7266 8.54882 15.7266 9.02344C15.7266 9.49806 16.1113 9.88281 16.5859 9.88281Z"
@@ -185,12 +185,12 @@
     </section>
     <section class="sideCalendar">
         <button class="closeCalendar" id="closeCalendar"><span></span><span></span></button>
-        <h1 class="calendarHeader" >Календарь</h1>
-        <div id="datepicker"></div>
-        <p class="calendarColor"><span></span>Пройденные тренировки</p>
+        <h1 class="calendarHeader" >{{__('language.calendar')}}</h1>
+        <div id="datePicker"></div>
+        <p class="calendarColor"><span></span>{{__('language.completed')}}</p>
         <div class="line"></div>
         <div class="calendarSection">
-            <h3>Пройденные тренировки</h3>
+            <h3>{{__('language.completed')}}</h3>
             <div class="item">
                 <img src="/images/pictureforcalendar.png" alt="">
                 <h2>Утреннее кардио 2. Сожги весь жир!</h2>
@@ -211,7 +211,6 @@
     @include('front.user.footer')
 </div>
 <script src="{{ asset('js/front/front.js') }}" defer></script>
-<script src="{{ asset('js/front/calendar.js') }}" defer></script>
 
 </body>
 </html>

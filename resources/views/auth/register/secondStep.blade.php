@@ -7,11 +7,11 @@
                 @include('auth.aside',[ 'data'=> 2])
             </div>
             <div class="col-xl-8 col-lg-12 second-step">
-                <h1>Ваша цель</h1>
+                <h1>{{__('language.yourAim')}}</h1>
                 <form action="" method="post"  class="d-flex flex-column FormNotSubmit">
                     @csrf
                     <div class="d-flex flex-column login-input">
-                        <h1>Выберите ваш пол</h1>
+                        <h1>{{__('language.gender')}}</h1>
                         <div class="gender-select">
                             <div class="gender-item">
                                 <input type="radio" name="gender" @if(Session::has('user.gender') && Session::get('user.gender')==='male') checked @endif checked value="male">
@@ -26,7 +26,7 @@
                                             fill="#111111"/>
                                     </svg>
                                 </label>
-                                <span>Мужчина</span>
+                                <span>{{__('language.male')}}</span>
                             </div>
                             <div class="gender-item">
                                 <input type="radio" name="gender" @if(Session::has('user.gender') && Session::get('user.gender')==='female') checked @endif value="female">
@@ -41,19 +41,19 @@
                                             fill="#999999"/>
                                     </svg>
                                 </label>
-                                <span>Женщина</span>
+                                <span>{{__('language.female')}}</span>
                             </div>
                         </div>
                     </div>
                     <div class="target">
-                        <h1>Выберите самую важную для себя цель</h1>
+                        <h1>{{__('language.important')}}</h1>
                         <div class="target-group">
                             <div class="item">
                                 <input type="radio"  @if(Session::has('user.target') && Session::get('user.target')==='flexibility') checked @endif name="target" checked value="flexibility">
                                 <label for="">
                                     <img src="/images/yoga.svg" alt="">
 
-                                    <span class="desc">Гибкость</span>
+                                    <span class="desc">{{__('language.flexibility')}}</span>
                                     <span class="target-ellipse"></span>
                                 </label>
 
@@ -63,7 +63,7 @@
                                 <input type="radio"  @if(Session::has('user.target') && Session::get('user.target')==='BurnFat') checked @endif name="target"  value="BurnFat">
                                 <label for="">
                                     <img src="/images/scales.svg" alt="">
-                                    <span class="desc">Сжечь жир</span>
+                                    <span class="desc">{{__('language.burn')}}</span>
                                     <span class="target-ellipse"></span>
                                 </label>
                             </div>
@@ -71,7 +71,7 @@
                                 <input type="radio"  @if(Session::has('user.target') && Session::get('user.target')==='muscleSet') checked @endif name="target" value="muscleSet">
                                 <label for="">
                                     <img src="/images/dumbbell.svg" alt="">
-                                    <span class="desc">Набор мышц</span>
+                                    <span class="desc">{{__('language.muscle')}}</span>
                                     <span class="target-ellipse"></span>
                                 </label>
                             </div>
@@ -79,15 +79,15 @@
                                 <input type="radio"  @if(Session::has('user.target') && Session::get('user.target')==='keepingInShape') checked @endif name="target" value="keepingInShape">
                                 <label for="">
                                     <img src="/images/brawn.svg" alt="">
-                                    <span class="desc">Поддержание формы</span>
+                                    <span class="desc">{{__('language.shape')}}</span>
                                     <span class="target-ellipse"></span>
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div class="submit-group">
-                        <button type="submit" class="next">Продолжить</button>
-                        <a href="{{route('register')}}" class="prev">Отмена</a>
+                        <button type="submit" class="next">{{__('language.proceed')}}</button>
+                        <a href="{{route('register')}}" class="prev">{{__('language.cancel')}}</a>
                     </div>
                 </form>
             </div>

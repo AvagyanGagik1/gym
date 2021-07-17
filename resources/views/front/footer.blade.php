@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="d-flex align-items-center">
-                <h6>Разработано:</h6>
+                <h6>{{__('language.designed')}}:</h6>
                 <img src="/images/PROMODEX.png" alt="">
             </div>
         </div>

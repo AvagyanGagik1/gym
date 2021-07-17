@@ -4,22 +4,22 @@
         <div class="d-flex flex-column">
             <div class="col-xl-10 col-12 d-flex justify-content-center flex-wrap m-auto">
                 <div class="col-12 p-0 d-flex align-items-center food-header subscribe-header">
-                    <h2>Питание</h2>
+                    <h2>{{__('language.food')}}</h2>
                 </div>
                 <div class="col-12 d-flex align-items-center justify-content-between food-filter">
                     <div class="food-select d-flex">
                         <div>
-                            <label for="gender">Пол</label>
+                            <label for="gender">{{__('language.gender')}}</label>
                             <select name="" id="gender" class="food-select-item">
-                                <option @if(auth()->user()->gender === 'male') selected @endif value="male">Мужской
+                                <option @if(auth()->user()->gender === 'male') selected @endif value="male">{{__('language.male')}}
                                 </option>
                                 <option @if(auth()->user()->gender === 'female') selected @endif value="female">
-                                    Женский
+                                    {{__('language.female')}}
                                 </option>
                             </select>
                         </div>
                         <div>
-                            <label for="limitation">Ограничения по питанию</label>
+                            <label for="limitation">{{__('language.diet')}}</label>
                             <select name="" id="limitation" class="food-select-item">
                                 <option @if(count($dietRestriction)) selected @endif disabled value="null">--Ограничения
                                     по питанию--
@@ -31,7 +31,7 @@
                             </select>
                         </div>
                         <div>
-                            <label for="purpose">Цель питания</label>
+                            <label for="purpose">{{__('language.purpose')}}</label>
                             <select name="" id="purpose" class="food-select-item">
                                 <option @if(count($purposeOfNutrition)) selected @endif disabled value="null">--Цель
                                     питания --
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <button class="food-select-button">
-                        ПОДОБРАТЬ РАЦИОН
+                        {{__('language.choseDiet')}}
                     </button>
                 </div>
                 @foreach($foodCategory as $key=>$category)
@@ -197,10 +197,10 @@
                 @endforeach
                 <div class="col-12 p-0 food-ready">
                     <p>
-                        Итого за день калорий: +100500 ccal
+                        {{__('language.dailyCalories')}}: +100500 ccal
                     </p>
                     <button>
-                        ГОТОВО
+                        {{__('language.ready')}}
                     </button>
                 </div>
             </div>

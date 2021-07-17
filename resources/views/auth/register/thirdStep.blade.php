@@ -7,11 +7,11 @@
                 @include('auth.aside',['data'=>3])
             </div>
             <div class="col-xl-8 col-lg-12 third-step">
-                <h1>Личные данные</h1>
+                <h1>{{__('language.personalData')}}</h1>
                 <div class="personal-data">
                     <div class="item age">
                         <div class="header">
-                            <h3>Возраст</h3>
+                            <h3>{{__('language.age')}}</h3>
                         </div>
                         <div class="value">
                             <h3 id="setAge">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="item weight">
                         <div class="header">
-                            <h3>Вес</h3>
+                            <h3>{{__('language.weight')}}</h3>
                         </div>
                         <div class="value">
                             <h3 id="setWeight">
@@ -71,7 +71,7 @@
                     </div>
                     <div class="item height">
                         <div class="header">
-                            <h3>Рост</h3>
+                            <h3>{{__('language.height')}}</h3>
                         </div>
                         <div class="value">
                             <h3 id="setHeight">
@@ -110,8 +110,8 @@
                                @if(Session::has('user.height') && Session::get('user.height')) value="{{Session::get('user.height')}}" @else value="178"@endif>
                         <input type="hidden" name="weight" id="inputWeight"
                                @if(Session::has('user.weight') && Session::get('user.weight')) value="{{Session::get('user.weight')}}" @else value="82"@endif>
-                        <button type="submit" class="next">Продолжить</button>
-                        <a class="prev" href="{{route('register.get.secondStep')}}">Отмена</a>
+                        <button type="submit" class="next">{{__('language.proceed')}}</button>
+                        <a class="prev" href="{{route('register.get.secondStep')}}">{{__('language.cancel')}}</a>
                     </form>
                 </div>
             </div>
