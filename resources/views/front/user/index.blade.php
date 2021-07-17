@@ -47,7 +47,7 @@
                                 </li>
                                 <li class="cardListLeft">{{__('language.workFrom')}}</li>
                                 <li class="cardListRight">
-                                    <p class="m-0">18-30 мин</p>
+                                    <p class="m-0">18-30 {{__('language.minutes')}}</p>
                                     <img class="ml-2" src="/images/timer.png" alt="">
                                 </li>
                                 <li class="cardListLeft">{{__('language.intensity')}}</li>

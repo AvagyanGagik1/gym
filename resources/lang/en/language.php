@@ -74,5 +74,6 @@ return [
     "fats"=>"Fats",
     "carboHydrates"=>"Carbohydrates",
     "addTo"=>"ADD TO",
+    "minutes"=>"min",
 
 ];

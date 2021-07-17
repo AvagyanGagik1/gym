@@ -74,5 +74,6 @@ return [
     "fats"=>"Жиры",
     "carboHydrates"=>"Углеводы",
     "addTo"=>"ДОБАВИТЬ НА",
+    "minutes"=>"мин",
 
 ];

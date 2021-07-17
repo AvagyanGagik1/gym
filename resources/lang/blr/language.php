@@ -74,5 +74,6 @@ return [
     "fats"=>"Тлушчы",
     "carboHydrates"=>"Вугляводы",
     "addTo"=>"ДАДАЦЬ НА",
+    "minutes"=>"мін",
 
 ];
