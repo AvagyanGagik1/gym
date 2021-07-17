@@ -69,5 +69,11 @@ return [
     "numbOfWork"=>"Number of workouts",
     "workFrom"=>"Workouts from and to",
     "intensity"=>"Intensity",
+    "calories"=>"Calories",
+    "protein"=>"Protein",
+    "fats"=>"Fats",
+    "carboHydrates"=>"Carbohydrates",
+    "addTo"=>"ADD TO",
+    "minutes"=>"min",
 
 ];
