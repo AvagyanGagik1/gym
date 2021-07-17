@@ -10,9 +10,9 @@
                 <div class="col-xl-8 col-lg-12 four-step">
                     <h1>{{__('language.subscribe')}}</h1>
                     <div class="subscriptions">
-                        @foreach($subscriptions as $subscription)
+                        @foreach($subscriptions as $key=>$subscription)
                             <div class="item">
-                                <input type="radio" name="subscribe" value="{{$subscription->id}}">
+                                <input type="radio" name="subscribe" @if($key === 0 ) checked @endif value="{{$subscription->id}}">
                                 <label for="" class="d-flex">
                                     <div class="desc col-8">
                                         <h3>{{$subscription->duration_program}} месяц</h3>

@@ -133,7 +133,7 @@ $(document).ready(function () {
         })
         $('body').css('overflow', 'hidden')
     })
-    $('#food-owl-carousel').owlCarousel({
+    $('.owl-carousel').owlCarousel({
         responsiveClass: true,
         margin: 20,
         lazyLoad: true,

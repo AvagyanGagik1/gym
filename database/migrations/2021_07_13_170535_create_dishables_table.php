@@ -17,7 +17,7 @@ class CreateDishablesTable extends Migration
             $table->id();
             $table->integer('dish_id');
             $table->integer('dishable_id');
-            $table->string('dishableable_type');
+            $table->string('dishable_type');
             $table->timestamps();
         });
     }

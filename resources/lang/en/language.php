@@ -37,7 +37,7 @@ return [
     "cancel"=>"Cancel",
     "gender"=>"Choose your gender",
     "male"=>"Male",
-    "female"=>"female",
+    "female"=>"Female",
     "important"=>"Choose the most important aim for you",
     "flexibility"=>"Flexibility",
     "burn"=>"Burn fat",

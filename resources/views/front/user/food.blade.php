@@ -25,7 +25,7 @@
                                 </option>
                                 @foreach($dietRestriction as $diet)
 
-                                    <option value="{{$diet->id}}">{{$diet->name}}</option>
+                                    <option value="{{$diet->id}}">{{App::getlocale()==='ru'?$diet->name_ru:(App::getlocale()==='en'?$diet->name_en:$diet->name_blr)}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -36,7 +36,7 @@
                                 </option>
 
                                 @foreach($purposeOfNutrition as $purpose)
-                                    <option value="{{$purpose->id}}">{{$purpose->name}}</option>
+                                    <option value="{{$purpose->id}}">{{App::getlocale()==='ru'?$purpose->name_ru:(App::getlocale()==='en'?$purpose->name_en:$purpose->name_blr)}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -48,7 +48,7 @@
                 @foreach($foodCategory as $key=>$category)
                     <div class="col-12 p-0 d-flex align-items-center food-category-content flex-wrap">
                         <div class="col-12 p-0 food-category-content-header">
-                            <h2>{{$category->name}}</h2>
+                            <h2>{{App::getlocale()==='ru'?$category->name_ru:(App::getlocale()==='en'?$category->name_en:$category->name_blr)}}</h2>
                         </div>
                         @if($key === 0)
                             <div class="col-12 d-flex justify-content-between p-0 food-category-content-alert">
@@ -89,7 +89,7 @@
                                                 </svg>
 
                                             </div>
-                                            {{__('language.addTo')}} ЗАВТРОК
+                                            {{__('language.addTo')}} {{App::getlocale()==='ru'?$category->name_ru:(App::getlocale()==='en'?$category->name_en:$category->name_blr)}}
                                         </button>
                                     @else
                                         <button class="food-category-content-item-button">
@@ -100,7 +100,7 @@
                                                 </svg>
 
                                             </div>
-                                            {{__('language.addTo')}} ЗАВТРОК
+                                            {{__('language.addTo')}} {{App::getlocale()==='ru'?$category->name_ru:(App::getlocale()==='en'?$category->name_en:$category->name_blr)}}
                                         </button>
                                     @endif
                                 </div>

@@ -32,7 +32,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Цель питания</label>
                 </div>
-                <select multiple class="custom-select" name="purposeOfNutrition" id="inputGroupSelect01">
+                <select multiple class="custom-select" name="purposeOfNutrition[]" id="inputGroupSelect01">
                     @foreach($purpose as $key=> $pur)
                     <option value="{{$pur->id}}">({{$key+1}}) {{$pur->name_ru}}</option>
                     @endforeach
