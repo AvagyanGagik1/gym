@@ -126,9 +126,9 @@ Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(functi
     Route::get('/information','ProfileController@information')->name('profile.information');
     Route::get('/food','ProfileController@food')->name('profile.food');
     Route::get('/achievements','ProfileController@achievements')->name('profile.achievements');
-    Route::get('/burn-fat','ProfileController@burnFat')->name('profile.burnFat');
+    Route::get('/burn-fat/{id}','ProfileController@burnFat')->name('profile.burnFat');
     Route::get('/subscribe','ProfileController@subscribe')->name('profile.subscribe');
-    Route::get('/functional','ProfileController@functional')->name('profile.functional');
+    Route::get('/functional/{id}','ProfileController@functional')->name('profile.functional');
     Route::get('/get/personals','ProfileController@getPersonals');
 
 //    postRoutes

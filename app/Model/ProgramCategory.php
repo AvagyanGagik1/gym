@@ -8,4 +8,9 @@ class ProgramCategory extends Model
 {
     protected $guarded = ['id'];
 
+
+    public function programs(){
+        return $this->hasMany('App\Model\Program');
+    }
+
 }

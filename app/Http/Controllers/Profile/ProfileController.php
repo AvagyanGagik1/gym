@@ -8,6 +8,7 @@ use App\Model\Achievement;
 use App\Model\DietRestrictions;
 use App\Model\FoodCategory;
 use App\Model\Personal;
+use App\Model\ProgramCategory;
 use App\Model\PurposeOfNutrition;
 use App\Model\Subscription;
 use App\User;
@@ -24,7 +25,17 @@ class ProfileController extends Controller
 
     public function index(): Response
     {
-        return response()->view('front.user.index');
+        $myPrograms = [];
+        $myProgramId = [];
+        $user =Auth::user();
+        $subscriptions = $user->subscriptions;
+        foreach ($subscriptions as $subscription){
+            foreach ($subscription->programs as $program){
+                array_push($myPrograms,$program);
+                array_push($myProgramId,$program->id);
+            }
+        }
+        return response()->view('front.user.index',['myProgramId'=>$myProgramId,'myPrograms'=>$myPrograms,'programsCategory'=>ProgramCategory::with('programs')->get()]);
     }
 
     public function information(): Response
