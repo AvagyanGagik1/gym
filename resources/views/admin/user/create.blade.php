@@ -2,7 +2,7 @@
 @section('content')
     <div class="container border p-5 bg-white">
         <h2 class="pb-5">Форма для Новостей</h2>
-        <form action="{{route('news.store')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('users.store')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group row pb-3">
                 <label for="email" class="col-sm-2 col-form-label font-weight-bold">email</label>

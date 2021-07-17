@@ -29,6 +29,7 @@
                             <th scope="col">Заголовок (en)</th>
                             <th scope="col">Заголовок (blr)</th>
                             <th>Продолжительность (в днях)</th>
+                            <th>Цена (в грн)</th>
                             <th scope="col">картинка</th>
                             <th scope="col">редактировать\Посмотреть\удалить</th>
                         </tr>
@@ -41,6 +42,7 @@
                                 <td>{{$item->name_en}}</td>
                                 <td>{{$item->name_blr}}</td>
                                 <td>{{$item->duration}}</td>
+                                <td>{{$item->price}}</td>
                                 <td><img src="{{$item->image}}" alt="" class="img-thumbnail table-image"></td>
                                 <td>
                                     <a href="{{route('subscription.edit',$item->id)}}"><i class="fas fa-edit custom-icon-edit"></i></a>

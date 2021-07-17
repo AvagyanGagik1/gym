@@ -1,7 +1,7 @@
 @extends('layouts.admin.index')
 @section('content')
     <div class="container border p-5 bg-white">
-        <h2 class="pb-5">Форма для Новостей</h2>
+        <h2 class="pb-5">Форма для Достижении</h2>
         <form action="{{route('achievement.store')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group row pb-3">

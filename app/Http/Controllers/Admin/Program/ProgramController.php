@@ -8,6 +8,7 @@ use App\Http\Requests\StoreProgramRequest;
 use App\Http\Requests\UpdateProgramRequest;
 use App\Model\Program;
 use App\Model\ProgramCategory;
+use App\Model\Subscription;
 use App\Model\Trainer;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -34,7 +35,7 @@ class ProgramController extends Controller
      */
     public function create()
     {
-        return response()->view('admin.program.create',['programCategories'=>ProgramCategory::all(),'trainers'=>Trainer::all()]);
+        return response()->view('admin.program.create',['programCategories'=>ProgramCategory::all(),'trainers'=>Trainer::all(),'subscriptions'=>Subscription::all()]);
 
     }
 
