@@ -14,10 +14,16 @@
                         <div class="custom-form-group-inline">
                             <input type="email" name="email" value="{{old('email')}}" placeholder="E-mail">
                             <div class="left-line"></div>
+                            @if ($errors->has('email'))
+                                <p class="text-danger  termsError">{{ $errors->first('email') }}</p>
+                            @endif
                         </div>
                         <div class="custom-form-group-inline">
                             <input type="password" name="password" value="{{old('email')}}" placeholder="Пароль">
                             <div class="left-line"></div>
+                            @if ($errors->has('password'))
+                                <p class="text-danger  termsError">{{ $errors->first('password') }}</p>
+                            @endif
                         </div>
                     </div>
                     <div class="social-form">
