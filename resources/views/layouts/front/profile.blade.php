@@ -22,6 +22,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/front/front.css') }}" rel="stylesheet">
     <link href="{{ asset('css/front/media.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/front/calendar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/package/owl.css') }}" rel="stylesheet">
 </head>
 <body>

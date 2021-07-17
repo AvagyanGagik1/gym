@@ -31,7 +31,7 @@ class FirstStepSeeder extends Seeder
                     посмотрите, как Gym project может помочь вам преобразовать вашу жизнь. Получите онлайн-доступ ко
                     всем
                     программам тренировок для любого телосложения и любого уровня подготовки.',
-                'video_link'=>'https://www.youtube.com/embed/M7lc1UVf-VE?playsinline=1&autoplay=1&enablejsapi=1&origin=http%3A%2F%2Fgym.loc&widgetid=1',
+                'video_link'=>'https://www.youtube.com/watch?v=PhGN1QQn__Q',
                 'image'=>'/images/about.png'
             ]);
     }

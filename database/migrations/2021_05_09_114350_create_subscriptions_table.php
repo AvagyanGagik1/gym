@@ -15,9 +15,12 @@ class CreateSubscriptionsTable extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
-            $table->string('duration_month');
-            $table->string('duration_week');
+            $table->string('name_ru');
+            $table->string('name_en');
+            $table->string('name_blr');
+            $table->string('duration');
             $table->bigInteger('price');
+            $table->string('image');
             $table->timestamps();
         });
     }

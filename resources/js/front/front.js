@@ -148,13 +148,20 @@ $(document).ready(function () {
             },
         }
     })
+    $('.calendarOverlay').click(function (){
+        $('.calendarOverlay').css('display', 'none')
+        $('.sideCalendar').css('display', 'none')
+        $('body').css('overflow','auto')
+    })
     $('#closeCalendar').click(function () {
         $('.calendarOverlay').css('display', 'none')
         $('.sideCalendar').css('display', 'none')
+        $('body').css('overflow','auto')
     })
     $('#openCalendar').click(function () {
         $('.calendarOverlay').css('display', 'block')
         $('.sideCalendar').css('display', 'flex')
+        $('body').css('overflow','hidden')
     })
     $('#mainButton').click(function () {
         console.log('pix')
@@ -176,11 +183,12 @@ $(document).ready(function () {
 
     let player;
     $('#playButton').click(function () {
+        let video = $(this).attr('data-link')
 
         player = new YT.Player('player', {
             height: 'inherit',
             width: 'inherit',
-            videoId: 'M7lc1UVf-VE',
+            videoId: video,
             playerVars: {
                 'playsinline': 1,
                 'autoplay': 1,
