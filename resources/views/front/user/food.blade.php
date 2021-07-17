@@ -21,8 +21,7 @@
                         <div>
                             <label for="limitation">{{__('language.diet')}}</label>
                             <select name="" id="limitation" class="food-select-item">
-                                <option @if(count($dietRestriction)) selected @endif disabled value="null">--Ограничения
-                                    по питанию--
+                                <option @if(count($dietRestriction)) selected @endif disabled value="null">--{{__('language.diet')}}--
                                 </option>
                                 @foreach($dietRestriction as $diet)
 
@@ -33,8 +32,7 @@
                         <div>
                             <label for="purpose">{{__('language.purpose')}}</label>
                             <select name="" id="purpose" class="food-select-item">
-                                <option @if(count($purposeOfNutrition)) selected @endif disabled value="null">--Цель
-                                    питания --
+                                <option @if(count($purposeOfNutrition)) selected @endif disabled value="null">--{{__('language.purpose')}}--
                                 </option>
 
                                 @foreach($purposeOfNutrition as $purpose)

@@ -66,5 +66,8 @@ return [
     "weekTransform"=>"Weekly Transformation",
     "reSub"=>"RENEW SUBSCRIPTION",
     "newSub"=>"Choose a new subscription plan",
+    "numbOfWork"=>"Number of workouts",
+    "workFrom"=>"Workouts from and to",
+    "intensity"=>"Intensity",
 
 ];

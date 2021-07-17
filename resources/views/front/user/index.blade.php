@@ -4,7 +4,7 @@
     <div class="d-flex flex-column program-content-item ">
         <div class="col-xl-10 col-12 d-flex flex-wrap m-auto">
             <div class="col-12 p-0">
-                <h2>Мои программы</h2>
+                <h2>{{__('language.programs')}}</h2>
             </div>
             <div class="col-3 item">
                 <div class="cardForFitness">
@@ -27,7 +27,7 @@
                         <h1 class="cardHeader">Утреннее кардио 2. Сожги весь жир!</h1>
                         <div class="cardContent">
                             <ul>
-                                <li class="cardListLeft">Кол-во тренировок</li>
+                                <li class="cardListLeft">{{__('language.numbOfWork')}}</li>
                                 <li class="cardListRight">
                                     <p class="m-0">15</p>
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,12 +45,12 @@
                                     </svg>
 
                                 </li>
-                                <li class="cardListLeft">Тренировки от и до</li>
+                                <li class="cardListLeft">{{__('language.workFrom')}}</li>
                                 <li class="cardListRight">
                                     <p class="m-0">18-30 мин</p>
                                     <img class="ml-2" src="/images/timer.png" alt="">
                                 </li>
-                                <li class="cardListLeft">Интенсивность</li>
+                                <li class="cardListLeft">{{__('language.intensity')}}</li>
                                 <li class="cardListRight">
                                     <p class="m-0">Низкая</p>
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
