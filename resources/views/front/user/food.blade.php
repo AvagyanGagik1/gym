@@ -72,10 +72,10 @@
                                     </div>
                                     <div class="food-category-content-item-content">
                                         <ul>
-                                            <li>Калории <span>{{$dish->calories}} ccal</span></li>
-                                            <li>Белки <span>{{$dish->protein}}г</span></li>
-                                            <li>Жиры <span>{{$dish->fat}}г</span></li>
-                                            <li>Углеводы <span>{{$dish->carbohydrates}}г</span></li>
+                                            <li>{{__('language.calories')}} <span>{{$dish->calories}} ccal</span></li>
+                                            <li>{{__('language.protein')}} <span>{{$dish->protein}}г</span></li>
+                                            <li>{{__('language.fats')}} <span>{{$dish->fat}}г</span></li>
+                                            <li>{{__('language.carboHydrates')}} <span>{{$dish->carbohydrates}}г</span></li>
                                         </ul>
                                     </div>
                                     @if(false)
@@ -89,7 +89,7 @@
                                                 </svg>
 
                                             </div>
-                                            ДОБАВИТЬ НА ЗАВТРОК
+                                            {{__('language.addTo')}} ЗАВТРОК
                                         </button>
                                     @else
                                         <button class="food-category-content-item-button">
@@ -100,7 +100,7 @@
                                                 </svg>
 
                                             </div>
-                                            ДОБАВИТЬ НА ЗАВТРОК
+                                            {{__('language.addTo')}} ЗАВТРОК
                                         </button>
                                     @endif
                                 </div>

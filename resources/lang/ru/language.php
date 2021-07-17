@@ -69,5 +69,10 @@ return [
     "numbOfWork"=>"Кол-во тренировок",
     "workFrom"=>"Тренировки от и до",
     "intensity"=>"Интенсивность",
+    "calories"=>"Калории",
+    "protein"=>"Белки",
+    "fats"=>"Жиры",
+    "carboHydrates"=>"Углеводы",
+    "addTo"=>"ДОБАВИТЬ НА",
 
 ];
