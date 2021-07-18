@@ -7,7 +7,7 @@
                     <h2>{{__('language.programs')}}</h2>
                 </div>
                 @foreach($myPrograms as $program)
-                    <div class="col-3 item">
+                    <div data-link="{{route('profile.burnFat',$program->id)}}" class="go-to-workout col-3 item">
                         <div class="cardForFitness">
                             <div class="position-relative">
                                 @if($program->type !== 'home')
@@ -157,7 +157,7 @@
                     </div>
                     @foreach($category->programs as $program)
                         @if(!in_array($program->id,$myProgramId))
-                        <div class="col-3 item">
+                        <div data-link="{{route('profile.burnFat',$program->id)}}" class="go-to-workout col-3 item">
                             <div class="cardForFitness">
                                 <div class="position-relative">
                                     @if($program->type !== 'home')

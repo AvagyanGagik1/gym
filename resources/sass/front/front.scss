@@ -447,7 +447,19 @@
         }
     }
 }
+.preview {
+    max-width: 740px;
+    max-height: 416px;
+    width: inherit;
+}
 
+#player {
+    display: none;
+    max-width: 740px;
+    max-height: 416px;
+    width: inherit;
+    height: inherit;
+}
 .about {
     height: 100%;
 
@@ -545,20 +557,6 @@
             max-height: 372px;
             width: 100%;
             height: inherit;
-
-            .preview {
-                max-width: 569px;
-                max-height: 372px;
-                width: inherit;
-            }
-
-            #player {
-                display: none;
-                max-width: 569px;
-                max-height: 372px;
-                width: inherit;
-                height: inherit;
-            }
         }
     }
 

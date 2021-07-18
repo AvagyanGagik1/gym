@@ -182,7 +182,7 @@ $(document).ready(function () {
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
     let player;
-    $('#playButton').click(function () {
+    $('.playButton').click(function () {
         let video = $(this).attr('data-link')
 
         player = new YT.Player('player', {
@@ -288,6 +288,10 @@ $(document).ready(function () {
         let calc = $(this).attr('data-calc')
         calc === '+'?value++:value--
         input.val(value)
+    })
+
+    $('.go-to-workout').click(function (){
+        window.location =  $(this).attr('data-link')
     })
 })
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\helper\ParseYoutubeLink;
+use App\Http\Controllers\helper\UploadImage;
 use App\Http\Requests\FlashRegisterFirstStep;
 use App\Model\FirstStep;
 use App\Model\HwoAreWe;
@@ -22,6 +24,7 @@ use MongoDB\Driver\Session;
 
 class FrontController extends Controller
 {
+    use ParseYoutubeLink;
 
     /**
      * @param Request $request
@@ -33,8 +36,7 @@ class FrontController extends Controller
         $slider = Slider::all();
         $sliderText = SliderText::find(1);
         $firstStep = FirstStep::find(1);
-        parse_str( parse_url( $firstStep->video_link, PHP_URL_QUERY ), $my_array_of_vars );
-        $youtubeImage = $my_array_of_vars['v'];
+       $youtubeImage = $this->youTubeImage($firstStep->video_link);
         $trainerHeader = TrainerHeader::find(1);
         $trainer = Trainer::all();
         $mainNews = MainNew::find(1);

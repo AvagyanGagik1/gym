@@ -27,4 +27,5 @@ class Program extends Model
     public function workout(){
         return $this->hasMany('App\Model\Workout');
     }
+
 }

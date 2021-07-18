@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\helper\ParseYoutubeLink;
 use App\Http\Controllers\helper\UploadImage;
 use App\Model\Achievement;
 use App\Model\DietRestrictions;
@@ -11,6 +12,7 @@ use App\Model\Personal;
 use App\Model\ProgramCategory;
 use App\Model\PurposeOfNutrition;
 use App\Model\Subscription;
+use App\Model\Workout;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
@@ -21,7 +23,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    use UploadImage;
+    use UploadImage,ParseYoutubeLink;
 
     public function index(): Response
     {
@@ -72,9 +74,16 @@ class ProfileController extends Controller
         return response()->view('front.user.functional');
     }
 
-    public function burnFat(): Response
+    public function burnFat($id)
     {
-        return response()->view('front.user.burnFat');
+        $workout =Workout::where('id',$id)->with('program','tasks','videos')->first();
+        $workout->program->trainer;
+        $workout->program->workout;
+
+        foreach ($workout->videos as $video){
+           $video->parsed_link =  $this->youTubeImage($video->link);
+        }
+        return response()->view('front.user.burnFat',['workout'=>$workout]);
     }
 
     /**

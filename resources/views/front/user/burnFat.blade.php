@@ -1,22 +1,26 @@
 @extends('layouts.front.profile')
 @section('content')
-    @if(false)
+    @if(count($workout->videos))
+
         <section class="content burn-content">
+            {{$workout->program->trainer}}
             <div class="d-flex flex-column">
                 <div class="col-xl-10 col-12 d-flex justify-content-center flex-wrap m-auto youtube-account">
                     <div class="col-12 d-flex align-items-center justify-content-between subscribe-header">
-                        <h2>Утреннее кардио 2. Сожги весь жир!</h2>
-                        <img class="d-none d-lg-block" src="/images/cardioHome.png" alt="">
+                        <h2>{{App::getlocale()==='ru'?$workout->program->name_ru:(App::getlocale()==='en'?$workout->program->name_en:$workout->program->name_blr)}}</h2>
+                        <img class="d-none d-lg-block"
+                             src="{{$workout->program->type === 'home'?'/images/cardioHome.png':'/images/hall.png'}}"
+                             alt="">
                     </div>
                     <div
                         class="col-12 d-flex d-lg-none d-flex align-items-center justify-content-between youtube-account">
                         <div class="d-flex align-items-center content-user bg-white">
                             <div class="content-user-image">
-                                <img src="/images/roundUser.png" alt="">
+                                <img src="{{$workout->program->trainer->image}}" alt="">
                             </div>
                             <div class="d-flex flex-column ">
                                 <p>Тренер</p>
-                                <h1>Лера Алёшкина</h1>
+                                <h1>{{App::getlocale()==='ru'?$workout->program->trainer->name_ru:(App::getlocale()==='en'?$workout->program->trainer->name_en:$workout->program->trainer->name_blr)}}</h1>
                             </div>
                         </div>
                         <img class="content-user-img" src="/images/cardioHome.png" alt="">
@@ -38,7 +42,7 @@
                                 </div>
                                 <div class="d-flex flex-column ">
                                     <p>Интенсивность</p>
-                                    <h1>Низкая</h1>
+                                    <h1>{{App::getlocale()==='ru'?$workout->program->intensity_ru:(App::getlocale()==='en'?$workout->program->intensity_en:$workout->program->intensity_blr)}}</h1>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center align-items-center content-user">
@@ -60,11 +64,11 @@
                     <div class="col-12 d-lg-flex d-none  justify-content-between align-items-center content-user">
                         <div class="d-flex align-items-center content-user">
                             <div class="content-user-image">
-                                <img src="/images/roundUser.png" alt="">
+                                <img src="{{$workout->program->trainer->image}}" alt="">
                             </div>
                             <div class="d-flex flex-column ">
                                 <p>Тренер</p>
-                                <h1>Лера Алёшкина</h1>
+                                <h1>{{App::getlocale()==='ru'?$workout->program->trainer->name_ru:(App::getlocale()==='en'?$workout->program->trainer->name_en:$workout->program->trainer->name_blr)}}</h1>
                             </div>
                         </div>
 
@@ -83,7 +87,7 @@
                                 </div>
                                 <div class="d-flex flex-column ">
                                     <p>Интенсивность</p>
-                                    <h1>Низкая</h1>
+                                    <h1>{{App::getlocale()==='ru'?$workout->program->intensity_ru:(App::getlocale()==='en'?$workout->program->intensity_en:$workout->program->intensity_blr)}}</h1>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center align-items-center content-user">
@@ -113,20 +117,11 @@
                     <div class="col-12 d-flex justify-content-between
             content-user-preview flex-wrap">
                         <div class="col-lg-5 col-12 p-0 d-flex justify-content-center pb-3">
-                            <img src="/images/previewPlaceholder.png" class="img-fluid" alt="">
+                            <img src="{{$workout->program->image}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-lg-7 col-12 pr-0">
                             <p>
-                                Хотите похудеть? Привести свое тело в форму? Сжечь лишние калории?
-                                Поставьте перед собой цель и посмотрите, как Gym project может помочь вам преобразовать
-                                вашу
-                                жизнь. Получите онлайн-доступ ко всем программам тренировок для любого телосложения и
-                                любого
-                                уровня подготовки.
-                                Хотите похудеть? Привести свое тело в форму? Сжечь лишние калории? Поставьте перед собой
-                                цель и посмотрите, как Gym project может помочь вам преобразовать вашу жизнь. Получите
-                                онлайн-доступ ко всем программам тренировок для любого телосложения и любого уровня
-                                подготовки.
+                                {!! App::getlocale()==='ru'?$workout->program->description_ru:(App::getlocale()==='en'?$workout->program->description_en:$workout->program->description_blr )!!}
                             </p>
                         </div>
                     </div>
@@ -138,15 +133,19 @@
              p-0">
                         <div class="col-lg-7 col-12 p-0 ">
                             <div class=" col-12 p-0 d-flex align-items-center justify-content-center">
-                                <img src="/images/resizemeyoutube.png" class="w-100" alt="">
+                                <div id="player"></div>
                                 <div class="position-absolute">
-                                    <img src="/images/playButton.png" alt="">
+                                    <img class="playButton w-100" id="playButton" src="/images/playButton.png"
+                                         data-link="{{$workout->videos[0]->parsed_link}}">
                                 </div>
+                                <img class="preview"
+                                     src="//img.youtube.com/vi/{{$workout->videos[0]->parsed_link}}/maxresdefault.jpg"
+                                     alt="">
                             </div>
                             <div class="col-12 p-0 d-flex justify-content-center flex-lg-row flex-wrap youtube-header">
                                 <div class="col-lg-8 col-12 p-0">
                                     <h3>
-                                        Лекция 1. Понятие рационального питания и здоровья
+                                        {{App::getlocale()==='ru'?$workout->program->name_ru:(App::getlocale()==='en'?$workout->program->name_en:$workout->program->name_blr)}}
                                     </h3>
                                 </div>
                                 <div class="col-lg-4 col-12  p-0 d-flex justify-content-lg-end">
@@ -166,7 +165,7 @@
                                                 </defs>
                                             </svg>
                                         </div>
-                                        <p>2 145 ccal</p>
+                                        <p>{{$workout->calories}} ccal</p>
                                     </div>
                                     <div class="youtube-image-ccal">
                                         <div>
@@ -235,71 +234,23 @@
                                 </div>
 
                                 <button>
-                                    отправить отзыв
+                                   загрузить еше
                                 </button>
                             </div>
                         </div>
                         <div class="col-lg-5 col-12 ">
+                            @foreach($workout->program->workout as $work)
                             <div class="col-12 d-flex content-user-video-item ">
                                 <div class="col-6 pl-0 ">
-                                    <img src="/images/previewPlaceholder.png" class="w-100 " alt="">
+                                    <img src="{{$work->video->}}" class="w-100 " alt="">
                                 </div>
                                 <div class="col-6 pr-0">
                                     <h2>
-                                        Лекция 1. Понятие рационального питания и здоровья
+                                        {{App::getlocale()==='ru'?$work->name_ru:(App::getlocale()==='en'?$work->name_en:$work->name_blr)}}
                                     </h2>
                                 </div>
                             </div>
-                            <div class="col-12 d-flex content-user-video-item">
-                                <div class="col-6 pl-0">
-                                    <img src="/images/previewPlaceholder.png" class="w-100" alt="">
-                                </div>
-                                <div class="col-6 pr-0">
-                                    <h2>
-                                        Лекция 1. Понятие рационального питания и здоровья
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex content-user-video-item">
-                                <div class="col-6 pl-0">
-                                    <img src="/images/previewPlaceholder.png" class="w-100" alt="">
-                                </div>
-                                <div class="col-6 pr-0">
-                                    <h2>
-                                        Лекция 1. Понятие рационального питания и здоровья
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex content-user-video-item">
-                                <div class="col-6 pl-0">
-                                    <img src="/images/previewPlaceholder.png" class="w-100" alt="">
-                                </div>
-                                <div class="col-6 pr-0">
-                                    <h2>
-                                        Лекция 1. Понятие рационального питания и здоровья
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex content-user-video-item">
-                                <div class="col-6 pl-0">
-                                    <img src="/images/previewPlaceholder.png" class="w-100" alt="">
-                                </div>
-                                <div class="col-6 pr-0">
-                                    <h2>
-                                        Лекция 1. Понятие рационального питания и здоровья
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex content-user-video-item">
-                                <div class="col-6 pl-0">
-                                    <img src="/images/previewPlaceholder.png" class="w-100" alt="">
-                                </div>
-                                <div class="col-6 pr-0">
-                                    <h2>
-                                        Лекция 1. Понятие рационального питания и здоровья
-                                    </h2>
-                                </div>
-                            </div>
+                            @endforeach
                             <div class="youtube-program col-12">
                                 <button>
                                     завершить программу
