@@ -143,12 +143,12 @@
                                      alt="">
                             </div>
                             <div class="col-12 p-0 d-flex justify-content-center flex-lg-row flex-wrap youtube-header">
-                                <div class="col-lg-8 col-12 p-0">
+                                <div class="col-lg-7 col-12 p-0">
                                     <h3>
                                         {{App::getlocale()==='ru'?$workout->program->name_ru:(App::getlocale()==='en'?$workout->program->name_en:$workout->program->name_blr)}}
                                     </h3>
                                 </div>
-                                <div class="col-lg-4 col-12  p-0 d-flex justify-content-lg-end">
+                                <div class="col-lg-5 col-12  p-0 d-flex justify-content-lg-end">
                                     <div class="youtube-image-ccal">
                                         <div>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -180,7 +180,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 d-flex justify-content-center youtube-save flex-lg-row flex-column-reverse">
+                            <div
+                                class="col-12 d-flex justify-content-center youtube-save flex-lg-row flex-column-reverse">
                                 <div class="col-lg-4 col-12 p-0 d-flex justify-content-center align-items-center">
                                     <button>ГОТОВО</button>
                                 </div>
@@ -214,7 +215,7 @@
                                         жизнь.
                                         Получите онлайн-доступ ко всем программам тренировок для любого телосложения и
                                         любого уровня подготовки.</p>
-                                    <a href="">Ответить</a>
+                                    <button class="btn p-0 m-0 answerInput" data-parent="">Ответить</button>
                                 </div>
                                 <div class="col-12 p-0 answer">
                                     <div class="col-12 p-0 d-flex align-items-center">
@@ -233,22 +234,22 @@
                                 </div>
 
                                 <button>
-                                   загрузить еше
+                                    загрузить еше
                                 </button>
                             </div>
                         </div>
                         <div class="col-lg-5 col-12 ">
                             @foreach($workout->program->workout as $work)
-                            <div class="col-12 d-flex content-user-video-item ">
-                                <div class="col-6 pl-0 ">
-                                    <img src="{{$work->video}}" class="w-100 " alt="">
+                                <div class="col-12 d-flex content-user-video-item ">
+                                    <div class="col-6 pl-0 ">
+                                        <img src="{{$work->video}}" class="w-100 " alt="">
+                                    </div>
+                                    <div class="col-6 pr-0">
+                                        <h2>
+                                            {{App::getlocale()==='ru'?$work->name_ru:(App::getlocale()==='en'?$work->name_en:$work->name_blr)}}
+                                        </h2>
+                                    </div>
                                 </div>
-                                <div class="col-6 pr-0">
-                                    <h2>
-                                        {{App::getlocale()==='ru'?$work->name_ru:(App::getlocale()==='en'?$work->name_en:$work->name_blr)}}
-                                    </h2>
-                                </div>
-                            </div>
                             @endforeach
                             <div class="youtube-program col-12">
                                 <button>

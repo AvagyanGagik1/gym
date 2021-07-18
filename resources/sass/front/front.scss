@@ -764,8 +764,11 @@
             display: flex;
             align-content: space-between;
             flex-wrap: wrap;
+            min-height: 129px;
+            flex-direction: column;
             p{
                 height: 80px;
+                min-height: 80px;
                 overflow: hidden;
             }
         }
@@ -1494,6 +1497,7 @@ footer {
 .workoutVideo{
     max-height: 419px;
     max-width: 740px;
+    margin: auto;
     position: relative;
 }
 .burn-content, .functional-content {
@@ -1544,6 +1548,7 @@ footer {
     }
 
     .youtube-header {
+        padding-top: 20px!important;
         h3 {
             font-family: Druk Wide Cyr;
             font-size: 20px;
@@ -1764,6 +1769,44 @@ footer {
     }
 
     .youtube-comment {
+        form{
+            width: 100%;
+            textarea::placeholder {
+                font-family: Montserrat, serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0;
+                text-align: left;
+                color: #444444;
+                margin: 40px 0 20px 0
+            }
+
+            textarea {
+                width: inherit;
+                height: 140px;
+                padding: 16px 40px 5px 40px;
+                resize: inherit;
+                border-color: #CBCBCB;
+            }
+
+            button {
+                font-family: Druk Wide Cyr, serif!important;
+                font-size: 11px!important;
+                font-style: normal!important;
+                font-weight: 500!important;
+                line-height: 18px!important;
+                letter-spacing: 0!important;
+                text-align: center!important;
+                margin: 20px 0 40px 0!important;
+                padding: 12px 28px!important;
+                background: #111111!important;
+                color: #FFFFFF!important;
+                text-decoration:unset!important;
+                width: auto;
+            }
+        }
         h1 {
             font-family: Druk Wide Cyr, serif;
             font-size: 20px;
@@ -1799,7 +1842,7 @@ footer {
                 text-align: left;
             }
 
-            a {
+            button {
                 font-family: Montserrat, serif;
                 font-size: 14px;
                 font-style: normal;
@@ -1810,6 +1853,7 @@ footer {
                 color: #111111;
                 text-decoration: underline;
                 margin-bottom: 40px;
+                border: none;
             }
 
             div {
