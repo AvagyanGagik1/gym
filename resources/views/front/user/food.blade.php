@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                         @endif
-                        <div class="col-12 d-flex justify-content-between p-0 food-category-content-items owl-carousel"
+                        <div class="col-12 d-flex justify-content-between p-0 food-category-content-items owl-carousel-food"
                              id="food-owl-carousel">
                             @foreach($category->dishes as $dish)
                                 <div class="col-4 food-category-content-item">

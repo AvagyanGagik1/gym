@@ -81,6 +81,9 @@ $(document).ready(function () {
                 console.log(response)
             })
     })
+    $('.approved').change(function (){
+        $(this)
+    })
 });
 $(function () {
     let container = $('.container-image'), inputFile = $('#file'), img, btn, txt = 'Browse',

@@ -6,9 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\helper\ParseYoutubeLink;
 use App\Http\Controllers\helper\UploadImage;
 use App\Http\Requests\FlashRegisterFirstStep;
+use App\Model\ClientComment;
 use App\Model\FirstStep;
 use App\Model\HwoAreWe;
 use App\Model\MainNew;
+use App\Model\News;
+use App\Model\Program;
 use App\Model\Slider;
 use App\Model\SliderText;
 use App\Model\Subscription;
@@ -36,19 +39,28 @@ class FrontController extends Controller
         $slider = Slider::all();
         $sliderText = SliderText::find(1);
         $firstStep = FirstStep::find(1);
-       $youtubeImage = $this->youTubeImage($firstStep->video_link);
+        $youtubeImage = $this->youTubeImage($firstStep->video_link);
         $trainerHeader = TrainerHeader::find(1);
         $trainer = Trainer::all();
         $mainNews = MainNew::find(1);
+        $news = News::all();
+        $clientComments = ClientComment::all();
+        $programs =Program::all();
+        $subscriptions = Subscription::all();
         return response()->view('front.index',
             ['who' => $who,
-            'slider' => $slider,
-            'sliderText' => $sliderText,
-            'firstStep'=>$firstStep,
-            'youtubeImage'=>$youtubeImage,
-            'trainerHeader'=>$trainerHeader,
-            'trainer'=>$trainer,
-                'mainNews'=>$mainNews]);
+                'slider' => $slider,
+                'sliderText' => $sliderText,
+                'firstStep' => $firstStep,
+                'youtubeImage' => $youtubeImage,
+                'trainerHeader' => $trainerHeader,
+                'trainer' => $trainer,
+                'mainNews' => $mainNews,
+                'news'=>$news,
+                'clientComments'=>$clientComments,
+                'programs'=>$programs,
+                'subscriptions'=>$subscriptions
+            ]);
     }
 
     /**
@@ -113,7 +125,7 @@ class FrontController extends Controller
 
     public function fourStep(): Response
     {
-        return response()->view('auth.register.fourStep',['subscriptions'=>Subscription::all()]);
+        return response()->view('auth.register.fourStep', ['subscriptions' => Subscription::all()]);
 
     }
 

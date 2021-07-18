@@ -242,7 +242,7 @@
                             @foreach($workout->program->workout as $work)
                             <div class="col-12 d-flex content-user-video-item ">
                                 <div class="col-6 pl-0 ">
-                                    <img src="{{$work->video->}}" class="w-100 " alt="">
+                                    <img src="{{$work->video}}" class="w-100 " alt="">
                                 </div>
                                 <div class="col-6 pr-0">
                                     <h2>

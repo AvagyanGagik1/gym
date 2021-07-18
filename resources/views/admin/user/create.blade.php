@@ -25,7 +25,8 @@
             <div class="form-group row pb-3">
                 <label for="password" class="col-sm-2 col-form-label font-weight-bold">Пароль</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" id="password" name="password" value="{{old('password')}}">
+                    <input type="password" class="form-control" id="password" name="password"
+                           value="{{old('password')}}">
                     @if ($errors->has('password'))
                         <span class="text-danger">{{ $errors->first('password') }}</span>
                     @endif
@@ -63,10 +64,16 @@
                 <div class="col-sm-10">
                     <select class="custom-select" id="target" name="target">
                         <option disabled selected>--Выберите Категорию для питания--</option>
-                        <option @if(old('target') === 'flexibility') selected @endif value="flexibility" id="" >Гибкость</option>
-                        <option @if(old('target') === 'BurnFat') selected @endif value="BurnFat" id="" >Сжечь жир</option>
-                        <option @if(old('target') === 'muscleSet') selected @endif value="muscleSet" id="" >Набор мышц</option>
-                        <option @if(old('target') === 'keepingInShape') selected @endif value="keepingInShape" id="" >Поддержание формы</option>
+                        <option @if(old('target') === 'flexibility') selected @endif value="flexibility" id="">
+                            Гибкость
+                        </option>
+                        <option @if(old('target') === 'BurnFat') selected @endif value="BurnFat" id="">Сжечь жир
+                        </option>
+                        <option @if(old('target') === 'muscleSet') selected @endif value="muscleSet" id="">Набор мышц
+                        </option>
+                        <option @if(old('target') === 'keepingInShape') selected @endif value="keepingInShape" id="">
+                            Поддержание формы
+                        </option>
                     </select>
                     @if ($errors->has('target'))
                         <span class="text-danger">{{ $errors->first('target')}}</span>
@@ -78,11 +85,26 @@
                 <div class="col-sm-10">
                     <select class="custom-select" id="food_category_id" name="gender">
                         <option disabled selected>--Выберите Категорию для питания--</option>
-                        <option @if(old('gender') === 'female') selected @endif value="female" id="" >Мужской</option>
-                        <option @if(old('gender') === 'male') selected @endif value="male" id="" >Женский</option>
+                        <option @if(old('gender') === 'female') selected @endif value="female" id="">Мужской</option>
+                        <option @if(old('gender') === 'male') selected @endif value="male" id="">Женский</option>
                     </select>
                     @if ($errors->has('gender'))
                         <span class="text-danger">{{ $errors->first('gender')}}</span>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group row pb-3">
+                <label for="food_category_id" class="col-sm-2 col-form-label font-weight-bold">Подписки:</label>
+                <div class="col-sm-10">
+                    <select class="custom-select" id="subscription_id" name="subscription_id">
+                        <option disabled selected>--тип подпискы--</option>
+                        @foreach($subscriptions as $subscription)
+                            <option @if(old('subscription_id') === $subscription->id) selected @endif value="{{$subscription->id}}" id="">{{$subscription->name_ru}}
+                            </option>
+                        @endforeach
+                    </select>
+                    @if ($errors->has('subscription_id'))
+                        <span class="text-danger">{{ $errors->first('subscription_id')}}</span>
                     @endif
                 </div>
             </div>

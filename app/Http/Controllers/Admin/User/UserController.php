@@ -7,6 +7,7 @@ use App\Http\Controllers\helper\UploadImage;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUsersRequest;
 use App\Model\Personal;
+use App\Model\Subscription;
 use App\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -32,7 +33,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return response()->view('admin.user.create');
+        return response()->view('admin.user.create',['subscriptions'=>Subscription::all()]);
     }
 
     /**
@@ -51,6 +52,7 @@ class UserController extends Controller
         $input['password'] = Hash::make($input['password']);
         $user = User::create($input);
         Personal::create(['age'=>$input['age'],'height'=>$input['height'],'weight'=>$input['weight'],'user_id'=>$user->id]);
+        $user->subscriptions()->attach($input['subscription_id']);
         return redirect()->route('users.index');
     }
 
@@ -74,7 +76,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return response()->view('admin.user.edit',['user'=>$user,'personal'=> count($user->personals)?$user->personals[0]:['weight'=>0,'height'=>0,'age'=>0]]);
+        return response()->view('admin.user.edit',['user'=>$user,'personal'=> count($user->personals)?$user->personals[0]:['weight'=>0,'height'=>0,'age'=>0],['subscriptions'=>Subscription::all()]]);
     }
 
     /**
@@ -96,6 +98,8 @@ class UserController extends Controller
 //        $input['password'] = Hash::make($input['password']);
         $user->update($input);
         $user->personals[0]->update(['age'=>$input['age'],'height'=>$input['height'],'weight'=>$input['weight']]);
+        $user->subscriptions()->detach();
+        $user->subscriptions()->attach($input['subscription_id']);
         return redirect()->route('users.index');
     }
 

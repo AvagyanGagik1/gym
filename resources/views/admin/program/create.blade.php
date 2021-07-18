@@ -21,8 +21,7 @@
                 </div>
             </div>
             <div class="form-group row pb-3">
-                <label for="program_category_id" class="col-sm-2 col-form-label font-weight-bold">Категория для
-                    питания:</label>
+                <label for="program_category_id" class="col-sm-2 col-form-label font-weight-bold">Категория для програмы:</label>
                 <div class="col-sm-10">
                     <select class="custom-select" id="program_category_id" name="program_category_id">
                         <option disabled @if(!old('program_category_id')) selected @endif>--Выберите Категорию для
@@ -39,7 +38,7 @@
                 </div>
             </div>
             <div class="form-group row pb-3">
-                <label for="trainer_id" class="col-sm-2 col-form-label font-weight-bold">Категория для питания:</label>
+                <label for="trainer_id" class="col-sm-2 col-form-label font-weight-bold">Тренер:</label>
                 <div class="col-sm-10">
                     <select class="custom-select" id="trainer_id" name="trainer_id">
                         <option disabled @if(!old('trainer_id')) selected @endif>--Выберите Категорию для питания--

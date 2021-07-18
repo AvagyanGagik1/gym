@@ -3947,3 +3947,12 @@ body {
         }
     }
 }
+.custom-text-comment{
+    display: flex;
+    div{
+        cursor: pointer;
+    }
+}
+.owl-carousel .owl-stage {
+    display: flex;
+}

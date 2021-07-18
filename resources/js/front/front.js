@@ -30,6 +30,7 @@ $(document).ready(function () {
         }
     })
 
+
     $('.owl-two').owlCarousel({
         margin: 22,
         lazyLoad: true,
@@ -133,7 +134,7 @@ $(document).ready(function () {
         })
         $('body').css('overflow', 'hidden')
     })
-    $('.owl-carousel').owlCarousel({
+    $('.owl-carousel-food').owlCarousel({
         responsiveClass: true,
         margin: 20,
         lazyLoad: true,
@@ -145,6 +146,31 @@ $(document).ready(function () {
             },
             1000: {
                 items: 3,
+            },
+        }
+    })
+    $('.owl-carousel-comment').owlCarousel({
+        autoplay: false,
+        lazyLoad: true,
+        margin: 20,
+        responsiveClass: true,
+        autoHeight: true,
+        dots: false,
+        loop: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            992: {
+                items: 1,
+                nav: true,
+                navContainerClass: 'custom-text-comment',
+                navElement: 'div',
+                navText: [
+                    '<img src="/images/ArrowR.png">',
+                    '<img src="/images/ArrowL.png">',
+                ]
             },
         }
     })

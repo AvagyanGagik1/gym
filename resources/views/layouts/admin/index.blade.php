@@ -90,7 +90,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('admin/clientComment') ? 'active' : '' }}"
-                           href="{{route('clientComment.index')}}">Коменты</a>
+                           href="{{route('clientComment.index')}}">Коменты (на главной странице)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::is('admin/comment') ? 'active' : '' }}"
+                           href="{{route('comment.index')}}">Коменты</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('admin/users') ? 'active' : '' }}"

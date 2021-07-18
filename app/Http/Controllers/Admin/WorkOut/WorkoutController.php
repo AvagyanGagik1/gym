@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\WorkOut;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\helper\ParseYoutubeLink;
 use App\Http\Requests\StoreWorkoutRequest;
 use App\Http\Requests\UpdateWorkoutRequest;
 use App\Model\Program;
@@ -16,6 +17,7 @@ use Illuminate\Http\Response;
 
 class WorkoutController extends Controller
 {
+    use ParseYoutubeLink;
     /**
      * Display a listing of the resource.
      *
@@ -167,7 +169,7 @@ class WorkoutController extends Controller
      */
     public function saveVideos(array $videoLinks,Workout $workout){
         foreach ($videoLinks as $i){
-            $video = Video::create(['link'=>$i,'image'=>'/images']);
+            $video = Video::create(['link'=>$this->youTubeImage($i),'image'=>'/images']);
             $workout->videos()->attach([$video->id]);
         }
     }
