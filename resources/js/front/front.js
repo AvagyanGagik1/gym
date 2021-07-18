@@ -148,20 +148,20 @@ $(document).ready(function () {
             },
         }
     })
-    $('.calendarOverlay').click(function (){
+    $('.calendarOverlay').click(function () {
         $('.calendarOverlay').css('display', 'none')
         $('.sideCalendar').css('display', 'none')
-        $('body').css('overflow','auto')
+        $('body').css('overflow', 'auto')
     })
     $('#closeCalendar').click(function () {
         $('.calendarOverlay').css('display', 'none')
         $('.sideCalendar').css('display', 'none')
-        $('body').css('overflow','auto')
+        $('body').css('overflow', 'auto')
     })
     $('#openCalendar').click(function () {
         $('.calendarOverlay').css('display', 'block')
         $('.sideCalendar').css('display', 'flex')
-        $('body').css('overflow','hidden')
+        $('body').css('overflow', 'hidden')
     })
     $('#mainButton').click(function () {
         console.log('pix')
@@ -184,9 +184,9 @@ $(document).ready(function () {
     let player;
     $('.playButton').click(function () {
         let video = $(this).attr('data-link')
-
+        let height = window.getComputedStyle($('.preview')[0], null).getPropertyValue("height")
         player = new YT.Player('player', {
-            height: 'inherit',
+            height: height,
             width: 'inherit',
             videoId: video,
             playerVars: {
@@ -259,39 +259,54 @@ $(document).ready(function () {
             }
         })
     })
-    $('#changePhoto').change(function (e){
+    $('#changePhoto').change(function (e) {
         let data = new FormData()
-        data.append('image',e.target.files[0])
-        axios.post('/profile/user/change/avatar',data,{
+        data.append('image', e.target.files[0])
+        axios.post('/profile/user/change/avatar', data, {
             headers: {
                 'content-type': 'multipart/form-data'
             }
-        }).then((response)=>{
+        }).then((response) => {
             console.log(response.data)
-            $('#avatarImage').attr('src',response.data.avatar)
-            $('#headerUserAvatar').attr('src',response.data.avatar)
+            $('#avatarImage').attr('src', response.data.avatar)
+            $('#headerUserAvatar').attr('src', response.data.avatar)
         })
     })
-    $('#userNameSet').change(function (){
-      axios.post('/profile/user/change/name',{'name':$(this).val()}).then((response)=>{
-          console.log(response.data)
-      })
+    $('#userNameSet').change(function () {
+        axios.post('/profile/user/change/name', {'name': $(this).val()}).then((response) => {
+            console.log(response.data)
+        })
     })
-    $('#userGenderSet').change(function (){
-      axios.post('/profile/user/change/gender',{'gender':$(this).val()}).then((response)=>{
-          console.log(response.data)
-      })
+    $('#userGenderSet').change(function () {
+        axios.post('/profile/user/change/gender', {'gender': $(this).val()}).then((response) => {
+            console.log(response.data)
+        })
     })
-    $('.plusMinusPersonal').click(function (){
+    $('.plusMinusPersonal').click(function () {
         let input = $(this).parent().parent().children('input')
         let value = $(this).parent().parent().children('input').val()
         let calc = $(this).attr('data-calc')
-        calc === '+'?value++:value--
+        calc === '+' ? value++ : value--
         input.val(value)
     })
 
-    $('.go-to-workout').click(function (){
-        window.location =  $(this).attr('data-link')
+    $('.go-to-workout').click(function () {
+        window.location = $(this).attr('data-link')
+    })
+    $('.news-item-read').click(function () {
+        if($(this).parent().height() > 130){
+            $(this).parent().css('height','129px')
+            $(this).parent().children('p').css('height','80px')
+            $(this).children('span.openButton').removeClass('d-none')
+            $(this).children('span.closeButton').addClass('d-none')
+        }else{
+            $(this).children('span.closeButton').removeClass('d-none')
+            $(this).children('span.openButton').addClass('d-none')
+            $(this).parent().css('height','auto')
+            $(this).parent().children('p').css('height','auto')
+        }
+        console.log($(this).children('span.closeButton'),$(this).children('span.openButton'),$(this).parent().height())
+
     })
 })
 

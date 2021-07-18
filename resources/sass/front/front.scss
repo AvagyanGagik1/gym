@@ -451,6 +451,7 @@
     max-width: 740px;
     max-height: 416px;
     width: inherit;
+    height: 100%;
 }
 
 #player {
@@ -458,7 +459,6 @@
     max-width: 740px;
     max-height: 416px;
     width: inherit;
-    height: inherit;
 }
 .about {
     height: 100%;
@@ -759,6 +759,16 @@
     }
 
     .news-item {
+        .news-item-content{
+            height: 129px;
+            display: flex;
+            align-content: space-between;
+            flex-wrap: wrap;
+            p{
+                height: 80px;
+                overflow: hidden;
+            }
+        }
         h3 {
             font-family: Druk Wide Cyr, serif;
             font-size: 18px;
@@ -785,7 +795,7 @@
             margin-bottom: 23px;
         }
 
-        a {
+        button {
             font-family: Druk Wide Cyr, serif;
             font-size: 11px;
             font-style: normal;
@@ -1481,7 +1491,11 @@ footer {
         margin: auto -15px !important;
     }
 }
-
+.workoutVideo{
+    max-height: 419px;
+    max-width: 740px;
+    position: relative;
+}
 .burn-content, .functional-content {
     .youtube-training {
         h1 {

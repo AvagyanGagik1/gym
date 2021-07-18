@@ -3,7 +3,7 @@
     @if(count($workout->videos))
 
         <section class="content burn-content">
-            {{$workout->program->trainer}}
+{{--            {{$workout->program->trainer}}--}}
             <div class="d-flex flex-column">
                 <div class="col-xl-10 col-12 d-flex justify-content-center flex-wrap m-auto youtube-account">
                     <div class="col-12 d-flex align-items-center justify-content-between subscribe-header">
@@ -132,7 +132,7 @@
             flex-wrap
              p-0">
                         <div class="col-lg-7 col-12 p-0 ">
-                            <div class=" col-12 p-0 d-flex align-items-center justify-content-center">
+                            <div class=" col-12 p-0 d-flex align-items-center justify-content-center workoutVideo">
                                 <div id="player"></div>
                                 <div class="position-absolute">
                                     <img class="playButton w-100" id="playButton" src="/images/playButton.png"
@@ -180,8 +180,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="col-12 d-flex justify-content-center youtube-save flex-lg-row flex-column-reverse">
+                            <div class="col-12 d-flex justify-content-center youtube-save flex-lg-row flex-column-reverse">
                                 <div class="col-lg-4 col-12 p-0 d-flex justify-content-center align-items-center">
                                     <button>ГОТОВО</button>
                                 </div>
@@ -242,7 +241,8 @@
                             @foreach($workout->program->workout as $work)
                             <div class="col-12 d-flex content-user-video-item ">
                                 <div class="col-6 pl-0 ">
-                                    <img src="{{$work->video->}}" class="w-100 " alt="">
+
+                                    <img src="{{ $work->image}}" class="w-100 " alt="">
                                 </div>
                                 <div class="col-6 pr-0">
                                     <h2>
