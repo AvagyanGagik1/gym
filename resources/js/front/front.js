@@ -210,9 +210,9 @@ $(document).ready(function () {
     let player;
     $('.playButton').click(function () {
         let video = $(this).attr('data-link')
-
+        let height = window.getComputedStyle($('.preview')[0], null).getPropertyValue("height")
         player = new YT.Player('player', {
-            height: 'inherit',
+            height: height,
             width: 'inherit',
             videoId: video,
             playerVars: {
@@ -316,8 +316,23 @@ $(document).ready(function () {
         input.val(value)
     })
 
-    $('.go-to-workout').click(function (){
-        window.location =  $(this).attr('data-link')
+    $('.go-to-workout').click(function () {
+        window.location = $(this).attr('data-link')
+    })
+    $('.news-item-read').click(function () {
+        if($(this).parent().height() > 130){
+            $(this).parent().css('height','129px')
+            $(this).parent().children('p').css('height','80px')
+            $(this).children('span.openButton').removeClass('d-none')
+            $(this).children('span.closeButton').addClass('d-none')
+        }else{
+            $(this).children('span.closeButton').removeClass('d-none')
+            $(this).children('span.openButton').addClass('d-none')
+            $(this).parent().css('height','auto')
+            $(this).parent().children('p').css('height','auto')
+        }
+        console.log($(this).children('span.closeButton'),$(this).children('span.openButton'),$(this).parent().height())
+
     })
 })
 

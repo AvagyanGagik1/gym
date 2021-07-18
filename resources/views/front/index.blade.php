@@ -611,51 +611,51 @@
         <div class="container-fluid col-12">
             <div class="row d-flex flex-wrap">
                 @foreach($subscriptions as $subscription)
-                <div class="d-flex align-items-md-center align-items-start
+                    <div class="d-flex align-items-md-center align-items-start
 				    justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">
-                    <h3>{{$subscription->duration_program}} {{App::getlocale()==='ru'?$subscription->name_ru:(App::getlocale()==='en'?$subscription->name_en:$subscription->name_blr)}}</h3>
-                    <div>
-                        <p>{{$subscription->price}} <span>грн</span></p>
+                        <h3>{{$subscription->duration_program}} {{App::getlocale()==='ru'?$subscription->name_ru:(App::getlocale()==='en'?$subscription->name_en:$subscription->name_blr)}}</h3>
+                        <div>
+                            <p>{{$subscription->price}} <span>грн</span></p>
+                        </div>
+                        <button class="btn btnNorm btnNormal1">
+                            {{__('language.start')}}
+                        </button>
+                        <!--                <img class="w-100" src="images/subscribe.png" alt="">-->
                     </div>
-                    <button class="btn btnNorm btnNormal1">
-                        {{__('language.start')}}
-                    </button>
-                    <!--                <img class="w-100" src="images/subscribe.png" alt="">-->
-                </div>
                 @endforeach
-{{--                <div class="d-flex align-items-md-center align-items-start--}}
-{{--				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">--}}
-{{--                    <h3>8 Недельная Трансформация</h3>--}}
-{{--                    <div>--}}
-{{--                        <p>640 <span>грн</span></p>--}}
-{{--                    </div>--}}
-{{--                    <button class="btn btnNorm btnNormal1">--}}
-{{--                        начать--}}
-{{--                    </button>--}}
-{{--                    <!--                <img class="w-100" src="images/subscribe1.png" alt="">-->--}}
-{{--                </div>--}}
-{{--                <div class="d-flex align-items-md-center align-items-start--}}
-{{--				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">--}}
-{{--                    <h3>8 Недельная Трансформация</h3>--}}
-{{--                    <div>--}}
-{{--                        <p>640 <span>грн</span></p>--}}
-{{--                    </div>--}}
-{{--                    <button class="btn btnNorm btnNormal1">--}}
-{{--                        начать--}}
-{{--                    </button>--}}
-{{--                    <!--                <img class="w-100" src="images/subscribe2.png" alt="">-->--}}
-{{--                </div>--}}
-{{--                <div class="d-flex align-items-md-center align-items-start--}}
-{{--				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">--}}
-{{--                    <h3>8 Недельная Трансформация</h3>--}}
-{{--                    <div>--}}
-{{--                        <p>640 <span>грн</span></p>--}}
-{{--                    </div>--}}
-{{--                    <button class="btn btnNorm btnNormal1">--}}
-{{--                        начать--}}
-{{--                    </button>--}}
-{{--                    <!--                <img class="w-100" src="images/subscribe3.png" alt="">-->--}}
-{{--                </div>--}}
+                {{--                <div class="d-flex align-items-md-center align-items-start--}}
+                {{--				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">--}}
+                {{--                    <h3>8 Недельная Трансформация</h3>--}}
+                {{--                    <div>--}}
+                {{--                        <p>640 <span>грн</span></p>--}}
+                {{--                    </div>--}}
+                {{--                    <button class="btn btnNorm btnNormal1">--}}
+                {{--                        начать--}}
+                {{--                    </button>--}}
+                {{--                    <!--                <img class="w-100" src="images/subscribe1.png" alt="">-->--}}
+                {{--                </div>--}}
+                {{--                <div class="d-flex align-items-md-center align-items-start--}}
+                {{--				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">--}}
+                {{--                    <h3>8 Недельная Трансформация</h3>--}}
+                {{--                    <div>--}}
+                {{--                        <p>640 <span>грн</span></p>--}}
+                {{--                    </div>--}}
+                {{--                    <button class="btn btnNorm btnNormal1">--}}
+                {{--                        начать--}}
+                {{--                    </button>--}}
+                {{--                    <!--                <img class="w-100" src="images/subscribe2.png" alt="">-->--}}
+                {{--                </div>--}}
+                {{--                <div class="d-flex align-items-md-center align-items-start--}}
+                {{--				justify-content-center col-lg-3 col-md-6 col-12 p-0 flex-column m-auto subscribe-item">--}}
+                {{--                    <h3>8 Недельная Трансформация</h3>--}}
+                {{--                    <div>--}}
+                {{--                        <p>640 <span>грн</span></p>--}}
+                {{--                    </div>--}}
+                {{--                    <button class="btn btnNorm btnNormal1">--}}
+                {{--                        начать--}}
+                {{--                    </button>--}}
+                {{--                    <!--                <img class="w-100" src="images/subscribe3.png" alt="">-->--}}
+                {{--                </div>--}}
             </div>
         </div>
     </section>
@@ -774,6 +774,7 @@
                                     <h3>{{App::getlocale()==='ru'?$item->profession_ru:(App::getlocale()==='en'?$item->profession_en:$item->profession_blr)}}</h3>
                                 </div>
                             </div>
+                            {{$item}}
                         @endforeach
                     </div>
                 </div>
@@ -795,19 +796,21 @@
                         </div>
                         <img src="{{$new->image}}" alt="">
                         <h3>{{App::getlocale()==='ru'?$new->title_ru:(App::getlocale()==='en'?$new->title_en:$new->title_blr)}}</h3>
-                        <p>{!! App::getlocale()==='ru'?$new->description_ru:(App::getlocale()==='en'?$new->description_en:$new->description_blr)!!}</p>
-                        <a href="#">Читать подробнее
-                            <svg width="40" height="14" viewBox="0 0 40 14" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M-21.0957 7.7765L37.1902 7.7765L33.5935 11.0372L33.5935 13.2109L40.4443 7.00015L33.5935 0.789369L33.5935 2.96314L37.1902 6.22381L-21.0957 6.2238L-21.0957 7.7765Z"
-                                    fill="#111111"/>
-                            </svg>
+                        <div class="news-item-content" style="height: 129px">
 
-
-                        </a>
+                            <p>{!! App::getlocale()==='ru'?$new->description_ru:(App::getlocale()==='en'?$new->description_en:$new->description_blr)!!}</p>
+                            <button class="btn m-0 p-0 news-item-read">
+                                <span class="openButton">Читать подробнее</span>
+                                <span class="closeButton d-none">Свернуть</span>
+                                <svg width="40" height="14" viewBox="0 0 40 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M-21.0957 7.7765L37.1902 7.7765L33.5935 11.0372L33.5935 13.2109L40.4443 7.00015L33.5935 0.789369L33.5935 2.96314L37.1902 6.22381L-21.0957 6.2238L-21.0957 7.7765Z"
+                                        fill="#111111"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                @endforeach
             </div>
         </div>
     </section>
