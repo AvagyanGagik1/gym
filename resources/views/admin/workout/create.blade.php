@@ -7,11 +7,11 @@
             <div class="form-group row pb-3">
                 <label for="program_id" class="col-sm-2 col-form-label font-weight-bold">Програма Тренировкы:</label>
                 <div class="col-sm-10">
-                    <select class="custom-select" id="food_category_id" name="program_id">
+                    <select class="custom-select customSelectCheckForTraining" id="program_id" name="program_id">
                         <option disabled @if(!old('program_id')) selected @endif>--Выберите програму для тренировки--
                         </option>
                         @foreach($programs as $program)
-                            <option value="{{$program->id}}"
+                            <option value="{{$program->id}}" data-type="{{$program->type}}"
                                     @if(old('program_id')=== $program->id) selected @endif>{{$program->name_ru}}</option>
                         @endforeach
                     </select>
