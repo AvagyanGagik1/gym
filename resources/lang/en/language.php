@@ -75,5 +75,17 @@ return [
     "carboHydrates"=>"Carbohydrates",
     "addTo"=>"ADD TO",
     "minutes"=>"min",
+    "trainer"=>"Trainer",
+    "signed"=>"Signed",
+    "description"=>"description",
+    "hide"=>"Hide",
+    "open"=>"Open",
+    "afterComplete"=>"After completing the workout, press the 'Ready' button to save your progress",
+    "feedback"=>"Give feedback",
+    "sendFeedback"=>"Send feedback",
+    "reviews"=>"Reviews",
+    "loadMore"=>"load more",
+    "finishProgram"=>"finish the program",
+    "reply"=>"Reply",
 
 ];

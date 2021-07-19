@@ -18,7 +18,7 @@
                             <img src="{{$program->trainer->image}}" alt="">
                         </div>
                         <div class="d-flex flex-column ">
-                            <p>Тренер</p>
+                            <p>{{__('language.trainer')}}</p>
                             <h1>{{App::getlocale()==='ru'?$program->trainer->name_ru:(App::getlocale()==='en'?$program->trainer->name_en:$program->trainer->name_blr)}}</h1>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                                 </svg>
                             </div>
                             <div class="d-flex flex-column ">
-                                <p>Интенсивность</p>
+                                <p>{{__('language.intensity')}}</p>
                                 <h1>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h1>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                 </svg>
                             </div>
                             <div class="d-flex flex-column ">
-                                <p>Подписано</p>
+                                <p>{{__('language.signed')}}</p>
                                 <h1>2 123</h1>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                             <img src="{{$program->trainer->image}}" alt="">
                         </div>
                         <div class="d-flex flex-column ">
-                            <p>Тренер</p>
+                            <p>{{__('language.trainer')}}</p>
                             <h1>{{App::getlocale()==='ru'?$program->trainer->name_ru:(App::getlocale()==='en'?$program->trainer->name_en:$program->trainer->name_blr)}}</h1>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                                 </svg>
                             </div>
                             <div class="d-flex flex-column ">
-                                <p>Интенсивность</p>
+                                <p>{{__('language.intensity')}}</p>
                                 <h1>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h1>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                                 </svg>
                             </div>
                             <div class="d-flex flex-column ">
-                                <p>Подписано</p>
+                                <p>{{__('language.signed')}}</p>
                                 <h1>2 123</h1>
                             </div>
                         </div>
@@ -109,9 +109,9 @@
 
                 <div class="col-12 d-flex justify-content-between align-items-center content-user-hide">
                     <button class="closeDescription">
-                        <span class="openContent ">Скрыть</span>
-                        <span class="closeContent  d-none">Открыть</span>
-                        описание
+                        <span class="openContent ">{{__('language.hide')}}</span>
+                        <span class="closeContent  d-none">{{__('language.open')}}</span>
+                        {{__('language.description')}}
                         <img src="/images/vectorTop.png" alt="">
                     </button>
                 </div>
@@ -184,17 +184,16 @@
                         </div>
                         <div class="col-12 d-flex justify-content-center youtube-save flex-lg-row flex-column-reverse">
                             <div class="col-lg-4 col-12 p-0 d-flex justify-content-center align-items-center">
-                                <button>ГОТОВО</button>
+                                <button>{{__('language.ready')}}</button>
                             </div>
                             <div class="col-lg-8 col-12  p-0 d-flex justify-content-end">
                                 <h2 class="text-lg-left text-center">
-                                    После выполнения тренировки нажмите кнопку “Готово” что бы сохранить свой
-                                    прогресс
+                                    {{__('language.afterComplete')}}
                                 </h2>
                             </div>
                         </div>
                         <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment-write">
-                            <h2>Оставить отзыв</h2>
+                            <h2>{{__('language.feedback')}}</h2>
                             <form class="w-100" action="{{route('add.comment')}}" method="post">
                                 @csrf
                                 <input type="hidden" name="user_id" value="{{auth()->id()}}">
@@ -202,12 +201,12 @@
                                 <input type="hidden" name="id" value="{{$program->id}}">
                                 <textarea name="text" placeholder="Комментарий"></textarea>
                                 <button type="submit">
-                                    отправить отзыв
+                                    {{__('language.sendFeedback')}}
                                 </button>
                             </form>
                         </div>
                         <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment">
-                            <h1>Отзывы <span>({{count($program->workout[0]->comments)}})</span></h1>
+                            <h1>{{__('language.reviews')}} <span>({{count($program->workout[0]->comments)}})</span></h1>
                             @include('front.user.helpers._comment',['firstComments'=>$program->workout[0]->comments()->where('parent_id',0)->get()])
 {{--                            @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)--}}
 {{--                                <div class="col-12 p-0">--}}
@@ -221,7 +220,7 @@
 {{--                                    {!! $comment->text !!}--}}
 {{--                                    <button class="answerInput" data-program="{{$program->id}}"--}}
 {{--                                            data-user="{{auth()->id()}}" data-parent="{{$comment->id}}"--}}
-{{--                                            data-workout="{{$program->workout[0]->id}}">Ответить--}}
+{{--                                            data-workout="{{$program->workout[0]->id}}">{{__('language.reply')}}--}}
 {{--                                    </button>--}}
 
 {{--                                    <form action="{{route('add.comment')}}" method="post">--}}
@@ -231,7 +230,7 @@
 {{--                            @endforeach--}}
 
                             <button>
-                                загрузить еше
+                                {{__('language.loadMore')}}
                             </button>
                         </div>
                     </div>
@@ -255,13 +254,13 @@
                         <div class="youtube-program col-12">
                             <form>
                                 <button type="submit">
-                                    завершить программу
+                                    {{__('language.finishProgram')}}
                                 </button>
                             </form>
 
                         </div>
                         <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment-write">
-                            <h2>Оставить отзыв</h2>
+                            <h2>{{__('language.feedback')}}</h2>
                             <form class="w-100" action="{{route('add.comment')}}" method="post">
                                 @csrf
                                 <input type="hidden" name="user_id" value="{{auth()->id()}}">
@@ -269,12 +268,12 @@
                                 <input type="hidden" name="id" value="{{$program->id}}">
                                 <textarea name="text" placeholder="Комментарий"></textarea>
                                 <button type="submit">
-                                    отправить отзыв
+                                    {{__('language.sendFeedback')}}
                                 </button>
                             </form>
                         </div>
                         <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment">
-                            <h1>Отзывы <span>({{count($program->workout[0]->comments)}})</span></h1>
+                            <h1>{{__('language.reviews')}} <span>({{count($program->workout[0]->comments)}})</span></h1>
 
                             @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)
                                 <div class="col-12 p-0">
@@ -288,7 +287,7 @@
                                     <p>{!! $comment->text !!}</p>
                                     <button class="answerInput" data-user="{{auth()->id()}}"
                                             data-parent="{{$comment->id}}" data-workout="{{$program->workout[0]->id}}">
-                                        Ответить
+                                        {{__('language.reply')}}
                                     </button>
                                     @foreach($comment->childs as $answer)
                                         <div class="col-12 p-0 answer">
@@ -299,7 +298,7 @@
                                                 <h3>{{$answer->user->name}}</h3>
                                             </div>
                                             <p>{{$answer->text}}</p>
-                                            <a href="">Ответить</a>
+                                            <a href="">{{__('language.reply')}}</a>
                                         </div>
                                     @endforeach
                                 </div>
@@ -312,14 +311,14 @@
                                             <h3>{{$answer->user->name}}</h3>
                                         </div>
                                         <p>{{$answer->text}}</p>
-                                        <a href="">Ответить</a>
+                                        <a href="">{{__('language.reply')}}</a>
                                     </div>
                                 @endforeach
                             @endforeach
 
 
                             <button>
-                                Загрузить еше
+                                {{__('language.loadMore')}}
                             </button>
                         </div>
                     </div>
@@ -343,7 +342,7 @@
                                 <img src="{{$program->trainer->image}}" alt="">
                             </div>
                             <div class="d-flex flex-column ">
-                                <p>Тренер</p>
+                                <p>{{__('language.trainer')}}</p>
                                 <h1>Лера Алёшкина</h1>
                             </div>
                         </div>
@@ -366,7 +365,7 @@
                                     </svg>
                                 </div>
                                 <div class="d-flex flex-column ">
-                                    <p>Интенсивность</p>
+                                    <p>{{__('language.intensity')}}</p>
                                     <h1>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h1>
                                 </div>
                             </div>
@@ -380,7 +379,7 @@
                                     </svg>
                                 </div>
                                 <div class="d-flex flex-column ">
-                                    <p>Подписано</p>
+                                    <p>{{__('language.signed')}}</p>
                                     <h1>2 123</h1>
                                 </div>
                             </div>
@@ -392,7 +391,7 @@
                                 <img src="{{$program->trainer->image}}" alt="">
                             </div>
                             <div class="d-flex flex-column ">
-                                <p>Тренер</p>
+                                <p>{{__('language.trainer')}}</p>
                                 <h1>{{App::getlocale()==='ru'?$program->trainer->name_ru:(App::getlocale()==='en'?$program->trainer->name_en:$program->trainer->name_blr)}}</h1>
                             </div>
                         </div>
@@ -411,7 +410,7 @@
                                     </svg>
                                 </div>
                                 <div class="d-flex flex-column ">
-                                    <p>Интенсивность</p>
+                                    <p>{{__('language.intensity')}}</p>
                                     <h1>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h1>
                                 </div>
                             </div>
@@ -425,7 +424,7 @@
                                     </svg>
                                 </div>
                                 <div class="d-flex flex-column ">
-                                    <p>Подписано</p>
+                                    <p>{{__('language.signed')}}</p>
                                     <h1>{{count($program->subscribe->users)}}</h1>
                                 </div>
                             </div>
@@ -433,8 +432,10 @@
                     </div>
 
                     <div class="col-12 d-flex justify-content-between align-items-center content-user-hide">
-                        <button>
-                            Скрыть описание
+                        <button class="closeDescription">
+                            <span class="openContent ">{{__('language.hide')}}</span>
+                            <span class="closeContent  d-none">{{__('language.open')}}</span>
+                            {{__('language.description')}}
                             <img src="/images/vectorTop.png" alt="">
                         </button>
                     </div>
@@ -532,17 +533,16 @@
                             <div
                                 class="col-12 d-flex justify-content-center youtube-save flex-lg-row flex-column-reverse">
                                 <div class="col-lg-4 col-12 p-0 d-flex justify-content-center align-items-center">
-                                    <button>ГОТОВО</button>
+                                    <button>{{__('language.ready')}}</button>
                                 </div>
                                 <div class="col-lg-8 col-12  p-0 d-flex justify-content-end">
                                     <h2 class="text-lg-left text-center">
-                                        После выполнения тренировки нажмите кнопку “Готово” что бы сохранить свой
-                                        прогресс
+                                        {{__('language.afterComplete')}}
                                     </h2>
                                 </div>
                             </div>
                             <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment-write">
-                                <h2>Оставить отзыв</h2>
+                                <h2>{{__('language.feedback')}}</h2>
                                 <form class="w-100" action="{{route('add.comment')}}" method="post">
                                     @csrf
                                     <input type="hidden" name="user_id" value="{{auth()->id()}}">
@@ -550,12 +550,12 @@
                                     <input type="hidden" name="id" value="{{$program->id}}">
                                     <textarea name="text" placeholder="Комментарий"></textarea>
                                     <button type="submit">
-                                        отправить отзыв
+                                        {{__('language.sendFeedback')}}
                                     </button>
                                 </form>
                             </div>
                             <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment">
-                                <h1>Отзывы <span>({{count($program->workout[0]->comments)}})</span></h1>
+                                <h1>{{__('language.reviews')}} <span>({{count($program->workout[0]->comments)}})</span></h1>
                                 @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)
                                     <div class="col-12 p-0">
 
@@ -568,7 +568,7 @@
                                         <p>{!! $comment->text !!}</p>
                                         <button class="answerInput" data-user="{{auth()->id()}}"
                                                 data-parent="{{$comment->id}}"
-                                                data-workout="{{$program->workout[0]->id}}">Ответить
+                                                data-workout="{{$program->workout[0]->id}}">{{__('language.reply')}}
                                         </button>
 
                                     </div>
@@ -581,13 +581,13 @@
                                                 <h3>{{$answer->user->name}}</h3>
                                             </div>
                                             <p>{!! $answer->text !!}</p>
-                                            <a href="">Ответить</a>
+                                            <a href="">{{__('language.reply')}}</a>
                                         </div>
                                     @endforeach
                                 @endforeach
 
                                 <button>
-                                    загрузить еше
+                                    {{__('language.loadMore')}}
                                 </button>
                             </div>
                         </div>
@@ -610,18 +610,18 @@
                             @endforeach
                             <div class="youtube-program col-12">
                                 <button>
-                                    завершить программу
+                                    {{__('language.finishProgram')}}
                                 </button>
                             </div>
                             <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment-write">
-                                <h2>Оставить отзыв</h2>
+                                <h2>{{__('language.feedback')}}</h2>
                                 <textarea name="" placeholder="Комментарий"></textarea>
                                 <button>
-                                    отправить отзыв
+                                    {{__('language.sendFeedback')}}
                                 </button>
                             </div>
                             <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment">
-                                <h1>Отзывы <span>({{count($program->workout[0]->comments)}})</span></h1>
+                                <h1>{{__('language.reviews')}} <span>({{count($program->workout[0]->comments)}})</span></h1>
 
                                 @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)
                                     <div class="col-12 p-0">
@@ -635,7 +635,7 @@
                                         <p>{!! $comment->text !!}</p>
                                         <button class="answerInput" data-user="{{auth()->id()}}"
                                                 data-parent="{{$comment->id}}"
-                                                data-workout="{{$program->workout[0]->id}}">Ответить
+                                                data-workout="{{$program->workout[0]->id}}">{{__('language.reply')}}
                                         </button>
                                         @foreach($comment->childs as $answer)
                                             <div class="col-12 p-0 answer">
@@ -646,7 +646,7 @@
                                                     <h3>{{$answer->user->name}}</h3>
                                                 </div>
                                                 <p>{{$answer->text}}</p>
-                                                <a href="">Ответить</a>
+                                                <a href="">{{__('language.reply')}}</a>
                                             </div>
                                         @endforeach
                                     </div>
@@ -664,11 +664,11 @@
                                 {{--                                        жизнь.--}}
                                 {{--                                        Получите онлайн-доступ ко всем программам тренировок для любого телосложения и--}}
                                 {{--                                        любого уровня подготовки.</p>--}}
-                                {{--                                    <a href="">Ответить</a>--}}
+                                {{--                                    <a href="">{{__('language.reply')}}</a>--}}
                                 {{--                                </div>--}}
 
                                 <button>
-                                    Загрузить еше
+                                    {{__('language.loadMore')}}
                                 </button>
                             </div>
                         </div>
