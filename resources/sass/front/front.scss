@@ -447,6 +447,7 @@
         }
     }
 }
+
 .preview {
     max-width: 740px;
     max-height: 416px;
@@ -460,6 +461,7 @@
     max-height: 416px;
     width: inherit;
 }
+
 .about {
     height: 100%;
 
@@ -759,16 +761,18 @@
     }
 
     .news-item {
-        .news-item-content{
+        .news-item-content {
             height: 129px;
             display: flex;
             align-content: space-between;
             flex-wrap: wrap;
-            p{
+
+            p {
                 height: 80px;
                 overflow: hidden;
             }
         }
+
         h3 {
             font-family: Druk Wide Cyr, serif;
             font-size: 18px;
@@ -1491,12 +1495,14 @@ footer {
         margin: auto -15px !important;
     }
 }
-.workoutVideo{
+
+.workoutVideo {
     max-height: 419px;
     max-width: 740px;
     margin: auto;
     position: relative;
 }
+
 .burn-content, .functional-content {
     .youtube-training {
         h1 {
@@ -1524,8 +1530,8 @@ footer {
 
     .functional-training {
         padding: 10px 20px;
-        background-position: center!important;
-        background-size: cover!important;
+        background-position: center !important;
+        background-size: cover !important;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1545,7 +1551,8 @@ footer {
     }
 
     .youtube-header {
-        padding-top: 20px!important;
+        padding: 30px 0!important;
+
         h3 {
             font-family: Druk Wide Cyr;
             font-size: 20px;
@@ -1791,8 +1798,10 @@ footer {
             }
 
         }
-        form{
+
+        form {
             width: 100%;
+
             textarea::placeholder {
                 font-family: Montserrat, serif;
                 font-size: 14px;
@@ -1829,6 +1838,7 @@ footer {
                 width: auto;
             }
         }
+
         div {
             margin-bottom: 40px;
 
@@ -2341,7 +2351,7 @@ footer {
         max-height: 116px;
         position: relative;
 
-        img:nth-child(1){
+        img:nth-child(1) {
             border-radius: 50%;
             height: 100%;
             object-fit: cover;
@@ -2362,6 +2372,7 @@ footer {
             align-items: center;
             justify-content: center;
             cursor: pointer;
+
             input {
                 position: absolute;
                 opacity: 0;
@@ -2444,10 +2455,12 @@ footer {
             text-align: center;
             width: 100%;
             border: none;
-            &:focus{
+
+            &:focus {
                 outline: none;
             }
-            &[type=number]::-webkit-inner-spin-button{
+
+            &[type=number]::-webkit-inner-spin-button {
                 height: 0;
             }
         }
@@ -2666,9 +2679,13 @@ footer {
     flex-direction: column;
     //max-height: 538px;
     height: 100%;
+    width: 100%;
     align-items: center;
     max-width: 308px;
     margin: auto;
+    .position-relative{
+        width: 100%;
+    }
 }
 
 .imgFitness {
@@ -2676,6 +2693,8 @@ footer {
     max-height: 320px;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .cardHeader {
@@ -2762,12 +2781,19 @@ ul {
     border: 1px solid #E6E6E6;
     box-sizing: border-box;
     padding-top: 12px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
 .cardFooter {
     margin: -0.5rem;
     padding: 14px 17px 14px 16px;
     border-top: 1px solid #E6E6E6;
+    position: relative;
+    bottom: 0;
+    width: 150%;
 
     svg {
         margin: auto 0;
@@ -4018,11 +4044,13 @@ body {
 .owl-carousel .owl-stage {
     display: flex;
 }
-.visibleContent{
+
+.visibleContent {
     visibility: hidden;
     height: 0;
 }
-.rotateImg{
+
+.rotateImg {
     transform: rotate(
             180deg
     );

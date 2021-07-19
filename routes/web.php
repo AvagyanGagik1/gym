@@ -140,5 +140,7 @@ Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(functi
     Route::post('/user/change/gender','ProfileController@changeUserGender');
     Route::post('/user/change/personals','ProfileController@changeUserPersonals')->name('user.change.personals');
     Route::post('/add/comment','ProfileController@addComment')->name('add.comment');
+    Route::post('/complete/program','ProfileController@completeWorkout')->name('complete.workout');
+    Route::post('/complete/workout','ProfileController@completeProgram')->name('complete.program');
 
 });

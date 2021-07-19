@@ -234,7 +234,7 @@ $('.customSelectCheckForTraining').change(function (){
     if($(this).find(':selected').data('type') !== 'Hall'){
         $('#cloneVideoDiv').addClass('d-none')
         $('.task-create').remove()
-    }else{
+    }else if(!$(document).find('.task-create').length){
         let taskCreate = `
         <div class="task-create d-flex flex-column">
                 <button type="button" class="btn btn-sm btn-primary ml-auto mb-2" id="cloneTaskDiv">Добавить заданые

@@ -184,7 +184,12 @@
                         </div>
                         <div class="col-12 d-flex justify-content-center youtube-save flex-lg-row flex-column-reverse">
                             <div class="col-lg-4 col-12 p-0 d-flex justify-content-center align-items-center">
-                                <button>{{__('language.ready')}}</button>
+                                <form action="{{route('complete.workout')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="user_id" value="{{auth()->id()}}">
+                                    <input type="hidden" name="workout_id" value="{{$program->workout[0]->id}}">
+                                    <button type="submit">{{__('language.ready')}}</button>
+                                </form>
                             </div>
                             <div class="col-lg-8 col-12  p-0 d-flex justify-content-end">
                                 <h2 class="text-lg-left text-center">
@@ -208,26 +213,26 @@
                         <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment">
                             <h1>{{__('language.reviews')}} <span>({{count($program->workout[0]->comments)}})</span></h1>
                             @include('front.user.helpers._comment',['firstComments'=>$program->workout[0]->comments()->where('parent_id',0)->get()])
-{{--                            @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)--}}
-{{--                                <div class="col-12 p-0">--}}
+                            {{--                            @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)--}}
+                            {{--                                <div class="col-12 p-0">--}}
 
-{{--                                    <div class="col-12 p-0 d-flex align-items-center">--}}
-{{--                                        <div>--}}
-{{--                                            <img src="{{optional($comment->user)->avatar}}" alt="">--}}
-{{--                                        </div>--}}
-{{--                                        <h3>{{optional($comment->user)->name}}</h3>--}}
-{{--                                    </div>--}}
-{{--                                    {!! $comment->text !!}--}}
-{{--                                    <button class="answerInput" data-program="{{$program->id}}"--}}
-{{--                                            data-user="{{auth()->id()}}" data-parent="{{$comment->id}}"--}}
-{{--                                            data-workout="{{$program->workout[0]->id}}">{{__('language.reply')}}--}}
-{{--                                    </button>--}}
+                            {{--                                    <div class="col-12 p-0 d-flex align-items-center">--}}
+                            {{--                                        <div>--}}
+                            {{--                                            <img src="{{optional($comment->user)->avatar}}" alt="">--}}
+                            {{--                                        </div>--}}
+                            {{--                                        <h3>{{optional($comment->user)->name}}</h3>--}}
+                            {{--                                    </div>--}}
+                            {{--                                    {!! $comment->text !!}--}}
+                            {{--                                    <button class="answerInput" data-program="{{$program->id}}"--}}
+                            {{--                                            data-user="{{auth()->id()}}" data-parent="{{$comment->id}}"--}}
+                            {{--                                            data-workout="{{$program->workout[0]->id}}">{{__('language.reply')}}--}}
+                            {{--                                    </button>--}}
 
-{{--                                    <form action="{{route('add.comment')}}" method="post">--}}
-{{--                                        @csrf--}}
-{{--                                    </form>--}}
-{{--                                </div>--}}
-{{--                            @endforeach--}}
+                            {{--                                    <form action="{{route('add.comment')}}" method="post">--}}
+                            {{--                                        @csrf--}}
+                            {{--                                    </form>--}}
+                            {{--                                </div>--}}
+                            {{--                            @endforeach--}}
 
                             <button>
                                 {{__('language.loadMore')}}
@@ -238,8 +243,9 @@
                         @foreach($program->workout as $key=> $work)
                             <div class="col-12 d-flex content-user-video-item ">
                                 <div class="col-6 p-0 position-relative ">
-                                    <img src="//img.youtube.com/vi/{{optional($work->videos[0])->link}}/maxresdefault.jpg"
-                                         class="w-100 " alt="">
+                                    <img
+                                        src="//img.youtube.com/vi/{{optional($work->videos[0])->link}}/maxresdefault.jpg"
+                                        class="w-100 " alt="">
                                     @if($key)
                                         <div class="lock"></div>
                                     @endif
@@ -252,11 +258,16 @@
                             </div>
                         @endforeach
                         <div class="youtube-program col-12">
-                            <form>
-                                <button type="submit">
-                                    {{__('language.finishProgram')}}
-                                </button>
-                            </form>
+                            <div class="youtube-program col-12">
+                                <form action="{{route('complete.program')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" value="{{$program->id}}" name="program_id">
+                                    <input type="hidden" value="{{auth()->id()}}" name="user_id">
+                                    <button type="submit">
+                                        {{__('language.finishProgram')}}
+                                    </button>
+                                </form>
+                            </div>
 
                         </div>
                         <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment-write">
@@ -533,7 +544,12 @@
                             <div
                                 class="col-12 d-flex justify-content-center youtube-save flex-lg-row flex-column-reverse">
                                 <div class="col-lg-4 col-12 p-0 d-flex justify-content-center align-items-center">
-                                    <button>{{__('language.ready')}}</button>
+                                    <form action="{{route('complete.workout')}}" method="post">
+                                        @csrf
+                                        <input type="hidden" name="user_id" value="{{auth()->id()}}">
+                                        <input type="hidden" name="workout_id" value="{{$program->workout[0]->id}}">
+                                        <button type="submit">{{__('language.ready')}}</button>
+                                    </form>
                                 </div>
                                 <div class="col-lg-8 col-12  p-0 d-flex justify-content-end">
                                     <h2 class="text-lg-left text-center">
@@ -555,7 +571,8 @@
                                 </form>
                             </div>
                             <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment">
-                                <h1>{{__('language.reviews')}} <span>({{count($program->workout[0]->comments)}})</span></h1>
+                                <h1>{{__('language.reviews')}} <span>({{count($program->workout[0]->comments)}})</span>
+                                </h1>
                                 @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)
                                     <div class="col-12 p-0">
 
@@ -593,13 +610,15 @@
                         </div>
                         <div class="col-lg-5 col-12 ">
 
-                            @foreach($program->workout as $work)
+                            @foreach($program->workout as $key=> $work)
                                 <div class="col-12 d-flex content-user-video-item ">
                                     <div class="col-6 p-0 ">
-                                        <img src="//img.youtube.com/vi/{{optional($work->videos[0])->link}}/maxresdefault.jpg"
-                                             class="w-100 " alt="">
-                                        <div class="lock"></div>
-
+                                        <img
+                                            src="//img.youtube.com/vi/{{optional($work->videos[0])->link}}/maxresdefault.jpg"
+                                            class="w-100 " alt="">
+                                        @if($key)
+                                            <div class="lock"></div>
+                                        @endif
                                     </div>
                                     <div class="col-6 pr-0">
                                         <h2>
@@ -609,9 +628,14 @@
                                 </div>
                             @endforeach
                             <div class="youtube-program col-12">
-                                <button>
-                                    {{__('language.finishProgram')}}
-                                </button>
+                                <form action="{{route('complete.program')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" value="{{$program->id}}" name="program_id">
+                                    <input type="hidden" value="{{auth()->id()}}" name="user_id">
+                                    <button type="submit">
+                                        {{__('language.finishProgram')}}
+                                    </button>
+                                </form>
                             </div>
                             <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment-write">
                                 <h2>{{__('language.feedback')}}</h2>
@@ -621,7 +645,8 @@
                                 </button>
                             </div>
                             <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment">
-                                <h1>{{__('language.reviews')}} <span>({{count($program->workout[0]->comments)}})</span></h1>
+                                <h1>{{__('language.reviews')}} <span>({{count($program->workout[0]->comments)}})</span>
+                                </h1>
 
                                 @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)
                                     <div class="col-12 p-0">

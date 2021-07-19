@@ -62,4 +62,12 @@ class User extends Authenticatable
     {
         return $this->morphedByMany('App\Model\Achievement','userable');
     }
+
+    /**
+     * @return HasMany
+     */
+    public function completedWorkouts(): HasMany
+    {
+        return $this->hasMany('App\Model\Workout');
+    }
 }

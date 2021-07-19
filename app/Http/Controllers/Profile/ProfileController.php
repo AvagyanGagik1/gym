@@ -8,6 +8,8 @@ use App\Http\Controllers\helper\ParseYoutubeLink;
 use App\Http\Controllers\helper\UploadImage;
 use App\Model\Achievement;
 use App\Model\Comment;
+use App\Model\CompletedProgram;
+use App\Model\CompletedWorkout;
 use App\Model\DietRestrictions;
 use App\Model\FoodCategory;
 use App\Model\Personal;
@@ -27,6 +29,7 @@ use Illuminate\Support\Facades\Auth;
 class ProfileController extends Controller
 {
     use UploadImage, ParseYoutubeLink;
+
     public function index(): Response
     {
         $myPrograms = [];
@@ -163,11 +166,28 @@ class ProfileController extends Controller
         }
         return $activatedAchievements;
     }
-    public function addComment(Request $request){
+
+    public function addComment(Request $request)
+    {
         $input = $request->all();
         $input['parent_id'] = 1;
         $comment = Comment::create($input);
         $comment->workouts()->attach($input['workout_id']);
-        return redirect()->route('profile.burnFat',$input['id']);
+        return redirect()->route('profile.burnFat', $input['id']);
+    }
+
+    public function completeWorkout(Request $request)
+    {
+        $input = $request->all();
+        CompletedWorkout::create($input);
+        return redirect()->back();
+    }
+
+    public function completeProgram(Request $request)
+    {
+        $input =  $request->all();
+        CompletedProgram::create($input);
+        return redirect()->back();
+
     }
 }

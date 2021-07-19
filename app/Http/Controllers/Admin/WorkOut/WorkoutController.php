@@ -49,14 +49,16 @@ class WorkoutController extends Controller
      * @param StoreWorkoutRequest $request
      * @return JsonResponse
      */
-    public function store(StoreWorkoutRequest $request): JsonResponse
+    public function store(StoreWorkoutRequest $request)
     {
+
         $input = $request->all();
         $tasks = json_decode($request->get('tasks'));
         $videoLinks = $request->get('link');
         $workOut = Workout::create($input);
         $this->saveVideos($videoLinks,$workOut);
         $this->saveTasks($tasks,$workOut);
+
         return response()->json(['success'=>1,'message'=>'workout created successful']);
     }
 
@@ -169,7 +171,7 @@ class WorkoutController extends Controller
      */
     public function saveVideos(array $videoLinks,Workout $workout){
         foreach ($videoLinks as $i){
-            $video = Video::create(['link'=>$this->youTubeImage($i),'name'=>'Упражнения с резинкой для верхней части тела']);
+            $video = Video::create(['link'=>$this->youTubeImage($i),'name'=>$this->youtubeVideoName($this->youTubeImage($i))]);
             $workout->videos()->attach([$video->id]);
         }
     }
