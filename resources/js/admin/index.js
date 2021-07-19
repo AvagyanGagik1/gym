@@ -82,7 +82,12 @@ $(document).ready(function () {
             })
     })
     $('.approved').change(function (){
-        $(this)
+        console.log('dsd')
+        let id = $(this).attr('data-id')
+        console.log()
+        axios.post('/admin/change/comment/'+id+'/status',{approved:$(this).is(':checked')}).then((response)=>{
+            console.log(response.data)
+        })
     })
 });
 $(function () {

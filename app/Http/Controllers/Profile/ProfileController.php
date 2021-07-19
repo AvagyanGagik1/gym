@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers\Profile;
 
+use App\Http\Controllers\Admin\Comment\CommentController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\helper\ParseYoutubeLink;
 use App\Http\Controllers\helper\UploadImage;
 use App\Model\Achievement;
+use App\Model\Comment;
 use App\Model\DietRestrictions;
 use App\Model\FoodCategory;
 use App\Model\Personal;
+use App\Model\Program;
 use App\Model\ProgramCategory;
 use App\Model\PurposeOfNutrition;
 use App\Model\Subscription;
@@ -23,21 +26,20 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    use UploadImage,ParseYoutubeLink;
-
+    use UploadImage, ParseYoutubeLink;
     public function index(): Response
     {
         $myPrograms = [];
         $myProgramId = [];
-        $user =Auth::user();
+        $user = Auth::user();
         $subscriptions = $user->subscriptions;
-        foreach ($subscriptions as $subscription){
-            foreach ($subscription->programs as $program){
-                array_push($myPrograms,$program);
-                array_push($myProgramId,$program->id);
+        foreach ($subscriptions as $subscription) {
+            foreach ($subscription->programs as $program) {
+                array_push($myPrograms, $program);
+                array_push($myProgramId, $program->id);
             }
         }
-        return response()->view('front.user.index',['myProgramId'=>$myProgramId,'myPrograms'=>$myPrograms,'programsCategory'=>ProgramCategory::with('programs')->get()]);
+        return response()->view('front.user.index', ['myProgramId' => $myProgramId, 'myPrograms' => $myPrograms, 'programsCategory' => ProgramCategory::with('programs')->get()]);
     }
 
     public function information(): Response
@@ -61,12 +63,12 @@ class ProfileController extends Controller
         $user = Auth::user();
         $achievements = $user->achievements;
         $activated = $this->getActivatedAchievements($achievements);
-        return response()->view('front.user.achievements',['achievements'=>Achievement::all(),'activated'=>$activated]);
+        return response()->view('front.user.achievements', ['achievements' => Achievement::all(), 'activated' => $activated]);
     }
 
     public function subscribe()
     {
-        return response()->view('front.user.subscribe',['subscriptions'=>Subscription::all()]);
+        return response()->view('front.user.subscribe', ['subscriptions' => Subscription::all()]);
     }
 
     public function functional(): Response
@@ -76,14 +78,16 @@ class ProfileController extends Controller
 
     public function burnFat($id)
     {
-        $workout =Workout::where('id',$id)->with('program','tasks','videos')->first();
-        $workout->program->trainer;
-        $workout->program->workout;
+        $program = Program::where('id', $id)->with('workout')->first();
+        foreach ($program->workout as $workout) {
 
-        foreach ($workout->videos as $video){
-           $video->parsed_link =  $this->youTubeImage($video->link);
+            foreach ($workout->tasks as $task) {
+                $task->subtasks;
+            }
+
+            $workout->videos;
         }
-        return response()->view('front.user.burnFat',['workout'=>$workout]);
+        return response()->view('front.user.burnFat', ['program' => $program]);
     }
 
     /**
@@ -150,12 +154,20 @@ class ProfileController extends Controller
         return response()->json($json);
 
     }
+
     public function getActivatedAchievements($achievements): array
     {
         $activatedAchievements = [];
-        foreach ($achievements as $achievement){
-            array_push($activatedAchievements,$achievement->id);
+        foreach ($achievements as $achievement) {
+            array_push($activatedAchievements, $achievement->id);
         }
         return $activatedAchievements;
+    }
+    public function addComment(Request $request){
+        $input = $request->all();
+        $input['parent_id'] = 1;
+        $comment = Comment::create($input);
+        $comment->workouts()->attach($input['workout_id']);
+        return redirect()->route('profile.burnFat',$input['id']);
     }
 }

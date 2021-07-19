@@ -447,6 +447,7 @@
         }
     }
 }
+
 .preview {
     max-width: 740px;
     max-height: 416px;
@@ -460,6 +461,7 @@
     max-height: 416px;
     width: inherit;
 }
+
 .about {
     height: 100%;
 
@@ -759,16 +761,18 @@
     }
 
     .news-item {
-        .news-item-content{
+        .news-item-content {
             height: 129px;
             display: flex;
             align-content: space-between;
             flex-wrap: wrap;
-            p{
+
+            p {
                 height: 80px;
                 overflow: hidden;
             }
         }
+
         h3 {
             font-family: Druk Wide Cyr, serif;
             font-size: 18px;
@@ -1491,11 +1495,13 @@ footer {
         margin: auto -15px !important;
     }
 }
-.workoutVideo{
+
+.workoutVideo {
     max-height: 419px;
     max-width: 740px;
     position: relative;
 }
+
 .burn-content, .functional-content {
     .youtube-training {
         h1 {
@@ -1523,8 +1529,8 @@ footer {
 
     .functional-training {
         padding: 10px 20px;
-        background: url(/images/lastpage.png) no-repeat center;
-        background-size: cover;
+        background-position: center!important;
+        background-size: cover!important;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1728,39 +1734,42 @@ footer {
             margin: 40px 0 20px 0;
         }
 
-        textarea::placeholder {
-            font-family: Montserrat, serif;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 20px;
-            letter-spacing: 0;
-            text-align: left;
-            color: #444444;
-            margin: 40px 0 20px 0
+        form {
+            textarea::placeholder {
+                font-family: Montserrat, serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0;
+                text-align: left;
+                color: #444444;
+                margin: 40px 0 20px 0
+            }
+
+            textarea {
+                width: inherit;
+                height: 140px;
+                padding: 16px 40px 5px 40px;
+                resize: inherit;
+                border-color: #CBCBCB;
+            }
+
+            button {
+                font-family: Druk Wide Cyr, serif;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0;
+                text-align: center;
+                margin: 20px 0 40px 0;
+                padding: 12px 28px;
+                background: #111111;
+                color: #FFFFFF;
+            }
         }
 
-        textarea {
-            width: inherit;
-            height: 140px;
-            padding: 16px 40px 5px 40px;
-            resize: inherit;
-            border-color: #CBCBCB;
-        }
-
-        button {
-            font-family: Druk Wide Cyr, serif;
-            font-size: 11px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 18px;
-            letter-spacing: 0;
-            text-align: center;
-            margin: 20px 0 40px 0;
-            padding: 12px 28px;
-            background: #111111;
-            color: #FFFFFF;
-        }
     }
 
     .youtube-comment {
@@ -2297,7 +2306,7 @@ footer {
         max-height: 116px;
         position: relative;
 
-        img:nth-child(1){
+        img:nth-child(1) {
             border-radius: 50%;
             height: 100%;
             object-fit: cover;
@@ -2318,6 +2327,7 @@ footer {
             align-items: center;
             justify-content: center;
             cursor: pointer;
+
             input {
                 position: absolute;
                 opacity: 0;
@@ -2400,10 +2410,12 @@ footer {
             text-align: center;
             width: 100%;
             border: none;
-            &:focus{
+
+            &:focus {
                 outline: none;
             }
-            &[type=number]::-webkit-inner-spin-button{
+
+            &[type=number]::-webkit-inner-spin-button {
                 height: 0;
             }
         }
@@ -3961,12 +3973,15 @@ body {
         }
     }
 }
-.custom-text-comment{
+
+.custom-text-comment {
     display: flex;
-    div{
+
+    div {
         cursor: pointer;
     }
 }
+
 .owl-carousel .owl-stage {
     display: flex;
 }

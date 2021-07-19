@@ -28,8 +28,9 @@
                             <th scope="col">User</th>
                             <th scope="col">Радительский коммент</th>
                             <th scope="col">Коммент</th>
+                            <th scope="col">Тренировка комента</th>
                             <th scope="col">разрешено показывать</th>
-                            <th scope="col">редактировать</th>
+{{--                            <th scope="col">редактировать</th>--}}
                             <th scope="col">удалить</th>
                         </tr>
                         </thead>
@@ -37,18 +38,16 @@
                         @foreach($comments as $key=>$item)
                             <tr>
                                 <th scope="row">{{$key+1}}</th>
-                                <td>{{$item->user->name}}</td>
-                                <td>{{$item->parent->text}}</td>
+                                <td>{{optional($item->user)->name}}</td>
+                                <td>{{optional($item->parent)->text}}</td>
                                 <td>{{$item->text}}</td>
+                                <td>{{$item->workouts->name_ru}}</td>
                                 <td><input class="approved" data-id="{{$item->id}}" type="checkbox" @if($item->approved) checked @endif value="1"></td>
-                                <td>{{$item->name_blr}}</td>
-                                {{--                                <td><img src="{{$item->image}}" alt="" class="img-thumbnail table-image"></td>--}}
+{{--                                <td>--}}
+{{--                                    <a href="{{route('comment.edit',$item->id)}}"><i class="fas fa-edit custom-icon-edit"></i></a>--}}
+{{--                                </td>--}}
                                 <td>
-                                    <a href="{{route('comment.edit',$item->id)}}"><i class="fas fa-edit custom-icon-edit"></i></a>
-                                    {{--                                    <a href=""><i class="far fa-eye custom-icon-preview"></i></a>--}}
-                                </td>
-                                <td>
-                                    <i class="fas fa-trash custom-icon-remove" data-id="{{$item->id}}" data-name="{{$item->name}}" data-type="comments"></i>
+                                    <i class="fas fa-trash custom-icon-remove" data-id="{{$item->id}}" data-name="{{$item->name}}" data-type="comment"></i>
                                 </td>
                             </tr>
                         @endforeach
