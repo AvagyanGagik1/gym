@@ -323,7 +323,6 @@
                                     <h3>{{App::getlocale()==='ru'?$item->profession_ru:(App::getlocale()==='en'?$item->profession_en:$item->profession_blr)}}</h3>
                                 </div>
                             </div>
-                            {{$item}}
                         @endforeach
                     </div>
                 </div>

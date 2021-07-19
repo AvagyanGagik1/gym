@@ -169,7 +169,7 @@ class WorkoutController extends Controller
      */
     public function saveVideos(array $videoLinks,Workout $workout){
         foreach ($videoLinks as $i){
-            $video = Video::create(['link'=>$this->youTubeImage($i),'image'=>'/images']);
+            $video = Video::create(['link'=>$this->youTubeImage($i),'name'=>'Упражнения с резинкой для верхней части тела']);
             $workout->videos()->attach([$video->id]);
         }
     }
