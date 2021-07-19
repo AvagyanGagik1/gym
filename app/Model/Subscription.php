@@ -15,9 +15,9 @@ class Subscription extends Model
         return $this->hasMany('App\Model\Program');
     }
 
-    public function users(): MorphToMany
+    public function users()
     {
-        return $this->morphedByMany('App\User','userable');
+        return $this->morphToMany('App\User','userable');
     }
 
 }

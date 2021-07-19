@@ -19,7 +19,11 @@ class CommentController extends Controller
      */
     public function index()
     {
-        return response()->view('admin.comments.index', ['comments' => Comment::where('approved', 0)->paginate(10)]);
+        $comments = Comment::paginate(10);
+        foreach ($comments as $comment){
+            $comment->workouts =  $comment->workouts->first();
+        }
+        return response()->view('admin.comments.index', ['comments' => $comments]);
     }
 
     /**
@@ -90,10 +94,21 @@ class CommentController extends Controller
      * Remove the specified resource from storage.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function destroy($id)
     {
-        //
+        $comment = Comment::find($id);
+        $comment->workouts()->detach();
+        $comment->delete();
+        return response()->json(['successful deleted']);
+    }
+
+
+    public function changeStatus(Request $request,$id){
+        $comment = Comment::find($id);
+        $comment->approved = $request->get('approved');
+        $comment->save();
+        return response()->json(['success' => 1, 'message'=>'successful changed']);
     }
 }

@@ -33,4 +33,10 @@ class Workout extends Model
     {
         return $this->morphedByMany('App\Model\Task','workoutables');
     }
+
+
+    public function comments(): MorphToMany
+    {
+        return $this->morphedByMany('App\Model\Comment','workoutables');
+    }
 }

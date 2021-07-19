@@ -68,6 +68,8 @@ Route::namespace('Admin')->middleware(['auth','is_admin'])->prefix('admin')->gro
     });
     Route::namespace('Comment')->group(function (){
         Route::resource('comment','CommentController');
+        Route::post('/change/comment/{id}/status','CommentController@changeStatus');
+
     });
     Route::namespace('ClientComment')->group(function (){
         Route::resource('clientComment','ClientCommentController');
@@ -126,7 +128,7 @@ Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(functi
     Route::get('/information','ProfileController@information')->name('profile.information');
     Route::get('/food','ProfileController@food')->name('profile.food');
     Route::get('/achievements','ProfileController@achievements')->name('profile.achievements');
-    Route::get('/workout/{id}','ProfileController@burnFat')->name('profile.burnFat');
+    Route::get('/program/{id}','ProfileController@burnFat')->name('profile.burnFat');
     Route::get('/subscribe','ProfileController@subscribe')->name('profile.subscribe');
     Route::get('/functional/{id}','ProfileController@functional')->name('profile.functional');
     Route::get('/get/personals','ProfileController@getPersonals');
@@ -137,4 +139,6 @@ Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(functi
     Route::post('/user/change/name','ProfileController@changeUserName');
     Route::post('/user/change/gender','ProfileController@changeUserGender');
     Route::post('/user/change/personals','ProfileController@changeUserPersonals')->name('user.change.personals');
+    Route::post('/add/comment','ProfileController@addComment')->name('add.comment');
+
 });

@@ -764,11 +764,8 @@
             display: flex;
             align-content: space-between;
             flex-wrap: wrap;
-            min-height: 129px;
-            flex-direction: column;
             p{
                 height: 80px;
-                min-height: 80px;
                 overflow: hidden;
             }
         }
@@ -1527,8 +1524,8 @@ footer {
 
     .functional-training {
         padding: 10px 20px;
-        background: url(/images/lastpage.png) no-repeat center;
-        background-size: cover;
+        background-position: center!important;
+        background-size: cover!important;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1733,42 +1730,67 @@ footer {
             margin: 40px 0 20px 0;
         }
 
-        textarea::placeholder {
-            font-family: Montserrat, serif;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 20px;
-            letter-spacing: 0;
-            text-align: left;
-            color: #444444;
-            margin: 40px 0 20px 0
+        form {
+            textarea::placeholder {
+                font-family: Montserrat, serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0;
+                text-align: left;
+                color: #444444;
+                margin: 40px 0 20px 0
+            }
+
+            textarea {
+                width: inherit;
+                height: 140px;
+                padding: 16px 40px 5px 40px;
+                resize: inherit;
+                border-color: #CBCBCB;
+            }
+
+            button {
+                font-family: Druk Wide Cyr, serif;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0;
+                text-align: center;
+                margin: 20px 0 40px 0;
+                padding: 12px 28px;
+                background: #111111;
+                color: #FFFFFF;
+            }
         }
 
-        textarea {
-            width: inherit;
-            height: 140px;
-            padding: 16px 40px 5px 40px;
-            resize: inherit;
-            border-color: #CBCBCB;
-        }
-
-        button {
-            font-family: Druk Wide Cyr, serif;
-            font-size: 11px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 18px;
-            letter-spacing: 0;
-            text-align: center;
-            margin: 20px 0 40px 0;
-            padding: 12px 28px;
-            background: #111111;
-            color: #FFFFFF;
-        }
     }
 
     .youtube-comment {
+        h1 {
+            font-family: Druk Wide Cyr, serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-bottom: 20px;
+
+            span {
+                font-family: Druk Wide Cyr, serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 28px;
+                letter-spacing: 0;
+                text-align: left;
+                color: #e21a3d
+            }
+
+        }
         form{
             width: 100%;
             textarea::placeholder {
@@ -1792,43 +1814,21 @@ footer {
             }
 
             button {
-                font-family: Druk Wide Cyr, serif!important;
-                font-size: 11px!important;
-                font-style: normal!important;
-                font-weight: 500!important;
-                line-height: 18px!important;
-                letter-spacing: 0!important;
-                text-align: center!important;
-                margin: 20px 0 40px 0!important;
-                padding: 12px 28px!important;
-                background: #111111!important;
-                color: #FFFFFF!important;
-                text-decoration:unset!important;
+                font-family: Druk Wide Cyr, serif !important;
+                font-size: 11px !important;
+                font-style: normal !important;
+                font-weight: 500 !important;
+                line-height: 18px !important;
+                letter-spacing: 0 !important;
+                text-align: center !important;
+                margin: 20px 0 40px 0 !important;
+                padding: 12px 28px !important;
+                background: #111111 !important;
+                color: #FFFFFF !important;
+                text-decoration: unset !important;
                 width: auto;
             }
         }
-        h1 {
-            font-family: Druk Wide Cyr, serif;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 28px;
-            letter-spacing: 0;
-            text-align: left;
-            margin-bottom: 20px;
-
-            span {
-                font-family: Druk Wide Cyr, serif;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 28px;
-                letter-spacing: 0;
-                text-align: left;
-                color: #e21a3d
-            }
-        }
-
         div {
             margin-bottom: 40px;
 
@@ -2795,9 +2795,10 @@ body {
 
 .lock {
     position: absolute;
-    width: 243px;
-    height: 136px;
+    width: 100%;
+    height: 100%;
     z-index: 1;
+    top: 0;
     background: #00000050 url(/images/lock.png) no-repeat center;
 }
 
@@ -4005,12 +4006,15 @@ body {
         }
     }
 }
-.custom-text-comment{
+
+.custom-text-comment {
     display: flex;
-    div{
+
+    div {
         cursor: pointer;
     }
 }
+
 .owl-carousel .owl-stage {
     display: flex;
 }

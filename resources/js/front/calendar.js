@@ -6,5 +6,5 @@ datepickerJAFactory($);
 
 $(function() {
     $('#datepicker').datepicker({regional:'ru'});
-
+console.log();
 });
