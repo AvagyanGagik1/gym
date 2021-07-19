@@ -336,12 +336,17 @@ $(document).ready(function () {
 
     })
     $('.answerInput').click(function () {
-        console.log($(this).parent())
-        $(this).parent().append(`
-            <form action="">
-                <textarea placeholder="Ответ"></textarea>
-                <button>Ответить</button>
-            </form>
+        let parent_id = $(this).attr('data-parent')
+        let user_id = $(this).attr('data-user')
+        let workout_id = $(this).attr('data-workout')
+        let program_id = $(this).attr('data-program')
+        $(this).parent().children('form').append(`
+                    <input type="hidden" name="id" value="${program_id}">
+                  <input type="hidden" name="parent_id" value="${parent_id}">
+                  <input type="hidden" name="user_id" value="${user_id}">
+                  <input type="hidden" name="workout_id" value="${workout_id}">
+                <textarea placeholder="Ответ" name="text"></textarea>
+                <button type="submit">Ответить</button>
             `)
         $(this).hide()
     })

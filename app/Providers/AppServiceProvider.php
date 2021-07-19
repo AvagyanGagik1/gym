@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Model\CompletedProgram;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
@@ -32,6 +33,12 @@ class AppServiceProvider extends ServiceProvider
             foreach ($subscriptions as $subscription){
                 $subscription->dayLeft = intval($subscription->duration_subscribe) - Carbon::parse($subscription->created_at)->diffInDays();
             }
+            $view->with('profileSubscription',$subscriptions);
+        });
+        View::composer(['layouts.front.profile'],function ($view){
+            $user =Auth::user();
+            $completedPrograms = CompletedProgram::where('user_id',$user->id)->get();
+            $completedWorkouts = CompletedProgram::where('user_id',$user->id)->get();
             $view->with('profileSubscription',$subscriptions);
         });
     }

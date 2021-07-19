@@ -190,7 +190,7 @@
     <section class="sideCalendar">
         <button class="closeCalendar" id="closeCalendar"><span></span><span></span></button>
         <h1 class="calendarHeader" >{{__('language.calendar')}}</h1>
-        <div id="datePicker"></div>
+        <div id="datepicker"></div>
         <p class="calendarColor"><span></span>{{__('language.completed')}}</p>
         <div class="line"></div>
         <div class="calendarSection">

@@ -107,14 +107,14 @@
                     </div>
                 </div>
 
-                    <div class="col-12 d-flex justify-content-between align-items-center content-user-hide">
-                        <button  class="closeDescription">
-                            <span class="openContent ">Скрыть</span>
-                            <span class="closeContent  d-none">Открыть</span>
-                             описание
-                            <img src="/images/vectorTop.png" alt="">
-                        </button>
-                    </div>
+                <div class="col-12 d-flex justify-content-between align-items-center content-user-hide">
+                    <button class="closeDescription">
+                        <span class="openContent ">Скрыть</span>
+                        <span class="closeContent  d-none">Открыть</span>
+                        описание
+                        <img src="/images/vectorTop.png" alt="">
+                    </button>
+                </div>
 
                 <div class="col-12 d-flex justify-content-between
             content-user-preview flex-wrap">
@@ -207,20 +207,28 @@
                             </form>
                         </div>
                         <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment">
-                            <h1>Отзывы <span>{{count($program->workout[0]->comments)}}</span></h1>
-                            @foreach($program->workout[0]->comments as $comment)
-                                <div class="col-12 p-0">
+                            <h1>Отзывы <span>({{count($program->workout[0]->comments)}})</span></h1>
+                            @include('front.user.helpers._comment',['firstComments'=>$program->workout[0]->comments()->where('parent_id',0)->get()])
+{{--                            @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)--}}
+{{--                                <div class="col-12 p-0">--}}
 
-                                    <div class="col-12 p-0 d-flex align-items-center">
-                                        <div>
-                                            <img src="{{optional($comment->user)->avatar}}" alt="">
-                                        </div>
-                                        <h3>{{optional($comment->user)->name}}</h3>
-                                    </div>
-                                    <p>{!! $comment->text !!}</p>
-                                    <a href="">Ответить</a>
-                                </div>
-                            @endforeach
+{{--                                    <div class="col-12 p-0 d-flex align-items-center">--}}
+{{--                                        <div>--}}
+{{--                                            <img src="{{optional($comment->user)->avatar}}" alt="">--}}
+{{--                                        </div>--}}
+{{--                                        <h3>{{optional($comment->user)->name}}</h3>--}}
+{{--                                    </div>--}}
+{{--                                    {!! $comment->text !!}--}}
+{{--                                    <button class="answerInput" data-program="{{$program->id}}"--}}
+{{--                                            data-user="{{auth()->id()}}" data-parent="{{$comment->id}}"--}}
+{{--                                            data-workout="{{$program->workout[0]->id}}">Ответить--}}
+{{--                                    </button>--}}
+
+{{--                                    <form action="{{route('add.comment')}}" method="post">--}}
+{{--                                        @csrf--}}
+{{--                                    </form>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
 
                             <button>
                                 загрузить еше
@@ -230,10 +238,10 @@
                     <div class="col-lg-5 col-12 ">
                         @foreach($program->workout as $key=> $work)
                             <div class="col-12 d-flex content-user-video-item ">
-                                <div class="col-6 pl-0 ">
+                                <div class="col-6 p-0 position-relative ">
                                     <img src="//img.youtube.com/vi/{{$work->videos[0]->link}}/maxresdefault.jpg"
                                          class="w-100 " alt="">
-                                    @if($key < count($program->workout)-1 && $key)
+                                    @if($key)
                                         <div class="lock"></div>
                                     @endif
                                 </div>
@@ -266,9 +274,9 @@
                             </form>
                         </div>
                         <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment">
-                            <h1>Отзывы <span>{{count($program->workout[0]->comments)}}</span></h1>
+                            <h1>Отзывы <span>({{count($program->workout[0]->comments)}})</span></h1>
 
-                            @foreach($program->workout[0]->comments as $comment)
+                            @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)
                                 <div class="col-12 p-0">
 
                                     <div class="col-12 p-0 d-flex align-items-center">
@@ -278,24 +286,37 @@
                                         <h3>{{optional($comment->user)->name}}</h3>
                                     </div>
                                     <p>{!! $comment->text !!}</p>
-                                    <a href="">Ответить</a>
+                                    <button class="answerInput" data-user="{{auth()->id()}}"
+                                            data-parent="{{$comment->id}}" data-workout="{{$program->workout[0]->id}}">
+                                        Ответить
+                                    </button>
+                                    @foreach($comment->childs as $answer)
+                                        <div class="col-12 p-0 answer">
+                                            <div class="col-12 p-0 d-flex align-items-center">
+                                                <div>
+                                                    <img src="{{$answer->user->avatar}}" alt="">
+                                                </div>
+                                                <h3>{{$answer->user->name}}</h3>
+                                            </div>
+                                            <p>{{$answer->text}}</p>
+                                            <a href="">Ответить</a>
+                                        </div>
+                                    @endforeach
                                 </div>
+                                @foreach($comment->childs as $answer)
+                                    <div class="col-12 p-0 answer">
+                                        <div class="col-12 p-0 d-flex align-items-center">
+                                            <div>
+                                                <img src="{{$answer->user->avatar}}" alt="">
+                                            </div>
+                                            <h3>{{$answer->user->name}}</h3>
+                                        </div>
+                                        <p>{{$answer->text}}</p>
+                                        <a href="">Ответить</a>
+                                    </div>
+                                @endforeach
                             @endforeach
-                            {{--                            <div class="col-12 p-0 answer">--}}
-                            {{--                                <div class="col-12 p-0 d-flex align-items-center">--}}
-                            {{--                                    <div>--}}
-                            {{--                                        <img src="/images/previewPlaceholder.png" alt="">--}}
-                            {{--                                    </div>--}}
-                            {{--                                    <h3>Юлия Стриж</h3>--}}
-                            {{--                                </div>--}}
-                            {{--                                <p>Хотите похудеть? Привести свое тело в форму? Сжечь лишние калории? Поставьте--}}
-                            {{--                                    перед--}}
-                            {{--                                    собой цель и посмотрите, как Gym project может помочь вам преобразовать вашу--}}
-                            {{--                                    жизнь.--}}
-                            {{--                                    Получите онлайн-доступ ко всем программам тренировок для любого телосложения и--}}
-                            {{--                                    любого уровня подготовки.</p>--}}
-                            {{--                                <a href="">Ответить</a>--}}
-                            {{--                            </div>--}}
+
 
                             <button>
                                 Загрузить еше
@@ -534,8 +555,8 @@
                                 </form>
                             </div>
                             <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment">
-                                <h1>Отзывы <span>{{count($program->workout[0]->comments)}}</span></h1>
-                                @foreach($program->workout[0]->comments as $comment)
+                                <h1>Отзывы <span>({{count($program->workout[0]->comments)}})</span></h1>
+                                @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)
                                     <div class="col-12 p-0">
 
                                         <div class="col-12 p-0 d-flex align-items-center">
@@ -545,8 +566,24 @@
                                             <h3>{{optional($comment->user)->name}}</h3>
                                         </div>
                                         <p>{!! $comment->text !!}</p>
-                                        <a href="">Ответить</a>
+                                        <button class="answerInput" data-user="{{auth()->id()}}"
+                                                data-parent="{{$comment->id}}"
+                                                data-workout="{{$program->workout[0]->id}}">Ответить
+                                        </button>
+
                                     </div>
+                                    @foreach($comment->childs as $answer)
+                                        <div class="col-12 p-0 answer">
+                                            <div class="col-12 p-0 d-flex align-items-center">
+                                                <div>
+                                                    <img src="{{$answer->user->avatar}}" alt="">
+                                                </div>
+                                                <h3>{{$answer->user->name}}</h3>
+                                            </div>
+                                            <p>{!! $answer->text !!}</p>
+                                            <a href="">Ответить</a>
+                                        </div>
+                                    @endforeach
                                 @endforeach
 
                                 <button>
@@ -586,7 +623,7 @@
                             <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment">
                                 <h1>Отзывы <span>({{count($program->workout[0]->comments)}})</span></h1>
 
-                                @foreach($program->workout[0]->comments as $comment)
+                                @foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)
                                     <div class="col-12 p-0">
 
                                         <div class="col-12 p-0 d-flex align-items-center">
@@ -596,7 +633,22 @@
                                             <h3>{{optional($comment->user)->name}}</h3>
                                         </div>
                                         <p>{!! $comment->text !!}</p>
-                                        <a href="">Ответить</a>
+                                        <button class="answerInput" data-user="{{auth()->id()}}"
+                                                data-parent="{{$comment->id}}"
+                                                data-workout="{{$program->workout[0]->id}}">Ответить
+                                        </button>
+                                        @foreach($comment->childs as $answer)
+                                            <div class="col-12 p-0 answer">
+                                                <div class="col-12 p-0 d-flex align-items-center">
+                                                    <div>
+                                                        <img src="{{$answer->user->avatar}}" alt="">
+                                                    </div>
+                                                    <h3>{{$answer->user->name}}</h3>
+                                                </div>
+                                                <p>{{$answer->text}}</p>
+                                                <a href="">Ответить</a>
+                                            </div>
+                                        @endforeach
                                     </div>
                                 @endforeach
                                 {{--                                <div class="col-12 p-0 answer">--}}
