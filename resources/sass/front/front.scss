@@ -2745,6 +2745,11 @@ ul {
     height: 100%;
     object-fit: cover;
     object-position: top;
+    img{
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+    }
 }
 
 .cardFooterText {
