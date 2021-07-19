@@ -54,10 +54,10 @@
                         </div>
                         @if($key === 0)
                             <div class="col-12 d-flex justify-content-between p-0 food-category-content-alert">
-                                <p>Выберите только одно блюдо в каждой категории</p>
+                                <p>{{__('language.chooseOnly')}}</p>
                                 <div>
                                     <img src="/images/pdf.png" alt="">
-                                    <a href="">Скачать рекомендации по питанию</a>
+                                    <a href="">{{__('language.downloadNutritional')}}</a>
                                 </div>
                             </div>
                         @endif

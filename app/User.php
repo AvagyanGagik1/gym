@@ -70,4 +70,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\CompletedWorkout');
     }
+    public function completedPrograms(): HasMany
+    {
+        return $this->hasMany('App\Model\CompletedProgram');
+    }
 }
