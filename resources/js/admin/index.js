@@ -18,13 +18,12 @@ $(document).ready(function () {
         })
         cloneTaskDiv.attr('data-key', Number($(this).parent().children(':last').attr('data-key')) + 1)
         cloneTaskDiv.children('.subtask').children('div').attr('data-key', Number($(this).parent().children(':last').attr('data-key')) + 1)
+        cloneTaskDiv.children('.subtask').children('#subTaskDiv').children('div').children('input').val('')
         cloneTaskDiv.children('div').children('input').val('')
         setTimeout(() => {
             cloneTaskDiv.children('.subtask').children('button').click(function () {
-                // console.log($(this).parent().parent())
                 let cloneSubTaskDiv = $('#subTaskDiv').clone()
-                cloneSubTaskDiv.children('div').val('')
-                // console.log(cloneSubTaskDiv.children())
+                cloneSubTaskDiv.children('div').children('div').children('input').val('')
                 cloneSubTaskDiv.attr('data-cloned', 'true')
                 cloneSubTaskDiv.attr('data-key', Number($(this).parent().parent().attr('data-key')))
                 $(this).parent().append(cloneSubTaskDiv)
@@ -84,9 +83,8 @@ $(document).ready(function () {
     $('.approved').change(function (){
         console.log('dsd')
         let id = $(this).attr('data-id')
-        console.log()
         axios.post('/admin/change/comment/'+id+'/status',{approved:$(this).is(':checked')}).then((response)=>{
-            console.log(response.data)
+            window.location ='/admin/workOut'
         })
     })
 });
@@ -231,3 +229,82 @@ function resizeImage(img) {
     ctx.drawImage(img, x, y, width, height)
     return canvas.toDataURL("image/jpg");
 }
+
+$('.customSelectCheckForTraining').change(function (){
+    if($(this).find(':selected').data('type') === 'Hall'){
+        $('#cloneVideoDiv').addClass('d-none')
+        $('.task-create').remove()
+    }else{
+        let taskCreate = `
+        <div class="task-create d-flex flex-column">
+                <button type="button" class="btn btn-sm btn-primary ml-auto mb-2" id="cloneTaskDiv">Добавить заданые
+                </button>
+                <div class="form-group row pb-3" id="taskDiv" data-key="0">
+                    <label for="task_ru" class="col-sm-2 col-form-label font-weight-bold">Заданые (ru):</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control tasks" id="task_ru" name="task[]" data-lang="ru" value="">
+                                            </div>
+                    <label for="task_en" class="col-sm-2 col-form-label font-weight-bold">Заданые (en):</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control tasks" id="task_en" name="task[]" data-lang="en" value="">
+                                            </div>
+                    <label for="task_blr" class="col-sm-2 col-form-label font-weight-bold">Заданые (blr):</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control tasks" id="task_blr" name="task[]" data-lang="blr" value="">
+                                            </div>
+                    <div class="subtask col-8 ml-auto d-flex flex-column mt-2">
+                        <button type="button" class="btn btn-sm btn-success ml-auto mb-2 cloneSubTaskDiv">Добавить
+                            Подзаданые
+                        </button>
+                        <div class="form-group row pb-3" id="subTaskDiv" data-key="0">
+                            <label for="subTask_ru" class="col-sm-2 col-form-label font-weight-bold">Подзаданые (ru):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control subtasks" id="subTask_ru" data-lang="ru" name="subTask[]" value="">
+                                                            </div>
+                            <label for="subTask_en" class="col-sm-2 col-form-label font-weight-bold">Подзаданые (en):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control subtasks" id="subTask" data-lang="en" name="subTask[]" value="">
+                                                            </div>
+                            <label for="subTask_blr" class="col-sm-2 col-form-label font-weight-bold">Подзаданые (blr):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control subtasks" id="subTask_blr" data-lang="blr" name="subTask[]" value="">
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+        $('.video-create').after(taskCreate)
+        $('#cloneVideoDiv').removeClass('d-none')
+        $('#cloneTaskDiv').click(function () {
+            let cloneTaskDiv = $('#taskDiv').clone()
+            cloneTaskDiv.children('.subtask').children().each(function () {
+                if ($(this).attr('data-cloned')) {
+                    $(this).remove()
+                }
+            })
+            cloneTaskDiv.attr('data-key', Number($(this).parent().children(':last').attr('data-key')) + 1)
+            cloneTaskDiv.children('.subtask').children('div').attr('data-key', Number($(this).parent().children(':last').attr('data-key')) + 1)
+            cloneTaskDiv.children('.subtask').children('#subTaskDiv').children('div').children('input').val('')
+            cloneTaskDiv.children('div').children('input').val('')
+            setTimeout(() => {
+                cloneTaskDiv.children('.subtask').children('button').click(function () {
+                    let cloneSubTaskDiv = $('#subTaskDiv').clone()
+                    cloneSubTaskDiv.children('div').children('div').children('input').val('')
+                    cloneSubTaskDiv.attr('data-cloned', 'true')
+                    cloneSubTaskDiv.attr('data-key', Number($(this).parent().parent().attr('data-key')))
+                    $(this).parent().append(cloneSubTaskDiv)
+                })
+            }, 0)
+
+            $('.task-create').append(cloneTaskDiv)
+        });
+        $('.cloneSubTaskDiv').click(function () {
+            let cloneSubTaskDiv = $('#subTaskDiv').clone()
+            cloneSubTaskDiv.attr('data-cloned', 'true')
+            cloneSubTaskDiv.attr('data-key', Number($(this).parent().parent().attr('data-key')))
+            cloneSubTaskDiv.children('div').children('input').val('')
+            $(this).parent().append(cloneSubTaskDiv)
+        })
+    }
+})
