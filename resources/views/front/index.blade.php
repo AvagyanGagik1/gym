@@ -110,7 +110,7 @@
                                 <h1 class="cardHeader">{{App::getlocale()==='ru'?$program->name_ru:(App::getlocale()==='en'?$program->name_en:$program->name_blr)}}</h1>
                                 <div class="cardContent">
                                     <ul>
-                                        <li class="cardListLeft">Кол-во тренировок</li>
+                                        <li class="cardListLeft">{{__('language.numbOfWork')}}</li>
                                         <li class="cardListRight">
                                             <p class="m-0">{{count($program->workout)}}</p>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -150,7 +150,7 @@
                                                     fill="#111111"/>
                                             </svg>
                                         </li>
-                                        <li class="cardListLeft">Тренировки от и до</li>
+                                        <li class="cardListLeft">{{__('language.workFrom')}}</li>
                                         <li class="cardListRight">
                                             <p class="m-0">{{$program->duration}} мин</p>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -161,7 +161,7 @@
                                             </svg>
 
                                         </li>
-                                        <li class="cardListLeft">Интенсивность</li>
+                                        <li class="cardListLeft">{{__('language.intensity')}}</li>
                                         <li class="cardListRight">
                                             <p class="m-0">{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</p>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
