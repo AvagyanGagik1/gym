@@ -345,6 +345,15 @@ $(document).ready(function () {
             `)
         $(this).hide()
     })
+    $('.closeDescription').click(function (){
+        $('.content-user-preview').toggle('slow',function (){
+            $(this).toggleClass('visibleContent')
+        })
+        console.log($(this))
+        $(this).children('span.openContent').toggleClass('d-none')
+        $(this).children('span.closeContent').toggleClass('d-none')
+        $(this).children('img').toggleClass('rotateImg')
+    })
 })
 
 

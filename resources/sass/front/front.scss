@@ -4014,3 +4014,12 @@ body {
 .owl-carousel .owl-stage {
     display: flex;
 }
+.visibleContent{
+    visibility: hidden;
+    height: 0;
+}
+.rotateImg{
+    transform: rotate(
+            180deg
+    );
+}

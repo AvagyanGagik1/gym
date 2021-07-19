@@ -108,8 +108,10 @@
                     </div>
 
                     <div class="col-12 d-flex justify-content-between align-items-center content-user-hide">
-                        <button>
-                            Скрыть описание
+                        <button  class="closeDescription">
+                            <span class="openContent ">Скрыть</span>
+                            <span class="closeContent  d-none">Открыть</span>
+                             описание
                             <img src="/images/vectorTop.png" alt="">
                         </button>
                     </div>
