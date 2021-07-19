@@ -39,7 +39,7 @@ class AppServiceProvider extends ServiceProvider
             $user =Auth::user();
             $completedPrograms = CompletedProgram::where('user_id',$user->id)->get();
             $completedWorkouts = CompletedProgram::where('user_id',$user->id)->get();
-            $view->with('profileSubscription',$subscriptions);
+            $view->with('completedPrograms',$completedPrograms)->with('completedWorkouts',$completedWorkouts);
         });
     }
 }
