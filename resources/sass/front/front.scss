@@ -447,7 +447,6 @@
         }
     }
 }
-
 .preview {
     max-width: 740px;
     max-height: 416px;
@@ -461,7 +460,6 @@
     max-height: 416px;
     width: inherit;
 }
-
 .about {
     height: 100%;
 
@@ -761,18 +759,16 @@
     }
 
     .news-item {
-        .news-item-content {
+        .news-item-content{
             height: 129px;
             display: flex;
             align-content: space-between;
             flex-wrap: wrap;
-
-            p {
+            p{
                 height: 80px;
                 overflow: hidden;
             }
         }
-
         h3 {
             font-family: Druk Wide Cyr, serif;
             font-size: 18px;
@@ -1495,13 +1491,12 @@ footer {
         margin: auto -15px !important;
     }
 }
-
-.workoutVideo {
+.workoutVideo{
     max-height: 419px;
     max-width: 740px;
+    margin: auto;
     position: relative;
 }
-
 .burn-content, .functional-content {
     .youtube-training {
         h1 {
@@ -1550,6 +1545,7 @@ footer {
     }
 
     .youtube-header {
+        padding-top: 20px!important;
         h3 {
             font-family: Druk Wide Cyr;
             font-size: 20px;
@@ -1808,7 +1804,7 @@ footer {
                 text-align: left;
             }
 
-            a {
+            button {
                 font-family: Montserrat, serif;
                 font-size: 14px;
                 font-style: normal;
@@ -1819,6 +1815,7 @@ footer {
                 color: #111111;
                 text-decoration: underline;
                 margin-bottom: 40px;
+                border: none;
             }
 
             div {
@@ -2306,7 +2303,7 @@ footer {
         max-height: 116px;
         position: relative;
 
-        img:nth-child(1) {
+        img:nth-child(1){
             border-radius: 50%;
             height: 100%;
             object-fit: cover;
@@ -2327,7 +2324,6 @@ footer {
             align-items: center;
             justify-content: center;
             cursor: pointer;
-
             input {
                 position: absolute;
                 opacity: 0;
@@ -2410,12 +2406,10 @@ footer {
             text-align: center;
             width: 100%;
             border: none;
-
-            &:focus {
+            &:focus{
                 outline: none;
             }
-
-            &[type=number]::-webkit-inner-spin-button {
+            &[type=number]::-webkit-inner-spin-button{
                 height: 0;
             }
         }
@@ -3984,4 +3978,13 @@ body {
 
 .owl-carousel .owl-stage {
     display: flex;
+}
+.visibleContent{
+    visibility: hidden;
+    height: 0;
+}
+.rotateImg{
+    transform: rotate(
+            180deg
+    );
 }

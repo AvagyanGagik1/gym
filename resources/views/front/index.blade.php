@@ -797,8 +797,7 @@
                         <img src="{{$new->image}}" alt="">
                         <h3>{{App::getlocale()==='ru'?$new->title_ru:(App::getlocale()==='en'?$new->title_en:$new->title_blr)}}</h3>
                         <div class="news-item-content" style="height: 129px">
-
-                            <p>{!! App::getlocale()==='ru'?$new->description_ru:(App::getlocale()==='en'?$new->description_en:$new->description_blr)!!}</p>
+                            {!!  App::getlocale()==='ru'?$new->description_ru:(App::getlocale()==='en'?$new->description_en:$new->description_blr)!!}
                             <button class="btn m-0 p-0 news-item-read">
                                 <span class="openButton">Читать подробнее</span>
                                 <span class="closeButton d-none">Свернуть</span>
