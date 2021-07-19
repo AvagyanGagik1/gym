@@ -6,11 +6,13 @@ use App\Http\Controllers\Admin\Comment\CommentController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\helper\ParseYoutubeLink;
 use App\Http\Controllers\helper\UploadImage;
+use App\Http\Requests\StoreCommentRequest;
 use App\Model\Achievement;
 use App\Model\Comment;
 use App\Model\CompletedProgram;
 use App\Model\CompletedWorkout;
 use App\Model\DietRestrictions;
+use App\Model\Dish;
 use App\Model\FoodCategory;
 use App\Model\Personal;
 use App\Model\Program;
@@ -74,7 +76,7 @@ class ProfileController extends Controller
         return response()->view('front.user.subscribe', ['subscriptions' => Subscription::all()]);
     }
 
-    public function functional(): Response
+    public function functional()
     {
         return response()->view('front.user.functional');
     }
@@ -83,14 +85,25 @@ class ProfileController extends Controller
     {
         $program = Program::where('id', $id)->with('workout')->first();
         foreach ($program->workout as $workout) {
-
             foreach ($workout->tasks as $task) {
                 $task->subtasks;
             }
 
             $workout->videos;
         }
-        return response()->view('front.user.burnFat', ['program' => $program]);
+        $user = Auth::user();
+        $completedWorkouts = [];
+        foreach ($user->completedWorkouts as $item) {
+            array_push($completedWorkouts, $item->workout_id);
+        }
+        if (!count($completedWorkouts)) {
+            array_push($completedWorkouts, 0);
+        }
+        $workout = $program->workout()->where('id', '>', max($completedWorkouts))->with('videos', 'tasks', 'comments')->first();
+        if (!$workout) {
+            $workout = $program->workout()->where('id', max($completedWorkouts))->with('videos', 'tasks', 'comments')->first();
+        }
+        return response()->view('front.user.burnFat', ['program' => $program, 'completedWorkouts' => $completedWorkouts, 'workout' => $workout]);
     }
 
     /**
@@ -167,10 +180,9 @@ class ProfileController extends Controller
         return $activatedAchievements;
     }
 
-    public function addComment(Request $request)
+    public function addComment(StoreCommentRequest $request)
     {
         $input = $request->all();
-        $input['parent_id'] = 1;
         $comment = Comment::create($input);
         $comment->workouts()->attach($input['workout_id']);
         return redirect()->route('profile.burnFat', $input['id']);
@@ -178,16 +190,36 @@ class ProfileController extends Controller
 
     public function completeWorkout(Request $request)
     {
+        $arr = [];
+        $completedWorkouts = Auth::user()->completedWorkouts;
         $input = $request->all();
-        CompletedWorkout::create($input);
-        return redirect()->back();
+        foreach ($completedWorkouts as $item) {
+            array_push($arr, $item->workout_id);
+        }
+        if (!in_array($request->get('workout_id'), $arr)) {
+            CompletedWorkout::create($input);
+        }
+        return redirect()->back()->withErrors(['error' => 'Вы уже завершили эту программу!!']);
     }
 
     public function completeProgram(Request $request)
     {
-        $input =  $request->all();
+
+        $input = $request->all();
         CompletedProgram::create($input);
         return redirect()->back();
+
+    }
+
+    public function chooseDiet(Request $request)
+    {
+        $limit = DietRestrictions::find($request->get('limitation'));
+        $purpose = PurposeOfNutrition::find($request->get('purpose'));
+        $foodCategories = FoodCategory::with('dishes')->get();
+        foreach ($foodCategories as $foodCategory){
+
+        }
+        $dish = Dish::with('purposeOfNutrition', 'dietRestriction')->get();
 
     }
 }

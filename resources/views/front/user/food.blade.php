@@ -7,6 +7,8 @@
                     <h2>{{__('language.food')}}</h2>
                 </div>
                 <div class="col-12 d-flex align-items-center justify-content-between food-filter">
+                    <form action="{{route('choose.diet')}}" class="d-flex" method="post">
+                        @csrf
                     <div class="food-select d-flex">
                         <div>
                             <label for="gender">{{__('language.gender')}}</label>
@@ -20,18 +22,17 @@
                         </div>
                         <div>
                             <label for="limitation">{{__('language.diet')}}</label>
-                            <select name="" id="limitation" class="food-select-item">
+                            <select name="limitation" id="limitation" class="food-select-item">
                                 <option @if(count($dietRestriction)) selected @endif disabled value="null">--{{__('language.diet')}}--
                                 </option>
                                 @foreach($dietRestriction as $diet)
-
                                     <option value="{{$diet->id}}">{{App::getlocale()==='ru'?$diet->name_ru:(App::getlocale()==='en'?$diet->name_en:$diet->name_blr)}}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div>
                             <label for="purpose">{{__('language.purpose')}}</label>
-                            <select name="" id="purpose" class="food-select-item">
+                            <select name="purpose" id="purpose" class="food-select-item">
                                 <option @if(count($purposeOfNutrition)) selected @endif disabled value="null">--{{__('language.purpose')}}--
                                 </option>
 
@@ -41,9 +42,10 @@
                             </select>
                         </div>
                     </div>
-                    <button class="food-select-button">
+                    <button class="food-select-button" type="submit">
                         {{__('language.choseDiet')}}
                     </button>
+                    </form>
                 </div>
                 @foreach($foodCategory as $key=>$category)
                     <div class="col-12 p-0 d-flex align-items-center food-category-content flex-wrap">

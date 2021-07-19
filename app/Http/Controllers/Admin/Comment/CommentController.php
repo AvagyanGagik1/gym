@@ -50,7 +50,6 @@ class CommentController extends Controller
     public function store(StoreCommentRequest $request)
     {
         $input = $request->all();
-        $input['parent_id'] = 1;
         $comment = Comment::create($input);
         $comment->workouts()->attach($input['workout_id']);
         return $comment;

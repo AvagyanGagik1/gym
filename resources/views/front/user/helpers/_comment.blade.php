@@ -1,4 +1,4 @@
-@foreach($program->workout[0]->comments()->where('parent_id',0)->get() as $comment)
+@foreach($firstComments as $comment)
     <div class="col-12 p-0">
 
         <div class="col-12 p-0 d-flex align-items-center">

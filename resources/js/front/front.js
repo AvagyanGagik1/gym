@@ -359,6 +359,35 @@ $(document).ready(function () {
         $(this).children('span.closeContent').toggleClass('d-none')
         $(this).children('img').toggleClass('rotateImg')
     })
+    $('.functional-training').click(function (){
+        $('#youtubeModal').modal('toggle')
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+        let video = $(this).attr('data-link')
+        let player = new YT.Player('fatPlayer', {
+            height: '100%',
+            width: 'inherit',
+            videoId: video,
+            playerVars: {
+                'playsinline': 1,
+                'autoplay': 1,
+            },
+            events: {
+                'onReady': onPlayerReady,
+                // 'onStateChange': onPlayerStateChange
+            }
+
+        });
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+        $('.closeYouTube').click(function stopVideo() {
+            player.destroy();
+        })
+    })
+
 })
 
 

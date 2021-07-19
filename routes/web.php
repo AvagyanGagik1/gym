@@ -143,4 +143,8 @@ Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(functi
     Route::post('/complete/program','ProfileController@completeWorkout')->name('complete.workout');
     Route::post('/complete/workout','ProfileController@completeProgram')->name('complete.program');
 
+    //food
+
+    Route::post('/choose/diet','ProfileController@chooseDiet')->name('choose.diet');
+
 });

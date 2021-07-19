@@ -68,6 +68,6 @@ class User extends Authenticatable
      */
     public function completedWorkouts(): HasMany
     {
-        return $this->hasMany('App\Model\Workout');
+        return $this->hasMany('App\Model\CompletedWorkout');
     }
 }

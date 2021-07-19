@@ -8,4 +8,7 @@ class PurposeOfNutrition extends Model
 {
     protected $guarded = ['id'];
 
+    public function dishes(){
+        return $this->morphToMany('App\Model\Dish','dishable');
+    }
 }

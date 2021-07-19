@@ -4060,3 +4060,18 @@ body {
             180deg
     );
 }
+#youtubeModal{
+    .modal-dialog-centered{
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 0;
+        position: inherit;
+        .modal-content{
+            height: 100%;
+        }
+    }
+    #fatPlayer{
+        height: 100%;
+    }
+}
