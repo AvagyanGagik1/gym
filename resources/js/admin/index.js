@@ -231,7 +231,7 @@ function resizeImage(img) {
 }
 
 $('.customSelectCheckForTraining').change(function (){
-    if($(this).find(':selected').data('type') === 'Hall'){
+    if($(this).find(':selected').data('type') !== 'Hall'){
         $('#cloneVideoDiv').addClass('d-none')
         $('.task-create').remove()
     }else{

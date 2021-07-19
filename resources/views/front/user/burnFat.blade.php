@@ -1,6 +1,6 @@
 @extends('layouts.front.profile')
 @section('content')
-    @if(count($program->workout->first()->videos)))
+    @if(count($program->workout->first()->videos) < 1))
 
     <section class="content burn-content">
         <div class="d-flex flex-column">
@@ -238,7 +238,7 @@
                         @foreach($program->workout as $key=> $work)
                             <div class="col-12 d-flex content-user-video-item ">
                                 <div class="col-6 p-0 position-relative ">
-                                    <img src="//img.youtube.com/vi/{{$work->videos[0]->link}}/maxresdefault.jpg"
+                                    <img src="//img.youtube.com/vi/{{optional($work->videos[0])->link}}/maxresdefault.jpg"
                                          class="w-100 " alt="">
                                     @if($key)
                                         <div class="lock"></div>
@@ -595,8 +595,8 @@
 
                             @foreach($program->workout as $work)
                                 <div class="col-12 d-flex content-user-video-item ">
-                                    <div class="col-6 pl-0 ">
-                                        <img src="//img.youtube.com/vi/{{$work->videos[0]->link}}/maxresdefault.jpg"
+                                    <div class="col-6 p-0 ">
+                                        <img src="//img.youtube.com/vi/{{optional($work->videos[0])->link}}/maxresdefault.jpg"
                                              class="w-100 " alt="">
                                         <div class="lock"></div>
 
