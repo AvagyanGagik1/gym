@@ -8,7 +8,9 @@ use App\Http\Controllers\helper\UploadImage;
 use App\Http\Requests\FlashRegisterFirstStep;
 use App\Model\ClientComment;
 use App\Model\FirstStep;
+use App\Model\FirstStepIcon;
 use App\Model\HwoAreWe;
+use App\Model\HwoWeAreDescription;
 use App\Model\MainNew;
 use App\Model\News;
 use App\Model\Program;
@@ -47,6 +49,8 @@ class FrontController extends Controller
         $clientComments = ClientComment::all();
         $programs =Program::all();
         $subscriptions = Subscription::all();
+        $descriptionsHwo = HwoWeAreDescription::all();
+        $programs = Program::all();
         return response()->view('front.index',
             ['who' => $who,
                 'slider' => $slider,
@@ -59,7 +63,9 @@ class FrontController extends Controller
                 'news'=>$news,
                 'clientComments'=>$clientComments,
                 'programs'=>$programs,
-                'subscriptions'=>$subscriptions
+                'subscriptions'=>$subscriptions,
+                'descriptionsHwo'=>$descriptionsHwo,
+                'firstSteIcon'=>FirstStepIcon::all(),
             ]);
     }
 
