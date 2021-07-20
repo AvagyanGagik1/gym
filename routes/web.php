@@ -132,6 +132,7 @@ Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(functi
     Route::get('/subscribe','ProfileController@subscribe')->name('profile.subscribe');
     Route::get('/functional/{id}','ProfileController@functional')->name('profile.functional');
     Route::get('/get/personals','ProfileController@getPersonals');
+    Route::get('/get/completed/workouts','ProfileController@getCompletedWorkouts');
 
 //    postRoutes
 

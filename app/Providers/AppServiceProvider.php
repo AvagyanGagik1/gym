@@ -37,9 +37,9 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer(['layouts.front.profile'],function ($view){
             $user =Auth::user();
-            $completedPrograms = CompletedProgram::where('user_id',$user->id)->get();
-            $completedWorkouts = CompletedProgram::where('user_id',$user->id)->get();
-            $view->with('completedPrograms',$completedPrograms)->with('completedWorkouts',$completedWorkouts);
+            $completedPrograms = $user->completedWorkouts;
+            $completedWorkouts =$user->completedWorkouts()->with('workout')->get();
+            $view->with(['completedWorkouts'=>$completedWorkouts,'completedPrograms'=>$completedPrograms]);
         });
     }
 }

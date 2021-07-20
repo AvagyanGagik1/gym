@@ -22,7 +22,7 @@
                         </div>
                         <div>
                             <label for="limitation">{{__('language.diet')}}</label>
-                            <select name="limitation" id="limitation" class="food-select-item">
+                            <select name="diet_id" id="limitation" class="food-select-item">
                                 <option @if(count($dietRestriction)) selected @endif disabled value="null">--{{__('language.diet')}}--
                                 </option>
                                 @foreach($dietRestriction as $diet)
@@ -32,7 +32,7 @@
                         </div>
                         <div>
                             <label for="purpose">{{__('language.purpose')}}</label>
-                            <select name="purpose" id="purpose" class="food-select-item">
+                            <select name="purpose_id" id="purpose" class="food-select-item">
                                 <option @if(count($purposeOfNutrition)) selected @endif disabled value="null">--{{__('language.purpose')}}--
                                 </option>
 
@@ -61,8 +61,7 @@
                                 </div>
                             </div>
                         @endif
-                        <div class="col-12 d-flex justify-content-between p-0 food-category-content-items owl-carousel-food"
-                             id="food-owl-carousel">
+                        <div class="col-12 d-flex justify-content-between p-0 food-category-content-items owl-carousel-food">
                             @foreach($category->dishes as $dish)
                                 <div class="col-4 food-category-content-item">
                                     <div class="food-category-content-item-img d-flex justify-content-center">

@@ -213,13 +213,36 @@ class ProfileController extends Controller
 
     public function chooseDiet(Request $request)
     {
-        $limit = DietRestrictions::find($request->get('limitation'));
-        $purpose = PurposeOfNutrition::find($request->get('purpose'));
+        $restriction = DietRestrictions::find($request->get('diet_id'));
+        $nutrition = PurposeOfNutrition::find($request->get('purpose_id'));
         $foodCategories = FoodCategory::with('dishes')->get();
-        foreach ($foodCategories as $foodCategory){
-
+        foreach ($foodCategories as $foodCategory) {
+            foreach ($foodCategory->dishes()->with('DietRestriction', 'PurposeOfNutrition')->get() as $dishKey => $dish) {
+                foreach ($dish->PurposeOfNutrition as $purpose) {
+                    if ($purpose->id !== $nutrition->id) {
+                        $foodCategory->dishes->forget($dishKey);
+                    }
+                }
+                foreach ($dish->DietRestriction as $diet) {
+                    if ($diet->id === $restriction->id) {
+                        $foodCategory->dishes->forget($dishKey);
+                    }
+                }
+            }
         }
-        $dish = Dish::with('purposeOfNutrition', 'dietRestriction')->get();
-
+        return response()->view('front.user.food',
+            [
+                'dietRestriction' => DietRestrictions::all(),
+                'foodCategory' => $foodCategories,
+                'purposeOfNutrition' => PurposeOfNutrition::all()
+            ]);
     }
+
+    public function getCompletedWorkouts (): JsonResponse
+    {
+        $user = Auth::user();
+        $workouts = $user->completedWorkouts()->get();
+        return response()->json($workouts);
+    }
+
 }

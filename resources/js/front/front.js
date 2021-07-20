@@ -140,6 +140,7 @@ $(document).ready(function () {
         lazyLoad: true,
         smartSpeed: 800,
         loop: false,
+        dots: false,
         responsive: {
             0: {
                 items: 1.2,

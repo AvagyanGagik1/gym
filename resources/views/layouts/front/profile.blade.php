@@ -195,18 +195,12 @@
         <div class="line"></div>
         <div class="calendarSection">
             <h3>{{__('language.completed')}}</h3>
+           @foreach($completedWorkouts as $completedWorkout)
             <div class="item">
-                <img src="/images/pictureforcalendar.png" alt="">
-                <h2>Утреннее кардио 2. Сожги весь жир!</h2>
+                <img src=" {{$completedWorkout->workout->program->image}}" alt="">
+                <h2> {{App::getlocale()==='ru'?$completedWorkout->workout->name_ru:(App::getlocale()==='en'?$completedWorkout->workout->name_en:$completedWorkout->workout->name_blr)}}</h2>
             </div>
-            <div class="item">
-                <img src="/images/pictureforcalendar.png" alt="">
-                <h2>Утреннее кардио 2. Сожги весь жир!</h2>
-            </div>
-            <div class="item">
-                <img src="/images/pictureforcalendar.png" alt="">
-                <h2>Утреннее кардио 2. Сожги весь жир!</h2>
-            </div>
+            @endforeach
         </div>
     </section>
     <main>

@@ -42,6 +42,7 @@
         thead{
             tr{
                 th{
+                    text-align: center;
                     font-family: Montserrat;
                     font-size: 14px;
                     font-style: normal;
@@ -54,18 +55,18 @@
         }
         tr {
             margin-bottom: 36px;
+            .active {
+                background-image: url("/images/calendar/tdBackground.png");
+                background-repeat: no-repeat;
+                background-position: center;
 
+            }
             td {
+                text-align: center;
                 max-width: 16px;
                 height: 20px;
                 //background: #F0F712;
 
-
-
-                .active {
-                    background: #F0F712;
-
-                }
 
                 a {
                     color: #111111;

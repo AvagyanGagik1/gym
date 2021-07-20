@@ -13,4 +13,9 @@ class CompletedWorkout extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function workout(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo('App\Model\Workout');
+    }
 }
