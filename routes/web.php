@@ -122,6 +122,8 @@ Route::namespace('Admin')->middleware(['auth','is_admin'])->prefix('admin')->gro
     Route::namespace('User')->group(function (){
         Route::resource('users','UserController');
     });
+    Route::get('/user/achievements/add/{id}','User\UserController@achievement')->name('user.achievement.show');
+    Route::post('/user/achievements/adding','User\UserController@achievementAdd')->name('user.achievement.add');
 });
 Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(function (){
     Route::get('/','ProfileController@index')->name('profile.index');
