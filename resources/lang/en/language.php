@@ -87,5 +87,7 @@ return [
     "loadMore"=>"load more",
     "finishProgram"=>"finish the program",
     "reply"=>"Reply",
+    "chooseOnly"=>"Choose only one dish in each category",
+    "downloadNutritional"=>"Download nutritional guidelines",
 
 ];

@@ -198,16 +198,26 @@ class ProfileController extends Controller
         }
         if (!in_array($request->get('workout_id'), $arr)) {
             CompletedWorkout::create($input);
+            return redirect()->back();
         }
-        return redirect()->back()->withErrors(['error' => 'Вы уже завершили эту программу!!']);
+
+            return redirect()->back()->withErrors(['error' => 'Вы уже завершили эту тренировку!!']);
+
     }
 
     public function completeProgram(Request $request)
     {
-
+        $arr = [];
+        $completedPrograms = Auth::user()->completedPrograms;
         $input = $request->all();
-        CompletedProgram::create($input);
-        return redirect()->back();
+        foreach ($completedPrograms as $item) {
+            array_push($arr, $item->workout_id);
+        }
+        if (!in_array($request->get('workout_id'), $arr)) {
+            CompletedProgram::create($input);
+            return redirect()->back();
+        }
+        return redirect()->back()->withErrors(['error' => 'Вы уже завершили эту программу!!']);
 
     }
 

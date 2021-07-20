@@ -1996,6 +1996,7 @@ footer {
         width: inherit;
         background: #F0F712;
         border: none;
+        max-height: 60px;
     }
 
     .food-category-content {
@@ -2057,7 +2058,11 @@ footer {
     }
 
     .food-category-content-item-img {
+        max-width: inherit;
         margin-bottom: 12px;
+        img{
+            max-width: inherit;
+        }
     }
 
     .food-category-content-item-heads {
@@ -4061,6 +4066,21 @@ body {
     transform: rotate(
             180deg
     );
+}
+#youtubeModal{
+    .modal-dialog-centered{
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 0;
+        position: inherit;
+        .modal-content{
+            height: 100%;
+        }
+    }
+    #fatPlayer{
+        height: 100%;
+    }
 }
 #youtubeModal{
     .modal-dialog-centered{

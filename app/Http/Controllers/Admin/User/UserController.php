@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Admin\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\helper\UploadImage;
+use App\Http\Requests\StoreAchievementUserRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUsersRequest;
+use App\Model\Achievement;
 use App\Model\Personal;
 use App\Model\Subscription;
 use App\User;
@@ -115,5 +117,32 @@ class UserController extends Controller
         $this->deleteImage($user->avatar);
         $user->delete();
         return response()->json(['success'=>1,'message'=>'user successful deleted']);
+    }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\Response
+     */
+    public function achievement($id): \Illuminate\Http\Response
+    {
+        $user = User::find($id);
+        return response()->view('admin.user.addAchievement',['userAchievements'=>$user->achievements,'achievements'=>Achievement::all(),'id'=>$id]);
+    }
+
+    public function achievementAdd(StoreAchievementUserRequest $request){
+
+
+        $user = User::find($request->get('user_id'));
+        $achievement = $request->get('achievement_id');
+
+        $arr = [];
+        $achievements = $user->achievements;
+        foreach ($achievements as $item) {
+            array_push($arr, $item->id);
+        }
+        if (!in_array($achievement, $arr)) {
+            $user->achievements()->attach($achievement);
+        }
+        return redirect()->route('users.index');
     }
 }
