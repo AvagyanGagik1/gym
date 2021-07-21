@@ -168,7 +168,7 @@
                href="{{route('profile.achievements')}}">{{__("language.achievements")}}</a>
             <a class="{{ Request::is('profile/information') ? 'active' : '' }}"
                href="{{route('profile.information')}}">{{__("language.personal")}}</a>
-            <a class="{{ Request::is('profile/subscribe') ? 'active' : '' }}" href="{{route('profile.subscribe')}}">{{__("language.subscription")}}</a>
+            <a class="{{ Request::is('profile/subscribe') || Request::is('profile/subscribe/*') ? 'active' : '' }}" href="{{route('profile.subscribe')}}">{{__("language.subscription")}}</a>
             <a href="{{ route('logout') }}"
                onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">

@@ -255,4 +255,13 @@ class ProfileController extends Controller
         return response()->json($workouts);
     }
 
+    /**
+     * @param $id
+     * @return Response
+     */
+    public function renew($id): Response
+    {
+        return response()->view('front.user.renewSubscription',['subscriptions'=>Subscription::all(),'id'=>$id]);
+    }
+
 }

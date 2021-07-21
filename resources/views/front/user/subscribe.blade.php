@@ -35,9 +35,9 @@
                                     {{$subscription->duration_program}} Недельная Трансформация
                                 </h4>
                                 <p>{{$subscription->price}} <span>грн</span></p>
-                                <button>
+                                <a href="{{route('profile.renew',$subscription->id)}}">
                                     ПРОДЛИТЬ
-                                </button>
+                                </a>
                             </div>
                         @endforeach
                     </div>

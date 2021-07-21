@@ -2325,7 +2325,7 @@ footer {
                 }
             }
 
-            button {
+            a {
                 font-family: Druk Wide Cyr, serif;
                 font-size: 11px;
                 font-style: normal;
@@ -2335,7 +2335,8 @@ footer {
                 text-align: center;
                 padding: 16px 56px;
                 background: #F0F712;
-                border: none
+                border: none;
+                color: #111111;
             }
         }
     }
