@@ -77,7 +77,7 @@ $(document).ready(function () {
         let data = new FormData(e.target)
         data.append('tasks', JSON.stringify(tasks))
             axios.post(e.target.action, data).then((response) => {
-                console.log(response)
+                window.location ='/admin/workOut'
             })
     })
     $('.approved').change(function (){

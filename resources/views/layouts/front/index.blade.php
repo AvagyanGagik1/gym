@@ -72,9 +72,9 @@
                                 </svg>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="mainButtonResponsive">
-                                <a class="dropdown-item d-none" href="#about">Результаты</a>
-                                <a class="dropdown-item d-none" href="#subscribe">Программы подписки</a>
-                                <a class="dropdown-item d-none" href="#news">Блог</a>
+                                <a class="dropdown-item d-none" href="#about">{{__("language.results")}}</a>
+                                <a class="dropdown-item d-none" href="#subscribe">{{__("language.subscriptionPrograms")}}</a>
+                                <a class="dropdown-item d-none" href="#news">{{__("language.blog")}}</a>
                             </div>
                         </div>
                     </ul>

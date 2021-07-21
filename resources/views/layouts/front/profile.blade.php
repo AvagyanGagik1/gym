@@ -141,7 +141,7 @@
                         <p>{{\Illuminate\Support\Facades\Auth::user()->email}}</p>
                     </div>
                     <div>
-                        <img src="{{\Illuminate\Support\Facades\Auth::user()->avatar??'/images/roundUser.png'}}" id="headerUserAvatar" alt="">
+                        <img src="{{\Illuminate\Support\Facades\Auth::user()->avatar??'/images/emptyAvatar.png'}}" id="headerUserAvatar" alt="">
                     </div>
                 </div>
             </div>
@@ -160,7 +160,7 @@
             </div>
         </div>
         <div class="sideNavTop">
-            <a class=" {{ Request::is('profile') ? 'active' : '' }}" href="{{route('profile.index')}}">
+            <a class=" {{ Request::is('profile') || Request::is('profile/program/*') ? 'active' : '' }}" href="{{route('profile.index')}}">
                 {{__("language.programs")}}</a>
             <a class="{{ Request::is('profile/food') ? 'active' : '' }}"
                href="{{route('profile.food')}}">{{__("language.food")}}</a>

@@ -66,6 +66,55 @@
     }
 }
 
+@media (max-width: 1500px){
+    .mainNav {
+        .nav {
+            .dropdown-menu{
+                a:nth-of-type(3){
+                    display: flex!important;
+                }
+            }
+            a:nth-of-type(5){
+                display: none;
+            }
+            .dropdown{
+                display: block !important;
+            }
+            #mainButtonResponsive{
+                display: block !important;
+                height: inherit;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1470px){
+    .mainNav {
+        //#mainButton {
+        //    display: block !important;
+        //    position: absolute;
+        //    top: 0;
+        //    left: 0;
+        //    width: 64px;
+        //    height: inherit;
+        //    margin: auto;
+        //    padding: 0;
+        //}
+        .dropdown-menu{
+            a:nth-of-type(2){
+                display: flex!important;
+            }
+        }
+        .nav {
+            a:nth-of-type(4){
+                display: none;
+            }
+        }
+    }
+}
+
 @media (max-width: 1440px) {
     .aboutThird {
         max-width: 100%;
@@ -94,27 +143,7 @@
             margin-bottom: 20px;
         }
     }
-    .mainNav {
-        .nav {
-            .dropdown-menu{
-                a:nth-of-type(3){
-                    display: flex!important;
-                }
-            }
-            a:nth-of-type(5){
-                display: none;
-            }
-            .dropdown{
-                display: block !important;
-            }
-            #mainButtonResponsive{
-                display: block !important;
-                height: inherit;
-                margin: 0;
-                padding: 0;
-            }
-        }
-    }
+
 }
 
 @media (max-width: 1350px) {
@@ -166,32 +195,11 @@
             }
         }
     }
-    .mainNav {
-        //#mainButton {
-        //    display: block !important;
-        //    position: absolute;
-        //    top: 0;
-        //    left: 0;
-        //    width: 64px;
-        //    height: inherit;
-        //    margin: auto;
-        //    padding: 0;
-        //}
-        .dropdown-menu{
-            a:nth-of-type(2){
-                display: flex!important;
-            }
-        }
-        .nav {
-            a:nth-of-type(4){
-                display: none;
-            }
-        }
-    }
+
 
 }
 
-@media (max-width: 1157px) {
+@media (max-width: 1250px){
     .mainNav {
         .nav {
             .dropdown-menu{
@@ -204,6 +212,9 @@
             }
         }
     }
+}
+
+@media (max-width: 1157px) {
     .mainNavUser {
         .menu {
             display: flex;

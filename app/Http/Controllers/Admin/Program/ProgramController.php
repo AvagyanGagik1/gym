@@ -72,7 +72,7 @@ class ProgramController extends Controller
      */
     public function edit(int $id): Response
     {
-        return response()->view('admin.program.edit',['program'=>Program::find($id),'programCategories'=>ProgramCategory::all(),'trainers'=>Trainer::all()]);
+        return response()->view('admin.program.edit',['program'=>Program::find($id),'programCategories'=>ProgramCategory::all(),'trainers'=>Trainer::all(),'subscriptions'=>Subscription::all()]);
     }
 
     /**

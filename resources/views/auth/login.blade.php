@@ -19,7 +19,7 @@
                             @endif
                         </div>
                         <div class="custom-form-group-inline">
-                            <input type="password" name="password" value="{{old('email')}}" placeholder="Пароль">
+                            <input type="password" name="password" value="" placeholder="Пароль">
                             <div class="left-line"></div>
                             @if ($errors->has('password'))
                                 <p class="text-danger  termsError">{{ $errors->first('password') }}</p>

@@ -21,7 +21,12 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 Route::post('/user/register','Front\UserController@register')->name('user.custom.register');
-
+Route::get('/cache',function (){
+   Artisan::call('route:clear');
+});
+//Route::get('/migrate',function (){
+//    Artisan::call('migrate:fresh --seed');
+//});
 //Route::get('/locale/{lang}','Front\FrontController@setLocal')->name('change.locale');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::namespace('Front')->group(function(){
@@ -108,7 +113,7 @@ Route::namespace('Admin')->middleware(['auth','is_admin'])->prefix('admin')->gro
         Route::resource('video','VideoController');
     });
     Route::namespace('WorkOut')->group(function (){
-        Route::resource('workOut','WorkOutController');
+        Route::resource('workOut','WorkoutController');
     });
     Route::namespace('FoodCategory')->group(function (){
         Route::resource('foodCategory','FoodCategoryController');

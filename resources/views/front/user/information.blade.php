@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-12 p-0 personal-head">
                     <div class="personal-head-img">
-                        <img src="{{\Illuminate\Support\Facades\Auth::user()->avatar}}" id="avatarImage"
+                        <img src="{{\Illuminate\Support\Facades\Auth::user()->avatar??'/images/emptyAvatar.png'}}" id="avatarImage"
                              class="img-fluid" alt="">
                         <button>
                             <input type="file" id="changePhoto">

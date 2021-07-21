@@ -89,5 +89,7 @@ return [
     "reply"=>"Reply",
     "chooseOnly"=>"Choose only one dish in each category",
     "downloadNutritional"=>"Download nutritional guidelines",
+    "comment"=>"Comment",
+    "answer"=>"Answer",
 
 ];

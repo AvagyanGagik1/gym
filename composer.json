@@ -21,7 +21,8 @@
         "socialiteproviders/apple": "^5.0",
         "socialiteproviders/facebook": "^4.1",
         "socialiteproviders/google": "^4.1",
-      "ext-mongodb": "*"
+      "ext-mongodb": "*",
+      "ext-dom": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

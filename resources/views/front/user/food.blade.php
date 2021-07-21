@@ -23,7 +23,7 @@
                         <div>
                             <label for="limitation">{{__('language.diet')}}</label>
                             <select name="diet_id" id="limitation" class="food-select-item">
-                                <option @if(count($dietRestriction)) selected @endif disabled value="null">--{{__('language.diet')}}--
+                                <option @if(!count($dietRestriction)) selected @endif disabled value="null">--{{__('language.diet')}}--
                                 </option>
                                 @foreach($dietRestriction as $diet)
                                     <option value="{{$diet->id}}">{{App::getlocale()==='ru'?$diet->name_ru:(App::getlocale()==='en'?$diet->name_en:$diet->name_blr)}}</option>
@@ -33,7 +33,7 @@
                         <div>
                             <label for="purpose">{{__('language.purpose')}}</label>
                             <select name="purpose_id" id="purpose" class="food-select-item">
-                                <option @if(count($purposeOfNutrition)) selected @endif disabled value="null">--{{__('language.purpose')}}--
+                                <option @if(!count($purposeOfNutrition)) selected @endif disabled value="null">--{{__('language.purpose')}}--
                                 </option>
 
                                 @foreach($purposeOfNutrition as $purpose)
