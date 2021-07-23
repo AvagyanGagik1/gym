@@ -79,8 +79,7 @@
                                             <li>{{__('language.carboHydrates')}} <span>{{$dish->carbohydrates}}г</span></li>
                                         </ul>
                                     </div>
-                                    @if(false)
-                                        <button class="food-category-content-item-button ">
+                                        <button class="food-category-content-item-button d-none checked-food-button" data-category="{{$category->id}}" data-dish="{{$dish->id}}">
                                             <div class="selected">
                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
@@ -92,8 +91,7 @@
                                             </div>
                                             {{__('language.addTo')}} {{App::getlocale()==='ru'?$category->name_ru:(App::getlocale()==='en'?$category->name_en:$category->name_blr)}}
                                         </button>
-                                    @else
-                                        <button class="food-category-content-item-button">
+                                        <button class="food-category-content-item-button un-checked-food-button" data-category="{{$category->id}}" data-dish="{{$dish->id}}">
                                             <div>
                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
@@ -103,7 +101,6 @@
                                             </div>
                                             {{__('language.addTo')}} {{App::getlocale()==='ru'?$category->name_ru:(App::getlocale()==='en'?$category->name_en:$category->name_blr)}}
                                         </button>
-                                    @endif
                                 </div>
                             @endforeach
 {{--                            <div class="col-4 food-category-content-item">--}}
