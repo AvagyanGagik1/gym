@@ -7,7 +7,7 @@
                     <h2>{{__('language.food')}}</h2>
                 </div>
                 <div class="col-12 d-flex align-items-center justify-content-between food-filter">
-                    <form action="{{route('choose.diet')}}" class="d-flex" method="post">
+                    <form action="{{route('choose.diet')}}" class="food-select d-flex" method="post">
                         @csrf
                     <div class="food-select d-flex">
                         <div>
@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                         @endif
-                        <div class="col-12 d-flex justify-content-between p-0 food-category-content-items owl-carousel-food">
+                        <div class="col-12 d-flex justify-content-between p-0 food-category-content-items owl-carousel-food owl-theme">
                             @foreach($category->dishes as $dish)
                                 <div class="col-4 food-category-content-item">
                                     <div class="food-category-content-item-img d-flex justify-content-center">

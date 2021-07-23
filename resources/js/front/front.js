@@ -126,9 +126,9 @@ $(document).ready(function () {
         }
     })
     $('#hamburger').click(function () {
-        $('.sideNav').css('display', 'flex').addClass('sideNav-open')
+        $('.sideNav').addClass('sideNav-open')
         $('.overlay').css('display', 'flex').click(function () {
-            $('.sideNav').hide('slow')
+            $('.sideNav').removeClass('sideNav-open')
             $(this).hide('slow')
             $('body').css('overflow', 'auto')
         })
@@ -141,9 +141,14 @@ $(document).ready(function () {
         smartSpeed: 800,
         loop: false,
         dots: false,
+        autoWidth:true,
         responsive: {
             0: {
-                items: 1.2,
+                items: .5,
+            },
+            600:{
+                items:2,
+                nav:false
             },
             1000: {
                 items: 3,
