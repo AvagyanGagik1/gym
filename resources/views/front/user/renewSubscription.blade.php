@@ -1,18 +1,14 @@
-@extends('layouts.front.index')
-
+@extends('layouts.front.profile')
 @section('content')
-    <div class="container-fluid">
-        <div class="row auth-wrapper">
-            <div class="col-xl-4 col-lg-12 justify-content-end aside-wrapper">
-                @include('auth.aside',['data'=>4])
-            </div>
-            <form method="post" action="{{route('user.custom.register')}}">
+    <div class="content">
+        <div class="d-flex auth-wrapper justify-content-center">
+            <form>
                 <div class="col-xl-8 col-lg-12 four-step">
                     <h1>{{__('language.subscribe')}}</h1>
                     <div class="subscriptions">
                         @foreach($subscriptions as $key=>$subscription)
                             <div class="item">
-                                <input type="radio" name="subscribe" @if($key === 0 ) checked @endif value="{{$subscription->id}}">
+                                <input type="radio" name="subscribe" @if($subscription->id === intval( $id)) checked @endif value="{{$subscription->id}}">
                                 <label for="" class="d-flex">
                                     <div class="desc col-8">
                                         <h3>{{$subscription->duration_program}} месяц</h3>
@@ -86,7 +82,6 @@
                                 </label>
                             </div>
                         </div>
-
                     </div>
                     <div class="submit-group d-flex align-items-center">
                         @csrf

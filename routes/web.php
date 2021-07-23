@@ -21,9 +21,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 Route::post('/user/register','Front\UserController@register')->name('user.custom.register');
-Route::get('/cache',function (){
-   Artisan::call('route:clear');
-});
+//Route::get('/cache',function (){
+//   Artisan::call('route:clear');
+//});
 //Route::get('/migrate',function (){
 //    Artisan::call('migrate:fresh --seed');
 //});
@@ -140,6 +140,7 @@ Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(functi
     Route::get('/functional/{id}','ProfileController@functional')->name('profile.functional');
     Route::get('/get/personals','ProfileController@getPersonals');
     Route::get('/get/completed/workouts','ProfileController@getCompletedWorkouts');
+    Route::get('/subscribe/renew/{id}','ProfileController@renew')->name('profile.renew');
 
 //    postRoutes
 

@@ -46,7 +46,7 @@ return [
     "age"=>"Age",
     "weight"=>"Weight",
     "height"=>"Height",
-    "convenient "=>"Pay in a convenient way",
+    "convenient"=>"Pay in a convenient way",
     "completed"=>"Completed workouts",
     "diet"=>"Diet restrictions",
     "purpose"=>"Purpose of nutrition",

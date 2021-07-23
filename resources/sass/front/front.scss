@@ -117,7 +117,7 @@
                 text-align: left;
                 color: #111111;
                 background: transparent;
-                margin: 0 0 0 8px;
+                margin: 0 0 0 8px!important;
                 padding: 0;
                 cursor: pointer;
 
@@ -1074,6 +1074,7 @@ footer {
 
     .navSearch {
         max-width: 401px;
+        min-width: 46px;
         width: inherit;
         position: relative;
         height: 46px;
@@ -1125,7 +1126,7 @@ footer {
         button:first-of-type {
             height: 42px;
             width: 184px;
-            margin-right: 50px !important;
+            margin:0 50px 0 0;
             font-family: Druk Wide Cyr, serif;
             font-size: 11px;
             font-style: normal;
@@ -1180,7 +1181,7 @@ footer {
                 text-align: left;
                 color: #111111;
                 background: transparent;
-                margin: 0 0 0 8px;
+                margin: 0 0 0 8px!important;
                 padding: 0;
                 cursor: pointer;
                 max-width: 50px;
@@ -1309,7 +1310,8 @@ footer {
     top: 0;
     left: 0;
     overflow: auto;
-    height: 100%;
+    touch-action: none;
+    height: 100vh;
     border-right: 1px solid #E6E6E6;
     display: flex;
     flex-direction: column;
@@ -1438,6 +1440,23 @@ footer {
             margin: 0 !important
         }
 
+    }
+
+    .language{
+        display: table;
+        padding-left: 20px;
+        .lang-item{
+            margin: 0 0 0 10px!important;
+            font-family: Druk Wide Cyr;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #111111
+        }
+        .lang-item.active-lang{
+            color: #999999!important;
+        }
     }
 }
 
@@ -1931,6 +1950,9 @@ footer {
 }
 
 .food-content {
+    .owl.stage{
+        display: flex;
+    }
     .food-header {
         h2 {
             font-family: Druk Wide Cyr, serif;
@@ -2002,6 +2024,9 @@ footer {
 
     .food-category-content {
         margin-bottom: 70px;
+        .owl-stage{
+            display: flex;
+        }
     }
 
     .food-category-content:last-of-type {
@@ -2056,12 +2081,15 @@ footer {
         padding: 26px;
         border: 1px solid #E6E6E6;
         max-width: 410px;
+        width: 100%;
     }
 
     .food-category-content-item-img {
         max-width: inherit;
+        width: 100%;
         margin-bottom: 12px;
         img{
+            width: 100%;
             max-width: inherit;
         }
     }
@@ -2325,7 +2353,7 @@ footer {
                 }
             }
 
-            button {
+            a {
                 font-family: Druk Wide Cyr, serif;
                 font-size: 11px;
                 font-style: normal;
@@ -2335,7 +2363,8 @@ footer {
                 text-align: center;
                 padding: 16px 56px;
                 background: #F0F712;
-                border: none
+                border: none;
+                color: #111111;
             }
         }
     }
@@ -3824,6 +3853,7 @@ body {
 
 .sideNav-open {
     z-index: 9000;
+    display: flex!important;
     background-color: white;
 }
 
@@ -3832,6 +3862,8 @@ body {
     width: 100%;
     height: 100vh;
     background-color: black;
+    overflow: hidden;
+    touch-action: none;
     opacity: 0.5;
     z-index: 8000;
     position: fixed;
