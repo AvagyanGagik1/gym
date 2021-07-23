@@ -18,7 +18,7 @@
                                 @method('PUT')
                                 <div class="form-group">
                                     <label for="text_ru"> Заголовок (ru)</label>
-                                    <textarea type="text" class="form-control" id="text_ru" rows="3" name="text_ru"
+                                    <textarea placeholder="Введите Заголовок" type="text" class="form-control" id="text_ru" rows="3" name="text_ru"
                                               placeholder="text">{{$weAre->text_ru}}</textarea>
                                     @if ($errors->has('text_ru'))
                                         <span class="text-danger">{{ $errors->first('text_ru') }}</span>
@@ -26,7 +26,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="text_en"> Заголовок (en)</label>
-                                    <textarea type="text" class="form-control" id="text_en" rows="3" name="text_en"
+                                    <textarea placeholder="Введите Заголовок" type="text" class="form-control" id="text_en" rows="3" name="text_en"
                                               placeholder="text">{{$weAre->text_en}}</textarea>
                                     @if ($errors->has('text_en'))
                                         <span class="text-danger">{{ $errors->first('text_en') }}</span>
@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="text_blr"> Заголовок (blr)</label>
-                                    <textarea type="text" class="form-control" id="text_blr" rows="3" name="text_blr"
+                                    <textarea placeholder="Введите Заголовок" type="text" class="form-control" id="text_blr" rows="3" name="text_blr"
                                               placeholder="text">{{$weAre->text_blr}}</textarea>
                                     @if ($errors->has('text_blr'))
                                         <span class="text-danger">{{ $errors->first('text_blr') }}</span>

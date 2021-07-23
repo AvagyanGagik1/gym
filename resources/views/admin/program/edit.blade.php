@@ -58,7 +58,7 @@
             <div class="form-group row pb-3">
                 <label for="name_ru" class="col-sm-2 col-form-label font-weight-bold">Имя (ru):</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name_ru" name="name_ru" value="{{$program->name_ru}}">
+                    <input placeholder="Введите Имя" type="text" class="form-control" id="name_ru" name="name_ru" value="{{$program->name_ru}}">
                     @if ($errors->has('name_ru'))
                         <span class="text-danger">{{ $errors->first('name_ru') }}</span>
                     @endif
@@ -67,7 +67,7 @@
             <div class="form-group row pb-3">
                 <label for="name_en" class="col-sm-2 col-form-label font-weight-bold">Имя (en):</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name_en" name="name_en" value="{{$program->name_en}}">
+                    <input placeholder="Введите Имя" type="text" class="form-control" id="name_en" name="name_en" value="{{$program->name_en}}">
                     @if ($errors->has('name_en'))
                         <span class="text-danger">{{ $errors->first('name_en') }}</span>
                     @endif
@@ -76,7 +76,7 @@
             <div class="form-group row pb-3">
                 <label for="name_blr" class="col-sm-2 col-form-label font-weight-bold">Имя (blr):</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name_blr" name="name_blr" value="{{$program->name_blr}}">
+                    <input placeholder="Введите Имя" type="text" class="form-control" id="name_blr" name="name_blr" value="{{$program->name_blr}}">
                     @if ($errors->has('name_blr'))
                         <span class="text-danger">{{ $errors->first('name_blr') }}</span>
                     @endif
@@ -96,7 +96,7 @@
             <div class="form-group row pb-3">
                 <label for="duration" class="col-sm-2 col-form-label font-weight-bold">Продалжительность:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="duration" name="duration"
+                    <input placeholder="Введите Продалжительность" type="text" class="form-control" id="duration" name="duration"
                            value="{{$program->duration}}">
                     @if ($errors->has('duration'))
                         <span class="text-danger">{{ $errors->first('duration') }}</span>
@@ -106,7 +106,7 @@
             <div class="form-group row pb-3">
                 <label for="intensity" class="col-sm-2 col-form-label font-weight-bold">Интенсивность:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="intensity" name="intensity"
+                    <input placeholder="Введите Интенсивность" type="text" class="form-control" id="intensity" name="intensity"
                            value="{{$program->intensity}}">
                     @if ($errors->has('intensity'))
                         <span class="text-danger">{{ $errors->first('intensity') }}</span>
@@ -116,7 +116,7 @@
             <div class="form-group row pb-3">
                 <label for="description_ru" class="col-sm-2 col-form-label font-weight-bold">Описаные (ru):</label>
                 <div class="col-sm-10">
-                    <textarea name="description_ru" class="editor" id="description_ru" cols="50"
+                    <textarea placeholder="Введите Описаные" name="description_ru" class="editor" id="description_ru" cols="50"
                               rows="10">{{$program->description_ru}}</textarea>
                     @if ($errors->has('description_ru'))
                         <span class="text-danger">{{ $errors->first('description_ru') }}</span>
@@ -126,7 +126,7 @@
             <div class="form-group row pb-3">
                 <label for="description_en" class="col-sm-2 col-form-label font-weight-bold">Описаные (en):</label>
                 <div class="col-sm-10">
-                    <textarea name="description_en" class="editor" id="description_en" cols="50"
+                    <textarea placeholder="Введите Описаные" name="description_en" class="editor" id="description_en" cols="50"
                               rows="10">{{$program->description_en}}</textarea>
                     @if ($errors->has('description_en'))
                         <span class="text-danger">{{ $errors->first('description_en') }}</span>
@@ -136,7 +136,7 @@
             <div class="form-group row pb-3">
                 <label for="description_blr" class="col-sm-2 col-form-label font-weight-bold">Описаные (blr):</label>
                 <div class="col-sm-10">
-                    <textarea name="description_blr" class="editor" id="description_blr" cols="50"
+                    <textarea placeholder="Введите Описаные" name="description_blr" class="editor" id="description_blr" cols="50"
                               rows="10">{{$program->description_blr}}</textarea>
                     @if ($errors->has('description_blr'))
                         <span class="text-danger">{{ $errors->first('description_blr') }}</span>

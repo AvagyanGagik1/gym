@@ -141,19 +141,17 @@ $(document).ready(function () {
         smartSpeed: 800,
         loop: false,
         dots: false,
+        autoWidth:true,
         responsive: {
             0: {
-
-                items: 1,
-                nav: false
+                items: .5,
             },
-            600: {
-                items: 2,
-                nav: false
+            600:{
+                items:2,
+                nav:false
             },
             1000: {
                 items: 3,
-                nav: false
             },
         }
     })
@@ -396,6 +394,21 @@ $(document).ready(function () {
         $('.closeYouTube').click(function stopVideo() {
             player.destroy();
         })
+    })
+    $('.owl-carousel-food').on('click', '.checked-food-button', function (e) {
+        let category = $(this).attr('data-category')
+        let dish = $(this).attr('data-dish')
+        $(this).addClass('d-none')
+        $(`.un-checked-food-button[data-dish=${dish}]`).removeClass('d-none')
+    })
+
+    $('.owl-carousel-food').on('click', '.un-checked-food-button', function (e) {
+        let category = $(this).attr('data-category')
+        let dish = $(this).attr('data-dish')
+        $(`.checked-food-button[data-category=${category}]`).addClass('d-none')
+        $(`.un-checked-food-button[data-category=${category}]`).removeClass('d-none')
+        $(this).addClass('d-none')
+        $(`.checked-food-button[data-dish=${dish}]`).removeClass('d-none')
     })
 
 })

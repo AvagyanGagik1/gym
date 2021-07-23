@@ -16,21 +16,21 @@
                             @method('PUT')
                             <div class="form-group">
                                 <label for="title_ru"> Заголовок (ru)</label>
-                                <textarea type="text" class="form-control" id="title_ru" rows="3" name="title_ru" placeholder="text">{{$weAre->title_ru}}</textarea>
+                                <textarea type="text" placeholder="Введите Заголовок" class="form-control" id="title_ru" rows="3" name="title_ru" placeholder="text">{{$weAre->title_ru}}</textarea>
                                 @if ($errors->has('title_ru'))
                                     <span class="text-danger">{{ $errors->first('title_ru') }}</span>
                                 @endif
                             </div>
                             <div class="form-group">
                                 <label for="title_en"> Заголовок (en)</label>
-                                <textarea type="text" class="form-control" id="title_en" rows="3" name="title_en" placeholder="text">{{$weAre->title_en}}</textarea>
+                                <textarea type="text" placeholder="Введите Заголовок" class="form-control" id="title_en" rows="3" name="title_en" placeholder="text">{{$weAre->title_en}}</textarea>
                                 @if ($errors->has('title_en'))
                                     <span class="text-danger">{{ $errors->first('title_en') }}</span>
                                 @endif
                             </div>
                             <div class="form-group">
                                 <label for="title_blr"> Заголовок (blr)</label>
-                                <textarea type="text" class="form-control" id="title_blr" rows="3" name="title_blr" placeholder="text">{{$weAre->title_blr}}</textarea>
+                                <textarea type="text" placeholder="Введите Заголовок" class="form-control" id="title_blr" rows="3" name="title_blr" placeholder="text">{{$weAre->title_blr}}</textarea>
                                 @if ($errors->has('title_blr'))
                                     <span class="text-danger">{{ $errors->first('title_blr') }}</span>
                                 @endif

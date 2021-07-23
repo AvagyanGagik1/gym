@@ -49,7 +49,7 @@
             <div class="form-group row pb-3">
                 <label for="text" class="col-sm-2 col-form-label font-weight-bold">Коммент (en):</label>
                 <div class="col-sm-10">
-                    <textarea name="text" id="text" class="editor" cols="50" rows="10">{{old('text')}}</textarea>
+                    <textarea name="text" placeholder="Введите Коммент" id="text" class="editor" cols="50" rows="10">{{old('text')}}</textarea>
                     @if ($errors->has('text'))
                         <span class="text-danger">{{ $errors->first('text') }}</span>
                     @endif

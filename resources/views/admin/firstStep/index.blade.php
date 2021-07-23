@@ -17,7 +17,7 @@
                             @method('PUT')
                             <div class="form-group">
                                 <label for="title_ru"> Заголовок (ru)</label>
-                                <textarea type="text" class="form-control" id="title_ru" rows="3" name="title_ru"
+                                <textarea type="text" placeholder="Введите Заголовок" class="form-control" id="title_ru" rows="3" name="title_ru"
                                           placeholder="text">{{$firstStep->title_ru}}</textarea>
                                 @if ($errors->has('title_ru'))
                                     <span class="text-danger">{{ $errors->first('title_ru') }}</span>
@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="title_en"> Заголовок (en)</label>
-                                <textarea type="text" class="form-control" id="title_en" rows="3" name="title_en"
+                                <textarea type="text" placeholder="Введите Заголовок" class="form-control" id="title_en" rows="3" name="title_en"
                                           placeholder="text">{{$firstStep->title_en}}</textarea>
                                 @if ($errors->has('title_en'))
                                     <span class="text-danger">{{ $errors->first('title_en') }}</span>
@@ -33,15 +33,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="title_blr"> Заголовок (blr)</label>
-                                <textarea type="text" class="form-control" id="title_blr" rows="3" name="title_blr"
+                                <textarea type="text" placeholder="Введите Заголовок" class="form-control" id="title_blr" rows="3" name="title_blr"
                                           placeholder="text">{{$firstStep->title_blr}}</textarea>
                                 @if ($errors->has('title_blr'))
                                     <span class="text-danger">{{ $errors->first('title_blr') }}</span>
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label for="video_link"> Сылка на выдео</label>
-                                <textarea type="text" class="form-control" id="video_link" rows="3" name="video_link"
+                                <label for="video_link"> Ссылка на выдео</label>
+                                <textarea type="text" placeholder="Введите Ссылку на выдео" class="form-control" id="video_link" rows="3" name="video_link"
                                           placeholder="text">{{$firstStep->video_link}}</textarea>
                                 @if ($errors->has('video_link'))
                                     <span class="text-danger">{{ $errors->first('video_link') }}</span>
@@ -49,7 +49,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="description_ru"> Описаные (ru) </label>
-                                <textarea type="text" class="form-control" id="description_ru" rows="3" name="description_ru"
+                                <textarea type="text" placeholder="Введите Описаные" class="form-control" id="description_ru" rows="3" name="description_ru"
                                           placeholder="text">{{$firstStep->description_ru}}</textarea>
                                 @if ($errors->has('description_ru'))
                                     <span class="text-danger">{{ $errors->first('description_ru') }}</span>
@@ -57,7 +57,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="description_en"> Описаные (en)</label>
-                                <textarea type="text" class="form-control" id="description_en" rows="3" name="description_en"
+                                <textarea type="text" placeholder="Введите Описаные" class="form-control" id="description_en" rows="3" name="description_en"
                                           placeholder="text">{{$firstStep->description_en}}</textarea>
                                 @if ($errors->has('description_en'))
                                     <span class="text-danger">{{ $errors->first('description_en') }}</span>
@@ -65,7 +65,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="description_blr"> Описаные (blr) </label>
-                                <textarea type="text" class="form-control" id="description_blr" rows="3" name="description_blr"
+                                <textarea type="text" placeholder="Введите Описаные" class="form-control" id="description_blr" rows="3" name="description_blr"
                                           placeholder="text">{{$firstStep->description_blr}}</textarea>
                                 @if ($errors->has('description_blr'))
                                     <span class="text-danger">{{ $errors->first('description_blr') }}</span>

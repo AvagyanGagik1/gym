@@ -8,7 +8,7 @@
             <div class="form-group row pb-3">
                 <label for="email" class="col-sm-2 col-form-label font-weight-bold">email</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="email" name="email" value="{{$user->email}}">
+                    <input placeholder="Введите email" type="text" class="form-control" id="email" name="email" value="{{$user->email}}">
                     @if ($errors->has('email'))
                         <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
@@ -17,7 +17,7 @@
             <div class="form-group row pb-3">
                 <label for="name" class="col-sm-2 col-form-label font-weight-bold">Имя</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name" name="name" value="{{$user->name}}">
+                    <input placeholder="Введите Имя" type="text" class="form-control" id="name" name="name" value="{{$user->name}}">
                     @if ($errors->has('name'))
                         <span class="text-danger">{{ $errors->first('name') }}</span>
                     @endif
@@ -26,7 +26,7 @@
             <div class="form-group row pb-3">
                 <label for="weight" class="col-sm-2 col-form-label font-weight-bold">вес</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="weight" name="weight" value="{{$personal->weight}}">
+                    <input placeholder="Введите вес" type="number" class="form-control" id="weight" name="weight" value="{{$personal->weight}}">
                     @if ($errors->has('weight'))
                         <span class="text-danger">{{ $errors->first('weight') }}</span>
                     @endif
@@ -35,7 +35,7 @@
             <div class="form-group row pb-3">
                 <label for="height" class="col-sm-2 col-form-label font-weight-bold">рост</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="height" name="height" value="{{$personal->height}}">
+                    <input placeholder="Введите рост" type="number" class="form-control" id="height" name="height" value="{{$personal->height}}">
                     @if ($errors->has('height'))
                         <span class="text-danger">{{ $errors->first('height') }}</span>
                     @endif
@@ -44,7 +44,7 @@
             <div class="form-group row pb-3">
                 <label for="age" class="col-sm-2 col-form-label font-weight-bold">возрост</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="age" name="age" value="{{$personal->age}}">
+                    <input placeholder="Введите возрост" type="number" class="form-control" id="age" name="age" value="{{$personal->age}}">
                     @if ($errors->has('age'))
                         <span class="text-danger">{{ $errors->first('age') }}</span>
                     @endif

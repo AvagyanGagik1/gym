@@ -9,7 +9,7 @@
             <div class="form-group row pb-3">
                 <label for="title_ru" class="col-sm-2 col-form-label font-weight-bold">Заголовок что говорят о нас клиенты Русский:</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" id="title_ru"
+                    <textarea class="form-control" id="title_ru" placeholder="Введите Заголовок"
                               name="title_ru">{{$header->title_ru}}</textarea>
                     @if ($errors->has('title_ru'))
                         <span class="text-danger">{{ $errors->first('title_ru') }}</span>
@@ -19,7 +19,7 @@
             <div class="form-group row pb-3">
                 <label for="title_en" class="col-sm-2 col-form-label font-weight-bold">Заголовок что говорят о нас клиенты Англиский:</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" id="title_en"
+                    <textarea class="form-control" id="title_en" placeholder="Введите Заголовок"
                               name="title_en">{{$header->title_en}}</textarea>
                     @if ($errors->has('title_en'))
                         <span class="text-danger">{{ $errors->first('title_en') }}</span>
@@ -29,7 +29,7 @@
             <div class="form-group row pb-3">
                 <label for="title_blr" class="col-sm-2 col-form-label font-weight-bold">Заголовок что говорят о нас клиенты Беларусский:</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" id="title_blr"
+                    <textarea class="form-control" id="title_blr" placeholder="Введите Заголовок"
                               name="title_blr">{{$header->title_blr}}</textarea>
                     @if ($errors->has('title_blr'))
                         <span class="text-danger">{{ $errors->first('title_blr') }}</span>

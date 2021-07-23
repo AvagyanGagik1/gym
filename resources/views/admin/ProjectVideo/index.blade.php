@@ -7,9 +7,9 @@
             @csrf
             @method('Put')
             <div class="form-group row pb-3">
-                <label for="link" class="col-sm-2 col-form-label font-weight-bold">Выдео о проэкте:</label>
+                <label for="link" class="col-sm-2 col-form-label font-weight-bold">Видео о проэкте:</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" id="link"
+                    <textarea placeholder="Ссылка на видео" class="form-control" id="link"
                               name="link">{{$projectVideo->link}}</textarea>
                     @if ($errors->has('link'))
                         <span class="text-danger">{{ $errors->first('link') }}</span>
