@@ -7,7 +7,7 @@
                     <h2>{{__('language.food')}}</h2>
                 </div>
                 <div class="col-12 d-flex align-items-center justify-content-between food-filter">
-                    <form action="{{route('choose.diet')}}" class="food-select d-flex" method="post">
+                    <form action="{{route('choose.diet')}}" class="food-select d-flex w-100" method="post">
                         @csrf
                     <div class="food-select d-flex">
                         <div>
