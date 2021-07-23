@@ -26,14 +26,8 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Категория (ru)</th>
-                            <th scope="col">Категория (en)</th>
-                            <th scope="col">Категория<(blr)/th>
                             <th scope="col">Имя (ru)</th>
-                            <th scope="col">Имя (en)</th>
-                            <th scope="col">Имя (blr)</th>
                             <th scope="col">описания (ru)</th>
-                            <th scope="col">описания (en)</th>
-                            <th scope="col">описания (blr)</th>
                             <th scope="col">калории</th>
                             <th scope="col">белки</th>
                             <th scope="col">жиры</th>
@@ -46,15 +40,9 @@
                         @foreach($dishes as $key=>$item)
                             <tr>
                                 <th scope="row">{{$key+1}}</th>
-                                <th scope="row">{{$item->category->name_ru}}</th>
-                                <th scope="row">{{$item->category->name_en}}</th>
-                                <th scope="row">{{$item->category->name_blr}}</th>
+                                <th scope="row">{{optional($item->category)->name_ru}}</th>
                                 <td>{{$item->name_ru}}</td>
-                                <td>{{$item->name_en}}</td>
-                                <td>{{$item->name_blr}}</td>
-                                <td>{{$item->description_ru}}</td>
-                                <td>{{$item->description_en}}</td>
-                                <td>{{$item->description_blr}}</td>
+                                <td>{!!  $item->description_ru!!}</td>
                                 <td>{{$item->calories}}</td>
                                 <td>{{$item->protein}}</td>
                                 <td>{{$item->fats}}</td>

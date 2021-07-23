@@ -213,7 +213,7 @@ class AdminController extends Controller
 
     }
     public function projectVideo(){
-        return response()->view('admin.projectVideo.index',['projectVideo' => ProjectVideo::find(1)]);
+        return response()->view('admin.ProjectVideo.index',['projectVideo' => ProjectVideo::find(1)]);
     }
     public function projectVideoUpdate(StoreProjectVideoRequest $request,$id){
         $projectVideo = ProjectVideo::find($id);

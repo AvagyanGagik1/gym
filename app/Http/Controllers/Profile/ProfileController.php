@@ -32,19 +32,29 @@ class ProfileController extends Controller
 {
     use UploadImage, ParseYoutubeLink;
 
-    public function index(): Response
+    public function index()
     {
-        $myPrograms = [];
+        $programs = [];
         $myProgramId = [];
-        $user = Auth::user();
-        $subscriptions = $user->subscriptions;
-        foreach ($subscriptions as $subscription) {
-            foreach ($subscription->programs as $program) {
-                array_push($myPrograms, $program);
-                array_push($myProgramId, $program->id);
+        $myPrograms = [];
+        $programsCategory = [];
+        $user = User::where('id',Auth::id())->with(['subscriptions.programs.category.programs','completedWorkouts.workout','completedPrograms'])->first();
+        $programsCategory = $user->subscriptions->map->programs->map->map->map->category->collect()[0];
+        $programs = $user->subscriptions->map->programs->collect()[0];
+        $completedWorkoutsProgram_id = $user->completedWorkouts->map->workout->map->program_id->collect();
+        $completedPrograms_id = $user->completedPrograms->map->program_id->collect()->toArray();
+        foreach ($completedWorkoutsProgram_id as $key=> $id){
+            if(in_array($id,$completedPrograms_id)){
+                $completedWorkoutsProgram_id->forget($key);
             }
         }
-        return response()->view('front.user.index', ['myProgramId' => $myProgramId, 'myPrograms' => $myPrograms, 'programsCategory' => ProgramCategory::with('programs')->get()]);
+        $completedWorkoutsProgram_id =  array_values($completedWorkoutsProgram_id->toArray());
+        foreach ($completedWorkoutsProgram_id as $id){
+            $myPrograms = $programs->where('id',$id)->collect();
+        }
+        if($myPrograms)
+        $myProgramId =  $myPrograms->pluck('id')->toArray();
+        return response()->view('front.user.index', ['myProgramId' => $myProgramId, 'myPrograms' => $myPrograms, 'programsCategory' =>$programsCategory->unique('id')]);
     }
 
     public function information(): Response

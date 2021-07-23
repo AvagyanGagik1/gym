@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-body">
 
-                <h4>Change about page information</h4>
+                <h4>Блок на главной странице кто мы</h4>
             </div>
         </div>
         <div class="row">
@@ -77,6 +77,7 @@
 {{--                                </div>--}}
 {{--                            </div>--}}
                             <button type="submit" class=" btn btn-success">Изменить</button>
+                            <a href="{{route('dashboard')}}" class="btn btn-danger">назад</a>
                         </form>
                     </div>
                 </div>

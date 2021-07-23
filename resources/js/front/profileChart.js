@@ -1,6 +1,6 @@
 import Chart from 'chart.js';
 import eachDayOfInterval from 'date-fns/eachDayOfInterval'
-
+let customTooltip = []
 let date = []
 let weight = []
 const labels = []
@@ -13,10 +13,9 @@ $(document).ready(function () {
         weight = response.data.weight
     }).then(() => {
         date.map(l => {
-            labels.push(l.getDate() + ' ' + getMonth(l.getMonth()))
+            labels.push(getMonth(l.getMonth()))
+            customTooltip.push(l)
         })
-
-
         new Chart(document.getElementById("profileChart"), {
             type: 'line',
             data: {
@@ -35,6 +34,33 @@ $(document).ready(function () {
                 ]
             },
             options: {
+                tooltips:{
+                    enabled: true,
+                    backgroundColor: 'black',
+                    titleFontSize: 16,
+                    titleFontStyle: 'normal',
+                    titleFontColor: 'white',
+                    bodyFontColor: 'white',
+                    bodyFontSize: 22,
+                    _bodyFontStyle: 'bold',
+                    displayColors: false,
+                    width: 96,
+                    height: 56,
+                    xPadding:20,
+                    yPadding:10,
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            let dataset = data['datasets'][0];
+                            return dataset.data[0]+ ' кг'
+                },
+                        title: function (tooltipItem,data){
+                            let date = customTooltip[tooltipItem[0].index].getDate()+'.'+ '0'+ Number(customTooltip[tooltipItem[0].index].getMonth()+1)+'.'+ customTooltip[tooltipItem[0].index].getFullYear()
+
+
+                            return date
+                        }
+                    }
+                },
                 scales: {
                     yAxes: [{
                         gridLines: {
@@ -59,7 +85,6 @@ $(document).ready(function () {
                 legend: {
                     display: false
                 },
-
             }
         });
     })

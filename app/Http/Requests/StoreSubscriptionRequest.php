@@ -28,7 +28,7 @@ class StoreSubscriptionRequest extends FormRequest
             'name_ru' => 'required',
             'name_en' => 'required',
             'name_blr' => 'required',
-            'duration' => 'required',
+            'duration_subscribe' => 'required',
             'price' => 'required',
             'image' => 'required|image'
 
