@@ -144,7 +144,7 @@ $(document).ready(function () {
         autoWidth:true,
         responsive: {
             0: {
-                items: .5,
+                items: 1,
             },
             600:{
                 items:2,

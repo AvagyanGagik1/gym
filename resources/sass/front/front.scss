@@ -4132,3 +4132,10 @@ body {
         height: 100%;
     }
 }
+.owl-carousel-food{
+    max-width: 100vw;
+    overflow: hidden;
+    .owl-item{
+        min-width: 300px;
+    }
+}
