@@ -15,6 +15,9 @@ class CreateCaloriesTable extends Migration
     {
         Schema::create('calories', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('in_calories');
+            $table->bigInteger('out_calories');
             $table->timestamps();
         });
     }

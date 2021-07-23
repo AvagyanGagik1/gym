@@ -102,22 +102,12 @@
                     </div>
                 </div>
                 <div class="col-12 p-0 personal-numbers d-flex justify-content-around flex-wrap">
+                    @foreach($firstSteps as $firstStep)
                     <div class="col-2 item">
-                        <h1>7550+</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h1>{{$firstStep->number}}</h1>
+                        <p>{{App::getlocale()==='ru'?$firstStep->text_ru:(App::getlocale()==='en'?$firstStep->text_en:$firstStep->text_blr)}}</p>
                     </div>
-                    <div class="col-2 item">
-                        <h1>7550+</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="col-2 item">
-                        <h1>7550+</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="col-2 item">
-                        <h1>7550+</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
+                    @endforeach
                     <div class="col-12 item">
                         <h5>{{__('language.projectVideo')}}</h5>
                     </div>
@@ -127,10 +117,14 @@
                         <h2>{{__('language.welcome')}}</h2>
                     </div>
                     <div class="col-12 item">
-                        <img src="/images/informationVideo.png" alt="" class="img-fluid">
+                        <div id="player"></div>
                         <div class="position-absolute">
-                            <img src="/images/playButton.png" alt="">
+                            <img class="playButton w-100" id="playButton" src="/images/playButton.png"
+                                 data-link="{{$projectVideo}}">
                         </div>
+                        <img class="preview"
+                             src="//img.youtube.com/vi/{{$projectVideo}}/maxresdefault.jpg"
+                             alt="">
                     </div>
                 </div>
             </div>

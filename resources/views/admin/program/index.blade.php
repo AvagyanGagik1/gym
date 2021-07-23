@@ -29,16 +29,10 @@
                             <th scope="col">Трейнер</th>
                             <th scope="col">Подписка</th>
                             <th scope="col">Имя (ru)</th>
-                            <th scope="col">Имя (en)</th>
-                            <th scope="col">Имя (blr)</th>
                             <th scope="col">Тип</th>
                             <th scope="col">Длительность</th>
                             <th scope="col">Интенсивность (ru)</th>
-                            <th scope="col">Интенсивность (en)</th>
-                            <th scope="col">Интенсивность (blr)</th>
                             <th scope="col">Описания (ru)</th>
-                            <th scope="col">Описания (en)</th>
-                            <th scope="col">Описания (blr)</th>
                             <th scope="col">Картинка</th>
                             <th scope="col">ред.\Посм.\уд.</th>
                         </tr>
@@ -51,16 +45,10 @@
                                 <th scope="row">{{$item->trainer->name_ru}}</th>
                                 <th scope="row">{{$item->subscribe->name_ru}}</th>
                                 <td>{{$item->name_ru}}</td>
-                                <td>{{$item->name_en}}</td>
-                                <td>{{$item->name_blr}}</td>
                                 <td>{{$item->type}}</td>
                                 <td>{{$item->duration}}</td>
                                 <td>{{$item->intensity_ru}}</td>
-                                <td>{{$item->intensity_en}}</td>
-                                <td>{{$item->intensity_blr}}</td>
                                 <td>{!! $item->description_ru !!}</td>
-                                <td>{!! $item->description_en !!}</td>
-                                <td>{!! $item->description_blr !!}</td>
                                 <td><img src="{{$item->image}}" alt="" class="img-thumbnail table-image"></td>
                                 <td>
                                     <a href="{{route('program.edit',$item->id)}}"><i class="fas fa-edit custom-icon-edit"></i></a>

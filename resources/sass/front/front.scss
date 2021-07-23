@@ -455,6 +455,7 @@
     height: 100%;
 }
 
+
 #player {
     display: none;
     max-width: 740px;
@@ -2372,6 +2373,16 @@ footer {
 }
 
 .information-content {
+    .preview{
+        max-height: 500px!important;
+        max-width: 1296px!important;
+    }
+    #player {
+        display: none;
+        max-height: 500px!important;
+        max-width: 1296px!important;
+        width: inherit;
+    }
     .personal-head {
         display: flex;
         align-items: center;

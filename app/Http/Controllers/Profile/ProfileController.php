@@ -13,10 +13,12 @@ use App\Model\CompletedProgram;
 use App\Model\CompletedWorkout;
 use App\Model\DietRestrictions;
 use App\Model\Dish;
+use App\Model\FirstStepIcon;
 use App\Model\FoodCategory;
 use App\Model\Personal;
 use App\Model\Program;
 use App\Model\ProgramCategory;
+use App\Model\ProjectVideo;
 use App\Model\PurposeOfNutrition;
 use App\Model\Subscription;
 use App\Model\Workout;
@@ -60,7 +62,7 @@ class ProfileController extends Controller
     public function information(): Response
     {
         $personal = Personal::where('user_id', Auth::id())->latest('created_at')->first();
-        return response()->view('front.user.information', ['personal' => $personal]);
+        return response()->view('front.user.information', ['personal' => $personal,'firstSteps'=>FirstStepIcon::all(),'projectVideo'=>$this->youTubeImage(ProjectVideo::first()->link)]);
     }
 
     public function food(): Response
