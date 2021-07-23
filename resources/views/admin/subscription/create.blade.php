@@ -32,9 +32,9 @@
                 </div>
             </div>
             <div class="form-group row pb-3">
-                <label for="duration" class="col-sm-2 col-form-label font-weight-bold">Продолжительность в днях:</label>
+                <label for="duration" class="col-sm-2 col-form-label font-weight-bold">Продолжительность (подписки) в днях:</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="duration" name="duration" value="{{old('duration')}}">
+                    <input type="number" class="form-control" id="duration" name="duration_subscribe" value="{{old('duration_subscribe')}}">
                     @if ($errors->has('duration'))
                         <span class="text-danger">{{ $errors->first('duration') }}</span>
                     @endif

@@ -42,10 +42,11 @@ class SubscriptionController extends Controller
      * @param StoreSubscriptionRequest $request
      * @return RedirectResponse
      */
-    public function store(StoreSubscriptionRequest $request): RedirectResponse
+    public function store(StoreSubscriptionRequest $request)
     {
         $input =$request->all();
         $image = $request->file('image');
+        $input['duration_program'] = floor($input['duration_subscribe'] /7);
         if($image){
             $input['image'] = $this->uploadSliderImage('/images/subscription',$image);
         }

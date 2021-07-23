@@ -1,7 +1,7 @@
 @extends('layouts.admin.index')
 @section('content')
     <div class="container border p-5 bg-white">
-        <h2 class="pb-5">Форма редактирования заголовка блока (тренеры) на главной странице</h2>
+        <h2 class="pb-5">Форма редактирования Главной новости на главной странице</h2>
         <form action="{{route('admin.main.news.update',['id'=>$mainNew->id])}}" method="post"
               enctype="multipart/form-data">
             @csrf

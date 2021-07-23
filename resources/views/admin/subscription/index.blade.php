@@ -41,7 +41,7 @@
                                 <td>{{$item->name_ru}}</td>
                                 <td>{{$item->name_en}}</td>
                                 <td>{{$item->name_blr}}</td>
-                                <td>{{$item->duration}}</td>
+                                <td>{{$item->duration_subscribe}}</td>
                                 <td>{{$item->price}}</td>
                                 <td><img src="{{$item->image}}" alt="" class="img-thumbnail table-image"></td>
                                 <td>
