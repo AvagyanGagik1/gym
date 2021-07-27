@@ -17,41 +17,43 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Список Пользователей</h5>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Имя (ru)</th>
-                            <th scope="col">цель</th>
-                            <th scope="col">емаил</th>
-                            <th scope="col">калории</th>
-                            <th scope="col">Картинка</th>
-                            <th scope="col">редактировать\Посмотреть\удалить\достижение</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($users as $key=>$item)
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
                             <tr>
-                                <th scope="row">{{$key+1}}</th>
-                                <td>{{$item->name}}</td>
-                                <td>{{$item->target}}</td>
-                                <td>{{$item->email}}</td>
-                                <td>{{$item->calories}}</td>
-                                <td><img src="{{$item->avatar}}" alt="" class="img-thumbnail table-image"></td>
-                                <td>
-                                    <a href="{{route('users.edit',$item->id)}}"><i class="fas fa-edit custom-icon-edit"></i></a>
-                                    <a href=""><i class="far fa-eye custom-icon-preview"></i></a>
-                                    <i class="fas fa-trash custom-icon-remove" data-id="{{$item->id}}" data-name="{{$item->name}}" data-type="users"></i>
-                                    <a href="{{route('user.achievement.show',$item->id)}}"><i class="fas fa-trophy"></i></a>
-                                </td>
+                                <th scope="col">#</th>
+                                <th scope="col">Имя (ru)</th>
+                                <th scope="col">цель</th>
+                                <th scope="col">емаил</th>
+                                <th scope="col">калории</th>
+                                <th scope="col">Картинка</th>
+                                <th scope="col">ред.\удал.\дост.</th>
                             </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                            @foreach($users as $key=>$item)
+                                <tr>
+                                    <th scope="row">{{$key+1}}</th>
+                                    <td>{{$item->name}}</td>
+                                    <td>{{$item->target}}</td>
+                                    <td>{{$item->email}}</td>
+                                    <td>{{$item->calories}}</td>
+                                    <td><img src="{{$item->avatar}}" alt="" class="img-thumbnail table-image"></td>
+                                    <td>
+                                        <a href="{{route('users.edit',$item->id)}}"><i class="fas fa-edit custom-icon-edit"></i></a>
+                                        <a href=""><i class="far fa-eye custom-icon-preview"></i></a>
+                                        <i class="fas fa-trash custom-icon-remove" data-id="{{$item->id}}" data-name="{{$item->name}}" data-type="users"></i>
+                                        <a href="{{route('user.achievement.show',$item->id)}}"><i class="fas fa-trophy"></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

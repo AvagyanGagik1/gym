@@ -74,4 +74,17 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\CompletedProgram');
     }
+    public function purposeOfNutrition(): MorphToMany
+    {
+        return $this->morphedByMany('App\Model\PurposeOfNutrition','userable');
+    }
+    public function dietRestriction(): MorphToMany
+    {
+        return $this->morphedByMany('App\Model\DietRestrictions','userable');
+    }
+    public function dishes(): MorphToMany
+    {
+        return $this->morphedByMany('App\Model\Dish','userable');
+    }
+
 }

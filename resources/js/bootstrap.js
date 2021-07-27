@@ -17,7 +17,6 @@ if (document.getElementsByClassName('editor').length) {
                 }
             )
             .then(editor => {
-                console.log(editor);
             })
             .catch(error => {
                 console.error(error);

@@ -23,6 +23,7 @@ class UserController extends Controller
         $user->subscriptions()->attach($subscription->id);
         $personal = ['age'=>$input['age'],'height'=>$input['height'],'weight'=>$input['weight'],'user_id'=>$user->id];
         Personal::create($personal);
+        $user->achievements()->attach(1);
         Auth::login($user);
         return redirect()->route('profile.index');
     }

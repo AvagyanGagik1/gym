@@ -60,12 +60,12 @@
             </div>
 
             <div class="video-create d-flex flex-column">
-                <button class="btn btn-primary btn-sm ml-auto mb-3" id="cloneVideoDiv">Добавить еше выдео</button>
+                <button class="btn btn-primary btn-sm ml-auto mb-3 cloneVideoDiv" >Добавить еше выдео</button>
                 @foreach($workout->videos as $video)
-                    <div class="form-group row pb-3" id="videoDiv">
+                    <div class="form-group row pb-3 videoDiv" >
                         <label for="link" class="col-sm-2 col-form-label font-weight-bold">Сылка на выдео:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="link" name="link" value="{{$video->link}}">
+                        <div class="col-sm-10 pr-5">
+                            <input type="text" class="form-control" id="link" name="link[]" value="https://www.youtube.com/watch?v={{$video->link}}">
                             @if ($errors->has('link'))
                                 <span class="text-danger">{{ $errors->first('link') }}</span>
                             @endif
@@ -74,10 +74,9 @@
                 @endforeach
             </div>
             <div class="task-create d-flex flex-column">
-{{--                </button>--}}
-{{--                <button type="button" class="btn btn-sm btn-primary ml-auto mb-2" id="cloneTaskDiv">Добавить заданые--}}
-                @foreach($workout->tasks as $task)
-                    <div class="form-group row pb-3" id="taskDiv" data-key="0">
+                <button type="button" class="btn btn-sm btn-primary ml-auto mb-2 cloneTaskDiv" >Добавить заданые</button>
+                @foreach($workout->tasks as $key=>$task)
+                    <div class="form-group row pb-3 taskDiv"  data-key="{{$key}}">
                         <label for="task_ru" class="col-sm-2 col-form-label font-weight-bold">Заданые (ru):</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control tasks" id="task_ru" name="task[]" data-lang="ru"
@@ -103,11 +102,11 @@
                             @endif
                         </div>
                         <div class="subtask col-8 ml-auto d-flex flex-column mt-2">
-{{--                            <button type="button" class="btn btn-sm btn-success ml-auto mb-2 cloneSubTaskDiv">Добавить--}}
-{{--                                Подзаданые--}}
-{{--                            </button>--}}
+                            <button type="button" class="btn btn-sm btn-success ml-auto mb-2 cloneSubTaskDiv">Добавить
+                                Подзаданые
+                            </button>
                             @foreach($task->subtasks as $subtask)
-                                <div class="form-group row pb-3" id="subTaskDiv" data-key="0">
+                                <div class="form-group row pb-3 subTaskDiv"  data-key="{{$key}}">
                                     <label for="subTask_ru" class="col-sm-2 col-form-label font-weight-bold">Подзаданые
                                         (ru):</label>
                                     <div class="col-sm-10">
@@ -159,7 +158,7 @@
             <div class="form-group row">
                 <div class="btn-group">
                     <button type="submit" class="btn btn-success">Обновить</button>
-                    <a href="{{route('workOut.index')}}" class="btn btn-danger">Назад</a>
+                    <a href="{{route('program.afterProgramCreate',$workout->program_id)}}" class="btn btn-danger">Отменить</a>
                 </div>
             </div>
         </form>

@@ -90,6 +90,7 @@ Route::namespace('Admin')->middleware(['auth','is_admin'])->prefix('admin')->gro
     });
     Route::namespace('Program')->group(function (){
         Route::resource('program','ProgramController');
+        Route::get('/program/after/{id}','ProgramController@programAfter')->name('program.afterProgramCreate');
     });
     Route::namespace('ProgramCategory')->group(function (){
         Route::resource('programCategory','ProgramCategoryController');
@@ -114,6 +115,7 @@ Route::namespace('Admin')->middleware(['auth','is_admin'])->prefix('admin')->gro
     });
     Route::namespace('WorkOut')->group(function (){
         Route::resource('workOut','WorkoutController');
+        Route::get('/workout/program/{id}','WorkoutController@programWithWorkouts')->name('workOut.programWorkout');
     });
     Route::namespace('FoodCategory')->group(function (){
         Route::resource('foodCategory','FoodCategoryController');
@@ -155,5 +157,7 @@ Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(functi
     //food
 
     Route::post('/choose/diet','ProfileController@chooseDiet')->name('choose.diet');
+    Route::post('/choose/dishes','ProfileController@chooseDishes')->name('choose.dishes');
+
 
 });

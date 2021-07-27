@@ -90,9 +90,13 @@ $(document).ready(function () {
             },
             1400: {
                 items: 3,
+                nav: true,
+
             },
             1700: {
                 items: 4,
+                nav: true,
+
             },
             1730: {
                 items: 5,
@@ -360,8 +364,8 @@ $(document).ready(function () {
             `)
         $(this).hide()
     })
-    $('.closeDescription').click(function (){
-        $('.content-user-preview').toggle('slow',function (){
+    $('.closeDescription').click(function () {
+        $('.content-user-preview').toggle('slow', function () {
             $(this).toggleClass('visibleContent')
         })
         console.log($(this))
@@ -369,7 +373,7 @@ $(document).ready(function () {
         $(this).children('span.closeContent').toggleClass('d-none')
         $(this).children('img').toggleClass('rotateImg')
     })
-    $('.functional-training').click(function (){
+    $('.functional-training').click(function () {
         $('#youtubeModal').modal('toggle')
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
@@ -390,14 +394,49 @@ $(document).ready(function () {
             }
 
         });
+
         function onPlayerReady(event) {
             event.target.playVideo();
         }
+
         $('.closeYouTube').click(function stopVideo() {
             player.destroy();
         })
     })
+    $('.owl-carousel-food').on('click', '.checked-food-button', function (e) {
+        let category = $(this).attr('data-category')
+        let dish = $(this).attr('data-dish')
+        $(this).addClass('d-none')
+        $(`.un-checked-food-button[data-dish=${dish}]`).removeClass('d-none')
+    })
 
+    $('.owl-carousel-food').on('click', '.un-checked-food-button', function (e) {
+        let category = $(this).attr('data-category')
+        let dish = $(this).attr('data-dish')
+        $(`.checked-food-button[data-category=${category}]`).addClass('d-none')
+        $(`.un-checked-food-button[data-category=${category}]`).removeClass('d-none')
+        $(this).addClass('d-none')
+        $(`.checked-food-button[data-dish=${dish}]`).removeClass('d-none')
+    })
+    $('#chooseDishes').submit(function (e) {
+        e.preventDefault()
+
+        let arr = [];
+        let data = new FormData()
+        $(`.checked-food-button`).each(function () {
+            if (!$(this).hasClass('d-none')) {
+                let tmp = {
+                    'category': $(this).attr('data-category'),
+                    'dish': $(this).attr('data-dish')
+                }
+                arr.push(tmp)
+            }
+        })
+        data.append('dataArray',JSON.stringify(arr))
+        axios.post('/profile/choose/dishes',data).then(response =>{
+          $('#calories').html(response.data.calories)
+        })
+    })
 })
 
 

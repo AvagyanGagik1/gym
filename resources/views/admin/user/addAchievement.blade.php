@@ -20,8 +20,8 @@
             </div>
             <div class="form-group row">
                 <div class="btn-group">
-                    <button type="submit" class="btn btn-success">Создать</button>
-                    <a href="{{route('dish.index')}}" class="btn btn-danger">Назад</a>
+                    <button type="submit" class="btn btn-success">Добавить</button>
+                    <a href="{{route('dish.index')}}" class="btn btn-danger">Отменить</a>
                 </div>
             </div>
         </form>

@@ -209,9 +209,9 @@
                         <div>
                             <p>{{$subscription->price}} <span>грн</span></p>
                         </div>
-                        <button class="btn btnNorm btnNormal1">
+                        <a href="{{route('register')}}" class="btn btnNorm btnNormal1">
                             {{__('language.start')}}
-                        </button>
+                        </a>
                         <!--                <img class="w-100" src="images/subscribe.png" alt="">-->
                     </div>
                 @endforeach

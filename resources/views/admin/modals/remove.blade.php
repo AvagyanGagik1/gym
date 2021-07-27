@@ -10,8 +10,8 @@
             <div class="modal-body remove">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" id="remove-button">Remove</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success" id="remove-button">Удалить</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Отменить</button>
             </div>
         </div>
     </div>

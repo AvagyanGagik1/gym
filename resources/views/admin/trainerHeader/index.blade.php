@@ -68,8 +68,8 @@
             </div>
             <div class="form-group row">
                 <div class="btn-group">
-                    <button type="submit" class="btn btn-success">обновить</button>
-                    <a href="{{route('dashboard')}}" class="btn btn-danger">назад</a>
+                    <button type="submit" class="btn btn-success">Обновить</button>
+                    <a href="{{route('dashboard')}}" class="btn btn-danger">Отменить</a>
                 </div>
             </div>
         </form>

@@ -47,7 +47,7 @@
                     <rect y="14" width="32" height="3" fill="#111111"/>
                 </svg>
             </button>
-            <a href="#" class="navHome navHomeBorder">
+            <a href="{{route('profile.index')}}" class="navHome navHomeBorder">
                 <img src="/images/logo.png" alt="">
             </a>
             <div class="navSearch">

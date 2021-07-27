@@ -10,6 +10,7 @@ use App\Model\Program;
 use App\Model\ProgramCategory;
 use App\Model\Subscription;
 use App\Model\Trainer;
+use App\Model\Workout;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -45,12 +46,13 @@ class ProgramController extends Controller
      * @param StoreProgramRequest $request
      * @return RedirectResponse
      */
-    public function store(StoreProgramRequest $request): RedirectResponse
+    public function store(StoreProgramRequest $request)
     {
         $input = $request->all();
         $input['image'] = $this->uploadSliderImage('/images/program',$request->file('image'));
-        Program::create($input);
-        return redirect()->route('program.index');
+        $program = Program::create($input);
+        $program->workout()->paginate(10);
+        return redirect()->route('program.afterProgramCreate',$program->id);
     }
 
     /**
@@ -107,5 +109,12 @@ class ProgramController extends Controller
         $this->deleteImage($program->image);
         $program->delete();
         return response()->json(['success'=>1,'message'=>'program successful deleted']);
+    }
+
+
+    public function programAfter($id){
+        $program = Program::with('workout')->where('id',$id)->first();
+        $workouts = $program->workout;
+        return response()->view('admin.program.afterProgramCreate',['program'=>$program,'workouts'=>$workouts]);
     }
 }

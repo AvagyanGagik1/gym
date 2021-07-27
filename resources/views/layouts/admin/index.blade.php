@@ -76,10 +76,10 @@
                         <a class="nav-link {{ Request::is('admin/program') ? 'active' : '' }}"
                            href="{{route('program.index')}}">Програмы</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ Request::is('admin/workOut') ? 'active' : '' }}"
-                           href="{{route('workOut.index')}}">Тренировкы</a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link {{ Request::is('admin/workOut') ? 'active' : '' }}"--}}
+{{--                           href="{{route('workOut.index')}}">Тренировкы</a>--}}
+{{--                    </li>--}}
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('admin/achievement') ? 'active' : '' }}"
                            href="{{route('achievement.index')}}">Достижения</a>

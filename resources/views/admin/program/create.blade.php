@@ -82,11 +82,11 @@
             </div>
             <div class="form-group row pb-3">
                 <p class="col-sm-2 col-form-label font-weight-bold">Тип програмы</p>
-                <div class="custom-control custom-radio m-2 ">
+                <div class="custom-control custom-radio customSelectCheckForTraining m-2 ">
                     <input type="radio" id="customRadio1" name="type" value="Hall" class="custom-control-input">
                     <label class="custom-control-label" for="customRadio1">Зал</label>
                 </div>
-                <div class="custom-control custom-radio m-2 ">
+                <div class="custom-control custom-radio customSelectCheckForTraining m-2 ">
                     <input type="radio" id="customRadio2" name="type" value="home" class="custom-control-input">
                     <label class="custom-control-label" for="customRadio2">Дом</label>
                 </div>
@@ -172,6 +172,14 @@
                     </div>
                 </div>
             </div>
+{{--            <div class="col-6">--}}
+{{--                <button type="button" class="btn btn-primary" id="create-workout">--}}
+{{--                    добавить тренировку--}}
+{{--                </button>--}}
+{{--            </div>--}}
+{{--            <div class="workouts">--}}
+{{--                @include('admin.workout.create')--}}
+{{--            </div>--}}
             <div class="form-group row">
                 <div class="btn-group">
                     <button type="submit" class="btn btn-success">Создать</button>

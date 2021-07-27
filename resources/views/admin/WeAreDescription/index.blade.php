@@ -43,8 +43,8 @@
                                 <img src="{{$weAre->image}}" alt="" width="200" id="default-image">
                                 <input type="file" name="image">
                                 <br>
-                                <button type="submit" class=" btn btn-success">Изменить</button>
-                                <a href="{{route('dashboard')}}" class="btn btn-danger">назад</a>
+                                <button type="submit" class=" btn btn-success">Обновить</button>
+                                <a href="{{route('dashboard')}}" class="btn btn-danger">Отменить</a>
                             </form>
                         @endforeach
 

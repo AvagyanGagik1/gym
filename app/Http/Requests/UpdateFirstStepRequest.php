@@ -32,7 +32,7 @@ class UpdateFirstStepRequest extends FormRequest
             'description_en'=>'required',
             'description_blr'=>'required',
             'image'=>'nullable|image',
-            'video_link'=>'required'
+            'video_link'=>'required|active_url'
         ];
     }
 }

@@ -59,7 +59,7 @@ class WorkoutController extends Controller
         $this->saveVideos($videoLinks,$workOut);
         $this->saveTasks($tasks,$workOut);
 
-        return response()->json(['success'=>1,'message'=>'workout created successful']);
+        return response()->json(['id'=>$workOut->program_id]);
     }
 
     /**
@@ -97,7 +97,7 @@ class WorkoutController extends Controller
      * @param int $id
      * @return JsonResponse
      */
-    public function update(UpdateWorkoutRequest $request, int $id): JsonResponse
+    public function update(UpdateWorkoutRequest $request, int $id)
     {
         $workout = Workout::find($id);
         $input = $request->all();
@@ -107,14 +107,14 @@ class WorkoutController extends Controller
         foreach ($workout->tasks as $ta){
             $ta->delete();
         }
-        foreach ($workout->viedos as $video){
+        foreach ($workout->videos as $video){
             $video->delete();
         }
         $workout->videos()->detach();
         $workout->tasks()->detach();
         $this->saveVideos($videoLinks,$workout);
         $this->saveTasks($tasks,$workout);
-        return response()->json(['success'=>1,'message'=>'workout created successful']);
+        return response()->json(['id'=>$workout->program_id]);
     }
 
     /**
@@ -174,5 +174,10 @@ class WorkoutController extends Controller
             $video = Video::create(['link'=>$this->youTubeImage($i),'name'=>$this->youtubeVideoName($this->youTubeImage($i))]);
             $workout->videos()->attach([$video->id]);
         }
+    }
+
+    public function programWithWorkouts(Request $request,$id){
+        $program = Program::where('id',$id)->with(['workout.videos','workout.tasks.subtasks'])->first();
+        return response()->view('admin.program.workoutsWithProgram',['program'=>$program]);
     }
 }

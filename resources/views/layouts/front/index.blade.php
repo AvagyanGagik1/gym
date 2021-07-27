@@ -52,7 +52,7 @@
                             <li>{{__("language.training")}}</li>
                         </a>
                         <a href="#expert">
-                            <li>{{__("language.training")}}</li>
+                            <li>{{__("language.trainer")}}</li>
                         </a>
                         <a href="#about">
                             <li>{{__("language.results")}}</li>

@@ -112,8 +112,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class=" btn btn-success">Изменить</button>
-                            <a href="{{route('dashboard')}}" class="btn btn-danger">назад</a>
+                            <button type="submit" class=" btn btn-success">Обновить</button>
+                            <a href="{{route('dashboard')}}" class="btn btn-danger">Отменить</a>
                         </form>
                     </div>
                 </div>

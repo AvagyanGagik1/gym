@@ -48,7 +48,7 @@
             <div class="form-group row">
                 <div class="btn-group">
                     <button type="submit" class="btn btn-success">обновить</button>
-                    <a href="{{route('slider.index')}}" class="btn btn-danger">назад</a>
+                    <a href="{{route('slider.index')}}" class="btn btn-danger">Отменить</a>
                 </div>
             </div>
         </form>

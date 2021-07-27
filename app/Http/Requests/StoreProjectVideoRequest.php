@@ -25,7 +25,7 @@ class StoreProjectVideoRequest extends FormRequest
     public function rules()
     {
         return [
-            'link'=>'required'
+            'link'=>'required|active_url'
         ];
     }
 }
