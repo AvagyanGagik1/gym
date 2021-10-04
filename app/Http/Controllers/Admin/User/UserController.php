@@ -66,7 +66,16 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return response()->view('admin.user.show',[
+            'user'=>User::where('id',$id)->with(
+            [
+                'completedWorkouts',
+                'completedPrograms.workout',
+                'purposeOfNutrition',
+                'dietRestriction',
+                'dishes'])->first(),
+            'personals'=>Personal::where('user_id',$id)->get()
+        ]);
     }
 
     /**

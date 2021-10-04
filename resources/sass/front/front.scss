@@ -4149,6 +4149,7 @@ body {
 .owl-carousel-food{
     max-width: 100vw;
     overflow: hidden;
+    touch-action: none;
     .owl-item{
         min-width: 300px;
     }

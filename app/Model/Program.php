@@ -20,10 +20,10 @@ class Program extends Model
     {
         return $this->belongsTo('App\Model\Trainer','trainer_id');
     }
-    public function subscribe(): BelongsTo
-    {
-        return $this->belongsTo('App\Model\Subscription','subscription_id');
-    }
+//    public function subscribe(): BelongsTo
+//    {
+//        return $this->belongsTo('App\Model\Subscription','subscription_id');
+//    }
     public function workout(){
         return $this->hasMany('App\Model\Workout');
     }

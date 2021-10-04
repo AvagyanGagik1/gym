@@ -19,7 +19,7 @@ class CreateSubscriptionsTable extends Migration
             $table->string('name_en');
             $table->string('name_blr');
             $table->string('duration_subscribe');
-            $table->string('duration_program');
+//            $table->string('duration_program');
             $table->bigInteger('price');
             $table->string('image');
             $table->timestamps();

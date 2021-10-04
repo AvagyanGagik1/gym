@@ -51,7 +51,9 @@ $(document).ready(function () {
                     callbacks: {
                         label: function(tooltipItem, data) {
                             let dataset = data['datasets'][0];
-                            return dataset.data[0]+ ' кг'
+                            // console.log(dataset[])
+                            console.log(dataset)
+                            return dataset.data[tooltipItem.index]+ ' кг'
                 },
                         title: function (tooltipItem,data){
                             let date = customTooltip[tooltipItem[0].index].getDate()+'.'+ '0'+ Number(customTooltip[tooltipItem[0].index].getMonth()+1)+'.'+ customTooltip[tooltipItem[0].index].getFullYear()

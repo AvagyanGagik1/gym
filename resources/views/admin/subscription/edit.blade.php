@@ -8,7 +8,7 @@
             <div class="form-group row pb-3">
                 <label for="name_ru" class="col-sm-2 col-form-label font-weight-bold">Заголовок (ru):</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name_ru" name="name_ru" value="{{$subscription->name_ru}}">
+                    <input placeholder="Введите Заголовок" type="text" class="form-control" id="name_ru" name="name_ru" value="{{$subscription->name_ru}}">
                     @if ($errors->has('name_ru'))
                         <span class="text-danger">{{ $errors->first('name_ru') }}</span>
                     @endif
@@ -17,7 +17,7 @@
             <div class="form-group row pb-3">
                 <label for="name_en" class="col-sm-2 col-form-label font-weight-bold">Заголовок (en):</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name_en" name="name_en" value="{{$subscription->name_en}}">
+                    <input placeholder="Введите Заголовок" type="text" class="form-control" id="name_en" name="name_en" value="{{$subscription->name_en}}">
                     @if ($errors->has('name_en'))
                         <span class="text-danger">{{ $errors->first('name_en') }}</span>
                     @endif
@@ -26,25 +26,25 @@
             <div class="form-group row pb-3">
                 <label for="name_blr" class="col-sm-2 col-form-label font-weight-bold">Заголовок (blr):</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name_blr" name="name_blr" value="{{$subscription->name_blr}}">
+                    <input placeholder="Введите Заголовок" type="text" class="form-control" id="name_blr" name="name_blr" value="{{$subscription->name_blr}}">
                     @if ($errors->has('name_blr'))
                         <span class="text-danger">{{ $errors->first('name_blr') }}</span>
                     @endif
                 </div>
             </div>
             <div class="form-group row pb-3">
-                <label for="duration" class="col-sm-2 col-form-label font-weight-bold">Продолжительность в днях:</label>
+                <label for="duration_subscribe" class="col-sm-2 col-form-label font-weight-bold">Продолжительность в днях:</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="duration" name="duration" value="{{$subscription->duration}}">
-                    @if ($errors->has('duration'))
-                        <span class="text-danger">{{ $errors->first('duration') }}</span>
+                    <input placeholder="Введите Продолжительность в днях" type="number" class="form-control" id="duration_subscribe" name="duration_subscribe" value="{{$subscription->duration_subscribe}}">
+                    @if ($errors->has('duration_subscribe'))
+                        <span class="text-danger">{{ $errors->first('duration_subscribe') }}</span>
                     @endif
                 </div>
             </div>
             <div class="form-group row pb-3">
                 <label for="price" class="col-sm-2 col-form-label font-weight-bold">Цена:</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="price" name="price" value="{{$subscription->price}}">
+                    <input placeholder="Введите Цена" type="number" class="form-control" id="price" name="price" value="{{$subscription->price}}">
                     @if ($errors->has('price'))
                         <span class="text-danger">{{ $errors->first('price') }}</span>
                     @endif

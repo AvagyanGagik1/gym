@@ -28,7 +28,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Категория (ru)</th>
                                 <th scope="col">Трейнер</th>
-                                <th scope="col">Подписка</th>
+{{--                                <th scope="col">Подписка</th>--}}
                                 <th scope="col">Имя (ru)</th>
                                 <th scope="col">Тип</th>
                                 <th scope="col">Длительность</th>
@@ -44,7 +44,7 @@
                                     <th scope="row">{{$key+1}}</th>
                                     <th scope="row">{{$item->category->name_ru}}</th>
                                     <th scope="row">{{$item->trainer->name_ru}}</th>
-                                    <th scope="row">{{$item->subscribe->name_ru}}</th>
+{{--                                    <th scope="row">{{$item->subscribe->name_ru}}</th>--}}
                                     <td>{{$item->name_ru}}</td>
                                     <td>{{$item->type}}</td>
                                     <td>{{$item->duration}}</td>

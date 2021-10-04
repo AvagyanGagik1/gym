@@ -783,7 +783,8 @@
     }
     .about {
         div:first-of-type {
-            max-width: 100%;
+            max-width: 92vw;
+            width: 100vw;
             padding: 0;
         }
 
@@ -860,9 +861,11 @@
             }
 
             .aboutThird-back {
-                left: 35px;
                 top: 90px;
-
+                right: 0!important;
+                img{
+                    margin: 0!important;
+                }
                 img:last-child {
                     display: none;
                 }

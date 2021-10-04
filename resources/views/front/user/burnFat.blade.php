@@ -198,7 +198,7 @@
                                                         fill="#111111"/>
                                                 </svg>
                                             </div>
-                                            <p>{{count($program->subscribe->users)}}</p>
+                                            <p>{{count(optional($subscription)->users)}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -400,7 +400,7 @@
                                     </div>
                                     <div class="d-flex flex-column ">
                                         <p>{{__('language.signed')}}</p>
-                                        <h1>{{count($program->subscribe->users)}}</h1>
+                                        <h1>{{count(optional($subscription)->users)}}</h1>
                                     </div>
                                 </div>
                             </div>

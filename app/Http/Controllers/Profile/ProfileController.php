@@ -40,9 +40,12 @@ class ProfileController extends Controller
         $myProgramId = [];
         $myPrograms = [];
         $programsCategory = [];
-        $user = User::where('id', Auth::id())->with(['subscriptions.programs.category.programs', 'completedWorkouts.workout', 'completedPrograms'])->first();
-        $programsCategory = $user->subscriptions->map->programs->map->map->map->category->collect()[0];
-        $programs = $user->subscriptions->map->programs->collect()[0];
+//        $user = User::where('id', Auth::id())->with(['subscriptions.programs.category.programs', 'completedWorkouts.workout', 'completedPrograms'])->first();
+//        $programsCategory = $user->subscriptions->map->programs->map->map->map->category->collect()[0];
+//        $programs = $user->subscriptions->map->programs->collect()[0];
+        $user = User::where('id', Auth::id())->with(['completedWorkouts.workout', 'completedPrograms'])->first();
+        $programsCategory = ProgramCategory::with('programs')->get();
+//        $programs = $user->subscriptions->map->programs->collect()[0];
         $completedWorkoutsProgram_id = $user->completedWorkouts->map->workout->map->program_id->collect();
         $completedPrograms_id = $user->completedPrograms->map->program_id->collect()->toArray();
         foreach ($completedWorkoutsProgram_id as $key => $id) {
@@ -56,7 +59,12 @@ class ProfileController extends Controller
         }
         if ($myPrograms)
             $myProgramId = $myPrograms->pluck('id')->toArray();
-        return response()->view('front.user.index', ['myProgramId' => $myProgramId, 'myPrograms' => $myPrograms, 'programsCategory' => $programsCategory->unique('id')]);
+
+
+        return response()->view('front.user.index', [
+            'myProgramId' => $myProgramId,
+            'myPrograms' => $myPrograms,
+            'programsCategory' => $programsCategory]);
     }
 
     public function information(): Response
@@ -111,7 +119,7 @@ class ProfileController extends Controller
 
             $workout->videos;
         }
-        $user = Auth::user();
+        $user = User::where('id',Auth::id())->first();
         $completedWorkouts = [];
         foreach ($user->completedWorkouts as $item) {
             array_push($completedWorkouts, $item->workout_id);
@@ -123,7 +131,12 @@ class ProfileController extends Controller
         if (!$workout) {
             $workout = $program->workout()->where('id', max($completedWorkouts))->with('videos', 'tasks', 'comments')->first();
         }
-        return response()->view('front.user.burnFat', ['program' => $program, 'completedWorkouts' => $completedWorkouts, 'workout' => $workout]);
+
+        return response()->view('front.user.burnFat', [
+            'program' => $program,
+            'completedWorkouts' => $completedWorkouts,
+            'workout' => $workout,
+            'subscription'=>$user->subscriptions()->with('users')->first()]);
     }
 
     /**

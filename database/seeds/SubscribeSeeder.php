@@ -10,7 +10,7 @@ class SubscribeSeeder extends Seeder
             'name_en'=>'Недельная Трансформация',
             'name_blr'=>'Недельная Трансформация',
             'duration_subscribe' => 365,
-            'duration_program' => 4,
+//            'duration_program' => 4,
             'price'=>340,
             'image' => '/images/subscription/subscribe1.png'
         ],
@@ -19,7 +19,7 @@ class SubscribeSeeder extends Seeder
             'name_en'=>' Недельная Трансформация',
             'name_blr'=>' Недельная Трансформация',
             'duration_subscribe' => 365,
-            'duration_program' => 8,
+//            'duration_program' => 8,
             'price'=>640,
             'image' => '/images/subscription/subscribe2.png'
         ],
@@ -28,7 +28,7 @@ class SubscribeSeeder extends Seeder
             'name_en'=>' Недельная Трансформация',
             'name_blr'=>' Недельная Трансформация',
             'duration_subscribe' => 365,
-            'duration_program' => 16,
+//            'duration_program' => 16,
             'price'=>740,
             'image' => '/images/subscription/subscribe3.png'
         ],
@@ -37,7 +37,7 @@ class SubscribeSeeder extends Seeder
             'name_en'=>' Недельная Трансформация',
             'name_blr'=>' Недельная Трансформация',
             'duration_subscribe' => 365,
-            'duration_program' => 32,
+//            'duration_program' => 32,
             'price'=>979,
             'image' => '/images/subscription/subscribe4.png'
         ]

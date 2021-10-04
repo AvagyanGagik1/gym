@@ -45,7 +45,7 @@
                                     <td><img src="{{$item->avatar}}" alt="" class="img-thumbnail table-image"></td>
                                     <td>
                                         <a href="{{route('users.edit',$item->id)}}"><i class="fas fa-edit custom-icon-edit"></i></a>
-                                        <a href=""><i class="far fa-eye custom-icon-preview"></i></a>
+                                        <a href="{{route('users.show',$item->id)}}"><i class="far fa-eye custom-icon-preview"></i></a>
                                         <i class="fas fa-trash custom-icon-remove" data-id="{{$item->id}}" data-name="{{$item->name}}" data-type="users"></i>
                                         <a href="{{route('user.achievement.show',$item->id)}}"><i class="fas fa-trophy"></i></a>
                                     </td>

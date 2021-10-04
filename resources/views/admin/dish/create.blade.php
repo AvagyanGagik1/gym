@@ -41,7 +41,7 @@
             <div class="form-group row pb-3">
                 <label for="name_ru" class="col-sm-2 col-form-label font-weight-bold">Имя (ru):</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name_ru" name="name_ru" value="{{old('name_ru')}}">
+                    <input type="text" placeholder="Введите Имя" class="form-control" id="name_ru" name="name_ru" value="{{old('name_ru')}}">
                     @if ($errors->has('name_ru'))
                         <span class="text-danger">{{ $errors->first('name_ru') }}</span>
                     @endif
@@ -50,7 +50,7 @@
             <div class="form-group row pb-3">
                 <label for="name_en" class="col-sm-2 col-form-label font-weight-bold">Имя (en):</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name_en" name="name_en" value="{{old('name_en')}}">
+                    <input type="text" placeholder="Введите Имя" class="form-control" id="name_en" name="name_en" value="{{old('name_en')}}">
                     @if ($errors->has('name_en'))
                         <span class="text-danger">{{ $errors->first('name_en') }}</span>
                     @endif
@@ -59,7 +59,7 @@
             <div class="form-group row pb-3">
                 <label for="name_blr" class="col-sm-2 col-form-label font-weight-bold">Имя (blr):</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name_blr" name="name_blr" value="{{old('name_blr')}}">
+                    <input type="text" placeholder="Введите Имя" class="form-control" id="name_blr" name="name_blr" value="{{old('name_blr')}}">
                     @if ($errors->has('name_blr'))
                         <span class="text-danger">{{ $errors->first('name_blr') }}</span>
                     @endif
@@ -68,7 +68,7 @@
             <div class="form-group row pb-3">
                 <label for="protein" class="col-sm-2 col-form-label font-weight-bold">Протеин:</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="protein" name="protein" value="{{old('protein')}}">
+                    <input type="number" placeholder="Введите Протеин" class="form-control" id="protein" name="protein" value="{{old('protein')}}">
                     @if ($errors->has('protein'))
                         <span class="text-danger">{{ $errors->first('protein') }}</span>
                     @endif
@@ -77,7 +77,7 @@
             <div class="form-group row pb-3">
                 <label for="calories" class="col-sm-2 col-form-label font-weight-bold">Калории:</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="protein" name="calories" value="{{old('calories')}}">
+                    <input type="number" placeholder="Введите Калории" class="form-control" id="protein" name="calories" value="{{old('calories')}}">
                     @if ($errors->has('calories'))
                         <span class="text-danger">{{ $errors->first('calories') }}</span>
                     @endif
@@ -86,7 +86,7 @@
             <div class="form-group row pb-3">
                 <label for="fats" class="col-sm-2 col-form-label font-weight-bold">Белки:</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="fats" name="fats" value="{{old('fats')}}">
+                    <input type="number" placeholder="Введите Белки" class="form-control" id="fats" name="fats" value="{{old('fats')}}">
                     @if ($errors->has('fats'))
                         <span class="text-danger">{{ $errors->first('fats') }}</span>
                     @endif
@@ -95,7 +95,7 @@
             <div class="form-group row pb-3">
                 <label for="carbohydrates" class="col-sm-2 col-form-label font-weight-bold">Углеводы:</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="carbohydrates" name="carbohydrates" value="{{old('carbohydrates')}}">
+                    <input type="number" placeholder="Введите Углеводы" class="form-control" id="carbohydrates" name="carbohydrates" value="{{old('carbohydrates')}}">
                     @if ($errors->has('carbohydrates'))
                         <span class="text-danger">{{ $errors->first('carbohydrates') }}</span>
                     @endif
@@ -104,7 +104,7 @@
             <div class="form-group row pb-3">
                 <label for="description_ru" class="col-sm-2 col-form-label font-weight-bold">Описаные (ru):</label>
                 <div class="col-sm-10">
-                    <textarea name="description_ru" id="description_ru" class="editor" cols="50" rows="10">{{old('description_ru')}}</textarea>
+                    <textarea name="description_ru" id="description_ru" class="editor" placeholder="Введите Описаные" cols="50" rows="10">{{old('description_ru')}}</textarea>
                     @if ($errors->has('description_ru'))
                         <span class="text-danger">{{ $errors->first('description_ru') }}</span>
                     @endif
@@ -113,7 +113,7 @@
             <div class="form-group row pb-3">
                 <label for="description_en" class="col-sm-2 col-form-label font-weight-bold">Описаные (en):</label>
                 <div class="col-sm-10">
-                    <textarea name="description_en" id="description_en" class="editor" cols="50" rows="10">{{old('description_en')}}</textarea>
+                    <textarea name="description_en" id="description_en" class="editor" placeholder="Введите Описаные" cols="50" rows="10">{{old('description_en')}}</textarea>
                     @if ($errors->has('description_en'))
                         <span class="text-danger">{{ $errors->first('description_en') }}</span>
                     @endif
@@ -122,7 +122,7 @@
             <div class="form-group row pb-3">
                 <label for="description_blr" class="col-sm-2 col-form-label font-weight-bold">Описаные (blr):</label>
                 <div class="col-sm-10">
-                    <textarea name="description_blr" id="description_blr" class="editor" cols="50" rows="10">{{old('description_blr')}}</textarea>
+                    <textarea name="description_blr" id="description_blr" class="editor" placeholder="Введите Описаные" cols="50" rows="10">{{old('description_blr')}}</textarea>
                     @if ($errors->has('description_blr'))
                         <span class="text-danger">{{ $errors->first('description_blr') }}</span>
                     @endif

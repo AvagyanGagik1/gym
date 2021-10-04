@@ -8,3 +8,5 @@ class ProjectVideo extends Model
 {
     protected $guarded = ['id'];
 }
+
+
