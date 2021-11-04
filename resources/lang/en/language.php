@@ -91,5 +91,5 @@ return [
     "downloadNutritional"=>"Download nutritional guidelines",
     "comment"=>"Comment",
     "answer"=>"Answer",
-
+    "totalCC"=>"Total Calories Lost"
 ];

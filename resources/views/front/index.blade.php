@@ -19,10 +19,10 @@
         </div>
     </section>
     <section class="gym position-relative">
-        <h1 class="onlineGym">ONLINE GYM.</h1>
+        <h2 class="onlineGym">ONLINE GYM.</h2>
         <div>
             <h6 class="gymSubTitle">{{__('language.whoWeAre')}}</h6>
-            <h1 class="gymTitle">{{App::getlocale()==='ru'?$who->title_ru:(App::getlocale()==='en'?$who->title_en:$who->title_blr)}}</h1>
+            <h2 class="gymTitle">{{App::getlocale()==='ru'?$who->title_ru:(App::getlocale()==='en'?$who->title_en:$who->title_blr)}}</h2>
             <div class="d-flex gymImages justify-content-center flex-wrap">
                 @foreach($descriptionsHwo as $desc)
                     <div class="d-flex flex-md-column align-items-center gymItem">
@@ -42,7 +42,7 @@
         </div>
     </section>
     <section id="program" class="program d-flex flex-column align-items-center">
-        <h1 class="program-header">{{__('language.ourPrograms')}}</h1>
+        <h2 class="program-header">{{__('language.ourPrograms')}}</h2>
         <div class="d-flex flex-column align-items-center col-md-10 col-sm-12 col-12">
             <div class="owl-two owl-carousel owl-theme position-relative">
                 @foreach($programs as $program)
@@ -107,7 +107,7 @@
                                 <img class="imgFitness" src="{{$program->image}}" alt="">
                             </div>
                             <div class="p-2 cardWrapper">
-                                <h1 class="cardHeader">{{App::getlocale()==='ru'?$program->name_ru:(App::getlocale()==='en'?$program->name_en:$program->name_blr)}}</h1>
+                                <h2 class="cardHeader">{{App::getlocale()==='ru'?$program->name_ru:(App::getlocale()==='en'?$program->name_en:$program->name_blr)}}</h2>
                                 <div class="cardContent">
                                     <ul>
                                         <li class="cardListLeft">{{__('language.numbOfWork')}}</li>
@@ -199,7 +199,7 @@
     </section>
     <section id="subscribe" class="subscribe d-flex flex-column align-items-center">
         <h6>НУЖНО ПРИДУМАТЬ НАЗВАНИЕ ДОПОЛНИТЕЛЬНОЕ</h6>
-        <h1>{{__('language.subscribe')}} Online Gym project {{__('language.firstSteps')}}!</h1>
+        <h2>{{__('language.subscribe')}} Online Gym project {{__('language.firstSteps')}}!</h2>
         <div class="container-fluid col-12">
             <div class="row d-flex flex-wrap">
                 @foreach($subscriptions as $subscription)
@@ -220,9 +220,9 @@
         </div>
     </section>
     <section id="about" class="about col-12 d-flex flex-column text-left align-items-center position-relative">
-        <div class="col-8 ">
+        <div class="about-items">
             <div class="col-6 aboutFirst">
-                <h1>{{App::getlocale()==='ru'?$firstStep->title_ru:(App::getlocale()==='en'?$firstStep->title_en:$firstStep->title_blr)}}</h1>
+                <h2>{{App::getlocale()==='ru'?$firstStep->title_ru:(App::getlocale()==='en'?$firstStep->title_en:$firstStep->title_blr)}}</h2>
                 <p>{{App::getlocale()==='ru'?$firstStep->description_ru:(App::getlocale()==='en'?$firstStep->description_en:$firstStep->description_blr)}}</p>
             </div>
             <div class="imgAbsolute col-lg-12">
@@ -230,19 +230,20 @@
                 <div class="img2">
 
                     <div id="player"></div>
-                    <img class="playButton" id="playButton" src="/images/playButton.png" data-link="{{$youtubeImage}}">
+                    <img class="playButton" alt="playButton" id="playButton" src="/images/playButton.png" data-link="{{$youtubeImage}}">
                     <img class="preview" src="//img.youtube.com/vi/{{$youtubeImage}}/maxresdefault.jpg" alt="">
                 </div>
             </div>
-            <div class="col-6 d-flex flex-wrap
-			aboutSecond">
+            <div class="opg-numbers col-12">
                 @foreach($firstSteIcon as $icon)
-                    <h1 class="col-6">{{$icon->number}}+</h1>
-                    <p class="col-6">{{App::getlocale()==='ru'?$icon->text_ru:(App::getlocale()==='en'?$icon->text_en:$icon->text_blr)}}</p>
+                    <div class="opg-number">
+                        <span>{{$icon->number}}</span>
+                        <p>{{App::getlocale()==='ru'?$icon->text_ru:(App::getlocale()==='en'?$icon->text_en:$icon->text_blr)}}</p>
+                    </div>
                 @endforeach
             </div>
         </div>
-        <div class="aboutThird col-8">
+        <div class="aboutThird col-7">
             <div class="d-flex justify-content-end aboutThird-back">
                 <img class="mr-4" src="images/backPic1.png" alt="">
                 <img src="images/backPic.png" alt="">
@@ -264,7 +265,7 @@
                         @foreach($clientComments as $comment)
                             <div>
                                 <p>{{App::getlocale()==='ru'?$comment->text_ru:(App::getlocale()==='en'?$comment->text_en:$comment->text_blr)}} </p>
-                                <h1>{{App::getlocale()==='ru'?$comment->user_name_ru:(App::getlocale()==='en'?$comment->user_name_en:$comment->user_name_blr)}}</h1>
+                                <h2>{{App::getlocale()==='ru'?$comment->user_name_ru:(App::getlocale()==='en'?$comment->user_name_en:$comment->user_name_blr)}}</h2>
                             </div>
 
                         @endforeach
@@ -319,7 +320,7 @@
                                         </svg>
 
                                     </div>
-                                    <h1>{{App::getlocale()==='ru'?$item->name_ru:(App::getlocale()==='en'?$item->name_en:$item->name_blr)}}</h1>
+                                    <h2>{{App::getlocale()==='ru'?$item->name_ru:(App::getlocale()==='en'?$item->name_en:$item->name_blr)}}</h2>
                                     <h3>{{App::getlocale()==='ru'?$item->profession_ru:(App::getlocale()==='en'?$item->profession_en:$item->profession_blr)}}</h3>
                                 </div>
                             </div>
@@ -368,7 +369,7 @@
         </div>
         <div class="col-12 d-flex flex-column flex-sm-column flex-md-row justify-content-between ">
             <div class="col-md-5 xol-sm-12 col-12">
-                <h1>{{App::getlocale()==='ru'?$mainNews->quote_ru:(App::getlocale()==='en'?$mainNews->quote_en:$mainNews->quote_blr)}}</h1>
+                <h2>{{App::getlocale()==='ru'?$mainNews->quote_ru:(App::getlocale()==='en'?$mainNews->quote_en:$mainNews->quote_blr)}}</h2>
                 <p>{{$mainNews->author}}</p>
             </div>
             <div class="col-md-7 xol-sm-12 col-12">

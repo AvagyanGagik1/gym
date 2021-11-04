@@ -1,6 +1,6 @@
 @extends('layouts.front.profile')
 @section('content')
-    <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog"
          aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content bg-transparent border-0 ">
@@ -21,14 +21,13 @@
         @if($program->type === 'home')
 
             <section class="content burn-content">
-                <div class="d-flex flex-column">.
-                    {{$program->type}}
+                <div class="d-flex flex-column">
                     <div class="col-xl-10 col-12 d-flex justify-content-center flex-wrap m-auto youtube-account">
                         <div class="col-12 d-flex align-items-center justify-content-between subscribe-header">
                             <h2>{{App::getlocale()==='ru'?$program->name_ru:(App::getlocale()==='en'?$program->name_en:$program->name_blr)}}</h2>
                             <img class="d-none d-lg-block"
                                  src="{{$program->type === 'home'?'/images/cardioHome.png':'/images/hall.png'}}"
-                                 alt="">
+                                 alt="homeOrHall">
                         </div>
                         <div
                             class="col-12 d-flex d-lg-none d-flex align-items-center justify-content-between youtube-account">
@@ -38,7 +37,7 @@
                                 </div>
                                 <div class="d-flex flex-column ">
                                     <p>{{__('language.trainer')}}</p>
-                                    <h1>{{App::getlocale()==='ru'?$program->trainer->name_ru:(App::getlocale()==='en'?$program->trainer->name_en:$program->trainer->name_blr)}}</h1>
+                                    <h2>{{App::getlocale()==='ru'?$program->trainer->name_ru:(App::getlocale()==='en'?$program->trainer->name_en:$program->trainer->name_blr)}}</h2>
                                 </div>
                             </div>
                             <img class="content-user-img"
@@ -61,7 +60,7 @@
                                     </div>
                                     <div class="d-flex flex-column ">
                                         <p>{{__('language.intensity')}}</p>
-                                        <h1>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h1>
+                                        <h2>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h2>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center content-user">
@@ -75,19 +74,20 @@
                                     </div>
                                     <div class="d-flex flex-column ">
                                         <p>{{__('language.signed')}}</p>
-                                        <h1>2 123</h1>
+                                        <h2>{{count($subscription->users)}}</h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 d-lg-flex d-none  justify-content-between align-items-center content-user">
+                        <div
+                            class="col-12 d-lg-flex d-none  justify-content-between align-items-center content-user ogp-trainer-header">
                             <div class="d-flex align-items-center content-user">
                                 <div class="content-user-image">
                                     <img src="{{$program->trainer->image}}" alt="">
                                 </div>
                                 <div class="d-flex flex-column ">
                                     <p>{{__('language.trainer')}}</p>
-                                    <h1>{{App::getlocale()==='ru'?$program->trainer->name_ru:(App::getlocale()==='en'?$program->trainer->name_en:$program->trainer->name_blr)}}</h1>
+                                    <h2>{{App::getlocale()==='ru'?$program->trainer->name_ru:(App::getlocale()==='en'?$program->trainer->name_en:$program->trainer->name_blr)}}</h2>
                                 </div>
                             </div>
 
@@ -106,7 +106,7 @@
                                     </div>
                                     <div class="d-flex flex-column ">
                                         <p>{{__('language.intensity')}}</p>
-                                        <h1>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h1>
+                                        <h2>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h2>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center content-user">
@@ -120,7 +120,7 @@
                                     </div>
                                     <div class="d-flex flex-column ">
                                         <p>{{__('language.signed')}}</p>
-                                        <h1>2 123</h1>
+                                        <h2>{{count($subscription->users)}}</h2>
                                     </div>
                                 </div>
                             </div>
@@ -141,9 +141,7 @@
                                 <img src="{{$program->image}}" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-7 col-12 pr-0">
-                                <p>
-                                    {!! App::getlocale()==='ru'?$program->description_ru:(App::getlocale()==='en'?$program->description_en:$program->description_blr )!!}
-                                </p>
+                                {!! App::getlocale()==='ru'?$program->description_ru:(App::getlocale()==='en'?$program->description_en:$program->description_blr )!!}
                             </div>
                         </div>
 
@@ -156,7 +154,8 @@
                                 <div class=" col-12 p-0 d-flex align-items-center justify-content-center workoutVideo">
                                     <div id="player"></div>
                                     <div class="position-absolute">
-                                        <img class="playButton w-100" id="playButton" src="/images/playButton.png"
+                                        <img class="playButton w-100" alt="playButton" id="playButton"
+                                             src="/images/playButton.png"
                                              data-link="{{$workout->videos[0]->link}}">
                                     </div>
                                     <img class="preview"
@@ -181,9 +180,6 @@
                                                             fill="#111111"/>
                                                     </g>
                                                     <defs>
-                                                        <clipPath id="clip0">
-                                                            <rect width="16" height="16" fill="white"/>
-                                                        </clipPath>
                                                     </defs>
                                                 </svg>
                                             </div>
@@ -238,7 +234,7 @@
                                     @endif
                                 </div>
                                 <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment">
-                                    <h1>{{__('language.reviews')}} <span>({{count($workout->comments)}})</span></h1>
+                                    <h2>{{__('language.reviews')}} <span>({{count($workout->comments)}})</span></h2>
                                     @include('front.user.helpers._comment',['firstComments'=>$workout->comments()->where('parent_id',null)->get()])
                                     <button>
                                         {{__('language.loadMore')}}
@@ -290,7 +286,7 @@
                                     </form>
                                 </div>
                                 <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment">
-                                    <h1>{{__('language.reviews')}} <span>({{count($workout->comments)}})</span></h1>
+                                    <h2>{{__('language.reviews')}} <span>({{count($workout->comments)}})</span></h2>
                                     @include('front.user.helpers._comment',['firstComments'=>$workout->comments()->where('parent_id',null)->get()])
                                     <button>
                                         {{__('language.loadMore')}}
@@ -318,7 +314,7 @@
                                 </div>
                                 <div class="d-flex flex-column ">
                                     <p>{{__('language.trainer')}}</p>
-                                    <h1>Лера Алёшкина</h1>
+                                    <h2>Лера Алёшкина</h2>
                                 </div>
                             </div>
                             <img class="content-user-img"
@@ -341,7 +337,7 @@
                                     </div>
                                     <div class="d-flex flex-column ">
                                         <p>{{__('language.intensity')}}</p>
-                                        <h1>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h1>
+                                        <h2>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h2>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center content-user">
@@ -355,19 +351,20 @@
                                     </div>
                                     <div class="d-flex flex-column ">
                                         <p>{{__('language.signed')}}</p>
-                                        <h1>2 123</h1>
+                                        <h2>{{count($subscription->users)}}</h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 d-lg-flex d-none  justify-content-between align-items-center content-user">
+                        <div
+                            class="col-12 d-lg-flex d-none  justify-content-between align-items-center content-user ogp-trainer-header">
                             <div class="d-flex align-items-center content-user">
                                 <div class="content-user-image">
                                     <img src="{{$program->trainer->image}}" alt="">
                                 </div>
                                 <div class="d-flex flex-column ">
                                     <p>{{__('language.trainer')}}</p>
-                                    <h1>{{App::getlocale()==='ru'?$program->trainer->name_ru:(App::getlocale()==='en'?$program->trainer->name_en:$program->trainer->name_blr)}}</h1>
+                                    <h2>{{App::getlocale()==='ru'?$program->trainer->name_ru:(App::getlocale()==='en'?$program->trainer->name_en:$program->trainer->name_blr)}}</h2>
                                 </div>
                             </div>
 
@@ -386,7 +383,7 @@
                                     </div>
                                     <div class="d-flex flex-column ">
                                         <p>{{__('language.intensity')}}</p>
-                                        <h1>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h1>
+                                        <h2>{{App::getlocale()==='ru'?$program->intensity_ru:(App::getlocale()==='en'?$program->intensity_en:$program->intensity_blr)}}</h2>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center content-user">
@@ -400,7 +397,7 @@
                                     </div>
                                     <div class="d-flex flex-column ">
                                         <p>{{__('language.signed')}}</p>
-                                        <h1>{{count(optional($subscription)->users)}}</h1>
+                                        <h2>{{count(optional($subscription)->users)}}</h2>
                                     </div>
                                 </div>
                             </div>
@@ -421,9 +418,7 @@
                                 <img src="{{$program->image}}" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-7 col-12 pr-0">
-                                <p>
-                                    {!! App::getlocale()==='ru'?$program->description_ru:(App::getlocale()==='en'?$program->description_en:$program->description_blr )!!}
-                                </p>
+                                {!! App::getlocale()==='ru'?$program->description_ru:(App::getlocale()==='en'?$program->description_en:$program->description_blr )!!}
                             </div>
                         </div>
 
@@ -451,11 +446,6 @@
                                                             d="M9.49951 0C6.08973 1.96464 6.4995 7.5 6.4995 7.5C6.4995 7.5 4.99952 6.99999 4.99952 4.75001C3.20992 5.78772 1.99951 7.78228 1.99951 10C1.99951 13.3137 4.6858 16 7.99952 16C11.3132 16 13.9995 13.3137 13.9995 10C13.9995 5.12501 9.49951 4.125 9.49951 0V0ZM8.52655 13.9326C7.32087 14.2332 6.09973 13.4995 5.79906 12.2937C5.49846 11.0881 6.23216 9.86686 7.43791 9.56626C10.3488 8.84049 10.7136 7.20358 10.7136 7.20358C10.7136 7.20358 12.1652 13.0254 8.52655 13.9326Z"
                                                             fill="#111111"/>
                                                     </g>
-                                                    <defs>
-                                                        <clipPath id="clip0">
-                                                            <rect width="16" height="16" fill="white"/>
-                                                        </clipPath>
-                                                    </defs>
                                                 </svg>
                                             </div>
                                             <p>{{$workout->calories}} ccal</p>
@@ -469,7 +459,7 @@
                                                         fill="#111111"/>
                                                 </svg>
                                             </div>
-                                            <p>{{count($program->subscribe->users)}}</p>
+                                            <p>{{count($subscription->users)}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -477,10 +467,10 @@
                                     class=" col-12 p-0 d-flex align-items-center justify-content-center flex-wrap youtube-training">
                                     <div class="col-lg-6 col-12">
                                         @foreach($workout->tasks as $task)
-                                            <h1>
+                                            <h2>
                                                 {{App::getlocale()==='ru'?$task->name_ru:(App::getlocale()==='en'?$task->name_en:$task->name_blr)}}
                                                 :
-                                            </h1>
+                                            </h2>
                                             <ul>
                                                 @foreach($task->subtasks as $subtask)
                                                     <li>
@@ -501,7 +491,6 @@
                                                           fill="white"/>
                                                     <circle cx="25" cy="25" r="24.5" stroke="#E21A3D"/>
                                                 </svg>
-                                                <img src="" alt="">
                                             </div>
                                         @endforeach
                                     </div>
@@ -544,8 +533,8 @@
 
                                 </div>
                                 <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment">
-                                    <h1>{{__('language.reviews')}} <span>({{count($workout->comments)}})</span>
-                                    </h1>
+                                    <h2>{{__('language.reviews')}} <span>({{count($workout->comments)}})</span>
+                                    </h2>
                                     @include('front.user.helpers._comment',['firstComments'=>$workout->comments()->where('parent_id',null)->get()])
                                     <button>
                                         {{__('language.loadMore')}}
@@ -583,14 +572,14 @@
                                 </div>
                                 <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment-write">
                                     <h2>{{__('language.feedback')}}</h2>
-                                    <textarea name="" placeholder="Комментарий"></textarea>
+                                    <textarea name="comment" placeholder="Комментарий"></textarea>
                                     <button>
                                         {{__('language.sendFeedback')}}
                                     </button>
                                 </div>
                                 <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment">
-                                    <h1>{{__('language.reviews')}} <span>({{count($workout->comments)}})</span>
-                                    </h1>
+                                    <h2>{{__('language.reviews')}} <span>({{count($workout->comments)}})</span>
+                                    </h2>
                                     @include('front.user.helpers._comment',['firstComments'=>$workout->comments()->where('parent_id',null)->get()])
                                     <button>
                                         {{__('language.loadMore')}}

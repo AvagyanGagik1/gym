@@ -14,7 +14,7 @@
                         </div>
                         <div class="d-flex flex-column ">
                             <p>Тренер</p>
-                            <h1>Лера Алёшкина</h1>
+                            <h2>Лера Алёшкина</h2>
                         </div>
                     </div>
                     <img class="content-user-img" src="/images/cardioHome.png" alt="">
@@ -30,7 +30,7 @@
                             </div>
                             <div class="d-flex flex-column ">
                                 <p>Интенсивность</p>
-                                <h1>Низкая</h1>
+                                <h2>Низкая</h2>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center align-items-center content-user">
@@ -41,19 +41,19 @@
                             </div>
                             <div class="d-flex flex-column ">
                                 <p>Подписано</p>
-                                <h1>2 123</h1>
+                                <h2>2 123</h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 d-lg-flex d-none  justify-content-between align-items-center content-user">
+                <div class="col-12 d-lg-flex d-none  justify-content-between align-items-center content-user ogp-trainer-header">
                     <div class="d-flex align-items-center content-user">
                         <div class="content-user-image">
                             <img src="/images/roundUser.png" alt="">
                         </div>
                         <div class="d-flex flex-column ">
                             <p>Тренер</p>
-                            <h1>Лера Алёшкина</h1>
+                            <h2>Лера Алёшкина</h2>
                         </div>
                     </div>
 
@@ -67,7 +67,7 @@
                             </div>
                             <div class="d-flex flex-column ">
                                 <p>Интенсивность</p>
-                                <h1>Низкая</h1>
+                                <h2>Низкая</h2>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center align-items-center content-user">
@@ -78,7 +78,7 @@
                             </div>
                             <div class="d-flex flex-column ">
                                 <p>Подписано</p>
-                                <h1>2 123</h1>
+                                <h2>2 123</h2>
                             </div>
                         </div>
                     </div>
@@ -157,18 +157,18 @@
                         </div>
                         <div class=" col-12 p-0 d-flex align-items-center justify-content-center flex-wrap youtube-training">
                             <div class="col-lg-6 col-12">
-                                <h1>Разминка:</h1>
+                                <h2>Разминка:</h2>
                                 <ul>
                                     <li>— Суставная разминка</li>
                                     <li> — 5 мин. двойные прыжки на скакалке</li>
                                 </ul>
-                                <h1>Задание 1:</h1>
+                                <h2>Задание 1:</h2>
                                 <ul>
                                     <li>— Табата 4 мин.</li>
                                     <li>— 20 сек. супермен</li>
                                     <li>— 10 сек. отдых</li>
                                 </ul>
-                                <h1>Задание 2:</h1>
+                                <h2>Задание 2:</h2>
                                 <ul>
                                     <li>— 20 мин. (Максимальное кол-во раундов)</li>
                                     <li>— 20 рывок двух гантелей с пола 3 кг</li>
@@ -256,7 +256,7 @@
                             </button>
                         </div>
                         <div class="col-12 d-none d-lg-flex p-0 flex-wrap youtube-comment">
-                            <h1>Отзывы <span>(13)</span></h1>
+                            <h2>Отзывы <span>(13)</span></h2>
 
                             <div class="col-12 p-0">
                                 <div class="col-12 p-0 d-flex align-items-center">
@@ -364,7 +364,7 @@
                             </button>
                         </div>
                         <div class="col-12 d-lg-none d-flex p-0 flex-wrap youtube-comment">
-                            <h1>Отзывы <span>(13)</span></h1>
+                            <h2>Отзывы <span>(13)</span></h2>
 
                             <div class="col-12 p-0">
                                 <div class="col-12 p-0 d-flex align-items-center">

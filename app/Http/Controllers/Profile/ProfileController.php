@@ -53,16 +53,16 @@ class ProfileController extends Controller
                 $completedWorkoutsProgram_id->forget($key);
             }
         }
-        $completedWorkoutsProgram_id = array_values($completedWorkoutsProgram_id->toArray());
-        foreach ($completedWorkoutsProgram_id as $id) {
-            $myPrograms = $programs->where('id', $id)->collect();
-        }
-        if ($myPrograms)
-            $myProgramId = $myPrograms->pluck('id')->toArray();
+//        $completedWorkoutsProgram_id = array_values($completedWorkoutsProgram_id->toArray());
+//        foreach ($completedWorkoutsProgram_id as $id) {
+//            $myPrograms = $programs->where('id', $id)->collect();
+//        }
+//        if ($myPrograms)
+//            $myProgramId = $myPrograms->pluck('id')->toArray();
 
 
         return response()->view('front.user.index', [
-            'myProgramId' => $myProgramId,
+//            'myProgramId' => $myProgramId,
             'myPrograms' => $myPrograms,
             'programsCategory' => $programsCategory]);
     }
@@ -70,7 +70,13 @@ class ProfileController extends Controller
     public function information(): Response
     {
         $personal = Personal::where('user_id', Auth::id())->latest('created_at')->first();
-        return response()->view('front.user.information', ['personal' => $personal, 'firstSteps' => FirstStepIcon::all(), 'projectVideo' => $this->youTubeImage(ProjectVideo::first()->link)]);
+        $user = User::where('id',Auth::id())->first();
+        $calories = 0;
+        foreach ($user->completedWorkouts as $item){
+           $workout = Workout::where('id',$item->workout_id)->first();
+           $calories +=$workout->calories;
+        }
+        return response()->view('front.user.information', ['calories'=>$calories,'personal' => $personal, 'firstSteps' => FirstStepIcon::all(), 'projectVideo' => $this->youTubeImage(ProjectVideo::first()->link)]);
     }
 
     public function food(): Response
@@ -116,7 +122,6 @@ class ProfileController extends Controller
             foreach ($workout->tasks as $task) {
                 $task->subtasks;
             }
-
             $workout->videos;
         }
         $user = User::where('id',Auth::id())->first();
@@ -304,6 +309,7 @@ class ProfileController extends Controller
     {
         $restriction = DietRestrictions::find($request->get('diet_id'));
         $nutrition = PurposeOfNutrition::find($request->get('purpose_id'));
+        $gender = $request->get('gender');
         $user = User::where('id',Auth::id())->first();
         if($restriction){
             $user->DietRestriction()->detach();
@@ -316,6 +322,10 @@ class ProfileController extends Controller
         $foodCategories = FoodCategory::with('dishes')->get();
         foreach ($foodCategories as $foodCategory) {
             foreach ($foodCategory->dishes()->with('DietRestriction', 'PurposeOfNutrition')->get() as $dishKey => $dish) {
+                if($dish->gender !== $gender ){
+                    $foodCategory->dishes->forget($dishKey);
+                    break;
+                }
                 foreach ($dish->PurposeOfNutrition as $purpose) {
                     if($nutrition){
                         if ($purpose->id !== $nutrition->id) {
@@ -335,6 +345,7 @@ class ProfileController extends Controller
         $calories = $user->dishes->reduce(function ($carry,$item){
             return $carry + intval($item->calories);
         },0);
+
         return response()->view('front.user.food',
             [
                 'dietRestrictions' => DietRestrictions::all(),
@@ -373,5 +384,20 @@ class ProfileController extends Controller
            return $carry + intval($item->calories);
         },0);
         return response()->json(['calories'=>$calories]);
+    }
+    public function block(){
+        return response()->view('layouts.front.block',[
+            'subscriptions'=>Subscription::all(),
+        ]);
+    }
+
+    public function addSubscription(Request $request){
+        $subscription = Subscription::where('id',$request->get('subscribe'))->first();
+        $user = User::where('id',Auth::id())->first();
+        $user->subscriptions()->attach($subscription->id);
+        $user->date_left = Carbon::now()->addDays($subscription->duration_subscribe);
+        $user->save();
+        return redirect('/profile');
+
     }
 }

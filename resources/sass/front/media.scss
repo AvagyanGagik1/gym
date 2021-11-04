@@ -11,24 +11,17 @@
     }
 }
 
-@media (max-width: 1900px) {
-    .about {
-        .aboutFirst, .aboutSecond {
-            max-width: 100%;
-        }
-
-        .imgAbsolute {
-            position: unset !important;
-
-            .img1 {
-                display: none;
-            }
-
-            .img2 {
-                position: unset !important;
+@media (max-width: 1780px) {
+    .subscribe-content {
+        .subscribe-new-plan-price {
+            div {
+                max-width: calc(50% - 22px);
             }
         }
     }
+}
+
+@media (max-width: 1900px) {
     .program-content {
         .program-content-item {
             justify-content: flex-start;
@@ -51,7 +44,6 @@
             }
         }
     }
-
 }
 
 @media (max-width: 1593px) {
@@ -66,21 +58,25 @@
     }
 }
 
-@media (max-width: 1500px){
+@media (max-width: 1500px) {
     .mainNav {
         .nav {
-            .dropdown-menu{
-                a:nth-of-type(3){
-                    display: flex!important;
+            .dropdown-menu {
+                a:nth-of-type(3) {
+                    display: flex !important;
                 }
             }
-            a:nth-of-type(5){
+
+            li:nth-of-type(5) {
                 display: none;
             }
-            .dropdown{
+
+            .dropdown {
                 display: block !important;
+                margin-right: 35px;
             }
-            #mainButtonResponsive{
+
+            #mainButtonResponsive {
                 display: block !important;
                 height: inherit;
                 margin: 0;
@@ -90,7 +86,7 @@
     }
 }
 
-@media (max-width: 1470px){
+@media (max-width: 1470px) {
     .mainNav {
         //#mainButton {
         //    display: block !important;
@@ -102,13 +98,14 @@
         //    margin: auto;
         //    padding: 0;
         //}
-        .dropdown-menu{
-            a:nth-of-type(2){
-                display: flex!important;
+        .dropdown-menu {
+            a:nth-of-type(2) {
+                display: flex !important;
             }
         }
+
         .nav {
-            a:nth-of-type(4){
+            li:nth-of-type(4) {
                 display: none;
             }
         }
@@ -160,7 +157,8 @@
             right: 50px;
             position: absolute;
             top: 20px;
-            &:hover{
+
+            &:hover {
                 cursor: pointer;
             }
         }
@@ -199,20 +197,37 @@
 
 }
 
-@media (max-width: 1250px){
-    .mainNav {
-        .nav {
-            .dropdown-menu{
-                a:nth-of-type(1){
-                    display: flex!important;
+@media (max-width: 1314px) {
+    .food-filter {
+        .food-select {
+            .selects {
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                 }
             }
-            a:nth-of-type(3) {
+        }
+    }
+}
+
+
+@media (max-width: 1250px) {
+    .mainNav {
+        .nav {
+            .dropdown-menu {
+                a:nth-of-type(1) {
+                    display: flex !important;
+                }
+            }
+
+            li:nth-of-type(3) {
                 display: none;
             }
         }
     }
 }
+
 
 @media (max-width: 1157px) {
     .mainNavUser {
@@ -230,9 +245,10 @@
 
 
         .navClient {
-            .language{
+            .language {
                 display: none;
             }
+
             .clientCabinet {
 
                 div:first-of-type {
@@ -259,8 +275,8 @@
             }
 
             button {
-                width: 22px!important;
-                height: 22px!important;
+                width: 22px !important;
+                height: 22px !important;
                 background: none;
                 padding: 0;
                 margin: 0 25px 0 25px;
@@ -276,9 +292,11 @@
         padding-top: 40px;
         display: none;
         width: 253px;
-        .language{
-            display: table!important;
+
+        .language {
+            display: table !important;
         }
+
         .sideNavProfile {
             display: block;
         }
@@ -467,19 +485,40 @@
     }
 
 }
-@media (max-width: 1260px) and (min-width: 959px){
-    #subscribe{
-        .container-fluid{
-            .col-md-6{
-                flex: 0 0 50%;
-                max-width: 50%!important;
+
+@media (max-width: 1078px) {
+    .about {
+        .aboutFirst, .aboutSecond {
+            max-width: 100%;
+        }
+
+        .imgAbsolute {
+            position: unset !important;
+
+            .img1 {
+                display: none;
+            }
+
+            .img2 {
+                position: unset !important;
             }
         }
     }
 }
 
-@media (max-width: 992px) {
-    .owl-next,.owl-prev{
+@media (max-width: 1260px) and (min-width: 959px) {
+    #subscribe {
+        .container-fluid {
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50% !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .owl-next, .owl-prev {
         display: none;
     }
 
@@ -488,12 +527,15 @@
         width: 100%;
         z-index: 4;
         opacity: .9;
-        .navHome{
+
+        .navHome {
             margin-left: 20px;
         }
-        #mainButtonResponsive{
+
+        #mainButtonResponsive {
             display: none;
         }
+
         #mainButton {
             display: block !important;
             position: absolute;
@@ -509,6 +551,7 @@
         .subscribe-new-plan-price {
             div {
                 margin-right: 0 !important;
+                max-width: 638px !important;
             }
         }
     }
@@ -597,7 +640,7 @@
     }
     .functional-content {
         .youtube-training {
-            h1 {
+            h2 {
                 font-family: Druk Wide Cyr;
                 font-size: 16px;
                 font-style: normal;
@@ -726,9 +769,11 @@
             max-width: 375px;
             max-height: 240px;
             background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 75.78%), url(/images/subscribe.png);
-            &:not(:last-child){
-                margin-bottom: 20px!important;
+
+            &:not(:last-child) {
+                margin-bottom: 20px !important;
             }
+
             h3 {
                 width: 60%;
                 font-family: Druk Wide Cyr, serif;
@@ -760,7 +805,7 @@
                     letter-spacing: 0;
                     text-align: center;
                     position: relative;
-                    top:-20px;
+                    top: -20px;
                 }
             }
 
@@ -785,7 +830,6 @@
         div:first-of-type {
             max-width: 92vw;
             width: 100vw;
-            padding: 0;
         }
 
         .aboutFirst {
@@ -862,10 +906,12 @@
 
             .aboutThird-back {
                 top: 90px;
-                right: 0!important;
-                img{
-                    margin: 0!important;
+                right: 0 !important;
+
+                img {
+                    margin: 0 !important;
                 }
+
                 img:last-child {
                     display: none;
                 }
@@ -873,9 +919,10 @@
         }
     }
     .gym {
-        .gymTitle{
-            margin-bottom: 20px!important;
+        .gymTitle {
+            margin-bottom: 20px !important;
         }
+
         .onlineGym {
             display: none;
         }
@@ -1103,33 +1150,35 @@
 }
 
 @media (max-width: 576px) {
-    header{
+    header {
         .navSearch {
-            margin-left: auto!important;
-            margin-right: unset!important;
+            margin-left: auto !important;
+            margin-right: unset !important;
 
             input {
                 display: none;
             }
 
             span {
-                line-height: inherit!important;
+                line-height: inherit !important;
             }
         }
-        .navClient{
-            button{
+
+        .navClient {
+            button {
                 margin: 0px 0px 0 0px !important;
             }
-            .clientCabinet{
-                div:last-of-type{
+
+            .clientCabinet {
+                div:last-of-type {
                     margin: auto 13px auto 18px;
                 }
             }
         }
     }
-    #program{
-        .program-header{
-            margin-top: 50px!important;
+    #program {
+        .program-header {
+            margin-top: 50px !important;
         }
     }
     .navClient {
@@ -1167,13 +1216,13 @@
         }
 
         p {
-            margin: 0 0 0 20px!important;
+            margin: 0 0 0 20px !important;
             text-align: left !important;
         }
 
         .gymSvgItems {
             width: 60px;
-            height: auto!important;
+            height: auto !important;
             margin-left: 15px;
             display: flex;
             justify-content: center;

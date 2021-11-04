@@ -27,7 +27,7 @@
                         @endforeach
                     </div>
                     <div class="payment-subscription">
-                        <h1>{{__('language.convenient')}}</h1>
+                        <h2>{{__('language.convenient')}}</h2>
                         <div class="payment-wrapper">
                             <div class="item">
                                 <input type="radio" name="payment" checked value="creditCard">

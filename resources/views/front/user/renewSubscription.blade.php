@@ -2,7 +2,8 @@
 @section('content')
     <div class="content">
         <div class="d-flex auth-wrapper justify-content-center">
-            <form>
+            <form action="{{route('add.subscription')}}" method="post">
+                @csrf
                 <div class="col-xl-8 col-lg-12 four-step">
                     <h1>{{__('language.subscribe')}}</h1>
                     <div class="subscriptions">
@@ -23,7 +24,7 @@
                         @endforeach
                     </div>
                     <div class="payment-subscription">
-                        <h1>{{__('language.convenient')}}</h1>
+                        <h2>{{__('language.convenient')}}</h2>
                         <div class="payment-wrapper">
                             <div class="item">
                                 <input type="radio" name="payment" checked value="creditCard">

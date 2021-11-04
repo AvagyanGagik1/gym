@@ -26,4 +26,5 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/admin.scss','public/css/admin')
     .sass('resources/sass/front/media.scss', 'public/css/front')
     .copy('resources/fonts/*', 'public/fonts')
-    .copyDirectory('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts');
+    .copyDirectory('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts')
+    .sourceMaps();

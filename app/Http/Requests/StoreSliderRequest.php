@@ -24,14 +24,17 @@ class StoreSliderRequest extends FormRequest
     public function rules()
     {
         return [
-            'image'=>'required|image'
+            'image'=>'required|image',
+            'image-small'=>'required|image'
         ];
     }
     public function messages()
     {
         return [
-            'images.image'=>'файл должен быть формата кртинкы!!!',
-            'images.required' => 'Картинка Обезательна!!'
+            'image.image'=>'файл должен быть формата кртинкы!!!',
+            'image-small.image'=>'файл должен быть формата кртинкы!!!',
+            'image.required' => 'Картинка Обезательна!!',
+            'image-small.required' => 'Картинка Обезательна!!',
         ];
     }
 }

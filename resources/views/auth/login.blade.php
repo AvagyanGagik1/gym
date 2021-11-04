@@ -12,22 +12,22 @@
                     @csrf
                     <div class="d-flex login-input">
                         <div class="custom-form-group-inline">
-                            <input type="email" name="email" value="{{old('email')}}" placeholder="E-mail">
+                            <input type="email" name="email" value="{{old('ema.social-formil')}}" placeholder="E-mail">
                             <div class="left-line"></div>
                             @if ($errors->has('email'))
-                                <p class="text-danger  termsError">{{ $errors->first('email') }}</p>
+                                <span class="text-danger  termsError">{{ $errors->first('email') }}</span>
                             @endif
                         </div>
                         <div class="custom-form-group-inline">
                             <input type="password" name="password" value="" placeholder="Пароль">
                             <div class="left-line"></div>
                             @if ($errors->has('password'))
-                                <p class="text-danger  termsError">{{ $errors->first('password') }}</p>
+                                <span class="text-danger  termsError">{{ $errors->first('password') }}</span>
                             @endif
                         </div>
                     </div>
                     <div class="social-form">
-                        <h1>{{__('language.orLogin')}}</h1>
+                        <h2>{{__('language.orLogin')}}</h2>
                         <div class="social-btn-grp">
                             <button type="button">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"

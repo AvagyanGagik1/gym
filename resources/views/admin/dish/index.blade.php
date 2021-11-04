@@ -29,6 +29,7 @@
                                 <th scope="col">Категория (ru)</th>
                                 <th scope="col">Имя (ru)</th>
                                 <th scope="col">описания (ru)</th>
+                                <th scope="col">пол</th>
                                 <th scope="col">калории</th>
                                 <th scope="col">белки</th>
                                 <th scope="col">жиры</th>
@@ -44,6 +45,7 @@
                                     <th scope="row">{{optional($item->category)->name_ru}}</th>
                                     <td>{{$item->name_ru}}</td>
                                     <td>{!!  $item->description_ru!!}</td>
+                                    <td>{{  $item->gender ==='male'? "мужской":'женский'}}</td>
                                     <td>{{$item->calories}}</td>
                                     <td>{{$item->protein}}</td>
                                     <td>{{$item->fats}}</td>

@@ -44,6 +44,18 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label for="image" class="col-sm-2 col-form-label font-weight-bold">Image-mobile:</label>
+                <div class="container-image-class col-sm-10">
+                    <label class="label" for="input">Please upload a picture !</label>
+                    <div class="input">
+                        <input name="image-small" class="file" type="file">
+                        @if ($errors->has('image-small'))
+                            <span class="text-danger">{{ $errors->first('image-small') }}</span>
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
                 <div class="btn-group">
                     <button type="submit" class="btn btn-success">Create</button>
                     <a href="{{route('slider.index')}}" class="btn btn-danger">back</a>

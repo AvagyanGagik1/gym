@@ -45,11 +45,11 @@
 {{--                    </li>--}}
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('admin/foodCategory') ? 'active' : '' }}"
-                           href="{{route('foodCategory.index')}}">Категория (Питаные\Еда)</a>
+                           href="{{route('foodCategory.index')}}">Категория (Питание\Еда)</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('admin/dish') ? 'active' : '' }}"
-                           href="{{route('dish.index')}}">Питаные</a>
+                           href="{{route('dish.index')}}">Питание</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('admin/purposeOfNutrition') ? 'active' : '' }}"

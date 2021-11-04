@@ -101,7 +101,7 @@
 
                     </div>
                     <div class="social-form">
-                        <h1>{{__('language.orLogin')}}</h1>
+                        <h2>{{__('language.orLogin')}}</h2>
                         <div class="social-btn-grp">
                             <button type="button">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -158,7 +158,7 @@
                         <input type="checkbox" @if(Session::has('user')) checked="true" @endif name="terms" value="1" class="terms-checkbox" id="terms-checkbox">
                         <span></span>
                         <label>{{__('language.terms')}}
-                                <p class="text-danger  termsError"></p>
+                                <span class="text-danger nowra termsError"></span>
                         </label>
                     </div>
 

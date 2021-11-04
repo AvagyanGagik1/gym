@@ -7,16 +7,16 @@
                     <h2>{{__('language.food')}}</h2>
                 </div>
                 <div class="col-12 d-flex align-items-center justify-content-between food-filter">
-                    <form action="{{route('choose.diet')}}" class="food-select d-flex w-100" method="post">
+                    <form action="{{route('choose.diet')}}" class="food-select d-flex w-100 ogp-food-filter" method="post">
                         @csrf
-                        <div class="food-select d-flex">
+                        <div class="food-select selects d-flex ogp-food-filter-selects">
                             <div>
                                 <label for="gender">{{__('language.gender')}}</label>
-                                <select name="" id="gender" class="food-select-item">
-                                    <option @if(auth()->user()->gender === 'male') selected
-                                            @endif value="male">{{__('language.male')}}
+                                <select name="gender" id="gender" class="food-select-item">
+                                    <option
+                                            value="male">{{__('language.male')}}
                                     </option>
-                                    <option @if(auth()->user()->gender === 'female') selected @endif value="female">
+                                    <option   value="female">
                                         {{__('language.female')}}
                                     </option>
                                 </select>
@@ -62,14 +62,14 @@
                                 <p>{{__('language.chooseOnly')}}</p>
                                 <div>
                                     <img src="/images/pdf.png" alt="">
-                                    <a href="">{{__('language.downloadNutritional')}}</a>
+                                    <a href="" download>{{__('language.downloadNutritional')}}</a>
                                 </div>
                             </div>
                         @endif
                         <div
                             class="col-12 d-flex justify-content-between p-0 food-category-content-items owl-carousel-food owl-theme">
                             @foreach($category->dishes as $dish)
-                                <div class="col-4 food-category-content-item">
+                                <div class=" food-category-content-item">
                                     <div class="food-category-content-item-img d-flex justify-content-center">
                                         <img src="{{$dish->image}}" alt="">
                                     </div>
@@ -88,7 +88,7 @@
                                     </div>
                                     <button class="food-category-content-item-button @if(!$dishes->contains('id',$dish->id)) d-none @endif checked-food-button"
                                             data-category="{{$category->id}}" data-dish="{{$dish->id}}">
-                                        <div class="selected">
+                                        <span class="selected">
                                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -96,18 +96,18 @@
                                                     fill="#020202"/>
                                             </svg>
 
-                                        </div>
+                                        </span>
                                         {{__('language.addTo')}} {{App::getlocale()==='ru'?$category->name_ru:(App::getlocale()==='en'?$category->name_en:$category->name_blr)}}
                                     </button>
                                     <button class="food-category-content-item-button @if($dishes->contains('id',$dish->id)) d-none @endif un-checked-food-button"
                                             data-category="{{$category->id}}" data-dish="{{$dish->id}}">
-                                        <div>
+                                        <span>
                                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M16 8H10V2H8V8H2V10H8V16H10V10H16V8Z" fill="white"/>
                                             </svg>
 
-                                        </div>
+                                        </span>
                                         {{__('language.addTo')}} {{App::getlocale()==='ru'?$category->name_ru:(App::getlocale()==='en'?$category->name_en:$category->name_blr)}}
                                     </button>
                                 </div>

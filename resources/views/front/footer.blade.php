@@ -9,21 +9,21 @@
             </a>
             <div class="w-100">
                 <ul class="flex-column flex-md-row d-flex justify-content-center m-0">
-                    <a href="">
-                        <li>{{__("language.training")}}</li>
-                    </a>
-                    <a href="">
-                        <li>{{__("language.training")}}</li>
-                    </a>
-                    <a href="">
-                        <li>{{__("language.results")}}</li>
-                    </a>
-                    <a href="">
-                        <li>{{__("language.subscriptionPrograms")}}</li>
-                    </a>
-                    <a href="">
-                        <li>{{__("language.blog")}}</li>
-                    </a>
+                    <li>
+                        <a href="#program">{{__("language.training")}}</a>
+                    </li>
+                    <li>
+                        <a href="#expert">{{__("language.trainer")}}</a>
+                    </li>
+                    <li>
+                        <a href="#about">{{__("language.results")}}</a>
+                    </li>
+                    <li>
+                        <a href="#subscribe">{{__("language.subscriptionPrograms")}}</a>
+                    </li>
+                    <li>
+                        <a href="#news">{{__("language.blog")}}</a>
+                    </li>
                 </ul>
             </div>
             <div class="footerClient">

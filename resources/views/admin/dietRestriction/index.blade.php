@@ -20,7 +20,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">список (ограничение Питаные)</h5>
+                    <h5 class="card-title">список (ограничение Питание)</h5>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>

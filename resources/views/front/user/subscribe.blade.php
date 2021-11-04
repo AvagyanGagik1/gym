@@ -6,21 +6,22 @@
                 <div class="col-12 p-0 d-flex align-items-center subscribe-header">
                     <h2>{{__('language.mySub')}}</h2>
                 </div>
-                @foreach($profileSubscription as $subscription)
+
+
                     <div class="col-12 d-flex align-items-center subscribe-transform justify-content-between">
                         <h3>
-                            {{$subscription->duration_week}} {{App::getlocale()==='ru'?$subscription->name_ru:(App::getlocale()==='en'?$subscription->name_en:$subscription->name_blr)}}
+                            {{App::getlocale()==='ru'?$profileSubscription[0]->name_ru:(App::getlocale()==='en'?$profileSubscription[0]->name_en:$profileSubscription[0]->name_blr)}}
                         </h3>
                         <div class="subscribe-transform-days">
                             <p>{{__('language.days')}}
-                                :<span>{{$subscription->dayLeft}}/{{$subscription->duration_subscribe}}</span></p>
+                                :<span>{{$dayLeft}}/{{$allDays}}</span></p>
                             <div></div>
                         </div>
                         <button>
                             {{__('language.reSub')}}
                         </button>
                     </div>
-                @endforeach
+
                 <div class="col-12 d-flex align-items-center subscribe-new-plan flex-wrap">
                     <div class="w-100 subscribe-new-plan-header">
                         <h2>

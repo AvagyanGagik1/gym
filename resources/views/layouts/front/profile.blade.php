@@ -15,7 +15,6 @@
     <script src="{{ asset('js/front/calendar.js') }}" defer></script>
 
 
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -109,16 +108,18 @@
                                 fill="#111111"/>
                         </g>
                         <defs>
-                            <clipPath id="clip0">
-                                <rect width="18" height="18" fill="white"/>
-                            </clipPath>
+
                         </defs>
                     </svg>
                     <div class="dropdown">
-                        <button class="btn languageButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn languageButton" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                             {{App::getLocale()}}
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.862 6.19533L7.99998 9.05733L5.13798 6.19533L4.19531 7.13799L7.99998 10.9427L11.8046 7.13799L10.862 6.19533Z" fill="#111111"/>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.862 6.19533L7.99998 9.05733L5.13798 6.19533L4.19531 7.13799L7.99998 10.9427L11.8046 7.13799L10.862 6.19533Z"
+                                    fill="#111111"/>
                             </svg>
 
                         </button>
@@ -128,7 +129,7 @@
                             {{--                                <a class="dropdown-item" href="{{route('change.locale','en')}}">ENG</a>--}}
                             @foreach (config('languages') as $lang => $language)
                                 @if ($lang != App::getLocale())
-                                    <a  class="dropdown-item" href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
+                                    <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
 
                                 @endif
                             @endforeach
@@ -137,11 +138,12 @@
                 </div>
                 <div class="clientCabinet">
                     <div>
-                        <h1>{{\Illuminate\Support\Facades\Auth::user()->name}}</h1>
+                        <h2>{{\Illuminate\Support\Facades\Auth::user()->name}}</h2>
                         <p>{{\Illuminate\Support\Facades\Auth::user()->email}}</p>
                     </div>
                     <div>
-                        <img src="{{\Illuminate\Support\Facades\Auth::user()->avatar??'/images/emptyAvatar.png'}}" id="headerUserAvatar" alt="">
+                        <img src="{{\Illuminate\Support\Facades\Auth::user()->avatar??'/images/emptyAvatar.png'}}"
+                             id="headerUserAvatar" alt="">
                     </div>
                 </div>
             </div>
@@ -154,13 +156,14 @@
                     <img src="/images/roundUser.png" alt="">
                 </div>
                 <div>
-                    <h1>Алёна Кнопочкина</h1>
-                    <p>Misterolympia@gmail.com</p>
+                    <h2>{{\Illuminate\Support\Facades\Auth::user()->name}}</h2>
+                    <p>{{\Illuminate\Support\Facades\Auth::user()->email}}</p>
                 </div>
             </div>
         </div>
         <div class="sideNavTop">
-            <a class=" {{ Request::is('profile') || Request::is('profile/program/*') ? 'active' : '' }}" href="{{route('profile.index')}}">
+            <a class=" {{ Request::is('profile') || Request::is('profile/program/*') ? 'active' : '' }}"
+               href="{{route('profile.index')}}">
                 {{__("language.programs")}}</a>
             <a class="{{ Request::is('profile/food') ? 'active' : '' }}"
                href="{{route('profile.food')}}">{{__("language.food")}}</a>
@@ -168,7 +171,8 @@
                href="{{route('profile.achievements')}}">{{__("language.achievements")}}</a>
             <a class="{{ Request::is('profile/information') ? 'active' : '' }}"
                href="{{route('profile.information')}}">{{__("language.personal")}}</a>
-            <a class="{{ Request::is('profile/subscribe') || Request::is('profile/subscribe/*') ? 'active' : '' }}" href="{{route('profile.subscribe')}}">{{__("language.subscription")}}</a>
+            <a class="{{ Request::is('profile/subscribe') || Request::is('profile/subscribe/*') ? 'active' : '' }}"
+               href="{{route('profile.subscribe')}}">{{__("language.subscription")}}</a>
             <a href="{{ route('logout') }}"
                onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
@@ -178,14 +182,14 @@
                 @csrf
             </form>
         </div>
-        @foreach($profileSubscription as $subscription)
-        <div class="sideNavBottom">
-            <h1>{{__("language.subscribe")}}</h1>
-            <p>{{__("language.days")}}:<span>{{$subscription->dayLeft}}/{{$subscription->duration_subscribe}}</span></p>
-            <div></div>
-            <button class="btn btnNorm btnNormal1" onclick="window.location = '/profile/subscribe'">{{__("language.renew")}}</button>
-        </div>
-        @endforeach
+            <div class="sideNavBottom">
+                <h2>{{__("language.subscribe")}}</h2>
+                <p>{{__("language.days")}}:<span>{{$dayLeft}}/{{$allDays}}</span>
+                </p>
+                <div></div>
+                <button class="btn btnNorm btnNormal1"
+                        onclick="window.location = '/profile/subscribe'">{{__("language.renew")}}</button>
+            </div>
         <div class="language d-none">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0)">
@@ -199,26 +203,25 @@
                     </clipPath>
                 </defs>
             </svg>
-
-
-                    @foreach (config('languages') as $lang => $language)
-                            <a  class="lang-item @if($lang!==App::getLocale()) active-lang @endif"  href="{{ route('lang.switch', $lang) }}">{{$lang}}</a>
-                    @endforeach
+            @foreach (config('languages') as $lang => $language)
+                <a class="lang-item @if($lang!==App::getLocale()) active-lang @endif"
+                   href="{{ route('lang.switch', $lang) }}">{{$lang}}</a>
+            @endforeach
         </div>
     </section>
     <section class="sideCalendar">
         <button class="closeCalendar" id="closeCalendar"><span></span><span></span></button>
-        <h1 class="calendarHeader" >{{__('language.calendar')}}</h1>
+        <h2 class="calendarHeader">{{__('language.calendar')}}</h2>
         <div id="datepicker"></div>
         <p class="calendarColor"><span></span>{{__('language.completed')}}</p>
         <div class="line"></div>
         <div class="calendarSection">
             <h3>{{__('language.completed')}}</h3>
-           @foreach($completedWorkouts as $completedWorkout)
-            <div class="item">
-                <img src=" {{$completedWorkout->workout->program->image}}" alt="">
-                <h2> {{App::getlocale()==='ru'?$completedWorkout->workout->name_ru:(App::getlocale()==='en'?$completedWorkout->workout->name_en:$completedWorkout->workout->name_blr)}}</h2>
-            </div>
+            @foreach($completedWorkouts as $completedWorkout)
+                <div class="item">
+                    <img src=" {{$completedWorkout->workout->program->image}}" alt="">
+                    <h2> {{App::getlocale()==='ru'?$completedWorkout->workout->name_ru:(App::getlocale()==='en'?$completedWorkout->workout->name_en:$completedWorkout->workout->name_blr)}}</h2>
+                </div>
             @endforeach
         </div>
     </section>

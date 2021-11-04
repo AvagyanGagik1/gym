@@ -11,7 +11,7 @@
                 <form action="" method="post"  class="d-flex flex-column FormNotSubmit">
                     @csrf
                     <div class="d-flex flex-column login-input">
-                        <h1>{{__('language.gender')}}</h1>
+                        <h2>{{__('language.gender')}}</h2>
                         <div class="gender-select">
                             <div class="gender-item">
                                 <input type="radio" name="gender" @if(Session::has('user.gender') && Session::get('user.gender')==='male') checked @endif checked value="male">
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="target">
-                        <h1>{{__('language.important')}}</h1>
+                        <h2>{{__('language.important')}}</h2>
                         <div class="target-group">
                             <div class="item">
                                 <input type="radio"  @if(Session::has('user.target') && Session::get('user.target')==='flexibility') checked @endif name="target" checked value="flexibility">

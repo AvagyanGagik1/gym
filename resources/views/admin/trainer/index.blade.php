@@ -37,11 +37,7 @@
                                 <tr>
                                     <th scope="row">{{$key+1}}</th>
                                     <td>{{$item->name_ru}}</td>
-                                    <td>{{$item->name_en}}</td>
-                                    <td>{{$item->name_blr}}</td>
                                     <td>{{$item->profession_ru}}</td>
-                                    <td>{{$item->profession_en}}</td>
-                                    <td>{{$item->profession_blr}}</td>
                                     <td><img src="{{$item->image}}" alt="" class="img-thumbnail table-image"></td>
                                     <td>
                                         <a href="{{route('trainer.edit',$item->id)}}"><i class="fas fa-edit custom-icon-edit"></i></a>

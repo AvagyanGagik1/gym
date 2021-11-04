@@ -67,7 +67,7 @@ body {
     font-weight: bold;
 }
 
-.container-image {
+.container-image,.container-image-class {
     width: 200px;
     margin: 50px auto;
     font-family: sans-serif;
@@ -81,16 +81,16 @@ body {
         color: #1a4756;
     }
 
-    .hidden, #uploadImg:not(.hidden) + label {
+    .hidden, #uploadImg:not(.hidden) + label,.uploadImg:not(.hidden) + label {
         display: none;
     }
 
-    #file {
+    input[type=file] {
         display: none;
         margin: 0 auto;
     }
 
-    #upload {
+    #upload,.upload {
         display: block;
         padding: 10px 25px;
         border: 0;

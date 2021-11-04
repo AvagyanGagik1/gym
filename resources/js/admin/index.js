@@ -80,21 +80,51 @@ $(document).ready(function () {
 
 });
 $(function () {
-    let container = $('.container-image'), inputFile = $('#file'), img, btn, txt = 'Browse',
-        txtAfter = 'Browse another pic';
+    let container = $('.container-image'),containerClass = $('.container-image-class'), inputFile = $('#file'), img,imgClass,btnClass, btn, txt = 'Browse',
+        txtAfter = 'Browse another pic',
+        inputFileClass = $('.file');
 
     if (!container.find('#upload').length) {
         container.find('.input').append('<input type="button" value="' + txt + '" id="upload">');
         btn = $('#upload');
-        container.prepend('<img src="" class="hidden" alt="Uploaded file" id="uploadImg" width="200">');
+        container.prepend('<img src="" class="hidden " alt="Uploaded file" id="uploadImg" width="200">');
         img = $('#uploadImg');
+    }
+    if (!containerClass.find('.upload').length) {
+        containerClass.find('.input').append('<input type="button" value="' + txt + '" class="upload">');
+        btnClass = $('.upload');
+        containerClass.prepend('<img src="" class="hidden uploadImg" alt="Uploaded file" width="200">');
+        imgClass = $('.uploadImg');
     }
 
     btn.on('click', function () {
         img.animate({opacity: 0}, 300);
         inputFile.click();
     });
+    btnClass.on('click', function () {
+        imgClass.animate({opacity: 0}, 300);
+        inputFileClass.click();
+    });
 
+    inputFileClass.on('change', function (e) {
+        console.log('pix')
+        container.find('label').html(inputFileClass.val());
+        $('#default-image').remove()
+
+        var i = 0;
+        for (i; i < e.originalEvent.srcElement.files.length; i++) {
+            var file = e.originalEvent.srcElement.files[i],
+                reader = new FileReader();
+
+            reader.onloadend = function () {
+                imgClass.attr('src', reader.result).animate({opacity: 1}, 700);
+            }
+            reader.readAsDataURL(file);
+            imgClass.removeClass('hidden');
+        }
+
+        btnClass.val(txtAfter);
+    });
     inputFile.on('change', function (e) {
         container.find('label').html(inputFile.val());
         $('#default-image').remove()
@@ -291,35 +321,35 @@ $('.customSelectCheckForTraining').click(function () {
     } else if (!$(document).find('.task-create').length) {
         let taskCreate = `
         <div class="task-create d-flex flex-column">
-                <button type="button" class="btn btn-sm btn-primary ml-auto mb-2" id="cloneTaskDiv">Добавить заданые
+                <button type="button" class="btn btn-sm btn-primary ml-auto mb-2" id="cloneTaskDiv">Добавить задание
                 </button>
                 <div class="form-group row pb-3" id="taskDiv" data-key="0">
-                    <label for="task_ru" class="col-sm-2 col-form-label font-weight-bold">Заданые (ru):</label>
+                    <label for="task_ru" class="col-sm-2 col-form-label font-weight-bold">Задание (ru):</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control tasks" id="task_ru" name="task[]" data-lang="ru" value="">
                                             </div>
-                    <label for="task_en" class="col-sm-2 col-form-label font-weight-bold">Заданые (en):</label>
+                    <label for="task_en" class="col-sm-2 col-form-label font-weight-bold">Задание (en):</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control tasks" id="task_en" name="task[]" data-lang="en" value="">
                                             </div>
-                    <label for="task_blr" class="col-sm-2 col-form-label font-weight-bold">Заданые (blr):</label>
+                    <label for="task_blr" class="col-sm-2 col-form-label font-weight-bold">Задание (blr):</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control tasks" id="task_blr" name="task[]" data-lang="blr" value="">
                                             </div>
                     <div class="subtask col-8 ml-auto d-flex flex-column mt-2">
                         <button type="button" class="btn btn-sm btn-success ml-auto mb-2 cloneSubTaskDiv">Добавить
-                            Подзаданые
+                            Подзадание
                         </button>
                         <div class="form-group row pb-3" id="subTaskDiv" data-key="0">
-                            <label for="subTask_ru" class="col-sm-2 col-form-label font-weight-bold">Подзаданые (ru):</label>
+                            <label for="subTask_ru" class="col-sm-2 col-form-label font-weight-bold">Подзадане (ru):</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control subtasks" id="subTask_ru" data-lang="ru" name="subTask[]" value="">
                                                             </div>
-                            <label for="subTask_en" class="col-sm-2 col-form-label font-weight-bold">Подзаданые (en):</label>
+                            <label for="subTask_en" class="col-sm-2 col-form-label font-weight-bold">Подзадание (en):</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control subtasks" id="subTask" data-lang="en" name="subTask[]" value="">
                                                             </div>
-                            <label for="subTask_blr" class="col-sm-2 col-form-label font-weight-bold">Подзаданые (blr):</label>
+                            <label for="subTask_blr" class="col-sm-2 col-form-label font-weight-bold">Подзадание (blr):</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control subtasks" id="subTask_blr" data-lang="blr" name="subTask[]" value="">
                                                             </div>

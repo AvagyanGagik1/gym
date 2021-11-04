@@ -35,7 +35,8 @@ class StoreDishRequest extends FormRequest
             'protein'=>'required|integer',
             'fats'=>'required|integer',
             'carbohydrates'=>'required',
-            'image'=>'required|image'
+            'image'=>'required|image',
+            'gender'=>'required|string'
         ];
     }
     public function messages()
@@ -56,6 +57,7 @@ class StoreDishRequest extends FormRequest
             'carbohydrates.integer'=>'должно иметь целочисленное значение!!',
             'image.required'=>'обезательна к заполнению!!',
             'image.image'=>'Виберите картинку',
+            'gender.required'=>'обезательна к заполнению!!',
         ];
     }
 }

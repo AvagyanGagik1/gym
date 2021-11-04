@@ -16,7 +16,7 @@
                             <div class="col-12 item">
                                 <div id="player"></div>
                                 <div class="position-absolute">
-                                    <img class="playButton w-100" id="playButton" src="/images/playButton.png"
+                                    <img class="playButton w-100" alt="playButton" id="playButton" src="/images/playButton.png"
                                          data-link="{{$video->link}}">
                                 </div>
                                 <img class="preview"

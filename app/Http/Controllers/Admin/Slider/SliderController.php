@@ -45,10 +45,13 @@ class SliderController extends Controller
     public function store(StoreSliderRequest $request)
     {
         $image = $request->file('image');
+        $imageSmall = $request->file('image-small');
 //        $input['title'] = $request->get('title');
 //        $input['long_description'] = $request->get('long_description');
 //        $input['short_description'] = $request->get('short_description');
         $input['image'] = $this->uploadSliderImage('/images/slider', $image);
+        $input['image_mobile'] = $this->uploadSliderImage('/images/slider/small', $imageSmall);
+        $input['image_mobile'] = $this->uploadSliderImage('/images/slider/small', $imageSmall);
         Slider::create($input);
         return redirect('/admin/slider');
     }

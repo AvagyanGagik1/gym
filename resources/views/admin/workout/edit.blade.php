@@ -74,10 +74,10 @@
                 @endforeach
             </div>
             <div class="task-create d-flex flex-column">
-                <button type="button" class="btn btn-sm btn-primary ml-auto mb-2 cloneTaskDiv" >Добавить заданые</button>
+                <button type="button" class="btn btn-sm btn-primary ml-auto mb-2 cloneTaskDiv" >Добавить задание</button>
                 @foreach($workout->tasks as $key=>$task)
                     <div class="form-group row pb-3 taskDiv"  data-key="{{$key}}">
-                        <label for="task_ru" class="col-sm-2 col-form-label font-weight-bold">Заданые (ru):</label>
+                        <label for="task_ru" class="col-sm-2 col-form-label font-weight-bold">Задание (ru):</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control tasks" id="task_ru" name="task[]" data-lang="ru"
                                    value="{{$task->name_ru}}">
@@ -85,7 +85,7 @@
                                 <span class="text-danger">{{ $errors->first('task_ru') }}</span>
                             @endif
                         </div>
-                        <label for="task_en" class="col-sm-2 col-form-label font-weight-bold">Заданые (en):</label>
+                        <label for="task_en" class="col-sm-2 col-form-label font-weight-bold">Задание (en):</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control tasks" id="task_en" name="task[]" data-lang="en"
                                    value="{{$task->name_en}}">
@@ -93,7 +93,7 @@
                                 <span class="text-danger">{{ $errors->first('task_en') }}</span>
                             @endif
                         </div>
-                        <label for="task_blr" class="col-sm-2 col-form-label font-weight-bold">Заданые (blr):</label>
+                        <label for="task_blr" class="col-sm-2 col-form-label font-weight-bold">Задание (blr):</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control tasks" id="task_blr" name="task[]" data-lang="blr"
                                    value="{{$task->name_blr}}">
@@ -103,11 +103,11 @@
                         </div>
                         <div class="subtask col-8 ml-auto d-flex flex-column mt-2">
                             <button type="button" class="btn btn-sm btn-success ml-auto mb-2 cloneSubTaskDiv">Добавить
-                                Подзаданые
+                                Подзадание
                             </button>
                             @foreach($task->subtasks as $subtask)
                                 <div class="form-group row pb-3 subTaskDiv"  data-key="{{$key}}">
-                                    <label for="subTask_ru" class="col-sm-2 col-form-label font-weight-bold">Подзаданые
+                                    <label for="subTask_ru" class="col-sm-2 col-form-label font-weight-bold">Подзадание
                                         (ru):</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control subtasks" id="subTask_ru" data-lang="ru"
@@ -117,7 +117,7 @@
                                             <span class="text-danger">{{ $errors->first('subTask_ru') }}</span>
                                         @endif
                                     </div>
-                                    <label for="subTask_en" class="col-sm-2 col-form-label font-weight-bold">Подзаданые
+                                    <label for="subTask_en" class="col-sm-2 col-form-label font-weight-bold">Подзадание
                                         (en):</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control subtasks" id="subTask" data-lang="en"
@@ -127,7 +127,7 @@
                                             <span class="text-danger">{{ $errors->first('subTask_en') }}</span>
                                         @endif
                                     </div>
-                                    <label for="subTask_blr" class="col-sm-2 col-form-label font-weight-bold">Подзаданые
+                                    <label for="subTask_blr" class="col-sm-2 col-form-label font-weight-bold">Подзадание
                                         (blr):</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control subtasks" id="subTask_blr"
